@@ -1,0 +1,25 @@
+
+$body-bg:    #fff !default;
+
+/* Fonts settings */
+$body-font-family: '', sans-serif;
+$heading-font-family: '', sans-serif;
+
+/* Colors */
+$primary-color: #AD893D;
+$secondary-color: #39393A;
+$cta-color: #AD893D;
+
+/* font colors */
+$primary-font-color: $primary-color;  
+$secondary-font-color: $secondary-color; 
+$light-grey: #f5f5f5;
+
+/* border colors */
+$border-color: rgba($color: $secondary-color, $alpha: 0.1);
+
+/* transition */
+$transition-animate: all ease 0.4s;
+
+/* important */
+$i: unquote("!important");
