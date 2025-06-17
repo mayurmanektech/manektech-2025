@@ -12871,3 +12871,217 @@ header .container .nav-menu > ul {
   display: flex;
   list-style: none;
 }
+
+footer {
+  background-color: #1d1d1d;
+}
+@media screen and (min-width: 1300px) {
+  footer .container {
+    max-width: 1186px;
+  }
+}
+footer .container {
+  padding: 80px 0;
+}
+footer .container .form-title h2 {
+  display: inline-block;
+  font-size: 36px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #ffffff;
+  position: relative;
+}
+footer .container .form-title h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 4px;
+  width: 70px;
+  background: -webkit-gradient(linear, left top, right top, from(#d81f28), color-stop(#ec2730), color-stop(#cc1763), to(#e0005f));
+  background: linear-gradient(to right, #d81f28, #ec2730, #cc1763, #e0005f);
+  /* Red to pink */
+}
+footer .container form {
+  margin-top: 50px;
+}
+footer .container form .form-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 30px 1fr;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 50px;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  footer .container form .form-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+footer .container form .form-grid .description,
+footer .container form .form-grid .attachment-wrapper,
+footer .container form .form-grid .checkbox-div,
+footer .container form .form-grid .submit-btn-div {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+@media screen and (max-width: 768px) {
+  footer .container form .form-grid .description,
+  footer .container form .form-grid .attachment-wrapper,
+  footer .container form .form-grid .checkbox-div,
+  footer .container form .form-grid .submit-btn-div {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+  }
+}
+footer .container form .form-grid .attachment-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .container form .form-grid .attachment-wrapper .form-label {
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+footer .container form .form-grid .attachment-wrapper .custom-upload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  border-radius: 4px;
+  position: relative;
+}
+footer .container form .form-grid .attachment-wrapper .custom-upload .upload-btn {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #ffffff;
+  padding: 8px 16px;
+  font-size: 14px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+footer .container form .form-grid .attachment-wrapper .custom-upload .upload-text {
+  color: #aaa;
+  font-size: 14px;
+  white-space: nowrap;
+}
+footer .container form .form-grid .attachment-wrapper .custom-upload .file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+footer .container form .form-grid .form-label {
+  color: rgba(255, 255, 255, 0.5019607843) !important;
+  font-size: 14px;
+}
+footer .container form .form-grid .form-floating label {
+  color: rgba(255, 255, 255, 0.5019607843) !important;
+  padding-left: 0;
+  font-size: 14px;
+}
+footer .container form .form-grid .form-floating > .form-control::-webkit-input-placeholder {
+  opacity: 0;
+}
+footer .container form .form-grid .form-floating > .form-control::-moz-placeholder {
+  opacity: 0;
+}
+footer .container form .form-grid .form-floating > .form-control:-ms-input-placeholder {
+  opacity: 0;
+}
+footer .container form .form-grid .form-floating > .form-control::-ms-input-placeholder {
+  opacity: 0;
+}
+footer .container form .form-grid .form-floating > .form-control::placeholder {
+  opacity: 0;
+}
+footer .container form .form-grid .form-control,
+footer .container form .form-grid .form-select {
+  padding: 8px 0;
+  color: #ffffff;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5019607843) !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+}
+footer .container form .form-grid .form-control:focus,
+footer .container form .form-grid .form-select:focus {
+  background-color: transparent !important;
+  outline: none !important;
+}
+footer .container form .form-grid .form-control::-webkit-input-placeholder, footer .container form .form-grid .form-select::-webkit-input-placeholder {
+  color: #aaa;
+}
+footer .container form .form-grid .form-control::-moz-placeholder, footer .container form .form-grid .form-select::-moz-placeholder {
+  color: #aaa;
+}
+footer .container form .form-grid .form-control:-ms-input-placeholder, footer .container form .form-grid .form-select:-ms-input-placeholder {
+  color: #aaa;
+}
+footer .container form .form-grid .form-control::-ms-input-placeholder, footer .container form .form-grid .form-select::-ms-input-placeholder {
+  color: #aaa;
+}
+footer .container form .form-grid .form-control::placeholder,
+footer .container form .form-grid .form-select::placeholder {
+  color: #aaa;
+}
+footer .container textarea.form-control {
+  resize: vertical;
+}
+footer .container .form-check-label {
+  color: #ccc;
+}
+footer .container .form-check-label a {
+  color: #ddd;
+  text-decoration: underline;
+}
+footer .container .form-check-label a:hover {
+  color: #ffffff;
+}
+footer .container .submit-btn-div .btn-submit {
+  background: linear-gradient(90.08deg, #D81F28 -0.75%, #E0005F 100.45%);
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  padding: 19px auto;
+  border-radius: 4px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  font-weight: 500;
+}
+footer .container .submit-btn-div .btn-submit:hover {
+  opacity: 0.9;
+}
+footer .container .contact-info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 30px 0;
+}
+footer .container .contact-info h6 {
+  color: #ffffff;
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+footer .container .contact-info small {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+}
+footer .footer-bottom-bar {
+  background-color: #242424;
+}
