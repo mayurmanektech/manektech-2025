@@ -1,1 +1,19 @@
-header{}
+header{
+  display: flex;
+  align-items: center;
+
+  .container{
+    display: flex;
+    align-items: center;
+
+    .nav-menu{
+            display: flex;
+            align-items: center;
+        >ul{
+            display: flex;
+            list-style: none;
+        }
+    }
+  }
+}
+//aazam

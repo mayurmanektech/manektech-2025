@@ -8,6 +8,7 @@ body{
     font-weight: normal;
     background: $body-bg;
     overflow-x: hidden;
+    position: relative;
 }
 a,.btn-sub,button{
     transition: $transition-animate;
@@ -22,7 +23,7 @@ a{
     img{
         border:0px;
     }
-    color: $cta-color;
+    
     &:hover{
         color: $primary-color;
     }
@@ -32,17 +33,17 @@ img{
     max-width: 100%;
 }
 .section-space{
-    padding: 100px 0;
+    padding: 70px 0;
     @media screen and (max-width: 991px){
-        padding: 60px 0;
+        padding: 55px 0;
     }
     @media screen and (max-width: 575px){
-        padding: 50px 0;
+        padding: 45px 0;
     }
 }
 .container{
-    @media screen and (min-width: 1400px){
-        max-width: 1210px;
+    @media screen and (min-width: 1600px){
+        max-width: 1454px;
     }
 }
 .g-2,.gx-2{--bs-gutter-x:0.6rem}.g-2,.gy-2{--bs-gutter-y:0.6rem}
@@ -67,11 +68,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 }
 
 h1,.h1{
-    font-size: 52px;
-    line-height: 62px;
-    margin: 0 0 18px;
+    font-size: 64px;
+    line-height: 1.32;
+    margin: 0 0 30px;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 0.64px;
     @media only screen and (max-width: 1799px) {
         font-size: 46px;
         line-height: 58px;
@@ -139,21 +140,21 @@ h4,.h4{
 /* btn */
 .btn{
     font-size: 16px;
-    color: white;
+    letter-spacing: 0.32px; 
+    background: $gradiant-color;
+    color: $white-color;
     text-decoration: none;
     display: inline-flex;
-    padding: 20px 24px;
-    font-weight: 700;
-    border: 1px solid $cta-color;
-    border-radius: 0;
-    transition: $transition-animate;
-    font-family: $heading-font-family;
-    position: relative;
-    background: $cta-color;
     align-items: center;
     justify-content: center;
+    padding: 18px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    transition: $transition-animate;
+    position: relative;
+ 
     &:hover{
-        color: $cta-color;
         background: transparent;
     }
     &:focus{
@@ -254,7 +255,7 @@ textarea.form-control{
         a{
             color: rgba($color: $primary-font-color, $alpha: 0.8);
             &:hover{
-                color: $cta-color;
+               
             }
         }
         &.active{
