@@ -13343,6 +13343,12 @@ footer .container .contact-info small {
 footer .footer-bottom-main {
   background-color: #242424;
 }
+@media screen and (min-width: 1400px) {
+  footer .footer-bottom-main .container {
+    max-width: 1430px;
+    width: 100% !important;
+  }
+}
 footer .footer-bottom-main .footer-bottom-bar.container {
   padding: 0;
 }
@@ -13492,13 +13498,6 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link {
 @media screen and (max-width: 575px) {
   footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link {
     gap: 0px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .footer-bottom-main .container {
-    max-width: 1430px;
-    width: 100% !important;
   }
 }
 
