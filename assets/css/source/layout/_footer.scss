@@ -142,7 +142,6 @@ footer {
             padding-top: 0 $i;
           }
         }
-       
         .form-control,
         .form-select {
           padding: 19px 0;
@@ -162,8 +161,6 @@ footer {
           &::placeholder {
             color: #ffffff80;
           }
-
-          
         }
         .form-check-input{
           height: 26px;
@@ -176,11 +173,9 @@ footer {
           border-color: #d81f28;
         }
         .form-floating > textarea.form-control:not(:placeholder-shown) ~ label {
-        padding-top: 0 !important;
-       
-        transition: padding-top 0.3s ease;
+          padding-top: 0 !important;
+          transition: padding-top 0.3s ease;
         }
-
         textarea.form-control{
            min-height: 85px !important;
         }
@@ -246,6 +241,13 @@ footer {
   }
   .footer-bottom-main {
     background-color: $secondary-dark;
+    .container {
+        @media screen and (min-width:1400px){
+          max-width: 1430px;
+          width: 100% !important;
+        }
+      } 
+
     .footer-bottom-bar.container{
        padding: 0;
     }
@@ -259,22 +261,22 @@ footer {
       .certification-logo {
         padding: 70px 0 86px;
         @media screen and (max-width:1399px) {
-                padding: 64px 0 64px;
-            }
-             @media screen and (max-width:991px) {
-                padding: 48px 0 48px;
-            }
-             @media screen and (max-width:767px) {
-                padding: 36px 0 36px;
-            }
-             @media screen and (max-width:575px) {
-                 padding: 24px 0 24px;
-            }
-        display: flex;
-        width: 100%;
-        align-items: center;
-        position: relative;
-         .certification-logo-track {
+            padding: 64px 0 64px;
+          }
+        @media screen and (max-width:991px) {
+           padding: 48px 0 48px;
+        }
+        @media screen and (max-width:767px) {
+          padding: 36px 0 36px;
+        }
+        @media screen and (max-width:575px) {
+          padding: 24px 0 24px;
+        }
+          display: flex;
+          width: 100%;
+          align-items: center;
+          position: relative;
+          .certification-logo-track {
             display: flex;
             width: max-content;
             animation: scrollLoop 60s linear infinite; 
@@ -282,7 +284,6 @@ footer {
             @media screen and (max-width:1399px) {
                gap: 64px;
             }
-             
              @media screen and (max-width:767px) {
                gap: 36px;
             }
@@ -292,9 +293,6 @@ footer {
           flex-shrink: 0;
         }
       }
-     
-
-
         @keyframes scrollLoop {
           0% {
             transform: translateX(0);
@@ -306,15 +304,15 @@ footer {
       .copyright-social {
         display: flex;
         padding: 39px 0;
-         @media screen and (max-width:991px) {
-              padding: 36px 0;
-            }
-             @media screen and (max-width:767px) {
-                padding: 36px 0;
-            }
-             @media screen and (max-width:575px) {
-               padding: 24px 0;
-            }
+        @media screen and (max-width:991px) {
+          padding: 36px 0;
+        }
+        @media screen and (max-width:767px) {
+          padding: 36px 0;
+        }
+        @media screen and (max-width:575px) {
+          padding: 24px 0;
+        }
         justify-content: space-between;
         align-items: center;
         gap: 16px;
@@ -342,23 +340,3 @@ footer {
     }
   }
 }
-
-
-
-
-.footer-bottom-main .container {
-  @media screen and (min-width:1400px){
-    max-width: 1430px;
-    width: 100% !important;
-  }
-} 
-
-
-
-
-// input:-webkit-autofill {
-//   background-color: transparent !important;
-//   -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
-//   -webkit-text-fill-color: $white-color !important;
-//   transition: background-color 5000s ease-in-out 0s !important;
-// }
