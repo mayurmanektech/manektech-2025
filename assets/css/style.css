@@ -12442,7 +12442,7 @@ body {
   color: #ffffff;
   margin: 0;
   padding: 0;
-  font-family: "NeueHaasGroteskDisp Pro", sans-serif;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
   font-weight: normal;
   background: #fff;
   overflow-x: hidden;
@@ -12469,6 +12469,7 @@ a:hover {
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 .section-space {
@@ -12518,7 +12519,7 @@ p {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 700;
   color: #ffffff;
-  font-family: "NeueHaasGroteskText Pro Md", sans-serif;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
 }
 
 h1, .h1 {
@@ -12570,10 +12571,9 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: 30px;
-  margin: 0 0 15px;
-  line-height: 40px;
-  text-transform: uppercase;
+  font-size: 26px;
+  margin: 0 0 10px;
+  font-weight: 600;
 }
 
 h4, .h4 {
@@ -12603,7 +12603,7 @@ h4, .h4 {
 }
 
 .grey-bg {
-  background: rgba(224, 0, 95, 0.1) !important;
+  background: #1d1d1d !important;
 }
 
 .border {
@@ -12612,7 +12612,7 @@ h4, .h4 {
 
 /* btn */
 .btn {
-  font-family: "NeueHaasGroteskText Pro Md", sans-serif;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
   text-transform: capitalize;
   font-size: 16px;
   letter-spacing: 0.32px;
@@ -12637,12 +12637,17 @@ h4, .h4 {
   position: relative;
 }
 .btn:hover {
-  background: transparent;
+  background: #ffffff;
+  color: #D81F28;
 }
 .btn:focus {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.primary-btn {
+  padding: 18px 60px;
 }
 
 label {
@@ -12815,20 +12820,165 @@ textarea.form-control {
   }
 }
 
+.section-title {
+  position: relative;
+}
+.section-title h2 {
+  font-size: 36px;
+  color: #1d1d1d;
+  text-transform: none;
+  margin: 0;
+  padding-bottom: 16px;
+  position: relative;
+  letter-spacing: 0.8px;
+}
+.section-title h2:before {
+  content: "";
+  position: absolute;
+  left: 36px;
+  bottom: 0;
+  width: 18px;
+  height: 6px;
+  background: #CC1763;
+}
+.section-title h2:after {
+  content: "";
+  position: absolute;
+  left: 54px;
+  bottom: 0;
+  width: 18px;
+  height: 6px;
+  background: #E0005F;
+}
+.section-title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 18px;
+  height: 6px;
+  background: #D81F28;
+}
+.section-title:after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  bottom: 0;
+  width: 18px;
+  height: 6px;
+  background: #EC2730;
+}
+
 @font-face {
-  font-family: "NeueHaasGroteskText Pro Md";
-  src: url("../fonts/NHaasGroteskTXPro-65Md.eot");
-  src: url("../fonts/NHaasGroteskTXPro-65Md.eot?#iefix") format("embedded-opentype"), url("../fonts/NHaasGroteskTXPro-65Md.woff2") format("woff2"), url("../fonts/NHaasGroteskTXPro-65Md.woff") format("woff"), url("../fonts/NHaasGroteskTXPro-65Md.ttf") format("truetype"), url("../fonts/NHaasGroteskTXPro-65Md.svg#NHaasGroteskTXPro-65Md") format("svg");
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-ThinItalic.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-Roman.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-Roman.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "NeueHaasGroteskDisp Pro";
-  src: url("../fonts/NHaasGroteskDSPro-55Rg.eot");
-  src: url("../fonts/NHaasGroteskDSPro-55Rg.eot?#iefix") format("embedded-opentype"), url("../fonts/NHaasGroteskDSPro-55Rg.woff2") format("woff2"), url("../fonts/NHaasGroteskDSPro-55Rg.woff") format("woff"), url("../fonts/NHaasGroteskDSPro-55Rg.ttf") format("truetype"), url("../fonts/NHaasGroteskDSPro-55Rg.svg#NHaasGroteskDSPro-55Rg") format("svg");
-  font-weight: normal;
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-Thin.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-Thin.woff") format("woff");
+  font-weight: 100;
   font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-RomanItalic.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-RomanItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-XThinItalic.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-XThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-XThin.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-XThin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-Bold.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-XXThinItalic.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-XXThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-LightItalic.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-XXThin.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-XXThin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-Mediu.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-Mediu.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-Light.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-Black.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-BoldItalic.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-BlackItalic.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("../fonts/NeueHaasDisplay-MediumItalic.woff2") format("woff2"), url("../fonts/NeueHaasDisplay-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
   font-display: swap;
 }
 header {
@@ -13251,4 +13401,109 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link {
           align-items: center;
   gap: 15px;
   list-style: none;
+}
+
+.service-card {
+  padding: 30px 0 10px;
+  border-bottom: 1px solid #282828;
+  position: relative;
+}
+.service-card.no-border {
+  border-bottom: 0;
+}
+.service-card.no-border::before {
+  display: none;
+}
+.service-card .service-large-heading {
+  font-size: 36px;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+.service-card p {
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+  opacity: 0.9;
+}
+.service-card:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+  background: linear-gradient(90.08deg, #D81F28 -0.75%, #E0005F 100.45%);
+  height: 1px;
+  opacity: 0;
+}
+.service-card:hover:before {
+  opacity: 1;
+}
+.service-card:hover .learn-more-link {
+  opacity: 1;
+  background: linear-gradient(90.08deg, #D81F28 -0.75%, #E0005F 100.45%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.service-card:hover .learn-more-link .icon {
+  left: 10px;
+}
+.service-card:hover .learn-more-link .icon::before {
+  width: 20px;
+}
+
+.service-card-list {
+  padding: 0;
+  list-style: none;
+}
+.service-card-list li {
+  padding-left: 12px;
+  position: relative;
+  line-height: 1.6;
+  padding-bottom: 2px;
+  letter-spacing: 0.6px;
+}
+.service-card-list li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background: #D81F28;
+}
+
+.learn-more-link {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #D81F28;
+  opacity: 0.5;
+  font-weight: 600;
+  gap: 15px;
+  background: linear-gradient(90.08deg, #D81F28 -0.75%, #E0005F 100.45%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.learn-more-link .icon {
+  position: relative;
+  left: 0;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+.learn-more-link .icon::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 4px;
+  height: 1px;
+  width: 10px;
+  background: #D81F28;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
 }
