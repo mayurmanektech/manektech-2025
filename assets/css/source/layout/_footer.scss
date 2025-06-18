@@ -10,24 +10,11 @@ footer {
     @media screen and (max-width:991px) {
       padding: 40px 0;
     }
-    .form-title {
+    .section-title {
       h2 {
-        display: inline-block;
-        font-size: 36px;
         font-weight: 500;
         text-transform: capitalize;
         color: $white-color;
-        position: relative;
-        margin-bottom: 0;
-        &::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: -10px;
-          height: 4px;
-          width: 70px;
-          background: linear-gradient(to right, #d81f28, #ec2730, #cc1763, #e0005f);
-        }
       }
     }
     form {
@@ -257,15 +244,55 @@ footer {
     background-color: $secondary-dark;
     .footer-bottom-bar {
       max-width: 1430px;
+       .certification-logo-wrapper {
+        margin: 0 auto;
+      overflow: hidden;
+    }
       .certification-logo {
         padding: 70px 0 86px;
         display: flex;
         gap: 81px;
         align-items: center;
+        position: relative;
+         .certification-logo-track {
+            display: flex;
+            gap: 81px;
+            animation: scrollLoop 20s linear infinite; 
+         }
         img {
           filter: grayscale(1);
+          flex-shrink: 0;
         }
       }
+      @media (max-width: 1599px) {
+          .certification-logo-track {
+           gap: 40px;
+         }
+        }
+
+     
+
+    @media (max-width: 768px) {
+      .certification-logo-track {
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .certification-logo-track {
+        gap: 30px;
+      }
+    }
+
+
+        @keyframes scrollLoop {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
       .copyright-social {
         display: flex;
         padding: 39px 0;
@@ -278,6 +305,7 @@ footer {
           font-size: 14px;
         }
         .social-link {
+          padding-inline-start: 0 ;
           margin-bottom: 0;
           display: flex;
           align-items: center;
