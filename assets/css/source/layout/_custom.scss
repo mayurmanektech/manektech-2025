@@ -2,6 +2,17 @@
     padding: 30px 0 10px;
     border-bottom: 1px solid $dark-grey;
     position: relative;
+    &.no-border {
+        border-bottom: 0;
+        &::before {
+            display: none;
+        }
+    }
+    .service-large-heading {
+        font-size: 36px;
+        line-height: 50px;
+        margin-bottom: 20px;
+    }
     p {
         line-height: 1.6;
         letter-spacing: 0.6px;
@@ -14,7 +25,7 @@
         left: 0;
         right: 0;
         transition: $transition-animate;
-        background: $primary-color;
+        background: $gradiant-color;
         height: 1px;
         opacity: 0;
     }
@@ -24,6 +35,9 @@
         }
         .learn-more-link {
             opacity: 1;
+            background: $gradiant-color;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             .icon {
                 left: 10px;
                 &::before {
@@ -60,8 +74,11 @@
     align-items: center;
     color: $primary-color;
     opacity: 0.5;
-    font-weight: 500;
+    font-weight: 600;
     gap: 15px;
+    background: $gradiant-color;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     .icon {
         position: relative;
         left: 0;
@@ -70,7 +87,7 @@
             content: '';
             position: absolute;
             right: 0;
-            top: 50%;
+            top: 4px;
             height: 1px;
             width: 10px;
             background: $primary-color;
