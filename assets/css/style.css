@@ -12822,6 +12822,7 @@ textarea.form-control {
 
 .section-title {
   position: relative;
+  margin-bottom: 70px;
 }
 .section-title h2 {
   font-size: 36px;
@@ -13604,4 +13605,98 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link {
   background: #D81F28;
   -webkit-transition: all ease 0.4s;
   transition: all ease 0.4s;
+}
+
+.industry-section {
+  background: linear-gradient(-26deg, #F5F5F5 0%, #fff 100%);
+}
+
+.industry-box-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 1px solid #E8E8E8;
+  border-bottom: 0;
+  border-right: 0;
+  background: #ffffff;
+}
+
+.industry-box {
+  position: relative;
+  width: 33.33%;
+  border-right: 1px solid #E8E8E8;
+  border-bottom: 1px solid #E8E8E8;
+}
+.industry-box:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(85deg, #B00000 0%, #E0005F 50%, transparent 100%);
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+.industry-box img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+.industry-box:hover::before {
+  opacity: 0.65;
+}
+.industry-box:hover img {
+  opacity: 1;
+}
+.industry-box:hover .industry-card h3, .industry-box:hover .industry-card p {
+  color: #ffffff;
+}
+
+.industry-card {
+  padding: 54px 57px 87px 46px;
+  position: relative;
+  z-index: 2;
+}
+.industry-card h3 {
+  color: #1d1d1d;
+  font-weight: normal;
+  margin-bottom: 16px;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+.industry-card p {
+  color: #1d1d1d;
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.9;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+
+.client-img-row {
+  row-gap: 70px;
+}
+
+.client-img-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
