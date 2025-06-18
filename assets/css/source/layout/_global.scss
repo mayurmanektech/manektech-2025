@@ -31,6 +31,7 @@ a{
 }
 img{
     max-width: 100%;
+    display: block;
 }
 .section-space{
     padding: 70px 0;
@@ -104,10 +105,9 @@ h2,.h2{
     }
 }
 h3,.h3{
-    font-size: 30px;
-    margin: 0 0 15px;
-    line-height: 40px;
-    text-transform: uppercase;
+    font-size: 26px;
+    margin: 0 0 10px;
+    font-weight: 600;
 }
 h4,.h4{
     font-size: 20px;
@@ -131,7 +131,7 @@ h4,.h4{
     background: $secondary-color $i;
 }
 .grey-bg{
-    background: $border-color $i;
+    background: $primary-dark $i;
 }
 .border{
     border-color: $border-color $i;
@@ -155,14 +155,17 @@ h4,.h4{
     border-radius: 3px;
     transition: $transition-animate;
     position: relative;
- 
     &:hover{
-        background: transparent;
+        background: $white-color;
+        color: $primary-color;
     }
     &:focus{
         outline: none;
         box-shadow: none;
     }
+}
+.primary-btn {
+    padding: 18px 60px;
 }
 
 label{
@@ -328,5 +331,54 @@ textarea.form-control{
                 }
             }
         }
+    }
+}
+.section-title {
+    position: relative;
+    margin-bottom: 70px;
+    h2 {
+        font-size: 36px;
+        color: $primary-dark;
+        text-transform: none;
+        margin: 0;
+        padding-bottom: 16px;
+        position: relative;
+        letter-spacing: 0.8px;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 36px;
+            bottom: 0;
+            width: 18px;
+            height: 6px;
+            background: #CC1763;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: 54px;
+            bottom: 0;
+            width: 18px;
+            height: 6px;
+            background: #E0005F;
+        }
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 18px;
+        height: 6px;
+        background: #D81F28;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        left: 18px;
+        bottom: 0;
+        width: 18px;
+        height: 6px;
+        background: #EC2730;
     }
 }

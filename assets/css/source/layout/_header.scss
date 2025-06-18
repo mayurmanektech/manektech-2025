@@ -7,17 +7,35 @@ header{
     align-items: center;
 
     .nav-menu{
+
             display: flex;
             flex-grow: 1;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 0 18px 0 40px;
-        >ul{
+
+        ul{
             padding: 0;
             display: flex;
             list-style: none;
+            margin: 0;
+            li{
+             &+li{
+              margin-left: 26px;
+             }
+
+             a{
+              color: $black-color;
+             }
+            }
         }
+
+        
+    }
+
+    >.btn{
+        padding: 11px 26px;
     }
   }
 }
