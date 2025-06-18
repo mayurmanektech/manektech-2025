@@ -24,15 +24,21 @@ footer {
         grid-template-columns: 1fr 1fr;
         row-gap: 50px;
         column-gap: 30px;
-        @media screen and (max-width:768px) {
+        @media screen and (max-width:767px) {
           grid-template-columns: 1fr;
+        }
+         input:-webkit-autofill {
+          background-color: transparent !important;
+          -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+          -webkit-text-fill-color: $white-color !important;
+          transition: background-color 5000s ease-in-out 0s !important;
         }
         .description,
         .attachment-wrapper,
         .checkbox-div,
         .submit-btn-div {
           grid-column: span 2;
-          @media screen and (max-width:768px) {
+          @media screen and (max-width:767px) {
             grid-column: span 1;
           }
         }
@@ -136,12 +142,7 @@ footer {
             padding-top: 0 $i;
           }
         }
-        input:-webkit-autofill {
-          background-color: transparent $i;
-          -webkit-box-shadow: 0 0 0 1000px transparent inset $i;
-          -webkit-text-fill-color: $white-color $i;
-          transition: background-color 5000s ease-in-out 0s;
-        }
+       
         .form-control,
         .form-select {
           padding: 19px 0;
@@ -155,11 +156,14 @@ footer {
             background-color: transparent $i;
             outline: none $i;
             border-bottom-color: $white-color $i;
+            transition: border-bottom-color 0.4s ease-in-out;
             box-shadow: none $i;
           }
           &::placeholder {
             color: #ffffff80;
           }
+
+          
         }
         .form-check-input{
           height: 26px;
@@ -242,47 +246,53 @@ footer {
   }
   .footer-bottom-main {
     background-color: $secondary-dark;
+    .footer-bottom-bar.container{
+       padding: 0;
+    }
     .footer-bottom-bar {
-      max-width: 1430px;
+      width: 100%;
        .certification-logo-wrapper {
         margin: 0 auto;
       overflow: hidden;
+      width: 100%;
     }
       .certification-logo {
         padding: 70px 0 86px;
+        @media screen and (max-width:1399px) {
+                padding: 64px 0 64px;
+            }
+             @media screen and (max-width:991px) {
+                padding: 48px 0 48px;
+            }
+             @media screen and (max-width:767px) {
+                padding: 36px 0 36px;
+            }
+             @media screen and (max-width:575px) {
+                 padding: 24px 0 24px;
+            }
         display: flex;
-        gap: 81px;
+        width: 100%;
         align-items: center;
         position: relative;
          .certification-logo-track {
             display: flex;
+            width: max-content;
+            animation: scrollLoop 60s linear infinite; 
             gap: 81px;
-            animation: scrollLoop 20s linear infinite; 
+            @media screen and (max-width:1399px) {
+               gap: 64px;
+            }
+             
+             @media screen and (max-width:767px) {
+               gap: 36px;
+            }
          }
         img {
           filter: grayscale(1);
           flex-shrink: 0;
         }
       }
-      @media (max-width: 1599px) {
-          .certification-logo-track {
-           gap: 40px;
-         }
-        }
-
      
-
-    @media (max-width: 768px) {
-      .certification-logo-track {
-        gap: 40px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .certification-logo-track {
-        gap: 30px;
-      }
-    }
 
 
         @keyframes scrollLoop {
@@ -296,11 +306,24 @@ footer {
       .copyright-social {
         display: flex;
         padding: 39px 0;
+         @media screen and (max-width:991px) {
+              padding: 36px 0;
+            }
+             @media screen and (max-width:767px) {
+                padding: 36px 0;
+            }
+             @media screen and (max-width:575px) {
+               padding: 24px 0;
+            }
         justify-content: space-between;
         align-items: center;
         gap: 16px;
         flex-wrap: wrap;
         border-top: 1px solid #ffffff80;
+        @media screen and (max-width:991px) {
+           display: flex;
+           justify-content: center;
+        }
         .copyright-text {
           font-size: 14px;
         }
@@ -310,6 +333,9 @@ footer {
           display: flex;
           align-items: center;
           gap: 15px;
+          @media screen and (max-width:575px) {
+            gap: 0px;
+          }
           list-style: none;
         }
       }
@@ -320,8 +346,19 @@ footer {
 
 
 
+.footer-bottom-main .container {
+  @media screen and (min-width:1400px){
+    max-width: 1430px;
+    width: 100% !important;
+  }
+} 
 
 
 
 
-
+// input:-webkit-autofill {
+//   background-color: transparent !important;
+//   -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+//   -webkit-text-fill-color: $white-color !important;
+//   transition: background-color 5000s ease-in-out 0s !important;
+// }

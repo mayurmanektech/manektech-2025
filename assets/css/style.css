@@ -13056,11 +13056,18 @@ footer .container form .form-grid {
      -moz-column-gap: 30px;
           column-gap: 30px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   footer .container form .form-grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
+}
+footer .container form .form-grid input:-webkit-autofill {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-transition: background-color 5000s ease-in-out 0s !important;
+  transition: background-color 5000s ease-in-out 0s !important;
 }
 footer .container form .form-grid .description,
 footer .container form .form-grid .attachment-wrapper,
@@ -13069,7 +13076,7 @@ footer .container form .form-grid .submit-btn-div {
   -ms-grid-column-span: 2;
   grid-column: span 2;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   footer .container form .form-grid .description,
   footer .container form .form-grid .attachment-wrapper,
   footer .container form .form-grid .checkbox-div,
@@ -13205,13 +13212,6 @@ footer .container form .form-grid .form-floating > .form-control:focus ~ label,
 footer .container form .form-grid .form-floating > .form-control:not(:placeholder-shown) ~ label {
   padding-top: 0 !important;
 }
-footer .container form .form-grid input:-webkit-autofill {
-  background-color: transparent !important;
-  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
-  -webkit-text-fill-color: #ffffff !important;
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
-}
 footer .container form .form-grid .form-control,
 footer .container form .form-grid .form-select {
   padding: 19px 0;
@@ -13227,6 +13227,8 @@ footer .container form .form-grid .form-select:active {
   background-color: transparent !important;
   outline: none !important;
   border-bottom-color: #ffffff !important;
+  -webkit-transition: border-bottom-color 0.4s ease-in-out;
+  transition: border-bottom-color 0.4s ease-in-out;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
@@ -13341,52 +13343,74 @@ footer .container .contact-info small {
 footer .footer-bottom-main {
   background-color: #242424;
 }
+footer .footer-bottom-main .footer-bottom-bar.container {
+  padding: 0;
+}
 footer .footer-bottom-main .footer-bottom-bar {
-  max-width: 1430px;
+  width: 100%;
 }
 footer .footer-bottom-main .footer-bottom-bar .certification-logo-wrapper {
   margin: 0 auto;
   overflow: hidden;
+  width: 100%;
 }
 footer .footer-bottom-main .footer-bottom-bar .certification-logo {
   padding: 70px 0 86px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 81px;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
 }
+@media screen and (max-width: 1399px) {
+  footer .footer-bottom-main .footer-bottom-bar .certification-logo {
+    padding: 64px 0 64px;
+  }
+}
+@media screen and (max-width: 991px) {
+  footer .footer-bottom-main .footer-bottom-bar .certification-logo {
+    padding: 48px 0 48px;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .footer-bottom-main .footer-bottom-bar .certification-logo {
+    padding: 36px 0 36px;
+  }
+}
+@media screen and (max-width: 575px) {
+  footer .footer-bottom-main .footer-bottom-bar .certification-logo {
+    padding: 24px 0 24px;
+  }
+}
 footer .footer-bottom-main .footer-bottom-bar .certification-logo .certification-logo-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-animation: scrollLoop 60s linear infinite;
+          animation: scrollLoop 60s linear infinite;
   gap: 81px;
-  -webkit-animation: scrollLoop 20s linear infinite;
-          animation: scrollLoop 20s linear infinite;
+}
+@media screen and (max-width: 1399px) {
+  footer .footer-bottom-main .footer-bottom-bar .certification-logo .certification-logo-track {
+    gap: 64px;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .footer-bottom-main .footer-bottom-bar .certification-logo .certification-logo-track {
+    gap: 36px;
+  }
 }
 footer .footer-bottom-main .footer-bottom-bar .certification-logo img {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
   -ms-flex-negative: 0;
       flex-shrink: 0;
-}
-@media (max-width: 1599px) {
-  footer .footer-bottom-main .footer-bottom-bar .certification-logo-track {
-    gap: 40px;
-  }
-}
-@media (max-width: 768px) {
-  footer .footer-bottom-main .footer-bottom-bar .certification-logo-track {
-    gap: 40px;
-  }
-}
-@media (max-width: 576px) {
-  footer .footer-bottom-main .footer-bottom-bar .certification-logo-track {
-    gap: 30px;
-  }
 }
 @-webkit-keyframes scrollLoop {
   0% {
@@ -13424,6 +13448,31 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social {
       flex-wrap: wrap;
   border-top: 1px solid rgba(255, 255, 255, 0.5019607843);
 }
+@media screen and (max-width: 991px) {
+  footer .footer-bottom-main .footer-bottom-bar .copyright-social {
+    padding: 36px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .footer-bottom-main .footer-bottom-bar .copyright-social {
+    padding: 36px 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  footer .footer-bottom-main .footer-bottom-bar .copyright-social {
+    padding: 24px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  footer .footer-bottom-main .footer-bottom-bar .copyright-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 footer .footer-bottom-main .footer-bottom-bar .copyright-social .copyright-text {
   font-size: 14px;
 }
@@ -13439,6 +13488,18 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link {
           align-items: center;
   gap: 15px;
   list-style: none;
+}
+@media screen and (max-width: 575px) {
+  footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link {
+    gap: 0px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .footer-bottom-main .container {
+    max-width: 1430px;
+    width: 100% !important;
+  }
 }
 
 .service-card {
