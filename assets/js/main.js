@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // const container_margin = $(".get-margin").css('margin-left');
+    // $(".process-slider-prev").css("left", container_margin);
+    // $(".process-slider-next").css("right", container_margin);
     const wrapper = document.getElementById("certificationLogoWrapper");
     wrapper.innerHTML += wrapper.innerHTML; // duplicate slides
 
@@ -37,6 +40,15 @@ document.addEventListener('DOMContentLoaded', function () {
         },
       },
     });
+
+    const swiper_process = new Swiper('.process-slider .swiper', {
+        speed: 400,
+        spaceBetween: 0,
+        navigation: {
+            nextEl: ".process-slider-next",
+            prevEl: ".process-slider-prev",
+          },
+      });
   });
 
 
