@@ -10,13 +10,7 @@ footer {
     @media screen and (max-width:991px) {
       padding: 40px 0;
     }
-    .section-title {
-      h2 {
-        font-weight: 500;
-        text-transform: capitalize;
-        color: $white-color;
-      }
-    }
+    
     form {
       margin: 50px 0 50px;
       .form-grid {
@@ -167,11 +161,22 @@ footer {
           width: 26px;
           border-radius: 3px;
           margin-right: 18px $i;
+          background-color: $secondary-dark !important;
+          border: 1px solid #ffffff80 !important;
+          border-radius: 3px !important;
         }
         .form-check-input:checked {
           background-color: #d81f28;
           border-color: #d81f28;
         }
+                .form-floating>.form-control:focus~label,
+                .form-floating>.form-control:not(:placeholder-shown)~label,
+                .form-floating>.form-select~label {
+                  opacity: 0.65;
+                  transform: scale(1) translateY(-0.5rem) translateX(0.15rem) !important;
+                  -webkit-transform: scale(1) translateY(-0.5rem) translateX(0.15rem) !important;
+                }
+
         .form-floating > textarea.form-control:not(:placeholder-shown) ~ label {
           padding-top: 0 !important;
           transition: padding-top 0.3s ease;
@@ -200,7 +205,7 @@ footer {
               color: $white-color;
               border: none;
               width: 100%;
-              font-size: 14px;
+              font-size: 16px;
               padding: 19px auto;
               border-radius: 4px;
               transition: opacity 0.3s;
@@ -255,9 +260,9 @@ footer {
       width: 100%;
        .certification-logo-wrapper {
         margin: 0 auto;
-      overflow: hidden;
-      width: 100%;
-    }
+        overflow: hidden;
+        width: 100%;
+      }
       .certification-logo {
         padding: 70px 0 86px;
         @media screen and (max-width:1399px) {
@@ -272,35 +277,26 @@ footer {
         @media screen and (max-width:575px) {
           padding: 24px 0 24px;
         }
-          display: flex;
+        .certification-logo.swiper-container {
           width: 100%;
+          overflow: hidden;
+        }
+
+        .swiper-wrapper {
+          transition-timing-function: linear !important; /* core fix: linear scroll */
+        }
+
+        .swiper-slide {
+          width: auto; 
+          display: flex;
+          justify-content: center;
           align-items: center;
-          position: relative;
-          .certification-logo-track {
-            display: flex;
-            width: max-content;
-            animation: scrollLoop 60s linear infinite; 
-            gap: 81px;
-            @media screen and (max-width:1399px) {
-               gap: 64px;
-            }
-             @media screen and (max-width:767px) {
-               gap: 36px;
-            }
-         }
+        }     
         img {
           filter: grayscale(1);
-          flex-shrink: 0;
         }
       }
-        @keyframes scrollLoop {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
+       
       .copyright-social {
         display: flex;
         padding: 39px 0;
