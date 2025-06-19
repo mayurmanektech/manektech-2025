@@ -100,7 +100,7 @@ footer {
               cursor: pointer;
               max-width: 179px;
               width: 100%;
-              padding: 15px 0;
+              padding: 15px 6px;
               color: #ffffff80;
               outline: none;
             }
@@ -324,6 +324,7 @@ footer {
         }
         .copyright-text {
           font-size: 14px;
+          color: $white-color;
         }
         .social-link {
           padding-inline-start: 0 ;
