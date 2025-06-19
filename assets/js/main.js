@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     wrapper.innerHTML += wrapper.innerHTML; // duplicate slides
 
     const swiper = new Swiper('.swiper-container', {
-      loop: false,
+      loop: true,
       speed: 4000,
       autoplay: {
         delay: 0,
