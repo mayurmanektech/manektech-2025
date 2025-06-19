@@ -13167,7 +13167,8 @@ footer .container form .form-grid .attachment-wrapper .custom-upload {
   position: relative;
 }
 footer .container form .form-grid .attachment-wrapper .custom-upload .upload-btn {
-  background-color: transparent;
+  font-family: "Sora" !important;
+  background-color: #242424;
   border: 1px solid rgba(255, 255, 255, 0.5019607843);
   margin-right: 12px;
   font-size: 14px;
@@ -13180,6 +13181,7 @@ footer .container form .form-grid .attachment-wrapper .custom-upload .upload-btn
   outline: none;
 }
 footer .container form .form-grid .attachment-wrapper .custom-upload .upload-text {
+  font-family: "Sora" !important;
   color: rgba(255, 255, 255, 0.2509803922);
   font-size: 14px;
   white-space: nowrap;
@@ -13210,6 +13212,7 @@ footer .container form .form-grid .input-prefix-wrapper .prefix-text {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   color: rgba(255, 255, 255, 0.7019607843);
+  font-family: "Sora" !important;
   font-size: 14px;
   pointer-events: none;
 }
@@ -13313,6 +13316,10 @@ footer .container form .form-grid .form-check-input:checked {
   background-color: #d81f28;
   border-color: #d81f28;
 }
+footer .container form .form-grid .form-check-input:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
 footer .container form .form-grid .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
   opacity: 0.65;
   transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
@@ -13364,6 +13371,7 @@ footer .container form .form-grid .form-check-label a:hover {
   color: #ffffff;
 }
 footer .container form .form-grid .submit-btn-div .btn-submit {
+  font-family: "Sora" !important;
   background: linear-gradient(90.08deg, #D81F28 -0.75%, #E0005F 100.45%);
   color: #ffffff;
   border: none;
@@ -13396,18 +13404,52 @@ footer .container .contact-info {
   }
 }
 footer .container .contact-info > div {
+  position: relative;
+  overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.1490196078);
   padding-top: 30px;
+  -webkit-transition: padding-left 0.4s;
+  transition: padding-left 0.4s;
 }
 @media screen and (max-width: 991px) {
   footer .container .contact-info > div {
     padding-top: 20px;
   }
 }
+footer .container .contact-info > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#D81F28), to(#E0005F));
+  background: linear-gradient(180deg, #D81F28 0%, #E0005F 100%);
+  z-index: 0;
+  -webkit-transition: height 0.4s ease;
+  transition: height 0.4s ease;
+}
+footer .container .contact-info > div:hover {
+  padding-left: 20px;
+}
+footer .container .contact-info > div:hover::before {
+  height: 100%;
+}
+footer .container .contact-info > div:hover small {
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
 footer .container .contact-info h6 {
   color: #ffffff;
   font-size: 26px;
   margin-bottom: 6px;
+  position: relative;
+  z-index: 1;
+}
+footer .container .contact-info h6 a {
+  text-decoration: none;
+  color: #ffffff;
 }
 footer .container .contact-info small {
   color: rgba(255, 255, 255, 0.6);

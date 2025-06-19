@@ -89,7 +89,8 @@ footer {
             border-radius: 4px;
             position: relative;
             .upload-btn {
-              background-color: transparent;
+               font-family: 'Sora' !important;
+              background-color: $secondary-dark ;
               border: 1px solid #ffffff80;
               margin-right: 12px;
               font-size: 14px;
@@ -102,6 +103,7 @@ footer {
               outline: none;
             }
             .upload-text {
+               font-family: 'Sora' !important;
               color: #ffffff40;
               font-size: 14px;
               white-space: nowrap;
@@ -133,6 +135,7 @@ footer {
             top: 61%;
             transform: translateY(-50%);
             color: #ffffffb3;
+             font-family: 'Sora' !important;
             font-size: 14px;
             pointer-events: none;
           }
@@ -203,6 +206,9 @@ footer {
           background-color: #d81f28;
           border-color: #d81f28;
         }
+        .form-check-input:focus{
+          box-shadow: none !important;
+        }
                 .form-floating>.form-control:focus~label,
                 .form-floating>.form-control:not(:placeholder-shown)~label,
                 .form-floating>.form-select~label {
@@ -235,6 +241,7 @@ footer {
         }
         .submit-btn-div {
             .btn-submit {
+               font-family: 'Sora' !important;
               background: linear-gradient(90.08deg, #D81F28 -0.75%, #E0005F 100.45%);
               color: $white-color;
               border: none;
@@ -262,20 +269,52 @@ footer {
         gap: 20px;
       }
       >div {
+         position: relative;
+        overflow: hidden; 
         border-top: 1px solid #ffffff26;
         padding-top: 30px;
+        transition: padding-left 0.4s;
         @media screen and (max-width:991px) {
           padding-top: 20px;
+        }
+         &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 0%;
+            width: 100%;
+            background: linear-gradient(180deg, #D81F28 0%, #E0005F 100%);
+            z-index: 0;
+            transition: height 0.4s ease;
+          }
+        &:hover{
+          padding-left: 20px;
+                &::before {
+              height: 100%;
+            }
+          small{
+            color: $white-color;
+            position: relative;
+            z-index: 1;
+          }
         }
       }
       h6 {
         color: $white-color;
         font-size: 26px;
         margin-bottom: 6px;
+        position: relative;
+        z-index: 1;
+        a{
+          text-decoration: none;
+          color: $white-color;
+        }
       }
       small {
-        color: rgba(255, 255, 255, 0.6);
+         color: rgba(255, 255, 255, 0.6);
         font-size: 16px;
+       
       }
     } 
   }
