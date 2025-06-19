@@ -10,8 +10,8 @@ footer {
     @media screen and (max-width:991px) {
       padding: 40px 0;
     }
-    
     form {
+      font-family: 'Sora' !important;
       margin: 50px 0 50px;
       .form-grid {
         display: grid;
@@ -31,6 +31,7 @@ footer {
         .attachment-wrapper,
         .checkbox-div,
         .submit-btn-div {
+          font-family: 'Sora' !important;
           grid-column: span 2;
           @media screen and (max-width:767px) {
             grid-column: span 1;
@@ -38,16 +39,17 @@ footer {
         }
         .select-wrapper {
           position: relative;
-          max-width: 140px;
+          max-width: fit-content;
+          width: 100%;
           #timezone {
-          max-width: 140px;
+          max-width: fit-content;
           height: 44px;
           background-color: transparent;
           color: $white-color;
           border: none;
           border-bottom: 1px solid #ffffff80;
           border-radius: 0;
-          padding: 8px 12px;
+          padding: 8px 12px 0 0;
           appearance: none;
           -webkit-appearance: none;
           -moz-appearance: none;
@@ -66,7 +68,7 @@ footer {
             content: '';
             position: absolute;
             right: 10px;
-            top: 50%;
+            top: 61%;
             transform: translateY(-50%);
             width: 12px;
             height: 7px;
@@ -77,6 +79,7 @@ footer {
           }
         }
         .attachment-wrapper {
+          font-family: 'Sora' !important;
           display: flex;
           flex-direction: column;
           .custom-upload {
@@ -115,16 +118,43 @@ footer {
           }
         }
         .form-label {
+           font-family: 'Sora' !important;
           color: #ffffff80 $i;
           font-size: 14px;
           margin-bottom: 8px;
         }
+        .input-prefix-wrapper {
+            position: relative;
+            width: 100%;
+          }
+          .input-prefix-wrapper .prefix-text {
+            position: absolute;
+            left: 12px;
+            top: 61%;
+            transform: translateY(-50%);
+            color: #ffffffb3;
+            font-size: 14px;
+            pointer-events: none;
+          }
+          .input-prefix-wrapper input {
+            padding-left: 48px !important; 
+          }
+          .form-floating > .form-control,
+          .form-floating > .form-select {
+              height: calc(3rem + 2px) !important;
+              line-height: 1.25;
+              padding-top: 10px;
+          }
+          .form-floating > #description{
+            padding-top: 20px !important;
+          }
         .form-floating {
           label {
+             font-family: 'Sora' !important;
             color: #ffffff80 $i;
             padding-left: 0;
             font-size: 14px;
-            padding: 19px 0;
+            padding: 12px 0 0;
             margin-bottom: 0;
             transition: padding-top 0.4s ease;
           }
@@ -138,7 +168,8 @@ footer {
         }
         .form-control,
         .form-select {
-          padding: 19px 0;
+           font-family: 'Sora' !important;
+          padding: 12px 0 0;
           color: $white-color;
           border: none $i;
           border-bottom: 1px solid #ffffff80 $i;
@@ -155,6 +186,9 @@ footer {
           &::placeholder {
             color: #ffffff80;
           }
+        }
+        .form-select {
+          padding: 19px 0 ;
         }
         .form-check-input{
           height: 26px;
@@ -173,8 +207,8 @@ footer {
                 .form-floating>.form-control:not(:placeholder-shown)~label,
                 .form-floating>.form-select~label {
                   opacity: 0.65;
-                  transform: scale(1) translateY(-0.5rem) translateX(0.15rem) !important;
-                  -webkit-transform: scale(1) translateY(-0.5rem) translateX(0.15rem) !important;
+                  transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
+                  -webkit-transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
                 }
 
         .form-floating > textarea.form-control:not(:placeholder-shown) ~ label {
@@ -206,10 +240,11 @@ footer {
               border: none;
               width: 100%;
               font-size: 16px;
-              padding: 19px auto;
+              padding: 19px 0 ;
               border-radius: 4px;
               transition: opacity 0.3s;
               font-weight: 500;
+              line-height: normal;
               &:hover {
                 opacity: 0.9;
                 transform: $transition-animate;
@@ -252,7 +287,6 @@ footer {
           width: 100% !important;
         }
       } 
-
     .footer-bottom-bar.container{
        padding: 0;
     }
@@ -264,7 +298,7 @@ footer {
         width: 100%;
       }
       .certification-logo {
-        padding: 70px 0 86px;
+        padding: 70px 0 70px;
         @media screen and (max-width:1399px) {
             padding: 64px 0 64px;
           }
@@ -281,11 +315,9 @@ footer {
           width: 100%;
           overflow: hidden;
         }
-
         .swiper-wrapper {
-          transition-timing-function: linear !important; /* core fix: linear scroll */
+          transition-timing-function: linear !important; 
         }
-
         .swiper-slide {
           width: auto; 
           display: flex;
@@ -296,7 +328,6 @@ footer {
           filter: grayscale(1);
         }
       }
-       
       .copyright-social {
         display: flex;
         padding: 39px 0;
@@ -337,3 +368,6 @@ footer {
     }
   }
 }
+
+
+

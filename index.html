@@ -541,25 +541,24 @@
               <label for="email">Business Email Address*</label>
             </div>
           </div>
-
-          <div class="">
+          
+          <div>
             <label class="form-label">Time Zone</label>
-            <div class="input-group gap-3">
+            <div class="input-group gap-3 d-flex flex-nowrap">
               <div class="select-wrapper">
-                <select class="form-select" id="timezone">
-                  <option value="IN" selected>IN</option>
-                  <option value="US">US</option>
-                  <option value="GB">UK</option>
-                  <option value="AU">AU</option>
-                </select>
+                <select class="form-select" id="timezone"></select>
               </div>
-              <input type="text" class="form-control" placeholder="Country Code" aria-label="Country Code">
+              <div class="input-prefix-wrapper">
+                <span class="prefix-text" id="prefixDisplay">+91</span>
+                <input autocomplete="off" type="text" id="countryCode" class="form-control" placeholder="" aria-label="Phone Number" />
+              </div>
             </div>
           </div>
 
+
           <div class=" d-flex align-items-end">
             <div class="form-floating w-100">
-              <input type="text" class="form-control" id="company" placeholder=" " required />
+              <input  type="text" class="form-control" id="company" placeholder=" " required />
               <label for="company">Company Name*</label>
             </div>
           </div>
