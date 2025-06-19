@@ -1,3 +1,54 @@
+//hero-section
+.hero-section{
+    padding:157px 0;
+    position: relative;
+    z-index: 1;
+     background-image: url("../images/hero-background.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+     @media (max-width:1799px) {
+            padding:140px 0;
+        }
+
+        @media (max-width:1366px) {
+            padding:120px 0;
+        }
+
+          @media (max-width:1199px) {
+            padding:100px 0;
+        }
+
+          @media (max-width:991px) {
+            padding:80px 0;
+        }
+
+          @media (max-width:767px) {
+            padding:60px 0;
+        }
+    &::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(96deg, #b00000 0%, #e0005f 100%);
+        display: block;
+        z-index: -1;
+       mix-blend-mode: overlay;
+    }
+
+   
+
+    .cta-btns{
+        .meering-btn{
+            background-color: $white-color;
+            color: $primary-color;
+            margin-right: 22px;
+        }
+    }
+}
+
 // Service Section
 .service-card {
     padding: 30px 0 10px;
