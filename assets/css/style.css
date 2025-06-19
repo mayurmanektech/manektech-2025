@@ -13116,7 +13116,7 @@ footer .container form .form-grid .select-wrapper #timezone {
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5019607843);
   border-radius: 0;
-  padding: 8px 12px 0;
+  padding: 8px 12px 0 0;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
