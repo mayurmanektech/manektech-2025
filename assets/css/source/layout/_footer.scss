@@ -12,6 +12,7 @@ footer {
     }
     
     form {
+     
       margin: 50px 0 50px;
       .form-grid {
         display: grid;
@@ -31,6 +32,7 @@ footer {
         .attachment-wrapper,
         .checkbox-div,
         .submit-btn-div {
+          font-family: 'Sora' !important;
           grid-column: span 2;
           @media screen and (max-width:767px) {
             grid-column: span 1;
@@ -77,6 +79,7 @@ footer {
           }
         }
         .attachment-wrapper {
+          font-family: 'Sora' !important;
           display: flex;
           flex-direction: column;
           .custom-upload {
@@ -115,12 +118,14 @@ footer {
           }
         }
         .form-label {
+           font-family: 'Sora' !important;
           color: #ffffff80 $i;
           font-size: 14px;
           margin-bottom: 8px;
         }
         .form-floating {
           label {
+             font-family: 'Sora' !important;
             color: #ffffff80 $i;
             padding-left: 0;
             font-size: 14px;
@@ -138,6 +143,7 @@ footer {
         }
         .form-control,
         .form-select {
+           font-family: 'Sora' !important;
           padding: 19px 0;
           color: $white-color;
           border: none $i;
@@ -264,7 +270,7 @@ footer {
         width: 100%;
       }
       .certification-logo {
-        padding: 70px 0 86px;
+        padding: 70px 0 70px;
         @media screen and (max-width:1399px) {
             padding: 64px 0 64px;
           }
