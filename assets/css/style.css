@@ -13543,6 +13543,28 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link {
     gap: 0px;
   }
 }
+footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li a {
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.6s ease, -webkit-filter 0.4s ease;
+  transition: -webkit-transform 0.6s ease, -webkit-filter 0.4s ease;
+  transition: transform 0.6s ease, filter 0.4s ease;
+  transition: transform 0.6s ease, filter 0.4s ease, -webkit-transform 0.6s ease, -webkit-filter 0.4s ease;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li a:hover {
+  -webkit-transform: scale(1.1) rotateY(360deg);
+          transform: scale(1.1) rotateY(360deg);
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}
+footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li a img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
 
 .service-card {
   padding: 30px 0 10px;

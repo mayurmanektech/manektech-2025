@@ -363,6 +363,24 @@ footer {
             gap: 0px;
           }
           list-style: none;
+          li{
+           a {
+      display: inline-block;
+      transition: transform 0.6s ease, filter 0.4s ease;
+      transform-style: preserve-3d;
+
+      &:hover {
+        transform: scale(1.1) rotateY(360deg);
+        filter: brightness(1.2);
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        backface-visibility: hidden;
+      }
+          }
+        }
         }
       }
     }
