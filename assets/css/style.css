@@ -13056,6 +13056,7 @@ footer .container {
   }
 }
 footer .container form {
+  font-family: "Sora" !important;
   margin: 50px 0 50px;
 }
 footer .container form .form-grid {
@@ -13100,17 +13101,22 @@ footer .container form .form-grid .submit-btn-div {
 }
 footer .container form .form-grid .select-wrapper {
   position: relative;
-  max-width: 140px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  width: 100%;
 }
 footer .container form .form-grid .select-wrapper #timezone {
-  max-width: 140px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   height: 44px;
   background-color: transparent;
   color: #ffffff;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5019607843);
   border-radius: 0;
-  padding: 8px 12px;
+  padding: 8px 12px 0;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -13129,7 +13135,7 @@ footer .container form .form-grid .select-wrapper::after {
   content: "";
   position: absolute;
   right: 10px;
-  top: 50%;
+  top: 61%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 12px;
@@ -13193,11 +13199,38 @@ footer .container form .form-grid .form-label {
   font-size: 14px;
   margin-bottom: 8px;
 }
+footer .container form .form-grid .input-prefix-wrapper {
+  position: relative;
+  width: 100%;
+}
+footer .container form .form-grid .input-prefix-wrapper .prefix-text {
+  position: absolute;
+  left: 12px;
+  top: 61%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7019607843);
+  font-size: 14px;
+  pointer-events: none;
+}
+footer .container form .form-grid .input-prefix-wrapper input {
+  padding-left: 48px !important;
+}
+footer .container form .form-grid .form-floating > .form-control,
+footer .container form .form-grid .form-floating > .form-select {
+  height: calc(3rem + 2px) !important;
+  line-height: 1.25;
+  padding-top: 10px;
+}
+footer .container form .form-grid .form-floating > #description {
+  padding-top: 20px !important;
+}
 footer .container form .form-grid .form-floating label {
+  font-family: "Sora" !important;
   color: rgba(255, 255, 255, 0.5019607843) !important;
   padding-left: 0;
   font-size: 14px;
-  padding: 19px 0;
+  padding: 12px 0 0;
   margin-bottom: 0;
   -webkit-transition: padding-top 0.4s ease;
   transition: padding-top 0.4s ease;
@@ -13230,7 +13263,7 @@ footer .container form .form-grid .form-floating > .form-control:not(:placeholde
 footer .container form .form-grid .form-control,
 footer .container form .form-grid .form-select {
   font-family: "Sora" !important;
-  padding: 19px 0;
+  padding: 12px 0 0;
   color: #ffffff;
   border: none !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5019607843) !important;
@@ -13264,6 +13297,9 @@ footer .container form .form-grid .form-control::placeholder,
 footer .container form .form-grid .form-select::placeholder {
   color: rgba(255, 255, 255, 0.5019607843);
 }
+footer .container form .form-grid .form-select {
+  padding: 19px 0;
+}
 footer .container form .form-grid .form-check-input {
   height: 26px;
   width: 26px;
@@ -13279,20 +13315,20 @@ footer .container form .form-grid .form-check-input:checked {
 }
 footer .container form .form-grid .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
   opacity: 0.65;
-  transform: scale(1) translateY(-0.5rem) translateX(0.15rem) !important;
-  -webkit-transform: scale(1) translateY(-0.5rem) translateX(0.15rem) !important;
+  transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
+  -webkit-transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
 }
 footer .container form .form-grid .form-floating > .form-control:not(:-ms-input-placeholder) ~ label {
   opacity: 0.65;
-  transform: scale(1) translateY(-0.5rem) translateX(0.15rem) !important;
-  -webkit-transform: scale(1) translateY(-0.5rem) translateX(0.15rem) !important;
+  transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
+  -webkit-transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
 }
 footer .container form .form-grid .form-floating > .form-control:focus ~ label,
 footer .container form .form-grid .form-floating > .form-control:not(:placeholder-shown) ~ label,
 footer .container form .form-grid .form-floating > .form-select ~ label {
   opacity: 0.65;
-  transform: scale(1) translateY(-0.5rem) translateX(0.15rem) !important;
-  -webkit-transform: scale(1) translateY(-0.5rem) translateX(0.15rem) !important;
+  transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
+  -webkit-transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
 }
 footer .container form .form-grid .form-floating > textarea.form-control:not(:-moz-placeholder-shown) ~ label {
   padding-top: 0 !important;
@@ -13333,11 +13369,12 @@ footer .container form .form-grid .submit-btn-div .btn-submit {
   border: none;
   width: 100%;
   font-size: 16px;
-  padding: 19px auto;
+  padding: 19px 0;
   border-radius: 4px;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   font-weight: 500;
+  line-height: normal;
 }
 footer .container form .form-grid .submit-btn-div .btn-submit:hover {
   opacity: 0.9;
@@ -13425,7 +13462,7 @@ footer .footer-bottom-main .footer-bottom-bar .certification-logo .certification
 }
 footer .footer-bottom-main .footer-bottom-bar .certification-logo .swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
-          transition-timing-function: linear !important; /* core fix: linear scroll */
+          transition-timing-function: linear !important;
 }
 footer .footer-bottom-main .footer-bottom-bar .certification-logo .swiper-slide {
   width: auto;
