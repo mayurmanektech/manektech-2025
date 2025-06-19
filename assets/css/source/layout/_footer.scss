@@ -88,6 +88,8 @@ footer {
             padding: 10px 0;
             border-radius: 4px;
             position: relative;
+            row-gap: 10px;
+            flex-wrap: wrap;
             .upload-btn {
                font-family: 'Sora' !important;
               background-color: $secondary-dark ;
@@ -288,17 +290,17 @@ footer {
             z-index: 0;
             transition: height 0.4s ease;
           }
-        &:hover{
-          padding-left: 20px;
-                &::before {
-              height: 100%;
+          &:hover{
+            padding-left: 20px;
+                  &::before {
+                height: 100%;
+              }
+            small{
+              color: $white-color;
+              position: relative;
+              z-index: 1;
             }
-          small{
-            color: $white-color;
-            position: relative;
-            z-index: 1;
           }
-        }
       }
       h6 {
         color: $white-color;

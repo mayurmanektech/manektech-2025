@@ -13165,6 +13165,9 @@ footer .container form .form-grid .attachment-wrapper .custom-upload {
   padding: 10px 0;
   border-radius: 4px;
   position: relative;
+  row-gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 footer .container form .form-grid .attachment-wrapper .custom-upload .upload-btn {
   font-family: "Sora" !important;
@@ -13997,4 +14000,8 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   border-bottom: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.blog-section {
+  background: linear-gradient(88deg, rgba(245, 207, 208, 0.6) 0%, rgba(255, 217, 233, 0.6) 100%);
 }
