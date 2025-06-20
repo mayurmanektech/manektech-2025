@@ -598,8 +598,21 @@
         font-size: 18px;
         line-height: 1.65;
         letter-spacing: 1px;
+        margin-bottom: 40px;
+        font-weight: 300;
+        opacity: 0.9;
     }
     .about-info-wrapper {
         padding-right: 58px;
+        .count {
+            font-size: 36px;
+            line-height: 1.4;
+            margin-bottom: 0;
+            font-weight: 300;
+        }
+        .count-name {
+            font-size: 18px;
+            font-weight: 300;
+        }
     }
 }
