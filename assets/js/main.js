@@ -178,7 +178,7 @@ function setCountryCodePrefix(prefix) {
   currentPrefix = prefix;
   prefixDisplay.textContent = currentPrefix;
   input.value = ''; // Clear user input on change (optional)
-  input.focus();
+  // input.focus();
 }
 
 // Load dropdown without dial codes in text

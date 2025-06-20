@@ -87,8 +87,9 @@
     }
     p {
         line-height: 1.6;
-        letter-spacing: 0.6px;
+        letter-spacing: 1px;
         opacity: 0.9;
+        font-weight: 300;
     }
     &:before {
         content: '';
@@ -125,14 +126,16 @@
     li {
         padding-left: 12px;
         position: relative;
+        font-size: 18px;
         line-height: 1.6;
+        font-weight: 300;
         padding-bottom: 2px;
-        letter-spacing: 0.6px;
+        letter-spacing: 1px;
         &:before {
             content: '';
             position: absolute;
             left: 0;
-            top: 8px;
+            top: 12px;
             width: 4px;
             height: 4px;
             border-radius: 4px;
@@ -173,8 +176,14 @@
     background: linear-gradient(-26deg, #F5F5F5 0%, #fff 100%);
 }
 .industry-box-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media screen and (max-width:991px) {
+        grid-template-columns: 1fr 1fr;
+    }
+     @media screen and (max-width:767px) {
+        grid-template-columns: 1fr;
+    }
     border: 1px solid #E8E8E8;
     border-bottom: 0;
     border-right: 0;
@@ -182,7 +191,7 @@
 }
 .industry-box {
     position: relative;
-    width: 33.33%;
+    width: 100%;
     border-right: 1px solid #E8E8E8;
     border-bottom: 1px solid #E8E8E8;
     &:before {
@@ -426,17 +435,190 @@
     .blog-info{
         .tech-title{
             font-size: 20px;
-            color: $primary-dark;
+            color: #1D1D1D80;
         }
         .desc{
             font-size: 26px;
+            line-height: 41px;
         }
         .desc-details{
             font-size: 18px;
+            line-height: 31px;
         }
         .time-date{
             font-size: 16px;
+             color: #1D1D1D80;
+        }
+        .profile-box {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    .profile-avatar {
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 50%;
+                        img {
+                            max-width: 48px;
+                            max-height: 48px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                .profile-info {
+                    .title {
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: normal;
+                        margin-bottom: 0;
+                    }
+                    .designation {
+                        font-size: 18px;
+                        color: #1D1D1D80;
+                        margin-bottom: 0;
+                    }
         }
     }
+}
+// .why-us-list {
+//     padding-left: 128px;
+// }
+// .why-us-item {
+//     margin-bottom: 40px;
+//     &:last-child {
+//         margin-bottom: 0;
+//     }
+//     .title {
+//         font-size: 24px;
+//         margin-bottom: 5px;
+//     }
+//     .desc {
+//         font-size: 18px;
+//         line-height: 1.6;
+//         margin-bottom: 0;
+//     }
+// }
 
+
+
+// why-choose-section
+
+.why-choose-section{
+    .service-left-space{
+        @media screen and (min-width:992px) {
+            padding-left: 152px;
+        }
+        .services {
+            h3 {
+                font-size: 24px;
+                font-weight: 500;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+    .top-spacing-location{
+        margin-top: 60px;
+        @media screen and (min-width:992px) {
+            margin-top: 120px;
+        }
+        .location{
+            h3 {
+                font-size: 24px;
+                font-weight: 500;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+        // svg hover effect 
+        .map-dot {
+            fill: #D81F28;
+            transform-origin: center;
+            transform-box: fill-box;
+            transition: transform 0.3s ease;
+        }
+        .map-dot.pulse {
+            animation: pulse-zoom 1.2s infinite;
+        }
+        .location-item[data-location="usa"]:hover ~ svg .map-dot[data-location="usa"],
+        .location-item[data-location="uk"]:hover ~ svg .map-dot[data-location="uk"],
+        .location-item[data-location="germany"]:hover ~ svg .map-dot[data-location="germany"],
+        .location-item[data-location="india"]:hover ~ svg .map-dot[data-location="india"],
+        .location-item[data-location="southafrica"]:hover ~ svg .map-dot[data-location="southafrica"] {
+            animation: pulse-zoom 1.2s infinite;
+        }
+        .map-dot {
+            fill: #D81F28;
+            transform-origin: center;
+            transform-box: fill-box;
+        }
+
+        @keyframes pulse-zoom {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(7);
+                opacity: 0.6;
+            }
+        }
+        .map-dot.pulse {
+            animation: pulse-zoom 1.5s infinite;
+        }
+    }
+}
+
+.inner-banner {
+    position: relative;
+    overflow: hidden;
+    padding: 132px 0;
+    .bg-img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: linear-gradient(-90deg, #00000080 0%, #c2083af2 60%);
+        }
+    }
+    .inner-banner-wrapper {
+        position: relative;
+        z-index: 1;
+    }
+    h1 {
+        font-size: 48px;
+        line-height: 1.3;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        color: $white-color;
+    }
+}
+
+.about-section {
+    .section-title {
+        margin-bottom: 37px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 1.65;
+        letter-spacing: 1px;
+    }
+    .about-info-wrapper {
+        padding-right: 58px;
+    }
 }

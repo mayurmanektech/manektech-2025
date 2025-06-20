@@ -68,7 +68,7 @@ p{
     }
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{ 
-    font-weight: 700;
+    font-weight: 600;
     font-family: $heading-font-family;
 }
 
@@ -231,7 +231,7 @@ label{
     }
 }
 select{
-    background: $light-grey url(../images/select-arrow.svg) no-repeat center right 20px !important;
+    // background: $light-grey url(../images/select-arrow.svg) no-repeat center right 20px !important;
     appearance: none;
     cursor: pointer;
     background-size: 14px !important;
