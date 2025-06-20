@@ -226,3 +226,19 @@ select.addEventListener("change", function () {
   const code = selected.getAttribute("data-code");
   setCountryCodePrefix(code);
 });
+
+// map location hover effect js
+
+  document.querySelectorAll('.location-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      const loc = item.dataset.location;
+      const dot = document.querySelector(`.map-dot[data-location="${loc}"]`);
+      dot?.classList.add('pulse');
+    });
+
+    item.addEventListener('mouseleave', () => {
+      const loc = item.dataset.location;
+      const dot = document.querySelector(`.map-dot[data-location="${loc}"]`);
+      dot?.classList.remove('pulse');
+    });
+  });
