@@ -58,6 +58,16 @@ header{
 body{
     &.scrolled{
       padding-top: 90px;
+
+      @media (max-width:1799px) {
+         padding-top: 73px;
+
+      }
+
+       @media (max-width:1199px) {
+         padding-top: 67px;
+
+      }
      header{
        position: fixed;
       top: 0;

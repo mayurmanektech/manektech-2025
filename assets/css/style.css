@@ -13112,6 +13112,16 @@ header .container .menu-toggle svg {
 body.scrolled {
   padding-top: 90px;
 }
+@media (max-width: 1799px) {
+  body.scrolled {
+    padding-top: 73px;
+  }
+}
+@media (max-width: 1199px) {
+  body.scrolled {
+    padding-top: 67px;
+  }
+}
 body.scrolled header {
   position: fixed;
   top: 0;
