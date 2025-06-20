@@ -118,12 +118,12 @@ function slideDown(element) {
 
 
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const track = document.querySelector('.certification-logo-track');
-    track.innerHTML += track.innerHTML;
-    track.innerHTML += track.innerHTML;
-    track.innerHTML += track.innerHTML;
-  });
+  // document.addEventListener('DOMContentLoaded', function () {
+  //   const track = document.querySelector('.certification-logo-track');
+  //   track.innerHTML += track.innerHTML;
+  //   track.innerHTML += track.innerHTML;
+  //   track.innerHTML += track.innerHTML;
+  // });
 
 
 
@@ -208,7 +208,7 @@ function setCountryCodePrefix(prefix) {
   currentPrefix = prefix;
   prefixDisplay.textContent = currentPrefix;
   input.value = ''; // Clear user input on change (optional)
-  input.focus();
+  // input.focus();
 }
 
 // Load dropdown without dial codes in text
