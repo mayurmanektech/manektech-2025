@@ -10,14 +10,8 @@ footer {
     @media screen and (max-width:991px) {
       padding: 40px 0;
     }
-    .section-title {
-      h2 {
-        font-weight: 500;
-        text-transform: capitalize;
-        color: $white-color;
-      }
-    }
     form {
+      font-family: 'Sora' !important;
       margin: 50px 0 50px;
       .form-grid {
         display: grid;
@@ -37,6 +31,7 @@ footer {
         .attachment-wrapper,
         .checkbox-div,
         .submit-btn-div {
+          font-family: 'Sora' !important;
           grid-column: span 2;
           @media screen and (max-width:767px) {
             grid-column: span 1;
@@ -44,16 +39,17 @@ footer {
         }
         .select-wrapper {
           position: relative;
-          max-width: 140px;
+          max-width: fit-content;
+          width: 100%;
           #timezone {
-          max-width: 140px;
+          max-width: fit-content;
           height: 44px;
           background-color: transparent;
           color: $white-color;
           border: none;
           border-bottom: 1px solid #ffffff80;
           border-radius: 0;
-          padding: 8px 12px;
+          padding: 8px 12px 0 0;
           appearance: none;
           -webkit-appearance: none;
           -moz-appearance: none;
@@ -72,7 +68,7 @@ footer {
             content: '';
             position: absolute;
             right: 10px;
-            top: 50%;
+            top: 61%;
             transform: translateY(-50%);
             width: 12px;
             height: 7px;
@@ -83,6 +79,7 @@ footer {
           }
         }
         .attachment-wrapper {
+          font-family: 'Sora' !important;
           display: flex;
           flex-direction: column;
           .custom-upload {
@@ -91,8 +88,11 @@ footer {
             padding: 10px 0;
             border-radius: 4px;
             position: relative;
+            row-gap: 10px;
+            flex-wrap: wrap;
             .upload-btn {
-              background-color: transparent;
+               font-family: 'Sora' !important;
+              background-color: $secondary-dark ;
               border: 1px solid #ffffff80;
               margin-right: 12px;
               font-size: 14px;
@@ -100,11 +100,12 @@ footer {
               cursor: pointer;
               max-width: 179px;
               width: 100%;
-              padding: 15px 0;
+              padding: 15px 6px;
               color: #ffffff80;
               outline: none;
             }
             .upload-text {
+               font-family: 'Sora' !important;
               color: #ffffff40;
               font-size: 14px;
               white-space: nowrap;
@@ -121,16 +122,44 @@ footer {
           }
         }
         .form-label {
+           font-family: 'Sora' !important;
           color: #ffffff80 $i;
           font-size: 14px;
           margin-bottom: 8px;
         }
+        .input-prefix-wrapper {
+            position: relative;
+            width: 100%;
+          }
+          .input-prefix-wrapper .prefix-text {
+            position: absolute;
+            left: 12px;
+            top: 61%;
+            transform: translateY(-50%);
+            color: #ffffffb3;
+             font-family: 'Sora' !important;
+            font-size: 14px;
+            pointer-events: none;
+          }
+          .input-prefix-wrapper input {
+            padding-left: 48px !important; 
+          }
+          .form-floating > .form-control,
+          .form-floating > .form-select {
+              height: calc(3rem + 2px) !important;
+              line-height: 1.25;
+              padding-top: 10px;
+          }
+          .form-floating > #description{
+            padding-top: 20px !important;
+          }
         .form-floating {
           label {
+             font-family: 'Sora' !important;
             color: #ffffff80 $i;
             padding-left: 0;
             font-size: 14px;
-            padding: 19px 0;
+            padding: 12px 0 0;
             margin-bottom: 0;
             transition: padding-top 0.4s ease;
           }
@@ -144,7 +173,8 @@ footer {
         }
         .form-control,
         .form-select {
-          padding: 19px 0;
+           font-family: 'Sora' !important;
+          padding: 12px 0 0;
           color: $white-color;
           border: none $i;
           border-bottom: 1px solid #ffffff80 $i;
@@ -162,16 +192,33 @@ footer {
             color: #ffffff80;
           }
         }
+        .form-select {
+          padding: 19px 0 ;
+        }
         .form-check-input{
           height: 26px;
           width: 26px;
           border-radius: 3px;
           margin-right: 18px $i;
+          background-color: $secondary-dark !important;
+          border: 1px solid #ffffff80 !important;
+          border-radius: 3px !important;
         }
         .form-check-input:checked {
           background-color: #d81f28;
           border-color: #d81f28;
         }
+        .form-check-input:focus{
+          box-shadow: none !important;
+        }
+                .form-floating>.form-control:focus~label,
+                .form-floating>.form-control:not(:placeholder-shown)~label,
+                .form-floating>.form-select~label {
+                  opacity: 0.65;
+                  transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
+                  -webkit-transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
+                }
+
         .form-floating > textarea.form-control:not(:placeholder-shown) ~ label {
           padding-top: 0 !important;
           transition: padding-top 0.3s ease;
@@ -196,15 +243,17 @@ footer {
         }
         .submit-btn-div {
             .btn-submit {
+               font-family: 'Sora' !important;
               background: linear-gradient(90.08deg, #D81F28 -0.75%, #E0005F 100.45%);
               color: $white-color;
               border: none;
               width: 100%;
-              font-size: 14px;
-              padding: 19px auto;
+              font-size: 16px;
+              padding: 19px 0 ;
               border-radius: 4px;
               transition: opacity 0.3s;
               font-weight: 500;
+              line-height: normal;
               &:hover {
                 opacity: 0.9;
                 transform: $transition-animate;
@@ -222,20 +271,52 @@ footer {
         gap: 20px;
       }
       >div {
+         position: relative;
+        overflow: hidden; 
         border-top: 1px solid #ffffff26;
         padding-top: 30px;
+        transition: padding-left 0.4s;
         @media screen and (max-width:991px) {
           padding-top: 20px;
         }
+         &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 0%;
+            width: 100%;
+            background: linear-gradient(180deg, #D81F28 0%, #E0005F 100%);
+            z-index: 0;
+            transition: height 0.4s ease;
+          }
+          &:hover{
+            padding-left: 20px;
+                  &::before {
+                height: 100%;
+              }
+            small{
+              color: $white-color;
+              position: relative;
+              z-index: 1;
+            }
+          }
       }
       h6 {
         color: $white-color;
         font-size: 26px;
         margin-bottom: 6px;
+        position: relative;
+        z-index: 1;
+        a{
+          text-decoration: none;
+          color: $white-color;
+        }
       }
       small {
-        color: rgba(255, 255, 255, 0.6);
+         color: rgba(255, 255, 255, 0.6);
         font-size: 16px;
+       
       }
     } 
   }
@@ -247,7 +328,6 @@ footer {
           width: 100% !important;
         }
       } 
-
     .footer-bottom-bar.container{
        padding: 0;
     }
@@ -255,11 +335,11 @@ footer {
       width: 100%;
        .certification-logo-wrapper {
         margin: 0 auto;
-      overflow: hidden;
-      width: 100%;
-    }
+        overflow: hidden;
+        width: 100%;
+      }
       .certification-logo {
-        padding: 70px 0 86px;
+        padding: 70px 0 70px;
         @media screen and (max-width:1399px) {
             padding: 64px 0 64px;
           }
@@ -272,35 +352,23 @@ footer {
         @media screen and (max-width:575px) {
           padding: 24px 0 24px;
         }
-          display: flex;
+        .certification-logo.swiper-container {
           width: 100%;
+          overflow: hidden;
+        }
+        .swiper-wrapper {
+          transition-timing-function: linear !important; 
+        }
+        .swiper-slide {
+          width: auto; 
+          display: flex;
+          justify-content: center;
           align-items: center;
-          position: relative;
-          .certification-logo-track {
-            display: flex;
-            width: max-content;
-            animation: scrollLoop 60s linear infinite; 
-            gap: 81px;
-            @media screen and (max-width:1399px) {
-               gap: 64px;
-            }
-             @media screen and (max-width:767px) {
-               gap: 36px;
-            }
-         }
+        }     
         img {
           filter: grayscale(1);
-          flex-shrink: 0;
         }
       }
-        @keyframes scrollLoop {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
       .copyright-social {
         display: flex;
         padding: 39px 0;
@@ -324,6 +392,7 @@ footer {
         }
         .copyright-text {
           font-size: 14px;
+          color: $white-color;
         }
         .social-link {
           padding-inline-start: 0 ;
@@ -335,8 +404,29 @@ footer {
             gap: 0px;
           }
           list-style: none;
+          li{
+           a {
+      display: inline-block;
+      transition: transform 0.6s ease, filter 0.4s ease;
+      transform-style: preserve-3d;
+
+      &:hover {
+        transform: scale(1.1) rotateY(360deg);
+        filter: brightness(1.2);
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        backface-visibility: hidden;
+      }
+          }
+        }
         }
       }
     }
   }
 }
+
+
+

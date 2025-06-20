@@ -69,7 +69,6 @@ p{
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{ 
     font-weight: 700;
-    color: $secondary-font-color;
     font-family: $heading-font-family;
 }
 
@@ -79,6 +78,7 @@ h1,.h1{
     line-height: 1.34;
     margin: 0 0 30px;
     letter-spacing: 0.64px;
+    color: $white-color;
     @media only screen and (max-width: 1799px) {
         font-size: 60px;
         letter-spacing: 0.55px;

@@ -278,10 +278,12 @@ body{
 }
 
 /* Sub-menus and sub-menu-inner ul default hidden */
-.sub-menu,
+@media (max-width:1199px) {
+    .sub-menu,
 .sub-menu-inner ul {
   display: none;
   overflow: hidden;
+}
 }
 
 /* Optional: ease-in transition styles for smoother look */

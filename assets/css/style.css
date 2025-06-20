@@ -12522,7 +12522,6 @@ p {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 700;
-  color: #ffffff;
   font-family: "Neue Haas Grotesk Display Pro", sans-serif;
 }
 
@@ -12532,6 +12531,7 @@ h1, .h1 {
   line-height: 1.34;
   margin: 0 0 30px;
   letter-spacing: 0.64px;
+  color: #ffffff;
 }
 @media only screen and (max-width: 1799px) {
   h1, .h1 {
@@ -13032,6 +13032,14 @@ textarea.form-control {
   font-style: italic;
   font-display: swap;
 }
+@font-face {
+  font-family: "Sora";
+  src: url("../fonts/Sora-Regular.eot");
+  src: url("../fonts/Sora-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Sora-Regular.woff2") format("woff2"), url("../fonts/Sora-Regular.woff") format("woff"), url("../fonts/Sora-Regular.ttf") format("truetype"), url("../fonts/Sora-Regular.svg#Sora-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13413,12 +13421,13 @@ body::after {
 }
 
 /* Sub-menus and sub-menu-inner ul default hidden */
-.sub-menu,
-.sub-menu-inner ul {
-  display: none;
-  overflow: hidden;
+@media (max-width: 1199px) {
+  .sub-menu,
+  .sub-menu-inner ul {
+    display: none;
+    overflow: hidden;
+  }
 }
-
 /* Optional: ease-in transition styles for smoother look */
 .sub-menu.open,
 .sub-menu-inner ul.open {
@@ -13441,12 +13450,8 @@ footer .container {
     padding: 40px 0;
   }
 }
-footer .container .section-title h2 {
-  font-weight: 500;
-  text-transform: capitalize;
-  color: #ffffff;
-}
 footer .container form {
+  font-family: "Sora" !important;
   margin: 50px 0 50px;
 }
 footer .container form .form-grid {
@@ -13476,6 +13481,7 @@ footer .container form .form-grid .description,
 footer .container form .form-grid .attachment-wrapper,
 footer .container form .form-grid .checkbox-div,
 footer .container form .form-grid .submit-btn-div {
+  font-family: "Sora" !important;
   -ms-grid-column-span: 2;
   grid-column: span 2;
 }
@@ -13490,17 +13496,22 @@ footer .container form .form-grid .submit-btn-div {
 }
 footer .container form .form-grid .select-wrapper {
   position: relative;
-  max-width: 140px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  width: 100%;
 }
 footer .container form .form-grid .select-wrapper #timezone {
-  max-width: 140px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   height: 44px;
   background-color: transparent;
   color: #ffffff;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5019607843);
   border-radius: 0;
-  padding: 8px 12px;
+  padding: 8px 12px 0 0;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -13519,7 +13530,7 @@ footer .container form .form-grid .select-wrapper::after {
   content: "";
   position: absolute;
   right: 10px;
-  top: 50%;
+  top: 61%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 12px;
@@ -13530,6 +13541,7 @@ footer .container form .form-grid .select-wrapper::after {
   pointer-events: none;
 }
 footer .container form .form-grid .attachment-wrapper {
+  font-family: "Sora" !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13548,9 +13560,13 @@ footer .container form .form-grid .attachment-wrapper .custom-upload {
   padding: 10px 0;
   border-radius: 4px;
   position: relative;
+  row-gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 footer .container form .form-grid .attachment-wrapper .custom-upload .upload-btn {
-  background-color: transparent;
+  font-family: "Sora" !important;
+  background-color: #242424;
   border: 1px solid rgba(255, 255, 255, 0.5019607843);
   margin-right: 12px;
   font-size: 14px;
@@ -13558,11 +13574,12 @@ footer .container form .form-grid .attachment-wrapper .custom-upload .upload-btn
   cursor: pointer;
   max-width: 179px;
   width: 100%;
-  padding: 15px 0;
+  padding: 15px 6px;
   color: rgba(255, 255, 255, 0.5019607843);
   outline: none;
 }
 footer .container form .form-grid .attachment-wrapper .custom-upload .upload-text {
+  font-family: "Sora" !important;
   color: rgba(255, 255, 255, 0.2509803922);
   font-size: 14px;
   white-space: nowrap;
@@ -13577,15 +13594,44 @@ footer .container form .form-grid .attachment-wrapper .custom-upload .file-input
   cursor: pointer;
 }
 footer .container form .form-grid .form-label {
+  font-family: "Sora" !important;
   color: rgba(255, 255, 255, 0.5019607843) !important;
   font-size: 14px;
   margin-bottom: 8px;
 }
+footer .container form .form-grid .input-prefix-wrapper {
+  position: relative;
+  width: 100%;
+}
+footer .container form .form-grid .input-prefix-wrapper .prefix-text {
+  position: absolute;
+  left: 12px;
+  top: 61%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7019607843);
+  font-family: "Sora" !important;
+  font-size: 14px;
+  pointer-events: none;
+}
+footer .container form .form-grid .input-prefix-wrapper input {
+  padding-left: 48px !important;
+}
+footer .container form .form-grid .form-floating > .form-control,
+footer .container form .form-grid .form-floating > .form-select {
+  height: calc(3rem + 2px) !important;
+  line-height: 1.25;
+  padding-top: 10px;
+}
+footer .container form .form-grid .form-floating > #description {
+  padding-top: 20px !important;
+}
 footer .container form .form-grid .form-floating label {
+  font-family: "Sora" !important;
   color: rgba(255, 255, 255, 0.5019607843) !important;
   padding-left: 0;
   font-size: 14px;
-  padding: 19px 0;
+  padding: 12px 0 0;
   margin-bottom: 0;
   -webkit-transition: padding-top 0.4s ease;
   transition: padding-top 0.4s ease;
@@ -13617,7 +13663,8 @@ footer .container form .form-grid .form-floating > .form-control:not(:placeholde
 }
 footer .container form .form-grid .form-control,
 footer .container form .form-grid .form-select {
-  padding: 19px 0;
+  font-family: "Sora" !important;
+  padding: 12px 0 0;
   color: #ffffff;
   border: none !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5019607843) !important;
@@ -13651,15 +13698,42 @@ footer .container form .form-grid .form-control::placeholder,
 footer .container form .form-grid .form-select::placeholder {
   color: rgba(255, 255, 255, 0.5019607843);
 }
+footer .container form .form-grid .form-select {
+  padding: 19px 0;
+}
 footer .container form .form-grid .form-check-input {
   height: 26px;
   width: 26px;
   border-radius: 3px;
   margin-right: 18px !important;
+  background-color: #242424 !important;
+  border: 1px solid rgba(255, 255, 255, 0.5019607843) !important;
+  border-radius: 3px !important;
 }
 footer .container form .form-grid .form-check-input:checked {
   background-color: #d81f28;
   border-color: #d81f28;
+}
+footer .container form .form-grid .form-check-input:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+footer .container form .form-grid .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
+  opacity: 0.65;
+  transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
+  -webkit-transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
+}
+footer .container form .form-grid .form-floating > .form-control:not(:-ms-input-placeholder) ~ label {
+  opacity: 0.65;
+  transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
+  -webkit-transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
+}
+footer .container form .form-grid .form-floating > .form-control:focus ~ label,
+footer .container form .form-grid .form-floating > .form-control:not(:placeholder-shown) ~ label,
+footer .container form .form-grid .form-floating > .form-select ~ label {
+  opacity: 0.65;
+  transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
+  -webkit-transform: scale(1) translateY(-0.5rem) translateX(0rem) !important;
 }
 footer .container form .form-grid .form-floating > textarea.form-control:not(:-moz-placeholder-shown) ~ label {
   padding-top: 0 !important;
@@ -13695,16 +13769,18 @@ footer .container form .form-grid .form-check-label a:hover {
   color: #ffffff;
 }
 footer .container form .form-grid .submit-btn-div .btn-submit {
+  font-family: "Sora" !important;
   background: linear-gradient(90.08deg, #D81F28 -0.75%, #E0005F 100.45%);
   color: #ffffff;
   border: none;
   width: 100%;
-  font-size: 14px;
-  padding: 19px auto;
+  font-size: 16px;
+  padding: 19px 0;
   border-radius: 4px;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   font-weight: 500;
+  line-height: normal;
 }
 footer .container form .form-grid .submit-btn-div .btn-submit:hover {
   opacity: 0.9;
@@ -13726,18 +13802,52 @@ footer .container .contact-info {
   }
 }
 footer .container .contact-info > div {
+  position: relative;
+  overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.1490196078);
   padding-top: 30px;
+  -webkit-transition: padding-left 0.4s;
+  transition: padding-left 0.4s;
 }
 @media screen and (max-width: 991px) {
   footer .container .contact-info > div {
     padding-top: 20px;
   }
 }
+footer .container .contact-info > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#D81F28), to(#E0005F));
+  background: linear-gradient(180deg, #D81F28 0%, #E0005F 100%);
+  z-index: 0;
+  -webkit-transition: height 0.4s ease;
+  transition: height 0.4s ease;
+}
+footer .container .contact-info > div:hover {
+  padding-left: 20px;
+}
+footer .container .contact-info > div:hover::before {
+  height: 100%;
+}
+footer .container .contact-info > div:hover small {
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
 footer .container .contact-info h6 {
   color: #ffffff;
   font-size: 26px;
   margin-bottom: 6px;
+  position: relative;
+  z-index: 1;
+}
+footer .container .contact-info h6 a {
+  text-decoration: none;
+  color: #ffffff;
 }
 footer .container .contact-info small {
   color: rgba(255, 255, 255, 0.6);
@@ -13764,15 +13874,7 @@ footer .footer-bottom-main .footer-bottom-bar .certification-logo-wrapper {
   width: 100%;
 }
 footer .footer-bottom-main .footer-bottom-bar .certification-logo {
-  padding: 70px 0 86px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
+  padding: 70px 0 70px;
 }
 @media screen and (max-width: 1399px) {
   footer .footer-bottom-main .footer-bottom-bar .certification-logo {
@@ -13794,52 +13896,29 @@ footer .footer-bottom-main .footer-bottom-bar .certification-logo {
     padding: 24px 0 24px;
   }
 }
-footer .footer-bottom-main .footer-bottom-bar .certification-logo .certification-logo-track {
+footer .footer-bottom-main .footer-bottom-bar .certification-logo .certification-logo.swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+footer .footer-bottom-main .footer-bottom-bar .certification-logo .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+          transition-timing-function: linear !important;
+}
+footer .footer-bottom-main .footer-bottom-bar .certification-logo .swiper-slide {
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  -webkit-animation: scrollLoop 60s linear infinite;
-          animation: scrollLoop 60s linear infinite;
-  gap: 81px;
-}
-@media screen and (max-width: 1399px) {
-  footer .footer-bottom-main .footer-bottom-bar .certification-logo .certification-logo-track {
-    gap: 64px;
-  }
-}
-@media screen and (max-width: 767px) {
-  footer .footer-bottom-main .footer-bottom-bar .certification-logo .certification-logo-track {
-    gap: 36px;
-  }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 footer .footer-bottom-main .footer-bottom-bar .certification-logo img {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-@-webkit-keyframes scrollLoop {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-}
-@keyframes scrollLoop {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
 }
 footer .footer-bottom-main .footer-bottom-bar .copyright-social {
   display: -webkit-box;
@@ -13884,6 +13963,7 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social {
 }
 footer .footer-bottom-main .footer-bottom-bar .copyright-social .copyright-text {
   font-size: 14px;
+  color: #ffffff;
 }
 footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link {
   -webkit-padding-start: 0;
@@ -13902,6 +13982,28 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link {
   footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link {
     gap: 0px;
   }
+}
+footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li a {
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.6s ease, -webkit-filter 0.4s ease;
+  transition: -webkit-transform 0.6s ease, -webkit-filter 0.4s ease;
+  transition: transform 0.6s ease, filter 0.4s ease;
+  transition: transform 0.6s ease, filter 0.4s ease, -webkit-transform 0.6s ease, -webkit-filter 0.4s ease;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li a:hover {
+  -webkit-transform: scale(1.1) rotateY(360deg);
+          transform: scale(1.1) rotateY(360deg);
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}
+footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li a img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .hero-section {
