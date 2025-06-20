@@ -164,7 +164,7 @@ h4,.h4{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 18px;
+      padding: 18px 40px;
     font-weight: 600;
     border: 1px solid transparent;
     border-radius: 3px;
@@ -178,15 +178,20 @@ h4,.h4{
         outline: none;
         box-shadow: none;
     }
+
+    @media (max-width:1199px) {
+         font-size: 14px;
+           padding: 12px 30px;
+    }
 }
 .primary-btn {
-    padding: 18px 60px;
+    padding: 18px 40px;
 }
 
 .secondary-btn{
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.15);
     background: rgba(255, 255, 255, 0.1);
-    padding: 18px 40px;
+  
     border: 1px solid $white-color;
 
 }

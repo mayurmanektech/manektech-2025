@@ -3,10 +3,7 @@
     padding:157px 0;
     position: relative;
     z-index: 1;
-     background-image: url("../images/hero-background.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-    
+ 
      @media (max-width:1799px) {
             padding:140px 0;
         }
@@ -38,13 +35,35 @@
        mix-blend-mode: overlay;
     }
 
+
+      &::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/hero-background.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: -2;
+        filter: blur(5px);
+    }
+
    
 
     .cta-btns{
+        gap: 22px;
+
+        @media (max-width:767px) {
+            gap: 15px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
         .meering-btn{
             background-color: $white-color;
             color: $primary-color;
-            margin-right: 22px;
+         
         }
     }
 }
