@@ -407,17 +407,47 @@
     .blog-info{
         .tech-title{
             font-size: 20px;
-            color: $primary-dark;
+            color: #1D1D1D80;
         }
         .desc{
             font-size: 26px;
+            line-height: 41px;
         }
         .desc-details{
             font-size: 18px;
+            line-height: 31px;
         }
         .time-date{
             font-size: 16px;
+             color: #1D1D1D80;
         }
-    }
-
+        .profile-box {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    .profile-avatar {
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 50%;
+                        img {
+                            max-width: 48px;
+                            max-height: 48px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                .profile-info {
+                    .title {
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: normal;
+                        margin-bottom: 0;
+                    }
+                    .designation {
+                        font-size: 18px;
+                        color: #1D1D1D80;
+                        margin-bottom: 0;
+                    }
+        }
+        }
 }

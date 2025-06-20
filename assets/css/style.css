@@ -14445,14 +14445,47 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
 }
 .blog-section .blog-info .tech-title {
   font-size: 20px;
-  color: #1d1d1d;
+  color: rgba(29, 29, 29, 0.5019607843);
 }
 .blog-section .blog-info .desc {
   font-size: 26px;
+  line-height: 41px;
 }
 .blog-section .blog-info .desc-details {
   font-size: 18px;
+  line-height: 31px;
 }
 .blog-section .blog-info .time-date {
   font-size: 16px;
+  color: rgba(29, 29, 29, 0.5019607843);
+}
+.blog-section .blog-info .profile-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+.blog-section .blog-info .profile-box .profile-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.blog-section .blog-info .profile-box .profile-avatar img {
+  max-width: 48px;
+  max-height: 48px;
+  border-radius: 50%;
+}
+.blog-section .blog-info .profile-info .title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 0;
+}
+.blog-section .blog-info .profile-info .designation {
+  font-size: 18px;
+  color: rgba(29, 29, 29, 0.5019607843);
+  margin-bottom: 0;
 }
