@@ -14005,3 +14005,16 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
 .blog-section {
   background: linear-gradient(88deg, rgba(245, 207, 208, 0.6) 0%, rgba(255, 217, 233, 0.6) 100%);
 }
+.blog-section .blog-info .tech-title {
+  font-size: 20px;
+  color: #1d1d1d;
+}
+.blog-section .blog-info .desc {
+  font-size: 26px;
+}
+.blog-section .blog-info .desc-details {
+  font-size: 18px;
+}
+.blog-section .blog-info .time-date {
+  font-size: 16px;
+}
