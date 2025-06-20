@@ -157,8 +157,14 @@
     background: linear-gradient(-26deg, #F5F5F5 0%, #fff 100%);
 }
 .industry-box-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media screen and (max-width:991px) {
+        grid-template-columns: 1fr 1fr;
+    }
+     @media screen and (max-width:767px) {
+        grid-template-columns: 1fr;
+    }
     border: 1px solid #E8E8E8;
     border-bottom: 0;
     border-right: 0;
@@ -166,7 +172,7 @@
 }
 .industry-box {
     position: relative;
-    width: 33.33%;
+    width: 100%;
     border-right: 1px solid #E8E8E8;
     border-bottom: 1px solid #E8E8E8;
     &:before {
@@ -454,21 +460,93 @@
         }
     }
 }
-.why-us-list {
-    padding-left: 128px;
-}
-.why-us-item {
-    margin-bottom: 40px;
-    &:last-child {
-        margin-bottom: 0;
+// .why-us-list {
+//     padding-left: 128px;
+// }
+// .why-us-item {
+//     margin-bottom: 40px;
+//     &:last-child {
+//         margin-bottom: 0;
+//     }
+//     .title {
+//         font-size: 24px;
+//         margin-bottom: 5px;
+//     }
+//     .desc {
+//         font-size: 18px;
+//         line-height: 1.6;
+//         margin-bottom: 0;
+//     }
+// }
+
+
+
+// why-choose-section
+
+.why-choose-section{
+.service-left-space{
+    @media screen and (min-width:992px) {
+        padding-left: 152px;
     }
-    .title {
-        font-size: 24px;
-        margin-bottom: 5px;
+    .services{
+    h3{
+    font-size: 24px;
+    font-weight: 500;
     }
-    .desc {
+    p{
         font-size: 18px;
-        line-height: 1.6;
-        margin-bottom: 0;
     }
+    }
+}
+.top-spacing-location{
+    margin-top: 60px;
+     @media screen and (min-width:992px) {
+    margin-top: 120px;
+    }
+      .location{
+    h3{
+    font-size: 24px;
+    font-weight: 500;
+    }
+    p{
+        font-size: 18px;
+    }
+    }
+    // svg hover effect 
+.map-dot {
+  fill: #D81F28;
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: transform 0.3s ease;
+}
+.map-dot.pulse {
+  animation: pulse-zoom 1.2s infinite;
+}
+.location-item[data-location="usa"]:hover ~ svg .map-dot[data-location="usa"],
+.location-item[data-location="uk"]:hover ~ svg .map-dot[data-location="uk"],
+.location-item[data-location="germany"]:hover ~ svg .map-dot[data-location="germany"],
+.location-item[data-location="india"]:hover ~ svg .map-dot[data-location="india"],
+.location-item[data-location="southafrica"]:hover ~ svg .map-dot[data-location="southafrica"] {
+  animation: pulse-zoom 1.2s infinite;
+}
+.map-dot {
+  fill: #D81F28;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes pulse-zoom {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(7);
+    opacity: 0.6;
+  }
+}
+.map-dot.pulse {
+  animation: pulse-zoom 1.5s infinite;
+}
+}
 }
