@@ -141,13 +141,33 @@ jQuery(window).on('resize', function () {
     });
 
     const swiper_process = new Swiper('.process-slider .swiper', {
-        speed: 400,
-        spaceBetween: 0,
-        navigation: {
-            nextEl: ".process-slider-next",
-            prevEl: ".process-slider-prev",
+      speed: 400,
+      spaceBetween: 0,
+      navigation: {
+        nextEl: ".process-slider-next",
+        prevEl: ".process-slider-prev",
+      },
+    });
+    var pElements = $('.journey-content > .title');
+    var journey_pagination = [];
+    pElements.each(function (i, el) {
+      journey_pagination.push($(el).text());
+    });
+    const swiper_journey = new Swiper('.journey-slider', {
+      speed: 400,
+      spaceBetween: 130,
+      navigation: {
+        nextEl: ".journey-slider-next",
+        prevEl: ".journey-slider-prev",
+      },
+      pagination: {
+        el: '.journey-pagination',
+        clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (journey_pagination[index]) + '</span>';
           },
-      });
+      },
+    });
   });
 
 

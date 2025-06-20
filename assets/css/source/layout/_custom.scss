@@ -631,3 +631,61 @@
         }
     }
 }
+
+.journey-section {
+    background: linear-gradient(122deg, #FFFFFF 0%, #F5F5F5 100%);
+}
+.journey-slider {
+    padding: 0 130px;
+    padding-bottom: 120px;
+    .journey-content {
+        padding-left: 20px;
+    }
+    .title {
+        font-size: 26px;
+        font-weight: 300;
+        margin-bottom: 16px;
+    }
+    .desc {
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        opacity: 0.9;
+        line-height: 1.7;
+    }
+}
+.journey-slider-prev.journey-slider-prev {
+    &::after {
+        content: "";
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        border: 1px solid #000;
+        border-right: 0;
+        border-top: 0;
+        transform: rotate(45deg);
+    }
+}
+.journey-slider-next.journey-slider-next {
+    &::after {
+        content: "";
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        border: 1px solid #000;
+        border-left: 0;
+        border-bottom: 0;
+        transform: rotate(45deg);
+    }
+}
+.journey-pagination {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 130px;
+    bottom: 0 !important;
+    .swiper-pagination-bullet {
+        width: auto;
+        background: transparent;
+        height: auto;
+    }
+}
