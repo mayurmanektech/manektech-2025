@@ -3,8 +3,8 @@
     padding:157px 0;
     position: relative;
     z-index: 1;
- 
-     @media (max-width:1799px) {
+
+        @media (max-width:1799px) {
             padding:140px 0;
         }
 
@@ -35,7 +35,6 @@
        mix-blend-mode: overlay;
     }
 
-
       &::after{
         content: "";
         position: absolute;
@@ -50,8 +49,6 @@
         filter: blur(5px);
     }
 
-   
-
     .cta-btns{
         gap: 22px;
 
@@ -63,7 +60,6 @@
         .meering-btn{
             background-color: $white-color;
             color: $primary-color;
-         
         }
     }
 }
