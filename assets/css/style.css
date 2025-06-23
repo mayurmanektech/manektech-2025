@@ -14646,19 +14646,20 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
 .blog-section {
   background: linear-gradient(88deg, rgba(245, 207, 208, 0.6) 0%, rgba(255, 217, 233, 0.6) 100%);
 }
-.blog-section .blog-info .tech-title {
+
+.blog-info .tech-title {
   font-size: 20px;
   color: rgba(29, 29, 29, 0.5019607843);
 }
-.blog-section .blog-info .desc {
+.blog-info .desc {
   font-size: 26px;
   line-height: 41px;
 }
-.blog-section .blog-info .desc-details {
+.blog-info .desc-details {
   font-size: 18px;
   line-height: 31px;
 }
-.blog-section .blog-info .time-date p {
+.blog-info .time-date p {
   font-size: 16px;
   color: rgba(29, 29, 29, 0.5019607843);
   display: -webkit-box;
@@ -14668,7 +14669,7 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
       -ms-flex-align: center;
           align-items: center;
 }
-.blog-section .blog-info .time-date p .mini {
+.blog-info .time-date p .mini {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14676,7 +14677,7 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
       -ms-flex-align: center;
           align-items: center;
 }
-.blog-section .blog-info .time-date p .mini::after {
+.blog-info .time-date p .mini::after {
   content: "";
   display: inline-block;
   width: 5px;
@@ -14686,7 +14687,7 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   margin: 0 10px;
   vertical-align: middle;
 }
-.blog-section .blog-info .profile-box {
+.blog-info .profile-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14695,28 +14696,28 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
           align-items: center;
   gap: 16px;
 }
-.blog-section .blog-info .profile-box .profile-avatar {
+.blog-info .profile-box .profile-avatar {
   width: 48px;
   height: 48px;
   border-radius: 50%;
   overflow: hidden;
 }
-.blog-section .blog-info .profile-box .profile-avatar img {
+.blog-info .profile-box .profile-avatar img {
   max-width: 48px;
   max-height: 48px;
   border: 1px solid #D81F28;
   border-radius: 50%;
 }
-.blog-section .blog-info .profile-info {
+.blog-info .profile-info {
   font-family: "Sora", sans-serif;
 }
-.blog-section .blog-info .profile-info .title {
+.blog-info .profile-info .title {
   font-size: 18px;
   font-weight: 600;
   line-height: normal;
   margin-bottom: 0;
 }
-.blog-section .blog-info .profile-info .designation {
+.blog-info .profile-info .designation {
   font-size: 18px;
   color: rgba(29, 29, 29, 0.5019607843);
   margin-bottom: 0;
