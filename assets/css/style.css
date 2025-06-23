@@ -12915,6 +12915,12 @@ textarea.form-control {
   background: #EC2730;
 }
 
+.section-desc {
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 1.65;
+}
+
 .banner-discription {
   font-weight: 500;
   font-size: 20px;
@@ -15038,4 +15044,34 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   bottom: 0;
   background: -webkit-gradient(linear, right top, left top, from(rgba(40, 2, 2, 0)), color-stop(64%, rgba(216, 31, 40, 0.9019607843)));
   background: linear-gradient(-90deg, rgba(40, 2, 2, 0) 0%, rgba(216, 31, 40, 0.9019607843) 64%);
+}
+
+.delivery-record-section {
+  background: linear-gradient(-23deg, #F5F5F5 0%, #FFFFFF 100%);
+}
+.delivery-record-section .section-title {
+  margin-bottom: 21px;
+}
+
+.delivery-record-wrapper {
+  padding-top: 70px;
+}
+
+.record-item {
+  padding: 50px 30px;
+  border-bottom: 1px solid #EBEBEB;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+.record-item:hover {
+  background: #ffffff;
+}
+.record-item:first-child {
+  border-top: 1px solid #EBEBEB;
+}
+.record-item .title {
+  font-size: 26px;
+  letter-spacing: 0.3px;
+  font-weight: 300;
+  margin-bottom: 0;
 }

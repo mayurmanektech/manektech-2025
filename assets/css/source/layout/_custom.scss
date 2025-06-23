@@ -840,3 +840,30 @@
         }
     }
 }
+
+.delivery-record-section {
+    background: linear-gradient(-23deg, #F5F5F5 0%, #FFFFFF 100%);
+    .section-title {
+        margin-bottom: 21px;
+    }
+}
+.delivery-record-wrapper {
+    padding-top: 70px;
+}
+.record-item {
+    padding: 50px 30px;
+    border-bottom: 1px solid #EBEBEB;
+    transition: $transition-animate;
+    &:hover {
+        background: $white-color;
+    }
+    &:first-child {
+        border-top: 1px solid #EBEBEB;
+    }
+    .title {
+        font-size: 26px;
+        letter-spacing: 0.3px;
+        font-weight: 300;
+        margin-bottom: 0;
+    }
+}
