@@ -818,6 +818,15 @@
 .swiper-pagination-bullet-active {
     background: $white-color;
 }
+.swiper-pagination-bullet {
+  background: transparent;
+  opacity: 1;
+  border: 1px solid $white-color;
+}
+.swiper-pagination-bullet-active{
+    background: $white-color !important;
+}
+
 .career-section {
     .bg-img {
         &:after {

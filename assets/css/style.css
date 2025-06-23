@@ -15019,6 +15019,16 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   background: #ffffff;
 }
 
+.swiper-pagination-bullet {
+  background: transparent;
+  opacity: 1;
+  border: 1px solid #ffffff;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffffff !important;
+}
+
 .career-section .bg-img:after {
   content: "";
   position: absolute;
