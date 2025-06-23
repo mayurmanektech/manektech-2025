@@ -364,6 +364,9 @@ textarea.form-control{
 .section-title {
     position: relative;
     margin-bottom: 70px;
+    @media screen and (max-width:767px) {
+         margin-bottom: 48px;
+    }
     h2 {
         font-size: 36px;
         color: $primary-dark;

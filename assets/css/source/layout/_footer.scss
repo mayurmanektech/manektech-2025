@@ -20,6 +20,7 @@ footer {
         column-gap: 30px;
         @media screen and (max-width:767px) {
           grid-template-columns: 1fr;
+          row-gap: 30px;
         }
          input:-webkit-autofill {
           background-color: transparent !important;
@@ -44,6 +45,9 @@ footer {
           #timezone {
           max-width: fit-content;
           height: 44px;
+          @media screen and (max-width:767px) {
+             max-width: 130px;
+          }
           background-color: transparent;
           color: $white-color;
           border: none;
