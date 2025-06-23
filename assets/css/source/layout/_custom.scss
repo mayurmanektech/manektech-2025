@@ -684,6 +684,9 @@
     }
     .about-info-wrapper {
         padding-right: 58px;
+        @media screen and (max-width:1200px) {
+             padding-right: 0;
+        }
         .count {
             font-size: 36px;
             line-height: 1.4;
@@ -703,8 +706,29 @@
 .journey-slider {
     padding: 0 130px;
     padding-bottom: 120px;
+     @media screen and (max-width:1200px) {
+              padding: 0 80px;
+              padding-bottom: 120px;
+        }
+         @media screen and (max-width:991px) {
+             padding: 0 48px;
+             padding-bottom: 86px;
+        }
+         @media screen and (max-width:575px) {
+              padding: 0 36px;
+              padding-bottom: 120px;
+         }
     .journey-content {
         padding-left: 20px;
+          @media screen and (max-width:991px) {
+            margin-top: 30px;
+          }
+        @media screen and (max-width:768px) {
+            padding-left: 0;
+        }
+          @media screen and (max-width:575px) {
+            margin-top: 12px;
+          }
     }
     .title {
         font-size: 26px;
@@ -747,6 +771,13 @@
     display: flex;
     justify-content: space-between;
     padding: 0 130px;
+     @media screen and (max-width:768px) {
+        padding: 0 48px;
+     }
+     @media screen and (max-width:575px) {
+        padding: 0 0px;
+        gap: 4px !important;
+     }
     bottom: 0 !important;
     .swiper-pagination-bullet {
         width: auto;
@@ -764,13 +795,13 @@
 /* Navigation buttons */
 .journey-slider-prev,
 .journey-slider-next {
-  cursor: pointer;
-  padding: 10px 15px;
-  background: #E0005F;
-  color: white;
-  margin: 10px;
-  border-radius: 5px;
-  display: inline-block;
+//   cursor: pointer;
+//   padding: 10px 15px;
+//   background: transparent;
+//   color: white;
+//   margin: 10px;
+//   border-radius: 5px;
+//   display: inline-block;
 }
 
 /* Pagination dots or text */
@@ -801,29 +832,22 @@
 // ----swiper slider navigation dots
 
 .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-    bottom: 70px;
+    bottom: 11%;
     @media screen and (max-width:1400px) {
-     bottom: 12px;
-    }
-    @media screen and (max-width:991px) {
-     bottom: 40px;
-    }
-    @media screen and (max-width:575px) {
-     bottom: 66px;
-    }
-    @media screen and (max-width:400px) {
-     bottom: 100px;
+     bottom: 2%;
     }
 }
-.swiper-pagination-bullet-active {
+
+
+.process-section .swiper-pagination-bullet-active {
     background: $white-color;
 }
-.swiper-pagination-bullet {
+.process-section .swiper-pagination-bullet {
   background: transparent;
   opacity: 1;
   border: 1px solid $white-color;
 }
-.swiper-pagination-bullet-active{
+.process-section .swiper-pagination-bullet-active{
     background: $white-color !important;
 }
 

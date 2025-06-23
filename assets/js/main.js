@@ -144,18 +144,19 @@ jQuery(window).on('resize', function () {
     });
 
     const swiper_process = new Swiper('.process-slider .swiper', {
-  speed: 400,
-  spaceBetween: 0,
-  loop: true, // Optional: Makes slider infinite
-  navigation: {
-    nextEl: ".process-slider-next",
-    prevEl: ".process-slider-prev",
-  },
-  pagination: {
-    el: ".process-pagination",
-    clickable: true,
-  },
-});
+      speed: 400,
+      spaceBetween: 0,
+      autoHeight :true,
+      loop: true,
+      navigation: {
+        nextEl: ".process-slider-next",
+        prevEl: ".process-slider-prev",
+      },
+      pagination: {
+        el: ".process-pagination",
+        clickable: true,
+      },
+    });
 
     var pElements = $('.journey-content > .title');
     var journey_pagination = [];
@@ -165,6 +166,7 @@ jQuery(window).on('resize', function () {
     const swiper_journey = new Swiper('.journey-slider', {
       speed: 400,
       spaceBetween: 130,
+      autoHeight :true,
       navigation: {
         nextEl: ".journey-slider-next",
         prevEl: ".journey-slider-prev",
@@ -184,6 +186,10 @@ jQuery(window).on('resize', function () {
 
 
 
+
+
+  // select dropdown form 
+
     const countries = [
   { name: "India", code: "IN", dial_code: "+91" },
   { name: "United States", code: "US", dial_code: "+1" },
@@ -201,13 +207,13 @@ const select = document.getElementById("timezone");
 const input = document.getElementById("countryCode");
 const prefixDisplay = document.getElementById("prefixDisplay");
 
-let currentPrefix = "+91"; // default
+let currentPrefix = "+91"; 
 
 function setCountryCodePrefix(prefix) {
   currentPrefix = prefix;
   prefixDisplay.textContent = currentPrefix;
-  input.value = ''; // Clear user input on change (optional)
-  // input.focus();
+  input.value = ''; 
+ 
 }
 
 // Load dropdown without dial codes in text
