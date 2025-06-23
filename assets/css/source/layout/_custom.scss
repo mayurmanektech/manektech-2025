@@ -237,6 +237,9 @@
     @media screen and (max-width:991px) {
        padding: 32px;
     }
+    @media screen and (max-width:577px) {
+       padding: 24px;
+    }
     position: relative;
     z-index: 2;
     h3 {
@@ -385,7 +388,7 @@
         padding:  48px 0;
     }
     @media screen and (max-width:575px) {
-        padding:  36px 0;
+        padding:  48px 0;
     }
    
 }
@@ -571,7 +574,7 @@
 
 // why-choose-section
 
-.why-choose-section{
+
 .service-left-space{
     @media screen and (min-width:1400px) {
         padding-left: 152px;
@@ -587,12 +590,13 @@
     }
     }
 }
+
 .top-spacing-location{
     margin-top: 36px;
      @media screen and (min-width:1200px) {
-    margin-top: 120px;
+       margin-top: 120px;
     }
-      .location{
+    .location{
     h3{
     font-size: 24px;
     font-weight: 500;
@@ -624,7 +628,6 @@
   transform-origin: center;
   transform-box: fill-box;
 }
-
         @keyframes pulse-zoom {
             0%, 100% {
                 transform: scale(1);
@@ -638,7 +641,6 @@
         .map-dot.pulse {
             animation: pulse-zoom 1.5s infinite;
         }
-    }
 }
 
 .inner-banner {
@@ -763,4 +765,68 @@
         background: transparent;
         height: auto;
     }
+}
+
+
+
+
+
+
+
+/* Navigation buttons */
+.journey-slider-prev,
+.journey-slider-next {
+  cursor: pointer;
+  padding: 10px 15px;
+  background: #E0005F;
+  color: white;
+  margin: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* Pagination dots or text */
+.journey-pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.journey-pagination .swiper-pagination-bullet {
+  padding: 6px 12px;
+  font-size: 14px;
+  background: #f0f0f0;
+  color: #333;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.journey-pagination .swiper-pagination-bullet-active {
+  background: #D81F28;
+  color: white;
+}
+
+
+// ----swiper slider navigation dots
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 70px;
+    @media screen and (max-width:1400px) {
+     bottom: 12px;
+    }
+    @media screen and (max-width:991px) {
+     bottom: 40px;
+    }
+    @media screen and (max-width:575px) {
+     bottom: 66px;
+    }
+    @media screen and (max-width:400px) {
+     bottom: 100px;
+    }
+}
+.swiper-pagination-bullet-active {
+    background: $white-color;
 }

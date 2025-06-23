@@ -104,6 +104,9 @@ jQuery(window).on('resize', function () {
     const wrapper = document.getElementById("certificationLogoWrapper");
     wrapper.innerHTML += wrapper.innerHTML; // duplicate slides
 
+
+  
+
     const swiper = new Swiper('.swiper-container', {
       loop: true,
       speed: 4000,
@@ -141,13 +144,19 @@ jQuery(window).on('resize', function () {
     });
 
     const swiper_process = new Swiper('.process-slider .swiper', {
-      speed: 400,
-      spaceBetween: 0,
-      navigation: {
-        nextEl: ".process-slider-next",
-        prevEl: ".process-slider-prev",
-      },
-    });
+  speed: 400,
+  spaceBetween: 0,
+  loop: true, // Optional: Makes slider infinite
+  navigation: {
+    nextEl: ".process-slider-next",
+    prevEl: ".process-slider-prev",
+  },
+  pagination: {
+    el: ".process-pagination",
+    clickable: true,
+  },
+});
+
     var pElements = $('.journey-content > .title');
     var journey_pagination = [];
     pElements.each(function (i, el) {
