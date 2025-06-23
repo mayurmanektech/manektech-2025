@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     "use strict";
     
     // Fixed Header Script
-    const header = document.getElementById('mainHeader');
+    // const header = document.getElementById('mainHeader');
+    const header = document.body;
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -12,118 +13,87 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+  });
 
-    // Responsive menu 
-const menuToggle = document.getElementById("menu-toggle");
-const closeMenu = document.getElementById("close-menu");
-const navMenu = document.querySelector(".nav-menu");
-const menuArrows = document.querySelectorAll(".menu-arrow");
-const htmlEl = document.documentElement; // reference to <html>
+function setupResponsiveMenu() {
+  const isMobile = jQuery(window).width() < 1200;
 
-// Open nav-menu
-menuToggle.addEventListener("click", () => {
-  if (window.innerWidth < 1200) {
-    navMenu.classList.add("open");
-    htmlEl.classList.add("active");  // Add active class to <html>
+  // Unbind previous event handlers to prevent duplicates
+  jQuery('.menu-arrow').off('click');
+  jQuery('#menu-toggle').off('click');
+  jQuery('#close-menu').off('click');
+
+  if (isMobile) {
+    // Toggle first-level .sub-menu
+    jQuery('.main-menu > li > .menu-arrow').on('click', function (e) {
+      e.preventDefault();
+
+      const element = jQuery(this).closest('li');
+
+      if (element.hasClass('toggle')) {
+        element.removeClass('toggle');
+        element.find('.sub-menu').slideUp('slow');
+        element.find('li').removeClass('toggle');
+      } else {
+        element.addClass('toggle');
+        element.children('.sub-menu').slideDown('slow');
+        element.siblings('li').removeClass('toggle').find('.sub-menu').slideUp('slow');
+        element.siblings('li').find('li').removeClass('toggle');
+      }
+    });
+
+    // Toggle nested submenu in .sub-menu-inner
+    jQuery('.sub-menu-inner .menu-arrow').on('click', function (e) {
+      e.preventDefault();
+
+      const $this = jQuery(this);
+      const $ul = $this.siblings('ul');
+
+      // Toggle this one
+      if ($ul.is(':visible')) {
+        $ul.slideUp('slow');
+      } else {
+        // Close sibling <ul>s
+        $this.closest('.sub-menu-inner')
+          .siblings('.sub-menu-inner')
+          .find('ul:visible')
+          .slideUp('slow');
+
+        $ul.slideDown('slow');
+      }
+    });
+
+    // Open mobile menu
+    jQuery('.menu-toggle').on('click', function () {
+      jQuery("html").addClass("open");
+    });
+
+    // Close mobile menu
+    jQuery('#close-menu').on('click', function () {
+      jQuery("html").removeClass("open");
+      jQuery('.sub-menu').slideUp('slow');
+      jQuery('.main-menu > li').removeClass('toggle');
+      jQuery('.sub-menu-inner ul').slideUp('slow');
+    });
+
+  } else {
+    // Reset for desktop
+    jQuery("html").removeClass("open");
+    jQuery('.sub-menu').removeAttr('style');
+    jQuery('.sub-menu-inner ul').removeAttr('style');
+    jQuery('.main-menu > li').removeClass('toggle');
   }
-});
-
-// Close nav-menu
-closeMenu.addEventListener("click", () => {
-  navMenu.classList.remove("open");
-  htmlEl.classList.remove("active");  // Remove active class from <html>
-});
-
-// Toggle top-level sub-menus
-menuArrows.forEach(arrow => {
-  arrow.addEventListener("click", function (e) {
-    e.stopPropagation();
-    const currentLi = this.closest("li");
-    const currentSubMenu = currentLi.querySelector(".sub-menu");
-
-    document.querySelectorAll(".sub-menu").forEach(sub => {
-      if (sub !== currentSubMenu) {
-        slideUp(sub);
-      }
-    });
-
-    // Toggle current submenu
-    if (currentSubMenu.classList.contains("open")) {
-      slideUp(currentSubMenu);
-    } else {
-      slideDown(currentSubMenu);
-    }
-  });
-});
-
-// Toggle sub-menu-inner ul
-const innerSpans = document.querySelectorAll(".sub-menu-inner span");
-innerSpans.forEach(span => {
-  span.addEventListener("click", function (e) {
-    e.stopPropagation();
-    const currentUl = this.nextElementSibling;
-
-    document.querySelectorAll(".sub-menu-inner ul").forEach(ul => {
-      if (ul !== currentUl) {
-        slideUp(ul);
-      }
-    });
-
-    if (currentUl.classList.contains("open")) {
-      slideUp(currentUl);
-    } else {
-      slideDown(currentUl);
-    }
-  });
-});
-
-// Utility slide functions
-function slideUp(element) {
-  element.style.height = element.scrollHeight + 'px'; // set to current height to allow transition
-  requestAnimationFrame(() => {
-    element.style.transition = 'height 0.3s linear, opacity 0.3s ease';
-    element.style.height = '0';
-    element.style.opacity = '0';
-  });
-  element.classList.remove('open');
-  setTimeout(() => {
-    element.style.display = 'none';
-    element.style.removeProperty('height');
-    element.style.removeProperty('opacity');
-    element.style.removeProperty('transition');
-  }, 300);
 }
 
-function slideDown(element) {
-  element.style.display = 'block';
-  element.style.height = '0';
-  element.style.opacity = '0';
-
-  requestAnimationFrame(() => {
-    element.style.transition = 'height 0.3s linear, opacity 0.3s ease';
-    element.style.height = element.scrollHeight + 'px';
-    element.style.opacity = '1';
-  });
-
-  element.classList.add('open');
-
-  setTimeout(() => {
-    element.style.removeProperty('height');
-    element.style.removeProperty('opacity');
-    element.style.removeProperty('transition');
-  }, 300);
-}
-
+// Init on document ready
+jQuery(document).ready(function () {
+  setupResponsiveMenu();
 });
 
-
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const track = document.querySelector('.certification-logo-track');
-    track.innerHTML += track.innerHTML;
-    track.innerHTML += track.innerHTML;
-    track.innerHTML += track.innerHTML;
-  });
+// Re-run on resize
+jQuery(window).on('resize', function () {
+  setupResponsiveMenu();
+});
 
 
 
@@ -171,13 +141,33 @@ function slideDown(element) {
     });
 
     const swiper_process = new Swiper('.process-slider .swiper', {
-        speed: 400,
-        spaceBetween: 0,
-        navigation: {
-            nextEl: ".process-slider-next",
-            prevEl: ".process-slider-prev",
+      speed: 400,
+      spaceBetween: 0,
+      navigation: {
+        nextEl: ".process-slider-next",
+        prevEl: ".process-slider-prev",
+      },
+    });
+    var pElements = $('.journey-content > .title');
+    var journey_pagination = [];
+    pElements.each(function (i, el) {
+      journey_pagination.push($(el).text());
+    });
+    const swiper_journey = new Swiper('.journey-slider', {
+      speed: 400,
+      spaceBetween: 130,
+      navigation: {
+        nextEl: ".journey-slider-next",
+        prevEl: ".journey-slider-prev",
+      },
+      pagination: {
+        el: '.journey-pagination',
+        clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (journey_pagination[index]) + '</span>';
           },
-      });
+      },
+    });
   });
 
 

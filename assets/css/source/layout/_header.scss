@@ -3,14 +3,7 @@ header{
   align-items: center;
     padding: 20px 0;
   background-color: $white-color;
-    &.scrolled{
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 9999;
-    }
-
+ 
       @media (max-width:1799px) {
          padding: 15px 0;
     }
@@ -23,57 +16,78 @@ header{
     @media (max-width:1366px) {
       max-width: 160px;
     }
+
+    @media (max-width:480px) {
+                max-width: 130px;
+  
+    }
   }
   .container{
     display: flex;
     align-items: center;
     
-    .menu-toggle {
-      width: 35px;
-      height: 35px;
-      position: relative;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 6px;
-      padding: 6px 0;
-      background: transparent;
-      outline: none;
-      border: 0;
-      margin-left: 15px;
-      span {
-        display: block;
-        height: 3px;
-        background: $primary-dark;
-        border-radius: 2px;
-        transition: all 0.3s ease;
-        position: relative;
-      }
-//  &.active {
-//     span {
-//       &:nth-child(1) {
-//         transform: rotate(45deg) translateY(10px)  ;
-//         top: 4px;
-//       }
-
-//       &:nth-child(2) {
-//         opacity: 0;
-//       }
-
-//       &:nth-child(3) {
-//         transform: rotate(-45deg) translateY(-10px)  ;
-//       }
-//     }
-//   }
-}
-
     >.btn{
         padding: 12px 26px;
         &:hover{
           border: 1px solid $primary-color;
         }
+
+        @media (max-width:1199px) {
+          padding: 10px 20px;
+        }
+
+          @media (max-width:480px) {
+          padding: 10px 12px;
+        }
+    }
+
+    .menu-toggle{
+      width: 25px;
+      height: 25px;
+      padding: 0;
+      margin-left: 10px;
+
+      svg{
+          width: 25px;
+          height: 25px;
+      }
     }
   }
+}
+
+body{
+    &.scrolled{
+      padding-top: 90px;
+
+      @media (max-width:1799px) {
+         padding-top: 73px;
+
+      }
+
+       @media (max-width:1199px) {
+         padding-top: 67px;
+
+      }
+     header{
+       position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+      animation: sticky-menu 0.8s forwards;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+     }
+    }
+
+
+}
+
+@keyframes sticky-menu {
+  0% {
+    top: -50%;
+}
+100% {
+    top: 0;
+}
 }
 //aazam

@@ -358,6 +358,7 @@ footer {
         }
         .swiper-wrapper {
           transition-timing-function: linear !important; 
+          align-items: center;
         }
         .swiper-slide {
           width: auto; 
@@ -391,6 +392,7 @@ footer {
            justify-content: center;
         }
         .copyright-text {
+           font-family: 'Sora' !important;
           font-size: 14px;
           color: $white-color;
         }
@@ -419,6 +421,7 @@ footer {
         width: 100%;
         height: auto;
         backface-visibility: hidden;
+        
       }
           }
         }
