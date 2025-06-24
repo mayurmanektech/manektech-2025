@@ -455,3 +455,34 @@ textarea.form-control{
     }
     
     }
+
+    .breadcrumb {
+        margin-bottom: 35px;
+        .breadcrumb-item {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+            padding-left: 30px;
+            position: relative;
+            &.active {
+                opacity: 0.5;
+            }
+            &:before {
+                content: '';
+                width: 6px;
+                height: 6px;
+                margin: 0;
+                padding: 0;
+                transform: rotate(45deg);
+                border: 2px solid $white-color;
+                border-left: 0;
+                border-bottom: 0;
+                position: absolute;
+                left: 10px;
+                top: 6px;
+            }
+            a {
+                color: $white-color;
+            }
+        }
+    }

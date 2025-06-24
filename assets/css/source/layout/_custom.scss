@@ -649,6 +649,17 @@
             background: linear-gradient(-90deg, #00000080 0%, #c2083af2 60%);
         }
     }
+    &.small-banner {
+        padding: 20px 0 75px;
+        .bg-img {
+            &:after {
+                background: linear-gradient(90deg, #D81F28 0%, #E0005F 100%);
+            }
+        }
+        h1 {
+            margin-bottom: 0;
+        }
+    }
     .inner-banner-wrapper {
         position: relative;
         z-index: 1;
@@ -889,5 +900,124 @@
         letter-spacing: 0.3px;
         font-weight: 300;
         margin-bottom: 0;
+    }
+}
+
+.holiday-card {
+    padding: 40px;
+    background: #FAFAFA;
+    border: 1px solid #1D1D1D33;
+    margin-bottom: 24px;
+    .date {
+        font-size: 32px;
+        line-height: 1;
+        margin-bottom: 16px;
+        letter-spacing: 0.3px;
+    }
+    .day {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+    .holiday-name {
+        font-size: 26px;
+        line-height: 33px;
+        letter-spacing: 0.3px;
+        margin-bottom: 40px;
+    }
+    .link {
+        font-size: 16px;
+        letter-spacing: 0.6px;
+        color: $primary-color;
+        font-weight: 600;
+    }
+}
+.meet-section {
+    background: linear-gradient(90deg, #F5CFD0 0%, #FFD9E9 100%);
+    overflow: hidden;
+    h3 {
+        font-size: 36px;
+        line-height: 55px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .meet-desc {
+        font-size: 24px;
+        letter-spacing: 0.3px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+}
+.meet-img-box {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    .img-wrapper {
+        position: relative;
+        z-index: 2;
+    }
+}
+.img-bg-strip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -20%;
+        right: 0;
+        background: #E0005F;
+        width: 80px;
+        height: 140%;
+        transform: rotate(30deg);
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: -20%;
+        right: 92px;
+        background: #CC1763;
+        width: 80px;
+        height: 140%;
+        transform: rotate(30deg);
+    }
+    span {
+        &:before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: 184px;
+            background: #EC2730;
+            width: 80px;
+            height: 140%;
+            transform: rotate(30deg);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: 276px;
+            background: #D81F28;
+            width: 80px;
+            height: 140%;
+            transform: rotate(30deg);
+        }
+    }
+}
+.meeting-person-info {
+    padding-right: 150px;
+    text-align: right;
+    padding-bottom: 40px;
+    .title {
+        font-size: 20px;
+        letter-spacing: 0.3px;
+        margin-bottom: 4px;
+    }
+    .desc {
+        margin-bottom: 0;
+        color: #1D1D1D80;
     }
 }
