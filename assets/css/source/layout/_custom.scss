@@ -284,6 +284,7 @@
     .desc {
         font-size: 18px;
         line-height: 36px;
+        letter-spacing: 0.01em;
     }
 }
 .reviewer-box {
@@ -1013,16 +1014,12 @@
 
 .How-we-do-section {
     
-.section-desc{
+.section-desc p{
     font-size: 18px;
     letter-spacing: 0.04em;
     line-height: 170%;
     }
-    .section-title{
-        font-size: 26px;
-        font-weight: 500;
-        letter-spacing: 0.01em;
-    }
+   
 }
 
 .How-we-do-box-wrapper {

@@ -12917,7 +12917,7 @@ textarea.form-control {
 
 .section-desc {
   font-size: 18px;
-  letter-spacing: 1px;
+  letter-spacing: 0.04em;
   line-height: 1.65;
 }
 
@@ -13601,6 +13601,9 @@ footer .container form .form-grid .submit-btn-div {
     grid-column: span 1;
   }
 }
+footer .container form .form-grid .select-wrapper .form-select {
+  background-image: none;
+}
 footer .container form .form-grid .select-wrapper {
   position: relative;
   max-width: -webkit-fit-content;
@@ -14099,6 +14102,14 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link {
     gap: 0px;
   }
 }
+footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li a {
   display: inline-block;
   -webkit-transition: -webkit-transform 0.6s ease, -webkit-filter 0.4s ease;
@@ -14447,6 +14458,7 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
 .review-info .desc {
   font-size: 18px;
   line-height: 36px;
+  letter-spacing: 0.01em;
 }
 
 .reviewer-box {
@@ -15285,15 +15297,10 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   }
 }
 
-.How-we-do-section .section-desc {
+.How-we-do-section .section-desc p {
   font-size: 18px;
   letter-spacing: 0.04em;
   line-height: 170%;
-}
-.How-we-do-section .section-title {
-  font-size: 26px;
-  font-weight: 500;
-  letter-spacing: 0.01em;
 }
 
 .How-we-do-box-wrapper {

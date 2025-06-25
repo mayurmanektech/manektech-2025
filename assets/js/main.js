@@ -310,6 +310,7 @@ const progressLine = document.querySelector('.progress-line');
 const steps = document.querySelectorAll('.step');
 const headerOffset = 190;
 
+let isScrollingByClick = false;
 
 function activateStep(index) {
   sidebarItems.forEach(li => li.classList.remove('active'));
@@ -326,6 +327,7 @@ function activateStep(index) {
 
 sidebarItems.forEach((item, index) => {
   item.addEventListener('click', () => {
+     isScrollingByClick = true;
     activateStep(index);
 
     const targetStep = steps[index];
@@ -336,11 +338,15 @@ sidebarItems.forEach((item, index) => {
       top: offsetPosition,
       behavior: 'smooth'
     });
+     setTimeout(() => {
+      isScrollingByClick = false;
+    }, 600);
   });
 });
 
 
 window.addEventListener('scroll', () => {
+   if (isScrollingByClick) return;
   let activeIndex = 0;
 
   steps.forEach((step, index) => {
