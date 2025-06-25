@@ -784,13 +784,16 @@
 .journey-pagination {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 0 130px;
-     @media screen and (max-width:768px) {
+     @media screen and (max-width:991px) {
         padding: 0 48px;
+        justify-content: center;
+        gap: 15px;
      }
      @media screen and (max-width:575px) {
         padding: 0 0px;
-        gap: 4px !important;
+        gap: 10px !important;
      }
     bottom: 0 !important;
     .swiper-pagination-bullet {
@@ -798,48 +801,6 @@
         background: transparent;
         height: auto;
     }
-}
-
-
-
-
-
-
-
-/* Navigation buttons */
-.journey-slider-prev,
-.journey-slider-next {
-//   cursor: pointer;
-//   padding: 10px 15px;
-//   background: transparent;
-//   color: white;
-//   margin: 10px;
-//   border-radius: 5px;
-//   display: inline-block;
-}
-
-/* Pagination dots or text */
-.journey-pagination {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.journey-pagination .swiper-pagination-bullet {
-  padding: 6px 12px;
-  font-size: 14px;
-  background: #f0f0f0;
-  color: #333;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.journey-pagination .swiper-pagination-bullet-active {
-  background: #D81F28;
-  color: white;
 }
 
 
@@ -912,6 +873,14 @@
         letter-spacing: 0.3px;
         font-weight: 300;
         margin-bottom: 0;
+    }
+    .img-wrapper {
+        @media screen and (max-width: 991px) {
+            max-width: 90px;
+            img {
+                max-height: 50px;
+            }
+        }
     }
 }
 
