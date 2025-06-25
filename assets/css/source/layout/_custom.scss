@@ -1011,6 +1011,19 @@
 
 // how we do section -Our Process
 
+.How-we-do-section {
+    
+.section-desc{
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    line-height: 170%;
+    }
+    .section-title{
+        font-size: 26px;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+    }
+}
 
 .How-we-do-box-wrapper {
     margin-top: 70px;
@@ -1098,6 +1111,7 @@
         color: $primary-dark;
         font-size: 18px;
         line-height: 1.7;
+        letter-spacing: 0.04em;
         opacity: 0.9;
         transition: $transition-animate;
     }
@@ -1108,6 +1122,12 @@
 .planning-main-wrapper{
     position: relative;
     padding: 100px 0 50px;
+    @media screen and (max-width:991px) {
+        padding: 50px 0 0;
+    }
+    @media screen and (max-width:575px) {
+        padding: 36px 0 0;
+    }
     .sidebar-menu{
         position: sticky;
         top: 140px;
@@ -1147,12 +1167,15 @@
             font-size: 20px;
             font-weight: 500;
             margin-bottom: 0;
-             color: $primary-dark;
-             letter-spacing: 0.01em;
+            color: $primary-dark;
+            letter-spacing: 0.01em;
+            cursor: pointer;
         }
     }
     .content-section{
-  
+      @media screen and (max-width:991px) {
+        margin-top: 36px;
+    }
         h3{
             font-size: 28px;
             font-weight: 600;

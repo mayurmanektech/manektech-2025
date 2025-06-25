@@ -252,23 +252,83 @@ select.addEventListener("change", function () {
 
   //  our process progress step
 
+// const sidebarItems = document.querySelectorAll('.progress-list li');
+// const progressLine = document.querySelector('.progress-line');
+// const steps = document.querySelectorAll('.step');
+
+// sidebarItems.forEach((item, index) => {
+//   item.addEventListener('click', () => {130
+//     sidebarItems.forEach(li => li.classList.remove('active'));
+//     item.classList.add('active');
+
+//     const targetStep = steps[index];
+//     const firstStepTop = steps[0].offsetTop;
+//     const targetBottom = targetStep.offsetTop + targetStep.offsetHeight;
+//     const newHeight = targetBottom - firstStepTop;
+
+//     progressLine.style.height = newHeight + 'px';
+
+//     const headerOffset = 130;
+//     const elementPosition = targetStep.getBoundingClientRect().top + window.scrollY;
+//     const offsetPosition = elementPosition - headerOffset;
+
+//     window.scrollTo({
+//       top: offsetPosition,
+//       behavior: 'smooth'
+//     });
+//   });
+// });
+
+
+
+// Handle click on "How we do it?" heading
+const howWeDoItTrigger = document.querySelector('h6[data-target="#howwedoit"]');
+
+if (howWeDoItTrigger) {
+  howWeDoItTrigger.addEventListener('click', () => {
+    const targetId = howWeDoItTrigger.getAttribute('data-target');
+    const targetEl = document.querySelector(targetId);
+
+    if (targetEl) {
+      const headerOffset = 130; 
+      const elementPosition = targetEl.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+}
+
+
+// our process progress step
+
 const sidebarItems = document.querySelectorAll('.progress-list li');
 const progressLine = document.querySelector('.progress-line');
 const steps = document.querySelectorAll('.step');
+const headerOffset = 190;
+
+
+function activateStep(index) {
+  sidebarItems.forEach(li => li.classList.remove('active'));
+  sidebarItems[index].classList.add('active');
+
+  const targetStep = steps[index];
+  const firstStepTop = steps[0].offsetTop;
+  const targetBottom = targetStep.offsetTop + targetStep.offsetHeight;
+  const newHeight = targetBottom - firstStepTop;
+
+  progressLine.style.height = newHeight + 'px';
+}
+
 
 sidebarItems.forEach((item, index) => {
   item.addEventListener('click', () => {
-    sidebarItems.forEach(li => li.classList.remove('active'));
-    item.classList.add('active');
+    activateStep(index);
 
     const targetStep = steps[index];
-    const firstStepTop = steps[0].offsetTop;
-    const targetBottom = targetStep.offsetTop + targetStep.offsetHeight;
-    const newHeight = targetBottom - firstStepTop;
-
-    progressLine.style.height = newHeight + 'px';
-
-    const headerOffset = 130;
     const elementPosition = targetStep.getBoundingClientRect().top + window.scrollY;
     const offsetPosition = elementPosition - headerOffset;
 
@@ -280,4 +340,20 @@ sidebarItems.forEach((item, index) => {
 });
 
 
+window.addEventListener('scroll', () => {
+  let activeIndex = 0;
 
+  steps.forEach((step, index) => {
+    const rect = step.getBoundingClientRect();
+
+    if (rect.top - headerOffset <= 0) {
+      activeIndex = index;
+    }
+  });
+
+  activateStep(activeIndex);
+});
+
+window.addEventListener('load', () => {
+  activateStep(0);
+});
