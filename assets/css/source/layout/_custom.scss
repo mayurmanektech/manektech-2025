@@ -1121,10 +1121,14 @@
                 list-style: none;
                 font-size: 16px;
                 padding-bottom: 8px;
-                 color: $primary-dark;
+                color: $primary-dark;
+                cursor: pointer;
             }
             li:last-child {
                 padding-bottom: 0;
+            }
+            .active{
+                font-weight: 600;
             }
             
             padding-bottom: 16px;
@@ -1164,42 +1168,34 @@
         }
         .step-div{
             margin-top: 50px;
-            h4{
+            position: relative;
+            padding-left: 30px;
+            .progress-line-container {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background-color: #eee;
+                    .progress-line {
+                        width: 100%;
+                        height: 0;
+                        background-color: #D81F28;
+                        transition: height 0.6s ease;
+                    }
+            }
+            .step {
+                margin-bottom: 40px;
+                scroll-padding-top: 190px;
+             h4{
                 font-size: 28px;
                 font-weight: 600;
                 margin-bottom: 26px;
                 margin-top: 40px;
                 letter-spacing: 0.01em;
             }
+            }
+           
         }
     }
 }
-
-
-
-.progress-line-container {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: #eee;
-}
-
-.progress-line {
-  width: 100%;
-  height: 0;
-  background-color: #D81F28;
-  transition: height 0.6s ease;
-}
-
-.step-div {
-  position: relative;
-  padding-left: 30px;
-}
-
-.step {
-  margin-bottom: 40px;
-  scroll-padding-top: 190px;
-}
-
