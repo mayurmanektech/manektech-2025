@@ -15031,55 +15031,30 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0 130px;
   bottom: 0 !important;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .journey-pagination {
     padding: 0 48px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 15px;
   }
 }
 @media screen and (max-width: 575px) {
   .journey-pagination {
     padding: 0 0px;
-    gap: 4px !important;
+    gap: 10px !important;
   }
 }
 .journey-pagination .swiper-pagination-bullet {
   width: auto;
   background: transparent;
   height: auto;
-}
-
-/* Navigation buttons */
-/* Pagination dots or text */
-.journey-pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.journey-pagination .swiper-pagination-bullet {
-  padding: 6px 12px;
-  font-size: 14px;
-  background: #f0f0f0;
-  color: #333;
-  border-radius: 20px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.journey-pagination .swiper-pagination-bullet-active {
-  background: #D81F28;
-  color: white;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
@@ -15159,6 +15134,14 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   letter-spacing: 0.3px;
   font-weight: 300;
   margin-bottom: 0;
+}
+@media screen and (max-width: 991px) {
+  .record-item .img-wrapper {
+    max-width: 90px;
+  }
+  .record-item .img-wrapper img {
+    max-height: 50px;
+  }
 }
 
 .holiday-card {
