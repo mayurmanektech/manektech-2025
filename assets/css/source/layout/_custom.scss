@@ -929,6 +929,14 @@
         font-weight: 300;
         margin-bottom: 20px;
     }
+    .meeting-info {
+        @media screen and (max-width: 1199px) {
+            padding: 40px 0;
+        }
+        @media screen and (max-width: 991px) {
+            text-align: center;
+        }
+    }
 }
 .meet-img-box {
     position: relative;
@@ -938,6 +946,12 @@
     .img-wrapper {
         position: relative;
         z-index: 2;
+        @media screen and (max-width: 1199px) {
+            max-width: 220px;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        justify-content: center;
     }
 }
 .img-bg-strip {
@@ -954,6 +968,15 @@
         width: 80px;
         height: 140%;
         transform: rotate(30deg);
+        @media screen and (max-width: 1199px) {
+            width: 40px;
+            height: 200%;
+            top: auto;
+            bottom: -50%;
+        }
+        @media screen and (max-width: 991px) {
+            display: none;
+        }
     }
     &:after {
         content: '';
@@ -964,6 +987,16 @@
         width: 80px;
         height: 140%;
         transform: rotate(30deg);
+        @media screen and (max-width: 1199px) {
+            width: 40px;
+            right: 46px;
+            height: 200%;
+            top: auto;
+            bottom: -50%;
+        }
+        @media screen and (max-width: 991px) {
+            display: none;
+        }
     }
     span {
         &:before {
@@ -975,6 +1008,16 @@
             width: 80px;
             height: 140%;
             transform: rotate(30deg);
+            @media screen and (max-width: 1199px) {
+                width: 40px;
+                right: 92px;
+                height: 200%;
+                top: auto;
+                bottom: -50%;
+            }
+            @media screen and (max-width: 991px) {
+                display: none;
+            }
         }
         &:after {
             content: '';
@@ -985,6 +1028,16 @@
             width: 80px;
             height: 140%;
             transform: rotate(30deg);
+            @media screen and (max-width: 1199px) {
+                width: 40px;
+                right: 138px;
+                height: 200%;
+                top: auto;
+                bottom: -50%;
+            }
+            @media screen and (max-width: 991px) {
+                display: none;
+            }
         }
     }
 }
@@ -992,6 +1045,9 @@
     padding-right: 150px;
     text-align: right;
     padding-bottom: 40px;
+    @media screen and (max-width: 1199px) {
+        padding-right: 20px;
+    }
     .title {
         font-size: 20px;
         letter-spacing: 0.3px;
