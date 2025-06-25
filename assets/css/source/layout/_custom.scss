@@ -237,7 +237,7 @@
     @media screen and (max-width:991px) {
        padding: 32px;
     }
-    @media screen and (max-width:577px) {
+    @media screen and (max-width:575px) {
        padding: 24px;
     }
     position: relative;
@@ -1039,3 +1039,198 @@
         margin-top: 36px;
     }
 }
+
+// how we do section -Our Process
+
+
+.How-we-do-box-wrapper {
+    margin-top: 70px;
+     @media screen and (max-width:991px) {
+      margin-top: 36px;
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+     @media screen and (max-width:767px) {
+        grid-template-columns: 1fr;
+    }
+    border: 1px solid #E8E8E8;
+    border-bottom: 0;
+    border-right: 0;
+    background: $white-color;
+}
+
+.How-we-do-box {
+    position: relative;
+    width: 100%;
+    border-right: 1px solid #E8E8E8;
+    border-bottom: 1px solid #E8E8E8;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(85deg, #B00000 0%, #E0005F 100%);
+        opacity: 0;
+        z-index: 1;
+        transition: $transition-animate;
+    }
+    img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        opacity: 0;
+        transition: $transition-animate;
+    }
+    &:hover {
+        &::before {
+            opacity: 0.65;
+        }
+        img {
+            opacity: 1;
+        }
+    }
+    &:hover .How-we-do-card{
+        h3, p{
+            color: $white-color;
+               transition: $transition-animate;
+        }
+        svg path{
+            stroke: $white-color;
+            transition: $transition-animate;
+        }
+    }
+}
+.How-we-do-card {
+    padding: 40px;
+    @media screen and (max-width:991px) {
+       padding: 32px;
+    }
+    @media screen and (max-width:575px) {
+       padding: 18px;
+    }
+    position: relative;
+    z-index: 2;
+    h3 {
+        color: $primary-dark;
+        font-weight: normal;
+        margin-bottom: 16px;
+        transition: $transition-animate;
+    }
+    
+    p {
+        color: $primary-dark;
+        font-size: 18px;
+        line-height: 1.7;
+        opacity: 0.9;
+        transition: $transition-animate;
+    }
+}
+
+// planning section
+
+.planning-main-wrapper{
+    position: relative;
+    padding: 100px 0 50px;
+    .sidebar-menu{
+        position: sticky;
+        top: 140px;
+        max-width: 334px;
+        border: 1px solid #E8E8E8;
+        padding: 30px;
+        ul{ 
+            margin-top: 16px;
+            padding-inline-start: 0;
+            li{
+                list-style: none;
+                font-size: 16px;
+                padding-bottom: 8px;
+                 color: $primary-dark;
+            }
+            li:last-child {
+                padding-bottom: 0;
+            }
+            
+            padding-bottom: 16px;
+              border-bottom: 1px solid #E8E8E8;
+        }
+        h5{
+           font-size: 20px;
+           font-weight: 500; 
+           padding-bottom: 16px;
+           border-bottom: 1px solid #E8E8E8;
+           margin-bottom: 0;
+            color: $primary-dark;
+            letter-spacing: 0.01em;
+        }
+        h6{
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 0;
+             color: $primary-dark;
+             letter-spacing: 0.01em;
+        }
+    }
+    .content-section{
+  
+        h3{
+            font-size: 28px;
+            font-weight: 600;
+             color: $primary-dark;
+             letter-spacing: 0.01em;
+        }
+        p{
+            font-size: 18px;
+            margin-bottom: 0;
+            line-height: 200%;
+            color: $primary-dark;
+            letter-spacing: 0.04em;
+        }
+        .step-div{
+            margin-top: 50px;
+            h4{
+                font-size: 28px;
+                font-weight: 600;
+                margin-bottom: 26px;
+                margin-top: 40px;
+                letter-spacing: 0.01em;
+            }
+        }
+    }
+}
+
+
+
+.progress-line-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #eee;
+}
+
+.progress-line {
+  width: 100%;
+  height: 0;
+  background-color: #D81F28;
+  transition: height 0.6s ease;
+}
+
+.step-div {
+  position: relative;
+  padding-left: 30px;
+}
+
+.step {
+  margin-bottom: 40px;
+  scroll-padding-top: 190px;
+}
+
