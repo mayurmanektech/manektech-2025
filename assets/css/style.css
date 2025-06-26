@@ -15204,6 +15204,16 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   font-weight: 300;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 1199px) {
+  .meet-section .meeting-info {
+    padding: 40px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .meet-section .meeting-info {
+    text-align: center;
+  }
+}
 
 .meet-img-box {
   position: relative;
@@ -15220,6 +15230,18 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
 .meet-img-box .img-wrapper {
   position: relative;
   z-index: 2;
+}
+@media screen and (max-width: 1199px) {
+  .meet-img-box .img-wrapper {
+    max-width: 220px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .meet-img-box {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .img-bg-strip {
@@ -15239,6 +15261,19 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
 }
+@media screen and (max-width: 1199px) {
+  .img-bg-strip:before {
+    width: 40px;
+    height: 200%;
+    top: auto;
+    bottom: -50%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .img-bg-strip:before {
+    display: none;
+  }
+}
 .img-bg-strip:after {
   content: "";
   position: absolute;
@@ -15249,6 +15284,20 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   height: 140%;
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
+}
+@media screen and (max-width: 1199px) {
+  .img-bg-strip:after {
+    width: 40px;
+    right: 46px;
+    height: 200%;
+    top: auto;
+    bottom: -50%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .img-bg-strip:after {
+    display: none;
+  }
 }
 .img-bg-strip span:before {
   content: "";
@@ -15261,6 +15310,20 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
 }
+@media screen and (max-width: 1199px) {
+  .img-bg-strip span:before {
+    width: 40px;
+    right: 92px;
+    height: 200%;
+    top: auto;
+    bottom: -50%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .img-bg-strip span:before {
+    display: none;
+  }
+}
 .img-bg-strip span:after {
   content: "";
   position: absolute;
@@ -15272,11 +15335,30 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
 }
+@media screen and (max-width: 1199px) {
+  .img-bg-strip span:after {
+    width: 40px;
+    right: 138px;
+    height: 200%;
+    top: auto;
+    bottom: -50%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .img-bg-strip span:after {
+    display: none;
+  }
+}
 
 .meeting-person-info {
   padding-right: 150px;
   text-align: right;
   padding-bottom: 40px;
+}
+@media screen and (max-width: 1199px) {
+  .meeting-person-info {
+    padding-right: 20px;
+  }
 }
 .meeting-person-info .title {
   font-size: 20px;
