@@ -38,6 +38,9 @@ footer {
             grid-column: span 1;
           }
         }
+        .select-wrapper .form-select{
+          background-image: none;
+        }
         .select-wrapper {
           position: relative;
           max-width: fit-content;
@@ -411,6 +414,8 @@ footer {
           }
           list-style: none;
           li{
+            display: flex;
+            align-items: center;
            a {
       display: inline-block;
       transition: transform 0.6s ease, filter 0.4s ease;
