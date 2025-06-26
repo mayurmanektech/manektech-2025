@@ -363,3 +363,54 @@ window.addEventListener('scroll', () => {
 window.addEventListener('load', () => {
   activateStep(0);
 });
+
+
+
+
+const dotContainer = document.querySelector('.progress-line-container');
+const stepWrapper = document.querySelector('.step-div');
+const wrapperRectTop = stepWrapper.getBoundingClientRect().top + window.scrollY;
+
+steps.forEach((step, index) => {
+  const dot = document.createElement('div');
+  dot.classList.add('progress-dot');
+  dot.dataset.index = index;
+
+  const heading = step.querySelector('h4');
+  const headingTop = heading.getBoundingClientRect().top + window.scrollY;
+
+  // Get offset relative to the stepWrapper
+ const relativeTop = headingTop - wrapperRectTop - 5;
+
+
+  dot.style.top = `${relativeTop}px`;
+  dotContainer.appendChild(dot);
+});
+
+
+// Update active dot on scroll or click
+function updateDots(index) {
+  document.querySelectorAll('.progress-dot').forEach(dot => {
+    dot.classList.remove('active');
+  });
+  const currentDot = document.querySelector(`.progress-dot[data-index="${index}"]`);
+  if (currentDot) currentDot.classList.add('active');
+}
+
+// Add to activateStep
+function activateStep(index) {
+  sidebarItems.forEach(li => li.classList.remove('active'));
+  sidebarItems[index].classList.add('active');
+
+  const targetStep = steps[index];
+  const firstStepTop = steps[0].offsetTop;
+  const targetBottom = targetStep.offsetTop + targetStep.offsetHeight;
+  const newHeight = targetBottom - firstStepTop;
+
+  progressLine.style.height = newHeight + 'px';
+
+  updateDots(index);
+}
+
+
+

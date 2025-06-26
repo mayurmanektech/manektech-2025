@@ -366,6 +366,9 @@
         margin-top: 27px;
         font-size: 20px;
         letter-spacing: 0.01em;
+        @media screen and (max-width:767px) {
+            margin-top: 16px;
+        }
     }
     .title {
         font-size: 24px;
@@ -373,6 +376,9 @@
         margin-bottom: 30px;
         font-weight: normal;
         letter-spacing: 0.01em;
+        @media screen and (max-width:767px) {
+            margin-bottom: 10px;
+        }
     }
 }
 
@@ -1283,13 +1289,31 @@
                 margin-bottom: 26px;
                 margin-top: 40px;
                 letter-spacing: 0.01em;
+                line-height: normal;
             }
             }
            
         }
+        
+
     }
 }
 
+.progress-dot {
+            position: absolute;
+            left: -4px;  
+            width: 10px;
+            height: 10px;
+            border: 2px solid $primary-color;
+            background-color: $white-color;
+            border-radius: 50%;
+            z-index: 2;
+            transition: background-color 0.3s;
+            }
+
+            .progress-dot.active {
+            background-color: $primary-color
+            }
 
 #pagination {
   list-style: none;
@@ -1450,3 +1474,34 @@
       background-size: contain;
       pointer-events: none;
   }
+
+//   events-detail page 
+.events-details-wrappper{
+    .img-row{
+        display: grid;
+        grid-template-columns: 70% 30%;
+        @media screen and (max-width:767px) {
+            grid-template-columns: 100%;
+        }
+        gap: 20px;
+    }
+    .content-section .step-div{
+        padding-left: 0;
+    }
+    .content-section .progress-line-container{
+        visibility: hidden;
+    }
+    .Future-Focused{
+        background: linear-gradient(96deg, rgba(216, 31, 40, 0.1) 0%, rgba(224, 0, 95, 0.1) 100%);
+        padding: 40px;
+         @media screen and (max-width:767px) {
+            padding: 20px;
+        }
+    }
+}
+
+
+
+
+
+
