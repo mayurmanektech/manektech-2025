@@ -394,3 +394,67 @@ window.addEventListener('scroll', () => {
 window.addEventListener('load', () => {
   activateStep(0);
 });
+
+
+
+
+const dotContainer = document.querySelector('.progress-line-container');
+const stepWrapper = document.querySelector('.step-div');
+const wrapperRectTop = stepWrapper.getBoundingClientRect().top;
+
+steps.forEach((step, index) => {
+  const dot = document.createElement('div');
+  dot.classList.add('progress-dot');
+  dot.dataset.index = index;
+
+  const heading = step.querySelector('h4');
+  const relativeTop = heading.getBoundingClientRect().top - wrapperRectTop + heading.offsetHeight / 2;
+
+  dot.style.top = `${relativeTop}px`;
+  dotContainer.appendChild(dot);
+});
+
+
+// Update active dot on scroll or click
+function updateDots(index) {
+  document.querySelectorAll('.progress-dot').forEach(dot => {
+    dot.classList.remove('active');
+  });
+  const currentDot = document.querySelector(`.progress-dot[data-index="${index}"]`);
+  if (currentDot) currentDot.classList.add('active');
+}
+
+// Add to activateStep
+function activateStep(index) {
+sidebarItems.forEach(li => li.classList.remove('active'));
+sidebarItems[index].classList.add('active');
+
+
+  updateDots(index);
+
+  const currentDot = document.querySelector(`.progress-dot[data-index="${index}"]`);
+  const nextDot = document.querySelector(`.progress-dot[data-index="${index + 1}"]`);
+
+  let lineHeight;
+
+  if (nextDot) {
+    const nextDotTop = parseFloat(nextDot.style.top);
+    lineHeight = nextDotTop + 5;
+  } else {
+    // It's the last step — fill to bottom of the step container
+    const stepWrapper = document.querySelector('.step-div');
+    const progressTop = stepWrapper.getBoundingClientRect().top + window.scrollY;
+
+    const lastStep = steps[index];
+    const lastStepBottom = lastStep.getBoundingClientRect().bottom + window.scrollY;
+
+    lineHeight = lastStepBottom - progressTop;
+  }
+   steps.forEach(s => s.classList.remove('active'));
+  steps[index].classList.add('active');
+
+  progressLine.style.height = `${lineHeight}px`;
+}
+
+
+
