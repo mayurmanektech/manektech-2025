@@ -369,7 +369,7 @@ window.addEventListener('load', () => {
 
 const dotContainer = document.querySelector('.progress-line-container');
 const stepWrapper = document.querySelector('.step-div');
-const wrapperRectTop = stepWrapper.getBoundingClientRect().top + window.scrollY;
+const wrapperRectTop = stepWrapper.getBoundingClientRect().top;
 
 steps.forEach((step, index) => {
   const dot = document.createElement('div');
@@ -377,11 +377,7 @@ steps.forEach((step, index) => {
   dot.dataset.index = index;
 
   const heading = step.querySelector('h4');
-  const headingTop = heading.getBoundingClientRect().top + window.scrollY;
-
-  // Get offset relative to the stepWrapper
- const relativeTop = headingTop - wrapperRectTop - 5;
-
+  const relativeTop = heading.getBoundingClientRect().top - wrapperRectTop + heading.offsetHeight / 2;
 
   dot.style.top = `${relativeTop}px`;
   dotContainer.appendChild(dot);
@@ -399,17 +395,34 @@ function updateDots(index) {
 
 // Add to activateStep
 function activateStep(index) {
-  sidebarItems.forEach(li => li.classList.remove('active'));
-  sidebarItems[index].classList.add('active');
+sidebarItems.forEach(li => li.classList.remove('active'));
+sidebarItems[index].classList.add('active');
 
-  const targetStep = steps[index];
-  const firstStepTop = steps[0].offsetTop;
-  const targetBottom = targetStep.offsetTop + targetStep.offsetHeight;
-  const newHeight = targetBottom - firstStepTop;
-
-  progressLine.style.height = newHeight + 'px';
 
   updateDots(index);
+
+  const currentDot = document.querySelector(`.progress-dot[data-index="${index}"]`);
+  const nextDot = document.querySelector(`.progress-dot[data-index="${index + 1}"]`);
+
+  let lineHeight;
+
+  if (nextDot) {
+    const nextDotTop = parseFloat(nextDot.style.top);
+    lineHeight = nextDotTop + 5;
+  } else {
+    // It's the last step — fill to bottom of the step container
+    const stepWrapper = document.querySelector('.step-div');
+    const progressTop = stepWrapper.getBoundingClientRect().top + window.scrollY;
+
+    const lastStep = steps[index];
+    const lastStepBottom = lastStep.getBoundingClientRect().bottom + window.scrollY;
+
+    lineHeight = lastStepBottom - progressTop;
+  }
+   steps.forEach(s => s.classList.remove('active'));
+  steps[index].classList.add('active');
+
+  progressLine.style.height = `${lineHeight}px`;
 }
 
 

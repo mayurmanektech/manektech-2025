@@ -15554,6 +15554,8 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
 }
 .planning-main-wrapper .sidebar-menu ul .active {
   font-weight: 600;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
 }
 .planning-main-wrapper .sidebar-menu h5 {
   font-size: 20px;
@@ -15628,8 +15630,7 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   left: -4px;
   width: 10px;
   height: 10px;
-  border: 2px solid #D81F28;
-  background-color: #ffffff;
+  background-color: #d9d9d9;
   border-radius: 50%;
   z-index: 2;
   -webkit-transition: background-color 0.3s;
@@ -15638,6 +15639,8 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
 
 .progress-dot.active {
   background-color: #D81F28;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 #pagination {

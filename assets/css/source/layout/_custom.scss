@@ -1222,6 +1222,7 @@
             }
             .active{
                 font-weight: 600;
+                transition: $transition-animate;
             }
             
             padding-bottom: 16px;
@@ -1304,15 +1305,15 @@
             left: -4px;  
             width: 10px;
             height: 10px;
-            border: 2px solid $primary-color;
-            background-color: $white-color;
+            background-color:  #d9d9d9;
             border-radius: 50%;
             z-index: 2;
             transition: background-color 0.3s;
             }
 
             .progress-dot.active {
-            background-color: $primary-color
+            background-color: $primary-color;
+              transition: background-color 0.3s;
             }
 
 #pagination {
