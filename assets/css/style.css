@@ -14552,12 +14552,14 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   margin-bottom: 10px;
   margin-top: 27px;
   font-size: 20px;
+  letter-spacing: 0.01em;
 }
 .success-story-card .title {
   font-size: 24px;
   line-height: 36px;
   margin-bottom: 30px;
   font-weight: normal;
+  letter-spacing: 0.01em;
 }
 
 .process-section .section-title {
@@ -15716,12 +15718,12 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
           box-shadow: none !important;
 }
 
-.floating-label {
+.our-events-floating-label {
   position: relative;
 }
 
-.floating-label select,
-.floating-label input {
+.our-events-floating-label select,
+.our-events-floating-label input {
   width: 100%;
   padding: 1rem 0rem 0.25rem;
   font-size: 1rem;
@@ -15731,7 +15733,7 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   outline: none;
 }
 
-.floating-label label {
+.our-events-floating-label label {
   position: absolute;
   top: 1rem;
   left: 0rem;
@@ -15742,7 +15744,7 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   transition: 0.2s ease all;
 }
 
-.floating-label input:not(:-moz-placeholder-shown) ~ label {
+.our-events-floating-label input:not(:-moz-placeholder-shown) ~ label {
   top: -0.2rem;
   left: 0rem;
   font-size: 0.75rem;
@@ -15750,7 +15752,7 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   padding: 0 0rem;
 }
 
-.floating-label input:not(:-ms-input-placeholder) ~ label {
+.our-events-floating-label input:not(:-ms-input-placeholder) ~ label {
   top: -0.2rem;
   left: 0rem;
   font-size: 0.75rem;
@@ -15758,10 +15760,10 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   padding: 0 0rem;
 }
 
-.floating-label input:focus ~ label,
-.floating-label input:not(:placeholder-shown) ~ label,
-.floating-label select:focus ~ label,
-.floating-label select:valid ~ label {
+.our-events-floating-label input:focus ~ label,
+.our-events-floating-label input:not(:placeholder-shown) ~ label,
+.our-events-floating-label select:focus ~ label,
+.our-events-floating-label select:valid ~ label {
   top: -0.2rem;
   left: 0rem;
   font-size: 0.75rem;
@@ -15794,4 +15796,19 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   .our-events-search-filter {
     padding: 24px 0;
   }
+}
+
+.our-events-floating-label:has(select)::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 61%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 12px;
+  height: 7px;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%231D1D1D'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
 }
