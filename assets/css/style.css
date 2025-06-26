@@ -13192,8 +13192,8 @@ body.scrolled header {
   z-index: 9999;
   -webkit-animation: sticky-menu 0.8s forwards;
           animation: sticky-menu 0.8s forwards;
-  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 @-webkit-keyframes sticky-menu {
@@ -15602,7 +15602,7 @@ footer .footer-bottom-main .footer-bottom-bar .copyright-social .social-link li 
   left: 0;
   top: 0;
   bottom: 0;
-  width: 2px;
+  width: 1px;
   background-color: #eee;
 }
 .planning-main-wrapper .content-section .step-div .progress-line-container .progress-line {
