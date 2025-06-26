@@ -173,6 +173,7 @@ h4,.h4{
     &:hover{
         background: $white-color;
         color: $primary-color;
+        border: 1px solid $primary-color;
     }
     &:focus{
         outline: none;
@@ -454,35 +455,68 @@ textarea.form-control{
            margin-bottom: 15px;
     }
     
-    }
+}
 
-    .breadcrumb {
-        margin-bottom: 35px;
-        .breadcrumb-item {
-            font-size: 14px;
+.breadcrumb {
+    margin-bottom: 35px;
+    .breadcrumb-item {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        padding-left: 30px;
+        position: relative;
+        &.active {
+            opacity: 0.5;
+        }
+        &:before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            margin: 0;
+            padding: 0;
+            transform: rotate(45deg);
+            border: 2px solid $white-color;
+            border-left: 0;
+            border-bottom: 0;
+            position: absolute;
+            left: 10px;
+            top: 6px;
+        }
+        a {
+            color: $white-color;
+        }
+    }
+}
+
+.tabs-wrapper {
+    border-bottom: 1px solid #000;
+    margin-bottom: 40px;
+    .nav-item {
+        flex: 1;
+        .nav-link {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            color: #000;
             font-weight: 300;
-            line-height: 20px;
-            padding-left: 30px;
-            position: relative;
+            border: 0;
+            border-bottom: 2px solid transparent;
+            transition: $transition-animate;
+            white-space: nowrap;
             &.active {
-                opacity: 0.5;
-            }
-            &:before {
-                content: '';
-                width: 6px;
-                height: 6px;
-                margin: 0;
-                padding: 0;
-                transform: rotate(45deg);
-                border: 2px solid $white-color;
-                border-left: 0;
-                border-bottom: 0;
-                position: absolute;
-                left: 10px;
-                top: 6px;
-            }
-            a {
-                color: $white-color;
+                background: linear-gradient(0deg, #FFEEEF 0%, #FAFAFA 100%);
+                border-color: $primary-color;
+                font-weight: 600;
+                color: $primary-color;
             }
         }
     }
+}
+
+.load-btn {
+    font-family: $sora-font-family;
+    margin-top: 40px;
+    margin: auto;
+}

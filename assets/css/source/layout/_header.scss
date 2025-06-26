@@ -28,9 +28,6 @@ header{
     
     >.btn{
         padding: 12px 26px;
-        &:hover{
-          border: 1px solid $primary-color;
-        }
 
         @media (max-width:1199px) {
           padding: 10px 20px;

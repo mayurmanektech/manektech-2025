@@ -179,6 +179,37 @@ jQuery(window).on('resize', function () {
           },
       },
     });
+
+    const swiper_trusted = new Swiper('.trusted-slider', {
+      speed: 400,
+      spaceBetween: 0,
+      autoHeight :true,
+      loop: true,
+      slidesPerView: 4,
+      spaceBetween: 30,
+      breakpoints: {
+        0: {
+          slidesPerView: 3,
+          spaceBetween: 36,
+        },
+        576: {
+          slidesPerView: 3,
+          spaceBetween: 36,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 48,
+        },
+      },
+      navigation: {
+        nextEl: ".trusted-slider-next",
+        prevEl: ".trusted-slider-prev",
+      },
+      pagination: {
+        el: ".trusted-pagination",
+        clickable: true,
+      },
+    });
   });
 
 
