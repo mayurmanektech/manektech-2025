@@ -100,7 +100,7 @@ h1,.h1{
           letter-spacing: 0.30px;
            margin: 0 0 15px;
     }
-      @media only screen and (max-width: 767px) {
+    @include breakpoint(s-tablet) {
          font-size:28px;
     }
 }
@@ -379,17 +379,23 @@ textarea.form-control{
 .section-title {
     position: relative;
     margin-bottom: 70px;
-    @media screen and (max-width:767px) {
+    @include breakpoint(s-tablet) {
          margin-bottom: 48px;
     }
     h2 {
-        font-size: 36px;
         color: $primary-dark;
         text-transform: none;
         margin: 0;
         padding-bottom: 16px;
         position: relative;
         letter-spacing: 0.8px;
+        @include breakpoint(l-tablet) {
+            font-size: 32px;
+            line-height: 1.6;
+        }
+        @include breakpoint(s-tablet) {
+            font-size: 24px;
+        }
         &:before {
             content: '';
             position: absolute;

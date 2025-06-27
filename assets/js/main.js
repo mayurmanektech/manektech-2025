@@ -189,14 +189,18 @@ jQuery(window).on('resize', function () {
       spaceBetween: 30,
       breakpoints: {
         0: {
-          slidesPerView: 3,
-          spaceBetween: 36,
-        },
-        576: {
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 36,
         },
         768: {
+          slidesPerView: 2,
+          spaceBetween: 36,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 48,
+        },
+        1200: {
           slidesPerView: 4,
           spaceBetween: 48,
         },
