@@ -336,8 +336,8 @@
                     </div>
                 </div>
             </div>
-            <div class=" col-lg-4 col-xl-5 mt-4 mt-lg-0 d-flex justify-content-center">
-                <img src="assets/images/global.svg" alt="">
+            <div class="earth-container col-lg-4 col-xl-5 mt-4 mt-lg-0 d-flex justify-content-center">
+                <img src="assets/images/global.svg"  alt="Rotating Earth" class="rotating-earth">
             </div>
         </div>
     </div>
@@ -356,9 +356,11 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="row align-items-center">
-                    <div class="col-lg-7">
-                        <img src="assets/images/2011-2012.png" alt="">
+                <div class="row align-items-center ">
+                    <div class="col-lg-7 card-wrapper">
+                        <div class="card3d card-1"><img src="./assets/images/about-us-journey-1.png" alt=""></div>
+                        <div class="card3d card-2"><img src="./assets/images/about-us-journey-2.png" alt=""></div>
+                        <div class="card3d card-3"><img src="./assets/images/about-us-journey-3.png" alt=""></div>
                     </div>
                     <div class="col-lg-5">
                         <div class="journey-content">
@@ -1053,6 +1055,7 @@
             <div class="form-floating">
               <input type="text" class="form-control" id="name" placeholder=" " required />
               <label for="name">Name*</label>
+              <span class="underline"></span>
             </div>
           </div>
 
@@ -1060,18 +1063,21 @@
             <div class="form-floating">
               <input type="email" class="form-control" id="email" placeholder=" " required />
               <label for="email">Business Email Address*</label>
+              <span class="underline"></span>
             </div>
           </div>
           
           <div>
             <label class="form-label">Time Zone</label>
-            <div class="input-group gap-3 d-flex flex-nowrap">
-              <div class="select-wrapper">
+            <div class=" input-group gap-3 d-flex flex-nowrap">
+              <div class=" form-floating select-wrapper">
                 <select class="form-select" id="timezone"></select>
+                <span class="underline"></span>
               </div>
-              <div class="input-prefix-wrapper">
+              <div class="form-floating input-prefix-wrapper">
                 <span class="prefix-text" id="prefixDisplay">+91</span>
                 <input autocomplete="off" type="text" id="countryCode" class="form-control" placeholder="" aria-label="Phone Number" />
+                <span class="underline"></span>
               </div>
             </div>
           </div>
@@ -1081,12 +1087,14 @@
             <div class="form-floating w-100">
               <input  type="text" class="form-control" id="company" placeholder=" " required />
               <label for="company">Company Name*</label>
+              <span class="underline"></span>
             </div>
           </div>
           <div class="description">
             <div class="form-floating">
               <textarea class="form-control" id="description" placeholder=" " style="height: 40px;"></textarea>
               <label for="description">Description</label>
+              <span class="underline"></span>
             </div>
           </div>
           <div class="attachment-wrapper">

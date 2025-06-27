@@ -882,9 +882,9 @@
     }
     border-bottom: 1px solid #EBEBEB;
     transition: $transition-animate;
-    &:hover {
-        background: $white-color;
-    }
+    // &:hover {
+    //     background: $white-color;
+    // }
     &:first-child {
         border-top: 1px solid #EBEBEB;
     }
@@ -955,6 +955,14 @@
         }
         @media screen and (max-width: 991px) {
             text-align: center;
+        }
+    }
+    .white-btn{
+         border: 1px solid transparent;
+        &:hover{
+            background: $primary-color;
+            color: $white-color;
+            border: 1px solid transparent;
         }
     }
 }
@@ -1288,6 +1296,9 @@
                 font-weight: 600;
                 margin-bottom: 26px;
                 margin-top: 40px;
+                @media screen and (max-width:767px) {
+                    margin-top: 26px;
+                }
                 letter-spacing: 0.01em;
                 line-height: normal;
             }
@@ -1649,3 +1660,111 @@
 
 
 
+.card3d {
+  width: 250px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+.card3d img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Wrapper layout */
+.card-wrapper {
+  height: 444px !important;
+  position: relative;
+}
+.card-1, .card-2, .card-3 {
+  position: absolute;
+}
+.card-1 {
+  bottom: 5%;
+  left: 0%; 
+  max-width: 300px;
+  width: 100%;
+  aspect-ratio: 1;
+  animation: skewIn1 3s ease forwards;
+}
+.card-2 {
+  width: 280px;
+  aspect-ratio: 1;
+  top: 7%;
+  left: 40%;
+  z-index: -1;   
+  animation: skewIn2 3s ease 0.3s forwards;
+}
+.card-3 {
+  bottom: 0%;
+  right: 0%;   
+  animation: skewIn3 3s ease 0.6s forwards;
+}
+
+/* Unique skew animations */
+@keyframes skewIn1 {
+  0% {
+    transform: skewY(10deg) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: skewY(-5deg) scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: skewY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes skewIn2 {
+  0% {
+    transform: skewX(12deg) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: skewX(-6deg) scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: skewX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes skewIn3 {
+  0% {
+    transform: skew(12deg, -8deg) scale(0.7);
+    opacity: 0;
+  }
+  50% {
+    transform: skew(-6deg, 5deg) scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: skew(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+
+.form-underline-animate,
+.form-floating{
+    position: relative;
+}
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.6s ease-in-out;
+    }
+.form-underline-animate:focus-within .underline,
+.form-floating:focus-within .underline
+{
+    transform: scaleX(1);
+}
