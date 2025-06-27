@@ -1660,21 +1660,22 @@
 
 
 
-.card3d {
+
+
+
+
+.card-wrapper {
+  height: 444px !important;
+  position: relative;
+  .card3d {
   width: 250px;
   overflow: hidden;
   transform-style: preserve-3d;
-}
-.card3d img {
+   img {
   width: 100%;
   height: auto;
   display: block;
 }
-
-/* Wrapper layout */
-.card-wrapper {
-  height: 444px !important;
-  position: relative;
 }
 .card-1, .card-2, .card-3 {
   position: absolute;
@@ -1746,7 +1747,9 @@
     opacity: 1;
   }
 }
+}
 
+// form input/select bottom underline animation
 
 .form-underline-animate,
 .form-floating{
@@ -1758,7 +1761,7 @@
     left: 0;
     height: 1px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: $white-color;
     transform: scaleX(0);
     transform-origin: left center;
     transition: transform 0.6s ease-in-out;
@@ -1767,4 +1770,42 @@
 .form-floating:focus-within .underline
 {
     transform: scaleX(1);
+}
+
+
+// software-development-li
+
+.software-development-li{
+    p:before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+    vertical-align: middle;
+}
+p{
+    margin-bottom: 16px;
+}
+}
+
+.service-we-offers-section{
+    .How-we-do-box-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        @media screen and (max-width:1200px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width:767px) {
+            grid-template-columns: 1fr;
+        }
+
+        gap: 20px;
+        border: none;
+        .How-we-do-box{
+            border: 1px solid #E8E8E8;
+        }
+    }
 }
