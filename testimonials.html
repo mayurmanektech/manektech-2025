@@ -437,7 +437,7 @@
                           <img src="assets/images/headshot-with-client-testimonial.jpg" alt="">
                       </div>
                       <div class="overlay-wrapper">
-                          <button class="video-btn">
+                          <button type="button" class="video-btn" data-bs-toggle="modal" data-bs-target="#testimonialModal">
                               <img src="assets/images/play-icon.svg" alt="">
                           </button>
                           <div class="info">
@@ -453,7 +453,7 @@
                           <img src="assets/images/headshot-with-client-testimonial.jpg" alt="">
                       </div>
                       <div class="overlay-wrapper">
-                          <button class="video-btn">
+                          <button class="video-btn" data-bs-toggle="modal" data-bs-target="#testimonialModal">
                               <img src="assets/images/play-icon.svg" alt="">
                           </button>
                           <div class="info">
@@ -469,7 +469,7 @@
                           <img src="assets/images/headshot-with-client-testimonial.jpg" alt="">
                       </div>
                       <div class="overlay-wrapper">
-                          <button class="video-btn">
+                          <button class="video-btn" data-bs-toggle="modal" data-bs-target="#testimonialModal">
                               <img src="assets/images/play-icon.svg" alt="">
                           </button>
                           <div class="info">
@@ -485,7 +485,7 @@
                           <img src="assets/images/headshot-with-client-testimonial.jpg" alt="">
                       </div>
                       <div class="overlay-wrapper">
-                          <button class="video-btn">
+                          <button class="video-btn" data-bs-toggle="modal" data-bs-target="#testimonialModal">
                               <img src="assets/images/play-icon.svg" alt="">
                           </button>
                           <div class="info">
@@ -501,7 +501,7 @@
                           <img src="assets/images/headshot-with-client-testimonial.jpg" alt="">
                       </div>
                       <div class="overlay-wrapper">
-                          <button class="video-btn">
+                          <button class="video-btn" data-bs-toggle="modal" data-bs-target="#testimonialModal">
                               <img src="assets/images/play-icon.svg" alt="">
                           </button>
                           <div class="info">
@@ -777,6 +777,30 @@
 
     </div>
   </footer>
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade testimonial-modal" id="testimonialModal" tabindex="-1" aria-labelledby="testimonialModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        <img src="assets/images/close-icon.svg" alt="">
+        <span>Close</span>
+      </button>
+      <div class="modal-body">
+        <div class="img-wrapper">
+          <img src="assets/images/testimonial-modal.jpg" alt="">
+        </div>
+        <div class="overlay-wrapper">
+          <button type="button" class="video-btn" data-bs-toggle="modal" data-bs-target="#testimonialModal">
+              <img src="assets/images/play-icon.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- footer end -->
 <script src="assets/js/jquery-3.7.1.min.js"></script>
