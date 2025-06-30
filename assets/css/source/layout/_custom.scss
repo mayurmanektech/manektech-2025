@@ -1196,6 +1196,7 @@
         h3, p{
             color: $white-color;
                transition: $transition-animate;
+               
         }
         svg path{
             stroke: $white-color;
@@ -1218,6 +1219,8 @@
         font-weight: normal;
         margin-bottom: 16px;
         transition: $transition-animate;
+        line-height: 127%;
+        letter-spacing: 0.01em;
     }
     
     p {
@@ -1227,6 +1230,7 @@
         letter-spacing: 0.04em;
         opacity: 0.9;
         transition: $transition-animate;
+        font-weight: 500;
     }
 }
 
@@ -2218,18 +2222,48 @@ p{
         margin-bottom: 0;
     }
 }
-// dot-net-devlopment page start----ba
+
+
+
+
+// dot-net-devlopment page start----
 
 .inner-banner.dot-net-banner .bg-img:after{
-background: linear-gradient(91deg, #67217a 40%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(91deg, #67217a 40%, rgba(0, 0, 0, 0.5) 100%);
 }
 .dot-net-banner{
     .banner-head-title{
         text-wrap: balance;
     }
 }
+.dot-net-dev-services{
+     @media screen and (min-width:992px) {
+    padding: 64px 0 127px;
+     }
+    .How-we-do-card{
+         @media screen and (min-width:992px) {
+                 padding: 48px 40px;
+            }
+        h3{
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 137%;
+            letter-spacing: 0.01em;
+            color: $primary-dark;
+        }
+        p{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 170%;
+            letter-spacing: 0.04em;
+            color: #2c2828;
+            opacity: 0.9;
+        }
+    }
+}
 .why-choose-dot-net{
     .How-we-do-box-wrapper{
+        margin-top: 40px;
         display: grid;
         grid-template-columns: 1fr 1fr !important;
         gap: 30px;
@@ -2237,11 +2271,93 @@ background: linear-gradient(91deg, #67217a 40%, rgba(0, 0, 0, 0.5) 100%);
              grid-template-columns: 1fr !important;
         }
         .How-we-do-box{
-        //   border: 1px solid rgba(29, 29, 29, 0.2) !important;
          background-color: #fafafa !important; 
+          
+         .How-we-do-card{
+            @media screen and (min-width:992px) {
+                 padding: 48px 40px;
+            }
+            h3{
+               font-weight: 500;
+                font-size: 24px;
+                line-height: 137%;
+                letter-spacing: 0.01em;
+            }
+            ul
+            {
+                margin-top: 24px;
+                margin-bottom: 0;
+            li{
+                position: relative;
+                opacity: 0.9;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 170%;
+                letter-spacing: 0.04em;
+                padding-left: 1em;
+                color: #2c2828 ;
+                
+            }
+        }
+            li::before{
+                 position: absolute; 
+                 left: 0;
+                 top: 14px;
+            }
+        }
         }
     }
 }
+.why-choose-dot-net .How-we-do-box-wrapper .How-we-do-box:hover .How-we-do-card ul li{
+    color: $white-color;
+    transition: $transition-animate;
+}
+.tech-we-use-section{
+    padding: 64px 0;
+    background: linear-gradient(180deg, #fff 0%, #f8f8f8 100%);
+}
+.tech-table table {
+  margin-top: 48px;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgba(29, 29, 29, 0.1);
+}
+.tech-table th,
+.tech-table td {
+  padding: 12px 24px;
+  text-align: left;
+}
+.tech-table th {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 200%;
+  letter-spacing: 0.04em;
+  color: $primary-dark;
+  border-right: 1px solid rgba(29, 29, 29, 0.1);
+}
+.tech-table td {
+  color: $primary-dark;
+  font-weight: 500;
+  font-size: 18px;  
+  line-height: 200%;
+  letter-spacing: 0.04em;
+}
+.tech-table tr:not(:last-child) {
+  border-bottom: 1px solid #e0e0e0;
+}
+@media screen and (max-width: 767px) {
+  .tech-table th, .tech-table td {
+    display: block;
+    width: 100%;
+  }
+  .tech-table th {
+    margin-top: 10px;
+  }
+  .tech-table td {
+    padding-top: 0;
+  }
+}
+
 // dot-net-devlopment page end----
 
 
