@@ -2008,3 +2008,76 @@ p{
 }
 
 // software-development-page-css end---------------
+.skill-img-wrapper {
+    position: relative;
+    .overlay-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 48px 50px 36px 54px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+            margin: 0;
+            color: $white-color;
+            font-weight: 600;
+            letter-spacing: 1px;
+            &.category {
+                font-size: 20px;
+            }
+            &.title {
+                font-size: 36px;
+                line-height: 1.2;
+            }
+        }
+    }
+}
+
+.project-section {
+    background: linear-gradient(0deg, #F8E7E6 0%, #FFF 100%);
+    .link-btn {
+        color: $primary-color;
+        font-weight: 600;
+    }
+}
+.project-row {
+    margin: 0 -50px;
+    margin-top: 70px;
+    > * {
+        padding: 0 50px;
+    }
+}
+.project-card {
+    .img-wrapper {
+        padding-bottom: 34px;
+    }
+    .category {
+        opacity: 0.5;
+        font-size: 20px;
+        letter-spacing: 0.3px;
+        margin-bottom: 12px;
+    }
+    .title {
+        font-size: 24px;
+        margin-bottom: 12px;
+        line-height: 36px;
+        letter-spacing: 0.3px;
+    }
+    .desc {
+        font-size: 18px;
+        line-height: 1.6;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+        opacity: 0.9;
+        font-weight: 300;
+    }
+    .btn {
+        box-shadow: none;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        background: $white-color;
+    }
+}
