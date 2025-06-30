@@ -7,7 +7,7 @@ footer {
   }
   .container {
     padding: 80px 0 34px;
-    @include breakpoint(l-tablet) {
+    @media screen and (max-width:991px) {
       padding: 40px 0;
     }
     form {
@@ -18,7 +18,7 @@ footer {
         grid-template-columns: 1fr 1fr;
         row-gap: 50px;
         column-gap: 30px;
-        @include breakpoint(s-tablet) {
+        @media screen and (max-width:767px) {
           grid-template-columns: 1fr;
           row-gap: 30px;
         }
@@ -34,7 +34,7 @@ footer {
         .submit-btn-div {
           font-family: 'Sora' !important;
           grid-column: span 2;
-          @include breakpoint(s-tablet) {
+          @media screen and (max-width:767px) {
             grid-column: span 1;
           }
         }
@@ -48,7 +48,7 @@ footer {
           #timezone {
           max-width: fit-content;
           height: 44px;
-          @include breakpoint(s-tablet) {
+          @media screen and (max-width:767px) {
              max-width: 130px;
           }
           background-color: transparent;
@@ -273,7 +273,7 @@ footer {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 40px;
-      @include breakpoint(l-tablet) {
+      @media screen and (max-width:991px) {
         grid-template-columns: 1fr;
         gap: 20px;
       }
@@ -283,7 +283,7 @@ footer {
         border-top: 1px solid #ffffff26;
         padding: 30px 0;
         transition: padding-left 0.4s;
-        @include breakpoint(l-tablet) {
+        @media screen and (max-width:991px) {
           padding: 20px 0;
         }
          &::before {
@@ -350,10 +350,10 @@ footer {
         @media screen and (max-width:1399px) {
             padding: 64px 0 64px;
           }
-        @include breakpoint(l-tablet) {
+        @media screen and (max-width:991px) {
            padding: 48px 0 48px;
         }
-        @include breakpoint(s-tablet) {
+        @media screen and (max-width:767px) {
           padding: 36px 0 36px;
         }
         @media screen and (max-width:575px) {
@@ -380,10 +380,10 @@ footer {
       .copyright-social {
         display: flex;
         padding: 39px 0;
-        @include breakpoint(l-tablet) {
+        @media screen and (max-width:991px) {
           padding: 36px 0;
         }
-        @include breakpoint(s-tablet) {
+        @media screen and (max-width:767px) {
           padding: 36px 0;
         }
         @media screen and (max-width:575px) {
@@ -394,7 +394,7 @@ footer {
         gap: 16px;
         flex-wrap: wrap;
         border-top: 1px solid #ffffff80;
-        @include breakpoint(l-tablet) {
+        @media screen and (max-width:991px) {
            display: flex;
            justify-content: center;
         }
@@ -439,6 +439,6 @@ footer {
     }
   }
 }
-
+  
 
 
