@@ -2218,3 +2218,28 @@ p{
         margin-bottom: 0;
     }
 }
+// dot-net-devlopment page start----ba
+
+.inner-banner.dot-net-banner .bg-img:after{
+background: linear-gradient(91deg, #67217a 40%, rgba(0, 0, 0, 0.5) 100%);
+}
+.dot-net-banner{
+    .banner-head-title{
+        text-wrap: balance;
+    }
+}
+.why-choose-dot-net{
+    .How-we-do-box-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 30px;
+        @media screen and (max-width:991px) {
+             grid-template-columns: 1fr !important;
+        }
+        .How-we-do-box{
+        //   border: 1px solid rgba(29, 29, 29, 0.2) !important;
+         background-color: #fafafa !important; 
+        }
+    }
+}
+// dot-net-devlopment page end----
