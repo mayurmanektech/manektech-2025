@@ -2007,6 +2007,70 @@ p{
     }
 }
 
+.unique-development-section {
+    background: linear-gradient(43deg, #f5f5f5 0%, #fff 99.78%);
+}
+
+.development-card {
+    border: 1px solid #f0f0f0;
+    height: 100%;
+    padding: 55px;
+    background-color: $white-color;
+    @include breakpoint(l-tablet) {
+        padding: 32px;
+    }
+    @media screen and (max-width:575px) {
+        padding: 18px;
+    }
+    position: relative;
+    z-index: 2;
+    h3 {
+        margin-top: 30px;
+        color: $primary-dark;
+        font-weight: normal;
+        margin-bottom: 16px;
+        transition: $transition-animate;
+    }
+    p {
+        color: $primary-dark;
+        font-size: 16px;
+        line-height: 1.7;
+        letter-spacing: 0.04em;
+        opacity: 0.9;
+        transition: $transition-animate;
+    }
+    ul {
+        padding-inline-start: 0;
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: auto auto;
+
+        @media screen and (max-width:575px) {
+            grid-template-columns: 1fr;
+        }
+        margin-bottom: 0;
+        li {
+            color: $primary-dark;
+            list-style: none;
+            font-size: 18px;
+            padding-bottom: 10px;
+        }
+        li:last-child {
+            padding-bottom: 0;
+        }
+        li::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background-color: $primary-color;
+            border-radius: 50%;
+            margin: 0 10px 0 0;
+            vertical-align: middle;
+        }
+    }
+}
+
 // software-development-page-css end---------------
 .skill-img-wrapper {
     position: relative;
