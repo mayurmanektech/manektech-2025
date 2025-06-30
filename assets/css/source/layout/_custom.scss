@@ -1876,6 +1876,9 @@ p{
 .skill-row {
     margin-bottom: 70px;
     &.reverse {
+        @include breakpoint(l-tablet) {
+            flex-direction: column-reverse;
+        }
         .skill-info {
             padding-left: 0;
             padding-right: 50px;
@@ -1884,6 +1887,10 @@ p{
 }
 .skill-info {
     padding-left: 50px;
+    @include breakpoint(l-tablet) {
+        padding-left: 0;
+        padding-top: 50px;
+    }
     .title {
         font-size: 26px;
         line-height: 33px;
@@ -1972,6 +1979,10 @@ p{
         color: $primary-color;
         font-weight: 600;
         letter-spacing: 0.04em;
+        @include breakpoint(s-tablet) {
+            margin-top: 30px;
+            display: inline-block;
+        }
     }
     .section-title {
         margin-bottom: 0;
@@ -2212,11 +2223,17 @@ p{
     margin-bottom: 24px;
     .icon {
         min-width: 80px;
+        @include breakpoint(s-tablet) {
+            min-width: 50px;
+        }
     }
     .title {
         margin-bottom: 5px;
         font-size: 26px;
         line-height: 41px;
+        @include breakpoint(s-tablet) {
+            font-size: 20px;
+        }
     }
     .desc {
         margin-bottom: 0;
@@ -2376,6 +2393,9 @@ p{
             line-height: 30px;
             font-weight: 300;
             letter-spacing: 0.8px;
+            @include breakpoint(s-tablet) {
+                font-size: 20px;
+            }
             &:after {
                 width: 12px;
                 height: 12px;
@@ -2391,6 +2411,9 @@ p{
             font-size: 18px;
             line-height: 1.7;
             font-family: $sora-font-family;
+            @include breakpoint(s-tablet) {
+                font-size: 14px;
+            }
         }
     }
 }
