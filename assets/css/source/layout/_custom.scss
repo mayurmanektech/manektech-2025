@@ -1964,46 +1964,56 @@ p{
 
 .Featured-Projects-section{
     background: linear-gradient(180deg, #fff 0%, #f8e7e6 100%);
+    .link-btn {
+        color: $primary-color;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+    }
+    .section-title {
+        margin-bottom: 0;
+    }
     .project-main-wrapper{
         display: grid;
         grid-template-columns: 1fr 1fr;
-         gap: 100px;
+        gap: 100px;
+        margin-top: 70px;
         @media screen and (max-width:991px) {
-              grid-template-columns: 1fr;
-              gap: 48px;
-        }
-       
-    .project-wrapper{
-        margin-top: 34px;
-        .sub-title{
-          color: #1D1D1D80;
-          font-weight: 500;
-          font-size: 20px;
-          letter-spacing: 0.01em;
-        }
-        .head-title{
-            color: $primary-dark;
-            font-size: 24px;
-            line-height: 150%;
-            letter-spacing: 0.01em;
-            margin: 16px 0;
-        }
-        .project-desc{
-            color: $primary-dark;
-             font-size: 18px;
-             line-height: 165%;
-             letter-spacing: 0.01em;
-             opacity: 0.9;
-        }
-        .white-btn{
-            border: 1px solid $primary-color;
-            &:hover{
-                background-color: $primary-color;
-                color: $white-color;
-                transition: $transition-animate;
-            }
+            grid-template-columns: 1fr;
+            gap: 48px;
         }
     }
+}
+
+.project-wrapper{
+    margin-top: 34px;
+    .sub-title{
+        opacity: 0.5;
+        font-size: 20px;
+        letter-spacing: 0.3px;
+        margin-bottom: 12px;
+    }
+    .head-title{
+        font-size: 24px;
+        margin-bottom: 12px;
+        line-height: 36px;
+        letter-spacing: 0.3px;
+        font-weight: 500;
+    }
+    .project-desc{
+        font-size: 18px;
+        line-height: 1.6;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+        opacity: 0.9;
+        font-weight: 300;
+    }
+    .white-btn{
+        border: 1px solid $primary-color;
+        &:hover{
+            background-color: $primary-color;
+            color: $white-color;
+            transition: $transition-animate;
+        }
     }
 }
 
@@ -2152,19 +2162,19 @@ p{
         display: grid;
         grid-template-columns: 1fr 1fr !important;
         @media screen and (max-width:991px) {
-             grid-template-columns: 1fr !important;
+            grid-template-columns: 1fr !important;
         }
     }
-    .How-we-do-box{
-          border: 1px solid rgba(29, 29, 29, 0.2) !important;
-         background-color: #fafafa !important; 
-        &:hover ul li{
-        border: 1px solid $white-color;
-        transition: $transition-animate;
+    .How-we-do-box {
+        border: 1px solid rgba(29, 29, 29, 0.2) !important;
+        background-color: #fafafa !important; 
+        &:hover ul li {
+            border: 1px solid $white-color;
+            transition: $transition-animate;
+        }
     }
-}
 
-    ul{
+    ul {
         display: flex !important;
         flex-wrap: wrap;
         gap: 10px !important;
@@ -2188,3 +2198,23 @@ p{
     }
 }
 // technology page css end -----
+
+.way-card {
+    display: flex;
+    gap: 20px;
+    border: 1px solid #1D1D1D1a;
+    padding: 40px;
+    height: calc(100% - 24px);
+    margin-bottom: 24px;
+    .icon {
+        min-width: 80px;
+    }
+    .title {
+        margin-bottom: 5px;
+        font-size: 26px;
+        line-height: 41px;
+    }
+    .desc {
+        margin-bottom: 0;
+    }
+}
