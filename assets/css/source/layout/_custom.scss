@@ -1196,6 +1196,7 @@
         h3, p{
             color: $white-color;
                transition: $transition-animate;
+               
         }
         svg path{
             stroke: $white-color;
@@ -1218,6 +1219,8 @@
         font-weight: normal;
         margin-bottom: 16px;
         transition: $transition-animate;
+        line-height: 127%;
+        letter-spacing: 0.01em;
     }
     
     p {
@@ -1227,6 +1230,7 @@
         letter-spacing: 0.04em;
         opacity: 0.9;
         transition: $transition-animate;
+        font-weight: 500;
     }
 }
 
@@ -2222,7 +2226,7 @@ p{
 
 
 
-// dot-net-devlopment page start----ba
+// dot-net-devlopment page start----
 
 .inner-banner.dot-net-banner .bg-img:after{
   background: linear-gradient(91deg, #67217a 40%, rgba(0, 0, 0, 0.5) 100%);
@@ -2233,9 +2237,13 @@ p{
     }
 }
 .dot-net-dev-services{
+     @media screen and (min-width:992px) {
     padding: 64px 0 127px;
+     }
     .How-we-do-card{
-        padding: 48px 40px;
+         @media screen and (min-width:992px) {
+                 padding: 48px 40px;
+            }
         h3{
             font-weight: 500;
             font-size: 24px;
@@ -2255,6 +2263,7 @@ p{
 }
 .why-choose-dot-net{
     .How-we-do-box-wrapper{
+        margin-top: 40px;
         display: grid;
         grid-template-columns: 1fr 1fr !important;
         gap: 30px;
@@ -2265,14 +2274,20 @@ p{
          background-color: #fafafa !important; 
           
          .How-we-do-card{
-            padding: 48px 40px;
+            @media screen and (min-width:992px) {
+                 padding: 48px 40px;
+            }
             h3{
                font-weight: 500;
                 font-size: 24px;
                 line-height: 137%;
                 letter-spacing: 0.01em;
             }
-            ul li{
+            ul
+            {
+                margin-top: 24px;
+                margin-bottom: 0;
+            li{
                 position: relative;
                 opacity: 0.9;
                 font-weight: 500;
@@ -2281,7 +2296,9 @@ p{
                 letter-spacing: 0.04em;
                 padding-left: 1em;
                 color: #2c2828 ;
+                
             }
+        }
             li::before{
                  position: absolute; 
                  left: 0;
