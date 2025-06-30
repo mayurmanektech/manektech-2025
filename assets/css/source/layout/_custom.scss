@@ -2145,3 +2145,46 @@ p{
         background: $white-color;
     }
 }
+
+// technology page css start -----
+.technology-section{
+    .How-we-do-box-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr !important;
+        @media screen and (max-width:991px) {
+             grid-template-columns: 1fr !important;
+        }
+    }
+    .How-we-do-box{
+          border: 1px solid rgba(29, 29, 29, 0.2) !important;
+         background-color: #fafafa !important; 
+        &:hover ul li{
+        border: 1px solid $white-color;
+        transition: $transition-animate;
+    }
+}
+
+    ul{
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 10px !important;
+        margin-top: 30px !important;
+        li{
+            border: 1px solid transparent;
+            background: linear-gradient(96deg, rgba(216, 31, 40, 0.1) 0%, rgba(224, 0, 95, 0.1) 100%) !important;
+            padding: 0 16px;
+            font-size: 18px;
+            letter-spacing: 0.04em;
+            color: $primary-dark;
+            line-height: 164%;
+            font-weight: 500;
+            padding-bottom: 0 !important;
+            width: max-content;
+
+        }
+        li::before{
+            display: none !important;
+        }
+    }
+}
+// technology page css end -----
