@@ -184,6 +184,16 @@
     border-bottom: 0;
     border-right: 0;
     background: $white-color;
+    &.dark {
+        background: $primary-dark;
+        border-color: #FFFFFF33;
+        .industry-box {
+            border-color: #FFFFFF33;
+        }
+        .industry-card {
+            padding-bottom: 36px;
+        }
+    }
 }
 .industry-box {
     position: relative;
@@ -231,6 +241,8 @@
 }
 .industry-card {
     padding: 54px 57px 87px 46px;
+    position: relative;
+    z-index: 2;
      @include breakpoint(laptop) {
        padding: 42px;
     }
@@ -240,16 +252,12 @@
     @media screen and (max-width:575px) {
        padding: 24px;
     }
-    position: relative;
-    z-index: 2;
     h3 {
-        color: $primary-dark;
         font-weight: normal;
         margin-bottom: 16px;
         transition: $transition-animate;
     }
     p {
-        color: $primary-dark;
         font-size: 18px;
         line-height: 1.7;
         opacity: 0.9;
@@ -675,6 +683,11 @@
         &.black {
             &:after {
                 background: linear-gradient(-90deg, #00000080 0%, #101E21 60%);
+            }
+        }
+        &.development {
+            &:after {
+                background: linear-gradient(-90deg, #00000080 0%, #0353B6 60%);
             }
         }
     }
@@ -1856,6 +1869,35 @@ p{
     }
 }
 
+.skill-row {
+    margin-bottom: 70px;
+    &.reverse {
+        .skill-info {
+            padding-left: 0;
+            padding-right: 50px;
+        }
+    }
+}
+.skill-info {
+    padding-left: 50px;
+    .title {
+        font-size: 26px;
+        line-height: 33px;
+        margin-bottom: 15px;
+    }
+    .desc {
+        font-size: 18px;
+        line-height: 1.7;
+        font-weight: 300;
+        letter-spacing: 1px;
+        opacity: 0.9;
+    }
+    .btn {
+        box-shadow: none;
+        border-color: $primary-color;
+        color: $primary-color;
+    }
+}
 
 
 .service-we-offers-section{
