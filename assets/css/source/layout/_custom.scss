@@ -962,10 +962,12 @@
         margin-bottom: 10px;
     }
     .meet-desc {
+      font-weight: 500;
         font-size: 24px;
-        letter-spacing: 0.3px;
-        font-weight: 300;
+        line-height: 154%;
+        letter-spacing: 0.01em;
         margin-bottom: 20px;
+        color: #111;
     }
     .meeting-info {
         @media screen and (max-width: 1199px) {
@@ -973,6 +975,17 @@
         }
         @media screen and (max-width: 991px) {
             text-align: center;
+        }
+        .call-section{
+            p{
+                color: $primary-dark;
+                font-size: 20px;
+                a{
+                    text-decoration: none;
+                    color: $primary-dark;
+                    font-weight: 600;
+                }
+            }
         }
     }
     .white-btn{
@@ -2954,3 +2967,105 @@ footer .container {
     }
 }
 // careers page css end---------
+
+
+
+
+.career-details-content-section{
+    @media screen and (min-width:992px) {
+        padding: 70px 0;
+    }
+    .content-section .step-div{
+            padding-left: 0;
+        }
+        .content-section .progress-line-container{
+            visibility: hidden;
+        }
+
+                .sidebar-menu {
+                    background: linear-gradient(96deg, rgba(216, 31, 40, 0.16) 0%, rgba(224, 0, 95, 0.16) 100%);
+        
+                    ul {
+                        border-bottom: none;
+                        padding-bottom: 0;
+        
+                        li {
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 150%;
+                            color: $primary-dark;
+                            display: flex;
+        
+                            a {
+                                padding-left: 4px;
+                                color: $primary-dark;
+                                opacity: 0.7;
+                            }
+                        }
+                        
+                    }
+                    .btn:hover{
+                       transition: $transition-animate;
+                    }
+                }
+}
+
+.content-section {
+    .step {
+        p {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 200%;
+            letter-spacing: 0.04em;
+            color: $primary-dark;
+        }
+    }
+
+    h5 {
+        font-weight: 600;
+        font-size: 36px;
+        letter-spacing: 0.01em;
+        color: $primary-dark;
+    }
+
+    h4 {
+        font-weight: 600;
+        font-size: 28px;
+        letter-spacing: 0.01em;
+        color: $primary-dark;
+    }
+
+    ul {
+        padding-inline-start: 0;
+
+        li {
+            list-style: none;
+            position: relative;
+            padding-left: 0.7em;
+            padding-bottom: 16px;
+            font-size: 18px;
+            letter-spacing: 0.04em;
+            line-height: 200%;
+            color: $primary-dark;
+        }
+
+        li:last-child {
+            padding-bottom: 0;
+        }
+
+        li::before {
+            position: absolute;
+            left: 0;
+            top: 15px;
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background-color: $primary-color;
+            border-radius: 50%;
+            margin: 0 10px 0 0;
+            vertical-align: middle;
+        }
+    }
+
+}
