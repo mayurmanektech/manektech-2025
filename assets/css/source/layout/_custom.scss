@@ -189,6 +189,15 @@
                 letter-spacing: 0.04em;
             }
         }
+        @include breakpoint(laptop) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @include breakpoint(l-tablet) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include breakpoint(s-tablet) {
+            grid-template-columns: 1fr;
+        }
     }
     @include breakpoint(l-tablet) {
         grid-template-columns: 1fr 1fr;
