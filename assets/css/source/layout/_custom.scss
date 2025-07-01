@@ -3060,3 +3060,23 @@ footer .container {
     }
 }
 
+.filter-card {
+    padding: 32px;
+    border: 1px solid #1D1D1D33;
+    .filter-item {
+        margin-bottom: 32px;
+        display: flex;
+        align-items: center;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        label {
+            margin-bottom: 0;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+        }
+    }
+}
+.faq-page-accr {
+    padding-left: 25px;
+}
