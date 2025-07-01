@@ -607,53 +607,6 @@
     }
    
 }
- .location{
-    h3{
-    font-size: 24px;
-    font-weight: 500;
-    }
-    p{
-        font-size: 18px;
-        margin-bottom: 26px;
-    }
-    }
-    // svg hover effect 
-.map-dot {
-  fill: #D81F28;
-  transform-origin: center;
-  transform-box: fill-box;
-  transition: transform 0.3s ease;
-}
-.map-dot.pulse {
-  animation: pulse-zoom 1.2s infinite;
-}
-.location-item[data-location="usa"]:hover ~ svg .map-dot[data-location="usa"],
-.location-item[data-location="uk"]:hover ~ svg .map-dot[data-location="uk"],
-.location-item[data-location="germany"]:hover ~ svg .map-dot[data-location="germany"],
-.location-item[data-location="india"]:hover ~ svg .map-dot[data-location="india"],
-.location-item[data-location="southafrica"]:hover ~ svg .map-dot[data-location="southafrica"] {
-  animation: pulse-zoom 1.2s infinite;
-}
-.map-dot {
-  fill: #D81F28;
-  transform-origin: center;
-  transform-box: fill-box;
-}
-        @keyframes pulse-zoom {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            50% {
-                transform: scale(7);
-                opacity: 0.6;
-            }
-        }
-        .map-dot.pulse {
-            animation: pulse-zoom 1.5s infinite;
-        }
-
-
 .inner-banner {
     position: relative;
     overflow: hidden;
@@ -2726,7 +2679,6 @@ p{
                 transition: opacity 0.3s;
                 font-weight: 500;
                 line-height: normal;
-
                 &:hover {
                     opacity: 0.9;
                     transform: $transition-animate;
@@ -2735,25 +2687,15 @@ p{
         }
 
 
-        .form-floating {
-            position: relative;
-        }
+       
 
         .underline {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 1px;
-            width: 100%;
+          
             background-color: $primary-dark;
-            transform: scaleX(0);
-            transform-origin: left center;
-            transition: transform 0.6s ease-in-out;
+          
         }
 
-        .form-floating:focus-within .underline {
-            transform: scaleX(1);
-        }
+        
 
       
     }
@@ -2764,134 +2706,79 @@ p{
 
 // contact-us page css start-------
 
-.contact-us-banner{
+.contact-us-banner {
     background: linear-gradient(91deg, #4202bb 28.17%, rgba(0, 0, 0, 0.5) 100%);
-  .breadcrumb{
-    margin-bottom: 56px !important;
-  }
-}
-.contactus-map-section{
-    margin: 123px 0 70px;
-      @media screen and (max-width:1399px) {
-       margin: 70px 0;
-      }
-}
- .contact-info {
-    margin-top: 60px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 40px;
-      @media screen and (max-width:991px) {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-      >div {
-         position: relative;
-        overflow: hidden; 
-        border-top: 1px solid #ffffff26;
-        padding: 30px 0 0;
-        transition: padding-left 0.4s;
-        @media screen and (max-width:991px) {
-          padding: 20px 0;
-        }
-         &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 0%;
-            width: 100%;
-            background: linear-gradient(180deg, #D81F28 0%, #E0005F 100%);
-            z-index: 0;
-            transition: height 0.4s ease;
-          }
-          &:hover{
-            padding-left: 20px;
-                  &::before {
-                height: 100%;
-              }
-            small{
-              color: $white-color;
-              position: relative;
-              z-index: 1;
-            }
-          }
-      }
-      h6 {
-        color: $white-color;
-        font-size: 26px;
-        margin-bottom: 6px;
-        position: relative;
-        z-index: 1;
-        a{
-          text-decoration: none;
-          color: $white-color;
-        }
-      }
-      small {
-         color: $white-color;
-         opacity: 0.9;
-        font-size: 16px;
-       
-      }
-    } 
-
-
-    .contactus-map-section{
-    .location{
-    h3{
-    font-size: 24px;
-    font-weight: 500;
+    .breadcrumb {
+        margin-bottom: 56px !important;
     }
-    p{
+}
+.contactus-map-section {
+    margin: 123px 0 70px;
+    @media screen and (max-width:1399px) {
+        margin: 70px 0;
+    }
+     @media screen and (max-width:991px) {
+       margin: 55px 0;
+     }
+      @media screen and (max-width:575px) {
+       margin: 45px 0;
+     }
+}
+.contact-info {
+    margin-top: 60px;   
+}
+.location {
+    h3 {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    p {
         font-size: 18px;
         margin-bottom: 26px;
     }
+}
+// svg hover effect 
+.map-dot {
+    fill: #D81F28;
+    transform-origin: center;
+    transform-box: fill-box;
+    transition: transform 0.3s ease;
+}
+.map-dot.pulse {
+    animation: pulse-zoom 1.2s infinite;
+}
+.location-item[data-location="usa"]:hover~svg .map-dot[data-location="usa"],
+.location-item[data-location="uk"]:hover~svg .map-dot[data-location="uk"],
+.location-item[data-location="germany"]:hover~svg .map-dot[data-location="germany"],
+.location-item[data-location="india"]:hover~svg .map-dot[data-location="india"],
+.location-item[data-location="southafrica"]:hover~svg .map-dot[data-location="southafrica"] {
+    animation: pulse-zoom 1.2s infinite;
+}
+.map-dot {
+    fill: #D81F28;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes pulse-zoom {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
-    // svg hover effect 
-        .map-dot {
-        fill: #D81F28;
-        transform-origin: center;
-        transform-box: fill-box;
-        transition: transform 0.3s ease;
-        }
-        .map-dot.pulse {
-        animation: pulse-zoom 1.2s infinite;
-        }
-        .location-item[data-location="usa"]:hover ~ svg .map-dot[data-location="usa"],
-        .location-item[data-location="uk"]:hover ~ svg .map-dot[data-location="uk"],
-        .location-item[data-location="germany"]:hover ~ svg .map-dot[data-location="germany"],
-        .location-item[data-location="india"]:hover ~ svg .map-dot[data-location="india"],
-        .location-item[data-location="southafrica"]:hover ~ svg .map-dot[data-location="southafrica"] {
-        animation: pulse-zoom 1.2s infinite;
-        }
-        .map-dot {
-        fill: #D81F28;
-        transform-origin: center;
-        transform-box: fill-box;
-        }
-        @keyframes pulse-zoom {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            50% {
-                transform: scale(7);
-                opacity: 0.6;
-            }
-        }
-        .map-dot.pulse {
-            animation: pulse-zoom 1.5s infinite;
-        }
-
+    50% {
+        transform: scale(7);
+        opacity: 0.6;
     }
-
-    footer .container{
-        @media screen and (min-width: 1400px) {
+}
+.map-dot.pulse {
+    animation: pulse-zoom 1.5s infinite;
+}
+footer .container {
+    @media screen and (min-width: 1400px) {
         max-width: 1320px;
-        }
-        @media screen and (min-width: 1600px) {
-        max-width: 1454px;
-        }
     }
+    @media screen and (min-width: 1600px) {
+        max-width: 1454px;
+    }
+}
 // contact-us page css end-------

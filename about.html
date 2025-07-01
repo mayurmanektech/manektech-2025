@@ -1205,6 +1205,22 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+      document.querySelectorAll('.location-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      const loc = item.dataset.location;
+      const dot = document.querySelector(`.map-dot[data-location="${loc}"]`);
+      dot?.classList.add('pulse');
+    });
+
+    item.addEventListener('mouseleave', () => {
+      const loc = item.dataset.location;
+      const dot = document.querySelector(`.map-dot[data-location="${loc}"]`);
+      dot?.classList.remove('pulse');
+    });
+  });
+      </script>
 </body>
 
 </html>
