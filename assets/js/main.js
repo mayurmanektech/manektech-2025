@@ -225,7 +225,10 @@ jQuery(window).on('resize', function () {
 
   // select dropdown form 
 
-    const countries = [
+//    
+
+
+const countries = [
   { name: "India", code: "IN", dial_code: "+91" },
   { name: "United States", code: "US", dial_code: "+1" },
   { name: "United Kingdom", code: "GB", dial_code: "+44" },
@@ -238,34 +241,42 @@ jQuery(window).on('resize', function () {
   { name: "South Africa", code: "ZA", dial_code: "+27" },
 ];
 
-const select = document.getElementById("timezone");
-const input = document.getElementById("countryCode");
-const prefixDisplay = document.getElementById("prefixDisplay");
+function initCountrySelector(selectId, inputId, prefixId, defaultPrefix) {
+  const select = document.getElementById(selectId);
+  const input = document.getElementById(inputId);
+  const prefixDisplay = document.getElementById(prefixId);
 
-let currentPrefix = "+91"; 
+  function setCountryCodePrefix(prefix) {
+    prefixDisplay.textContent = prefix;
+    input.value = '';
+    input.focus();
+  }
 
-function setCountryCodePrefix(prefix) {
-  currentPrefix = prefix;
-  prefixDisplay.textContent = currentPrefix;
-  input.value = ''; 
- 
+  countries.forEach((country, i) => {
+    const option = document.createElement("option");
+    option.value = country.code;
+    option.setAttribute("data-code", country.dial_code);
+    option.textContent = country.name;
+    select.appendChild(option);
+    if (i === 0) setCountryCodePrefix(country.dial_code);
+  });
+
+  select.addEventListener("change", function () {
+    const selected = select.options[select.selectedIndex];
+    const code = selected.getAttribute("data-code");
+    setCountryCodePrefix(code);
+  });
+
+  // Set initial prefix
+  setCountryCodePrefix(defaultPrefix || "+91");
 }
 
-// Load dropdown without dial codes in text
-countries.forEach((country, i) => {
-  const option = document.createElement("option");
-  option.value = country.code;
-  option.setAttribute("data-code", country.dial_code);
-  option.textContent = country.name;
-  select.appendChild(option);
-  if (i === 0) setCountryCodePrefix(country.dial_code);
-});
+// Initialize both selectors
+initCountrySelector("timezone", "countryCode", "prefixDisplay", "+91");
+initCountrySelector("timezone2", "countryCode2", "prefixDisplay2", "+91");
 
-select.addEventListener("change", function () {
-  const selected = select.options[select.selectedIndex];
-  const code = selected.getAttribute("data-code");
-  setCountryCodePrefix(code);
-});
+
+
 
 // map location hover effect js
 

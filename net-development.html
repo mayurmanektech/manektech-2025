@@ -338,7 +338,7 @@
                     <div class="col-lg-7">
                         <h1 class="banner-head-title">Powerful, Scalable, and Secure .NET Development Solutions </h1>
                         <p>Leverage the power of Microsoft .NET to build high-performance web, mobile, and enterprise applications. Our expert .NET developers create robust, scalable, and secure solutions tailored to your business needs.</p>
-                        <a href="#" class="btn secondary-btn">Get in Touch for Details</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#downloadBrochureModal"  class="btn secondary-btn">Get in Touch for Details</a>
                     </div>
                 </div>
             </div>
@@ -992,6 +992,86 @@
     </footer>
 
     <!-- Button trigger modal -->
+
+
+    <!--download brochure Modal -->
+    <div class="modal fade testimonial-modal" id="downloadBrochureModal" tabindex="-1"
+      aria-labelledby="downloadBrochureModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+    
+          <div class="modal-body">
+            <div class="container px-4 px-sm-0">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="section-title">
+                  <h2>Download Brochure</h2>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                  <img src="assets/images/close-icon-gray.svg" alt="modal-colse-icon">
+                </button>
+              </div>
+    
+              <form action="">
+                <div class="form-grid">
+    
+                  <div class="">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="name" placeholder=" " required />
+                      <label for="name">Full Name</label>
+                      <span class="underline"></span>
+                    </div>
+                  </div>
+    
+                  <div class="">
+                    <div class="form-floating">
+                      <input type="email" class="form-control" id="name" placeholder=" " required />
+                      <label for="email">Last Name</label>
+                      <span class="underline"></span>
+                    </div>
+                  </div>
+    
+                  <div class=" d-flex align-items-end">
+                    <div class="form-floating w-100">
+                      <input type="text" class="form-control" id="company" placeholder=" " required />
+                      <label for="company">Country</label>
+                      <span class="underline"></span>
+                    </div>
+                  </div>
+    
+                  <div>
+                  
+                    <div class=" input-group gap-3 d-flex flex-nowrap">
+                      <div class=" form-floating select-wrapper">
+                    <select class="form-select" id="timezone2"></select>
+                      <label class="form-label">Phone Number</label>
+                        <span class="underline"></span>
+                      </div>
+                      <div class="form-floating input-prefix-wrapper">
+                        <span class="prefix-text" id="prefixDisplay2">+91</span>
+                        <input autocomplete="off" type="text" id="countryCode2" class="form-control" placeholder=""
+                          aria-label="Phone Number" />
+                        <span class="underline"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+    
+                  <div class="submit-btn-div ">
+                    <button type="submit" class="btn btn-submit ">Download Now</button>
+                  </div>
+    
+    
+    
+                </div>
+              </form>
+    
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade testimonial-modal" id="testimonialModal" tabindex="-1"
