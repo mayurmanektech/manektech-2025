@@ -562,36 +562,36 @@
             }
         }
         .profile-box {
-                    display: flex;
-                    align-items: center;
-                    gap: 16px;
-                    .profile-avatar {
-                        width: 48px;
-                        height: 48px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            .profile-avatar {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                overflow: hidden;
+                img {
+                    max-width: 48px;
+                    max-height: 48px;
+                    border: 1px solid $primary-color;
                         border-radius: 50%;
-                        overflow: hidden;
-                        img {
-                            max-width: 48px;
-                            max-height: 48px;
-                            border: 1px solid $primary-color;
-                             border-radius: 50%;
-                     
-                        }
-                    }
+                
                 }
-                .profile-info {
-                    font-family: $sora-font-family;
-                    .title {
-                        font-size: 18px;
-                        font-weight: 600;
-                        line-height: normal;
-                        margin-bottom: 0;
-                    }
-                    .designation {
-                        font-size: 18px;
-                        color: #1D1D1D80;
-                        margin-bottom: 0;
-                    }
+            }
+        }
+        .profile-info {
+            font-family: $sora-font-family;
+            .title {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 0;
+            }
+            .designation {
+                font-size: 18px;
+                color: #1D1D1D80;
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -673,6 +673,11 @@
         &.healthcare {
             &:after {
                 background: linear-gradient(-90deg, #00000080 0%, #1300E0 60%);
+            }
+        }
+        &.blog {
+            &:after {
+                background: linear-gradient(-90deg, #00000080 0%, #4202BB 60%);
             }
         }
     }
@@ -3187,5 +3192,118 @@ form {
     #pagination {
         justify-content: center;
         gap: 18px;
+    }
+}
+.blog-author-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    p {
+        letter-spacing: normal;
+    }
+    .profile-box {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        .profile-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                max-width: 48px;
+                max-height: 48px;
+                border: 2px solid $white-color;
+                border-radius: 50%;
+            
+            }
+        }
+    }
+    .profile-info {
+        font-family: $sora-font-family;
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 0;
+        }
+        .designation {
+            font-size: 18px;
+            font-weight: 300;
+            opacity: 0.7;
+            margin-bottom: 0;
+        }
+    }
+    .time-date {
+        display: flex;
+        p {
+            margin-bottom: 0;
+        }
+        span {
+            padding: 0 25px;
+            font-size: 18px;
+            letter-spacing: 0.01em;
+            &.mini {
+                border-right: 1px solid #ffffff51;
+            }
+        }
+    }
+}
+.gradient-primary-card {
+    background: linear-gradient(-86deg,#E0005F29 0%, #D81F2829 100%);
+    padding: 45px;
+}
+.blog-content-row {
+    --bs-gutter-x: 100px;
+}
+
+.blog-content {
+    h1, h2, h3, h4, h5, h6 {
+        color: $primary-dark;
+        text-transform: none;
+        letter-spacing: 0.01em;
+    }
+    h2 {
+        font-size: 28px;
+        margin-bottom: 26px;
+    }
+    p {
+        font-size: 18px;
+        letter-spacing: 0.04em;
+        line-height: 36px;
+        font-weight: 300;
+    }
+}
+.table-content {
+    border: 1px solid $primary-color;
+    padding: 40px 50px;
+    background: #FAFAFA;
+    .title {
+        font-size: 28px;
+        letter-spacing: 0.01em;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    ol {
+        padding: 0;
+        counter-reset: blogcount;
+        li {
+            counter-increment: blogcount;
+            list-style: none;
+            display: flex;
+            font-size: 20px;
+            padding-bottom: 15px;
+            letter-spacing: 0.01em;
+            a {
+                color: $primary-dark;
+            }
+            &::before {
+                content: counter(blogcount) ".";
+                width: 30px;
+                text-align: right;
+                padding-right: 10px;
+                display: block;
+            }
+        }
     }
 }
