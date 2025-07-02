@@ -1595,6 +1595,9 @@
     font-size: 14px;
     margin-right: 16px;
 }
+
+
+
 #resultsPerPage{
     display: inline-flex !important;
     align-items: center;
@@ -2391,7 +2394,7 @@ p{
             box-shadow: none;
             font-size: 24px;
             line-height: 30px;
-            font-weight: 300;
+            font-weight: 500;
             letter-spacing: 0.8px;
             @include breakpoint(s-tablet) {
                 font-size: 20px;
@@ -2856,7 +2859,9 @@ footer .container {
 // careers page css start---------
 
 .live-work-balance{
+    margin-top: 56px;
     .How-we-do-box-wrapper{
+        margin-top: 56px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         @media screen and (max-width:991px) {
