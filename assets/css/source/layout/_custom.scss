@@ -1824,7 +1824,9 @@
 {
     transform: scaleX(1);
 }
-
+.form-underline-animate .underline{
+    background-color: $primary-color;
+}
 
 // software-development-li
 
@@ -1966,7 +1968,7 @@ p{
     background: linear-gradient(325deg, #f5f5f5 0%, #fff 99.78%);
 }
 .why-manektech{
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width:1400px) {
         padding-left: 70px;
     }
 }
@@ -2966,11 +2968,17 @@ footer .container {
         }
     }
 }
+
+.current-opening{
+    .serach-select-div{
+        margin-bottom: 40px;
+    }
+}
 // careers page css end---------
 
 
 
-
+// careers-details  page css end---------
 .career-details-content-section {
     @media screen and (min-width:992px) {
         padding: 70px 0;
@@ -3059,6 +3067,71 @@ footer .container {
         }
     }
 }
+
+.opening-card-wrapper {
+    .opening-card {
+        margin-top: 32px;
+        padding: 40px;
+          @media screen and (max-width:991px) {
+             padding: 32px;
+            }
+              @media screen and (max-width:575px) {
+                   padding: 12px;
+            }
+        border: 1px solid rgba(29, 29, 29, 0.1);
+        background-color: #fafafa;
+
+        h3 {
+            font-weight: 600;
+            font-size: 28px;
+            letter-spacing: 0.01em;
+            color: $primary-dark;
+        }
+
+        ul {
+            padding-inline-start: 0;
+            display: flex;
+            @media screen and (max-width:991px) {
+                 flex-direction: column;
+            }
+            gap: 16px;
+            margin: 24px 0;
+
+            li {
+                color: $primary-dark;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 150%;
+                list-style: none;
+
+                span {
+                    opacity: 0.7;
+                }
+                @media screen and (min-width:992px) {
+                &:not(:first-child)::before {
+                    content: "|";
+                    margin-right: 16px;
+                    color: #d9d9d9;
+                }
+                }
+            }
+            
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 200%;
+            letter-spacing: 0.04em;
+            color: $primary-dark;
+        }
+        .project-wrapper{
+            margin-top: 40px;
+        }
+    }
+}
+// careers-details page css end---------
+
 
 .filter-card {
     padding: 32px;
