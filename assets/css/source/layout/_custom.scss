@@ -3022,12 +3022,18 @@ footer .container {
 // careers-details  page css end---------
 .career-details-content-section {
     position: relative;
-    @media screen and (min-width:992px) {
-        padding: 70px 0;
+    padding: 70px 0;
+    @media screen and (min-width:991px) {
+        padding: 55px 0;
+    }
+    @media screen and (min-width:575px) {
+        padding: 45px 0;
     }
     .content-section {
         .step {
-            margin-bottom: 40px;
+           &:not(:last-child){
+              margin-bottom: 40px; 
+           } 
             scroll-padding-top: 190px;
             p {
                 font-weight: 500;
@@ -3055,6 +3061,9 @@ footer .container {
         }
         ul {
             padding-inline-start: 0;
+             &:last-child{
+                margin-bottom: 0;
+             }
             li {
                 list-style: none;
                 position: relative;
@@ -3087,8 +3096,10 @@ footer .container {
         }
     }
     .sidebar-wrapper {
-        position: sticky;
-        top: 140px;
+        @media screen and (min-width:992px) {
+            position: sticky;
+            top: 140px;
+        }
     }
     .sidebar-menu {
         max-width: 334px;
