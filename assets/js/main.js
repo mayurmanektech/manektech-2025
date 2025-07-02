@@ -246,20 +246,19 @@ function initCountrySelector(selectId, inputId, prefixId, defaultPrefix) {
   const input = document.getElementById(inputId);
   const prefixDisplay = document.getElementById(prefixId);
 
-  function setCountryCodePrefix(prefix) {
-    prefixDisplay.textContent = prefix;
-    input.value = '';
-    // input.focus();
-  }
+ function setCountryCodePrefix(prefix, shouldFocus = true) {
+  prefixDisplay.textContent = prefix;
+  input.value = '';
+  if (shouldFocus) input.focus();
+}
 
-  countries.forEach((country, i) => {
-    const option = document.createElement("option");
-    option.value = country.code;
-    option.setAttribute("data-code", country.dial_code);
-    option.textContent = country.name;
-    select.appendChild(option);
-    if (i === 0) setCountryCodePrefix(country.dial_code);
-  });
+countries.forEach((country, i) => {
+  const option = document.createElement("option");
+  option.value = country.code;
+  option.setAttribute("data-code", country.dial_code);
+  option.textContent = country.name;
+  select.appendChild(option);
+});
 
   select.addEventListener("change", function () {
     const selected = select.options[select.selectedIndex];
@@ -268,7 +267,7 @@ function initCountrySelector(selectId, inputId, prefixId, defaultPrefix) {
   });
 
   // Set initial prefix
-  setCountryCodePrefix(defaultPrefix || "+91");
+setCountryCodePrefix(defaultPrefix || "+91", false);
 }
 
 // Initialize both selectors

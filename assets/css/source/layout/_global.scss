@@ -380,7 +380,7 @@ textarea.form-control{
     position: relative;
     margin-bottom: 70px;
     @include breakpoint(s-tablet) {
-         margin-bottom: 48px;
+         margin-bottom: 24px;
     }
     h2 {
         color: $primary-dark;
