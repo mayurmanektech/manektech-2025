@@ -1871,6 +1871,10 @@ p{
         opacity: 1;
     }
     .modal-body {
+          @media screen and (max-width:767px) {
+             max-height: 600px;
+             overflow: auto;
+        }
         background: $white-color;
         padding: 5px;
     }
@@ -2456,14 +2460,15 @@ p{
             padding: 36px;
         }
          @media screen and (max-width:575px) {
-            padding: 16px;
+           padding: 16px 16px 24px;
         }
         background-color: $white-color;
-        .modal-body {
-            padding: 0;
-            .section-title {
+         .section-title {
                 margin-bottom: 40px;
             }
+        .modal-body {
+            padding: 0;
+           
         }
     }
     .form-grid {
@@ -2947,110 +2952,6 @@ footer .container {
         margin-bottom: 40px;
     }
 }
-// careers page css end---------
-
-
-
-// careers-details  page css end---------
-.career-details-content-section {
-    @media screen and (min-width:992px) {
-        padding: 70px 0;
-    }
-    .content-section {
-        .step {
-            p {
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 200%;
-                letter-spacing: 0.04em;
-                color: $primary-dark;
-            }
-        }
-        h5 {
-            font-weight: 600;
-            font-size: 36px;
-            letter-spacing: 0.01em;
-            color: $primary-dark;
-        }
-        h4 {
-            font-weight: 600;
-            font-size: 28px;
-            letter-spacing: 0.01em;
-            color: $primary-dark;
-        }
-        ul {
-            padding-inline-start: 0;
-            li {
-                list-style: none;
-                position: relative;
-                padding-left: 0.7em;
-                padding-bottom: 16px;
-                @media screen and (max-width:767px) {
-                    padding-bottom: 10px;
-                }
-                font-size: 18px;
-                letter-spacing: 0.04em;
-                line-height: 200%;
-                color: $primary-dark;
-            }
-            li:last-child {
-                padding-bottom: 0;
-            }
-            li::before {
-                position: absolute;
-                left: 0;
-                top: 15px;
-                content: "";
-                display: inline-block;
-                width: 4px;
-                height: 4px;
-                background-color: $primary-color;
-                border-radius: 50%;
-                margin: 0 10px 0 0;
-                vertical-align: middle;
-            }
-        }
-    }
-    .content-section .step-div {
-        padding-left: 0;
-    }
-    .content-section .progress-line-container {
-        visibility: hidden;
-    }
-    .sidebar-menu {
-        background: linear-gradient(96deg, rgba(216, 31, 40, 0.16) 0%, rgba(224, 0, 95, 0.16) 100%);
-        ul {
-            border-bottom: none;
-            padding-bottom: 0;
-            li {
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 150%;
-                color: $primary-dark;
-                display: flex;
-                a {
-                    padding-left: 4px;
-                    color: $primary-dark;
-                    opacity: 0.7;
-                }
-            }
-        }
-        h5{
-            font-weight: 600;
-            font-size: 26px;
-            letter-spacing: 0.01em;
-        }
-        .btn{
-            max-width: 147px;
-            width: 100%;
-            height: 42px;
-            padding: 12px 12px;
-        }
-        .btn:hover {
-            transition: $transition-animate;
-        }
-    }
-}
 
 .opening-card-wrapper {
     .opening-card {
@@ -3114,6 +3015,133 @@ footer .container {
         }
     }
 }
+// careers page css end---------
+
+
+
+// careers-details  page css end---------
+.career-details-content-section {
+    position: relative;
+    @media screen and (min-width:992px) {
+        padding: 70px 0;
+    }
+    .content-section {
+        .step {
+            margin-bottom: 40px;
+            scroll-padding-top: 190px;
+            p {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 200%;
+                letter-spacing: 0.04em;
+                color: $primary-dark;
+                margin-bottom: 0;
+            }
+        }
+        h5 {
+            font-weight: 600;
+            font-size: 36px;
+            letter-spacing: 0.01em;
+            color: $primary-dark;
+        }
+        h4 {
+            font-weight: 600;
+            font-size: 28px;
+            letter-spacing: 0.01em;
+            color: $primary-dark;
+            margin-bottom: 26px;
+            margin-top: 40px;
+            line-height: normal;
+        }
+        ul {
+            padding-inline-start: 0;
+            li {
+                list-style: none;
+                position: relative;
+                padding-left: 0.7em;
+                padding-bottom: 16px;
+                @media screen and (max-width:767px) {
+                    padding-bottom: 10px;
+                }
+                font-size: 18px;
+                letter-spacing: 0.04em;
+                line-height: 200%;
+                color: $primary-dark;
+            }
+            li:last-child {
+                padding-bottom: 0;
+            }
+            li::before {
+                position: absolute;
+                left: 0;
+                top: 15px;
+                content: "";
+                display: inline-block;
+                width: 4px;
+                height: 4px;
+                background-color: $primary-color;
+                border-radius: 50%;
+                margin: 0 10px 0 0;
+                vertical-align: middle;
+            }
+        }
+    }
+    .sidebar-wrapper {
+        position: sticky;
+        top: 140px;
+    }
+    .sidebar-menu {
+        max-width: 334px;
+        width: 100%;
+        border: 1px solid #E8E8E8;
+        padding: 30px;
+        background: linear-gradient(96deg, rgba(216, 31, 40, 0.16) 0%, rgba(224, 0, 95, 0.16) 100%);
+        ul {
+            margin-top: 16px;
+            padding-inline-start: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+            li {
+                list-style: none;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 150%;
+                color: $primary-dark;
+                padding-bottom: 16px;
+                display: flex;
+                cursor: pointer;
+                a {
+                    padding-left: 4px;
+                    color: $primary-dark;
+                    opacity: 0.7;
+                }
+            }
+            li:last-child {
+                padding-bottom: 0;
+            }
+        }
+        h5 {
+            font-weight: 600;
+            font-size: 26px;
+            letter-spacing: 0.01em;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #E8E8E8;
+            margin-bottom: 0;
+            color: $primary-dark;
+        }
+        .btn {
+            max-width: 147px;
+            width: 100%;
+            height: 42px;
+            padding: 12px 12px;
+        }
+        .btn:hover {
+            transition: $transition-animate;
+        }
+    }
+}
+
+
 // careers-details page css end---------
 
 

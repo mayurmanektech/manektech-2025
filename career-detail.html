@@ -312,17 +312,13 @@
         </div>
     </div>
   </section>
-<section class="planning-main-wrapper career-details-content-section">
+<section class="career-details-content-section">
     <div class="container">
         <div class="row">
 
             <div class="col-lg-8">
                 <div class="content-section">
                     <div class="step-div mt-0">
-
-                        <div class="progress-line-container">
-                            <div class="progress-line"></div>
-                        </div>
 
                         <div class="step">
                             <h5 class="mt-0">Introduction</h5>
@@ -428,7 +424,7 @@
                     </div>
                 </div>  
             </div>
-            <div class="col-lg-4 h-100 d-flex justify-content-lg-end order-first order-lg-last">
+            <div class="col-lg-4 h-100 d-flex justify-content-lg-end order-first order-lg-last sidebar-wrapper">
                 <div class="sidebar-menu">
                     <h5 class="border-0 pb-0">Job Description</h5>
                     <div class="progress-list-wrapper">
@@ -439,7 +435,7 @@
                                         alt="link-icon"></a></li>
                         </ul>
                     </div>
-                    <a href="#" class="btn load-btn">Apply Now</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#careerModal" class="btn load-btn">Apply Now</a>
                 </div>
             </div>
         </div>
@@ -629,6 +625,101 @@
   </footer>
 
   <!-- footer end -->
+
+   <!--career-pop-Modal -->
+  <div class="modal fade testimonial-modal" id="careerModal" tabindex="-1" aria-labelledby="careerModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+         <div class="d-flex justify-content-between align-items-start">
+              <div class="section-title">
+                <h2>Ready to join our team!</h2>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <img src="assets/images/close-icon-gray.svg" alt="modal-colse-icon">
+              </button>
+            </div>
+        <div class="modal-body">
+          <div class="container">
+            <form class="my-0" action="">
+              <div class="form-grid">
+                <div class="">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="name" placeholder=" " required />
+                    <label for="name">Full Name *</label>
+                    <span class="underline"></span>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="form-floating">
+                    <input type="email" class="form-control" id="name" placeholder=" " required />
+                    <label for="email">Your Email *</label>
+                    <span class="underline"></span>
+                  </div>
+                </div>
+                <div class=" d-flex align-items-end">
+                  <div class="form-floating w-100">
+                    <input type="text" class="form-control" id="company" placeholder=" " required />
+                    <label for="company">Apply For *</label>
+                    <span class="underline"></span>
+                  </div>
+                </div>
+                <div>
+                  <div class=" input-group gap-3 d-flex flex-nowrap">
+                    <div class=" form-floating select-wrapper">
+                      <select class="form-select" id="timezone2"></select>
+                      <label class="form-label">Phone Number *</label>
+                      <span class="underline"></span>
+                    </div>
+                    <div class="form-floating input-prefix-wrapper">
+                      <span class="prefix-text" id="prefixDisplay2">+91</span>
+                      <input autocomplete="off" type="text" id="countryCode2" class="form-control" placeholder=""
+                        aria-label="Phone Number" />
+                      <span class="underline"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="description">
+                  <div class="form-floating">
+                    <textarea class="form-control" id="description" placeholder=" " style="height: 40px;"></textarea>
+                    <label for="description">Experience *</label>
+                    <span class="underline"></span>
+                  </div>
+                </div>
+                <div class="attachment-wrapper">
+                  <div class="custom-upload">
+                    <button class="upload-btn">Attach your resume *</button>
+                    <span class="upload-text">or drag & drop file here (max 100 mb)</span>
+                    <input type="file" class="file-input" />
+                  </div>
+                  <span class="upload-condition">Supports only PDF / DOC / JPG/ PNG (UP TO 5MB)</span>
+                </div>
+                <div class="checkbox-div ">
+                  <div class="d-flex gap-2 gap-xl-0 flex-wrap align-items-center">
+                    <input class="form-check-input mt-0 " type="checkbox" value="" id="agree" required />
+                    <label class="form-check-label mb-0" for="agree">
+                      I have read the<a href="#" class="text-decoration-none fw-medium"> Privacy Policy </a>and confirm
+                      that ManekTech can stores my personal details to be able to process my job application.
+                    </label>
+                  </div>
+                  <div class="mt-3 d-flex  gap-2 gap-md-0 flex-wrap align-items-center">
+                    <input class="form-check-input mt-0 " type="checkbox" value="" id="agree" required />
+                    <label class="form-check-label mb-0" for="agree">
+                      Yes<a href="#" class="text-decoration-none fw-medium"> ManekTech </a>
+                      can also contact me about future job opportunities.
+                    </label>
+                  </div>
+                </div>
+                <div class="submit-btn-div ">
+                  <button type="submit"  class="btn btn-submit ">Apply Now</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
