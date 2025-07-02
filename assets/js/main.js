@@ -249,7 +249,7 @@ function initCountrySelector(selectId, inputId, prefixId, defaultPrefix) {
   function setCountryCodePrefix(prefix) {
     prefixDisplay.textContent = prefix;
     input.value = '';
-    input.focus();
+    // input.focus();
   }
 
   countries.forEach((country, i) => {
