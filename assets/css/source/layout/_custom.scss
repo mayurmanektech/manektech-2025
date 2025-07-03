@@ -3441,6 +3441,12 @@ form {
     padding: 45px;
 }
 .blog-info-card {
+    @include breakpoint(laptop) {
+        padding: 30px;
+    }
+    @include breakpoint(l-tablet) {
+        margin-bottom: 30px;
+    }
     .category {
         font-size: 16px;
         line-height: 24px;
@@ -3468,6 +3474,9 @@ form {
 
 .blog-content {
     padding-left: 75px;
+    @include breakpoint(laptop) {
+        padding-left: 0;
+    }
     h1, h2, h3, h4, h5, h6 {
         color: $primary-dark;
         text-transform: none;
@@ -3476,14 +3485,24 @@ form {
     h2 {
         font-size: 28px;
         margin-bottom: 26px;
+        @include breakpoint(s-tablet) {
+            font-size: 26px;
+        }
     }
     h3 {
         font-weight: normal;
+        @include breakpoint(s-tablet) {
+            font-size: 22px;
+        }
     }
     p {
         font-size: 18px;
         letter-spacing: 0.04em;
         line-height: 36px;
+        @include breakpoint(s-tablet) {
+            font-size: 16px;
+            line-height: 32px;
+        }
     }
     a {
         color: $primary-color;
@@ -3526,6 +3545,12 @@ form {
             line-height: 33px;
             letter-spacing: 0.01em;
             border: 1px solid #1D1D1D33;
+            width: 200px;
+            @include breakpoint(s-tablet) {
+                font-size: 22px;
+                line-height: 32px;
+                padding: 14px 18px;
+            }
         }
         tbody {
             tr {
@@ -3538,6 +3563,14 @@ form {
                     line-height: 1.7;
                     letter-spacing: 0.04em;
                     border: 1px solid #1D1D1D33;
+                    inline-size: 100px;
+                    overflow-wrap: break-word;
+                    hyphens: auto;
+                    hyphenate-character: auto;
+                    @include breakpoint(s-tablet) {
+                        font-size: 16px;
+                        padding: 18px;
+                    }
                 }
             }
         }
@@ -3548,14 +3581,21 @@ form {
     padding: 40px 50px;
     background: #FAFAFA;
     margin-bottom: 60px;
+    @include breakpoint(s-tablet) {
+        padding: 30px;
+    }
     .title {
         font-size: 28px;
         letter-spacing: 0.01em;
         margin-bottom: 20px;
         font-weight: 600;
+        @include breakpoint(s-tablet) {
+            font-size: 26px;
+        }
     }
     ol {
         padding: 0;
+        margin: 0;
         counter-reset: blogcount;
         li {
             counter-increment: blogcount;
@@ -3564,6 +3604,13 @@ form {
             font-size: 20px;
             padding-bottom: 15px;
             letter-spacing: 0.01em;
+            &:last-child {
+                padding-bottom: 0;
+            }
+            @include breakpoint(s-tablet) {
+                font-size: 16px;
+                padding-bottom: 10px;
+            }
             a {
                 color: $primary-dark;
             }
@@ -3593,6 +3640,9 @@ form {
         display: flex;
         justify-content: flex-end;
         padding-top: 40px;
+        @include breakpoint(l-tablet) {
+            justify-content: center;
+        }
     }
     .img-bg-strip {
         right: auto;
@@ -3604,17 +3654,32 @@ form {
         }
         &:after {
             left: 92px;
+            @include breakpoint(laptop) {
+                left: 46px;
+            }
         }
         span {
             &:before {
                 left: 184px;
+                @include breakpoint(laptop) {
+                    left: 92px;
+                }
             }
             &:after {
                 left: 276px;
+                @include breakpoint(laptop) {
+                    left: 138px;
+                }
             }
         }
     }
     .meeting-info {
+        @media screen and (max-width: 1399px) {
+            padding-left: 60px;
+        }
+        @include breakpoint(laptop) {
+            padding-left: 0;
+        }
         .name {
             font-size: 24px;
             margin-bottom: 8px;
