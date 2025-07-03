@@ -3734,3 +3734,91 @@ form {
         }
     }
 }
+// e book details page css start-----
+.light-blue-layer .bg-img:after{
+    background: linear-gradient(91deg, #0f5ab0 40%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.e-book-details{
+     padding: 70px 0;
+    @media screen and (max-width:991px) {
+        padding: 55px 0;
+    }
+    @media screen and (max-width:575px) {
+        padding: 45px 0;
+    }
+      .sidebar-sticky{
+        @media screen and (min-width:992px) {
+            position: sticky;
+            top: 140px;
+        }
+    }
+    .sidebar-menu ul
+    {   
+        padding-inline-start: 14px;
+        li{
+        list-style: decimal;
+        list-style-position: outside;
+        padding-bottom: 16px;
+        }
+
+    }
+    .blog-info.blog-subscribe{
+        background: linear-gradient(325deg, #f5f5f5 0%, #fff 99.78%);
+        border: 1px solid #f0f0f0;
+        padding: 50px;
+        @media screen and (max-width:767px) {
+            padding: 24px;
+        }
+        .form-grid{
+            row-gap: 40px;
+        }
+        .section-title{
+            margin-bottom: 40px;
+            h2{
+                font-size: 36px;
+                font-weight: 600;
+            }
+        }
+    }
+ 
+}
+
+.e-book-details .step-div .step{
+  ul{
+    padding-inline-start: 0;
+    margin-top: 16px;
+    li{
+          padding-left: 0.7em;
+           position: relative;
+           list-style: none;
+           font-weight: 500;
+            font-size: 18px;
+            line-height: 167%;
+            letter-spacing: 0.04em;
+            color: $primary-dark;
+            margin-bottom: 24px;
+    }
+     li::before {
+                position: absolute;
+                left: 0;
+                top: 13px;
+                content: "";
+                display: inline-block;
+                width: 4px;
+                height: 4px;
+                background-color: $primary-color;
+                border-radius: 50%;
+                margin: 0 10px 0 0;
+                vertical-align: middle;
+            }
+            strong{
+                font-weight: 600;
+            }
+  }
+}
+
+
+
+
+// e book details page css end-----
