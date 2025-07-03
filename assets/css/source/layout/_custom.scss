@@ -3822,3 +3822,23 @@ form {
 
 
 // e book details page css end-----
+
+.golden-layer .bg-img:after{
+background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
+}
+.eBook-card-bottom{
+    margin-bottom: 50px;
+    @media screen and (max-width:991px) {
+        margin-bottom: 36px;
+    }
+    .skill-info{
+    @media screen and (max-width:991px) {
+        padding-top: 36px;
+    }
+    @media screen and (max-width:575px) {
+        padding-top: 24px;
+    }
+    }
+}
+
+// ebook page css end here
