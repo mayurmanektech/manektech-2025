@@ -3187,6 +3187,7 @@ footer .container {
     .blog-info {
         padding: 40px;
         border: 1px solid #1D1D1D1A;
+        background: #FAFAFA;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -3426,6 +3427,61 @@ form {
                 padding-right: 10px;
                 display: block;
             }
+        }
+    }
+}
+.conclusion-box {
+    padding: 40px;
+    .title {
+        font-size: 28px;
+        letter-spacing: 0.01em;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+}
+.blog-meet {
+    .img-wrapper {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 40px;
+    }
+    .img-bg-strip {
+        right: auto;
+        left: 118px;
+        &:before, &:after, span:before, span:after {
+            right: auto;
+            left: 0;
+            transform: rotate(-30deg);
+        }
+        &:after {
+            left: 92px;
+        }
+        span {
+            &:before {
+                left: 184px;
+            }
+            &:after {
+                left: 276px;
+            }
+        }
+    }
+    .meeting-info {
+        .name {
+            font-size: 24px;
+            margin-bottom: 8px;
+            letter-spacing: 0.04em;
+        }
+        .post {
+            font-family: $sora-font-family;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .desc {
+            font-size: 18px;
+            letter-spacing: 0.04em;
+            line-height: 2;
         }
     }
 }
