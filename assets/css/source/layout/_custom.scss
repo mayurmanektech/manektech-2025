@@ -3725,6 +3725,7 @@ form {
                     }
                     &.active {
                         color: $primary-color;
+                        font-weight: normal;
                         a {
                             color: $primary-color;
                         }
