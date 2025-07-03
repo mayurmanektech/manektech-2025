@@ -3292,11 +3292,34 @@ form {
     background: linear-gradient(-86deg,#E0005F29 0%, #D81F2829 100%);
     padding: 45px;
 }
-.blog-content-row {
-    --bs-gutter-x: 100px;
+.blog-info-card {
+    .category {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 5px;
+        color: $primary-color;
+    }
+    .title {
+        font-size: 26px;
+        line-height: normal;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    .desc {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 8px;
+    }
+    .btn {
+        font-family: $sora-font-family;
+        padding: 11px 30px;
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 
 .blog-content {
+    padding-left: 75px;
     h1, h2, h3, h4, h5, h6 {
         color: $primary-dark;
         text-transform: none;
@@ -3306,17 +3329,45 @@ form {
         font-size: 28px;
         margin-bottom: 26px;
     }
+    h3 {
+        font-weight: normal;
+    }
     p {
         font-size: 18px;
         letter-spacing: 0.04em;
         line-height: 36px;
-        font-weight: 300;
+    }
+    a {
+        color: $primary-color;
+    }
+    ul {        
+        padding: 0;
+        list-style: none;
+        li {
+            padding-left: 12px;
+            position: relative;
+            font-size: 18px;
+            line-height: 1.6;
+            padding-bottom: 2px;
+            letter-spacing: 0.04em;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 12px;
+                width: 4px;
+                height: 4px;
+                border-radius: 4px;
+                background: $primary-color;
+            }
+        }
     }
 }
 .table-content {
     border: 1px solid $primary-color;
     padding: 40px 50px;
     background: #FAFAFA;
+    margin-bottom: 60px;
     .title {
         font-size: 28px;
         letter-spacing: 0.01em;
