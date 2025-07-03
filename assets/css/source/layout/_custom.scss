@@ -1253,6 +1253,7 @@
         top: 140px;
         max-width: 334px;
         border: 1px solid #E8E8E8;
+        background: #FAFAFA;
         padding: 30px;
         ul{ 
             margin-top: 16px;
@@ -3698,3 +3699,38 @@ form {
     }
 }
 
+
+.planning-main-wrapper {
+    .tutorial-sidebar {
+        &.sidebar-menu {
+            max-height: 80vh;
+            overflow: auto;
+            ul {
+                border: 0;
+                padding-bottom: 0;
+                margin-bottom: 0;
+                counter-reset: tutcount;
+                li {
+                    display: flex;
+                    counter-increment: tutcount;
+                    padding-bottom: 16px;
+                    &::before {
+                        content: counter(tutcount) ".";
+                        width: 20px;
+                        padding-right: 10px;
+                        display: block;
+                    }
+                    a {
+                        color: $primary-dark;
+                    }
+                    &.active {
+                        color: $primary-color;
+                        a {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
