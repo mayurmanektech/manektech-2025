@@ -3350,6 +3350,7 @@ form {
             line-height: 1.6;
             padding-bottom: 2px;
             letter-spacing: 0.04em;
+            padding-bottom: 12px;
             &:before {
                 content: '';
                 position: absolute;
@@ -3359,6 +3360,37 @@ form {
                 height: 4px;
                 border-radius: 4px;
                 background: $primary-color;
+            }
+        }
+    }
+    table {
+        table-layout: fixed;
+        width: 100%;
+        thead {
+            tr {
+                background: linear-gradient(90deg, #F5CFD0 0%, #FFD9E9AB 100%);
+            }
+        }
+        th {
+            padding: 16px 24px;
+            font-weight: normal;
+            font-size: 26px;
+            line-height: 33px;
+            letter-spacing: 0.01em;
+            border: 1px solid #1D1D1D33;
+        }
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    background: #FAFAFA;
+                }
+                td {
+                    padding: 24px;
+                    font-size: 18px;
+                    line-height: 1.7;
+                    letter-spacing: 0.04em;
+                    border: 1px solid #1D1D1D33;
+                }
             }
         }
     }
