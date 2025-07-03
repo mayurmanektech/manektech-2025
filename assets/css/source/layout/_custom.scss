@@ -3160,6 +3160,153 @@ footer .container {
 
 // careers-details page css end---------
 
+// technology Q&A 
+
+.techQA-content{
+    .filter-card{
+        background-color: #fafafa;
+        border: 0.66px solid rgba(29, 29, 29, 0.1);
+        .filter-title{
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 158%;
+            text-transform: capitalize;
+            color: $primary-dark;
+        }
+        .filter-item{
+            &:not(:last-child){
+                margin-bottom: 24px;
+            }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            >div{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                p{
+                    margin-bottom: 0;                }
+            }
+            label,p{
+                font-weight: 500;
+                font-size: 18px;
+                letter-spacing: 0.01em;
+                color: $primary-dark;
+                opacity: 0.6;
+            }
+        }
+    }
+   
+}
+.techQA-content .opening-card-wrapper{
+        .opening-card{
+            &:first-child{
+                @media screen and (min-width:992px) {
+                    margin-top: 0;
+                }
+            }
+            .category-title{
+                font-weight: 500;
+                font-size: 20px;
+                letter-spacing: 0.01em;
+                color: $primary-dark;
+                opacity: 0.6;
+            }
+            h3{
+                font-weight: 500;
+                font-size: 26px;
+                line-height: 158%;
+                text-transform: capitalize;
+            }
+            p{
+                font-size: 20px;
+                color: #192236;
+                line-height: 170%;
+                letter-spacing: 0.01em;
+            }
+            .job-meta{
+                margin: 16px 0 24px;
+                li{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                     font-weight: 500;
+                font-size: 20px;
+                letter-spacing: 0.01em;
+                color: #192236;
+                }
+            }
+            .btn-primary:focus
+           {
+                background: #ffffff;
+                color: #D81F28;
+                border: 1px solid #D81F28;
+                box-shadow: none;
+            }
+        }
+    }
+    .filter-bar-techQA {
+        margin-bottom: 30px;
+
+        #filter-tags-wrap {
+            span {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 170%;
+                letter-spacing: -0.01em;
+                color: #192236;
+            }
+            #active-tags {
+                a {
+                    border: 1px solid #d6d6d6;
+                    padding: 6px 16px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    background: #fbfbfb;
+                    color: #192236;
+                }
+            }
+        }
+        .pagination-info {
+            span {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 150%;
+                color: #192236;
+            }
+        }
+    }
+    .techQA-content .card-expand{
+        font-family: $body-font-family;
+        h5{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 150%;
+            text-transform: capitalize;
+            color: #192236;
+        }
+        strong{
+            font-weight: 600;
+              font-size: 20px;
+            line-height: 150%;
+            text-transform: capitalize;
+            color: #192236;
+        }
+        code{
+             font-family: $body-font-family;
+            color: #ed4336;
+            font-weight: 400;
+            font-size: 18px;
+            letter-spacing: -0.01em;
+        }
+    }
+
+// // technology Q&A end
+
+
 
 .filter-card {
     padding: 32px;
@@ -3485,3 +3632,4 @@ form {
         }
     }
 }
+
