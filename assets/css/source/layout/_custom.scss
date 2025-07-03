@@ -3220,16 +3220,22 @@ footer .container {
                 line-height: 158%;
                 text-transform: capitalize;
             }
+            p{
+                font-size: 20px;
+                color: #192236;
+                line-height: 170%;
+                letter-spacing: 0.01em;
+            }
             .job-meta{
                 margin: 16px 0 24px;
-              font-weight: 500;
-                font-size: 20px;
-                letter-spacing: 0.01em;
-                color: #192236;
                 li{
                     display: flex;
                     align-items: center;
                     gap: 5px;
+                     font-weight: 500;
+                font-size: 20px;
+                letter-spacing: 0.01em;
+                color: #192236;
                 }
             }
             .btn-primary:focus
@@ -3275,13 +3281,6 @@ footer .container {
     }
     .techQA-content .card-expand{
         font-family: $body-font-family;
-        p{
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 170%;
-            letter-spacing: 0.01em;
-            color: #192236;
-        }
         h5{
             font-weight: 600;
             font-size: 20px;

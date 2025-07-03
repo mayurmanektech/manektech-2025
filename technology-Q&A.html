@@ -338,11 +338,11 @@
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                   <li class="breadcrumb-item"><a href="about.html">Media</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Frequently Asked Questions</li>
+                  <li class="breadcrumb-item active" aria-current="page">Tech Q&A</li>
                 </ol>
             </nav>
             <div class="row">
-                <div class="col-lg-7">
+                <div class="col-lg-8">
                     <h1>Tech Q&A</h1>
                     <p>Fleet management systems refer to the software solutions that help a business manage and optimize its fleet of vehicles.Through tracking locations, scheduling maintenance, monitoring fuel use, and ensuring compliance, FMS makes operations simple, reduces costs, and increases efficiency through real-time data and insights. 
                      </p><br/><p>
@@ -419,16 +419,22 @@
                             </div>
                             <div class="filter-item">
                                 <label for="python">Python</label>
+                                <div>
+                                    <p class="count">(20)</p>
                                 <div class="checkbox-wrapper">
                                     <input id="python" type="checkbox" />
                                     <span></span>
                                 </div>
+                                </div>
                             </div>
                             <div class="filter-item">
                                 <label for="ror">Ruby On Rails</label>
+                                <div>
+                                    <p class="count">(45)</p>
                                 <div class="checkbox-wrapper">
                                     <input id="ror" type="checkbox" />
                                     <span></span>
+                                </div>
                                 </div>
                             </div>
                             <div class="filter-item">
@@ -484,59 +490,59 @@
                                 manipulation using the more standard ES6 syntax.
                             </p>
 
-                            <div class="collapse" id="collapseExample">
-  <div class="card-expand">
-    <h5>Here's How You Can Refactor Your SelectChildren Function For Angular 4 Using TypeScript:</h5>
+                            <div class="collapse show" id="collapseExample">
+                            <div class="card-expand">
+                                <h5>Here's How You Can Refactor Your SelectChildren Function For Angular 4 Using TypeScript:</h5>
 
-    <p>In AngularJS, the ng-repeat directive is commonly used to iterate over arrays.</p>
-    <strong>Controller:</strong>
-    <pre><code class="text-danger">$scope.items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];</code></pre>
+                                <p>In AngularJS, the ng-repeat directive is commonly used to iterate over arrays.</p>
+                                <strong>Controller:</strong>
+                                <pre><code class="text-danger">$scope.items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];</code></pre>
 
-    <strong>Template:</strong>
-    <pre><code>&lt;li ng-repeat="item in items"&gt;{{item}}&lt;/li&gt;</code></pre>
+                                <strong>Template:</strong>
+                                <pre><code>&lt;li ng-repeat="item in items"&gt;{{item}}&lt;/li&gt;</code></pre>
 
-    <p>This example iterates over the <code>items</code> array and displays each item in an <code>li</code> element.</p>
+                                <p>This example iterates over the <code>items</code> array and displays each item in an <code>li</code> element.</p>
 
-    <h6>Creating Ranges Without An Array</h6>
-    <p>To create a range of numbers for looping without a predefined array, use a custom filter.</p>
+                                <h5>Creating Ranges Without An Array</h5>
+                                <p>To create a range of numbers for looping without a predefined array, use a custom filter.</p>
 
-    <strong>Controller:</strong>
-    <pre><code>
-app.filter('range', function() {
-  return function(input, total) {
-    total = parseInt(total, 10);
-    for (var i = 0; i &lt; total; i++) {
-      input.push(i);
-    }
-    return input;
-  };
-});
-    </code></pre>
+                                <strong>Controller:</strong>
+                                <pre><code>
+                            app.filter('range', function() {
+                            return function(input, total) {
+                                total = parseInt(total, 10);
+                                for (var i = 0; i &lt; total; i++) {
+                                input.push(i);
+                                }
+                                return input;
+                            };
+                            });
+                                </code></pre>
 
-    <strong>Template:</strong>
-    <pre><code>&lt;li ng-repeat="n in [] | range:100"&gt;{{n}}&lt;/li&gt;</code></pre>
-    <p>This generates an array from 0 to 99, which <code>ng-repeat</code> uses to create 100 elements.</p>
+                                <strong>Template:</strong>
+                                <pre><code>&lt;li ng-repeat="n in [] | range:100"&gt;{{n}}&lt;/li&gt;</code></pre>
+                                <p>This generates an array from 0 to 99, which <code>ng-repeat</code> uses to create 100 elements.</p>
 
-    <h5>Angular (2+): *ngFor</h5>
-    <p>In modern Angular (2+), generate ranges in the component and use <code>*ngFor</code> in the template.</p>
+                                <h5>Angular (2+): *ngFor</h5>
+                                <p>In modern Angular (2+), generate ranges in the component and use <code>*ngFor</code> in the template.</p>
 
-    <strong>Component (TypeScript):</strong>
-    <pre><code>
-export class MyComponent {
-  range: number[];
+                                <strong>Component (TypeScript):</strong>
+                                <pre><code>
+                            export class MyComponent {
+                            range: number[];
 
-  constructor() {
-    const total = 100; // Or any dynamic value
-    this.range = Array.from({ length: total }, (_, k) =&gt; k + 1);
-  }
-}
-    </code></pre>
+                            constructor() {
+                                const total = 100; // Or any dynamic value
+                                this.range = Array.from({ length: total }, (_, k) =&gt; k + 1);
+                            }
+                            }
+                                </code></pre>
 
-    <strong>Template:</strong>
-    <pre><code>&lt;li *ngFor="let n of range"&gt;{{n}}&lt;/li&gt;</code></pre>
-    <p>This example creates an array of numbers from 0 to 99, which <code>*ngFor</code> uses to generate elements.</p>
-  </div>
-</div>
+                                <strong>Template:</strong>
+                                <pre><code>&lt;li *ngFor="let n of range"&gt;{{n}}&lt;/li&gt;</code></pre>
+                                <p>This example creates an array of numbers from 0 to 99, which <code>*ngFor</code> uses to generate elements.</p>
+                            </div>
+                            </div>
 
 
 
@@ -544,8 +550,9 @@ export class MyComponent {
 
                             <div class="project-wrapper d-flex gap-2 gap-sm-3 align-items-center">
                                 <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
-                                    aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary toggle-read-btn">Continue
-                                    Reading...</button>
+    aria-expanded="true" aria-controls="collapseExample" class="btn btn-primary toggle-read-btn">
+    Read Less
+  </button>
 
                             </div>
                             
@@ -580,10 +587,7 @@ export class MyComponent {
                                 <li><span> Angular</span></li>
                             </ul>
                             <p>
-                                In Angular 2+ (including Angular 4), the use of AngularJS constructs like angular.forEach
-                                are typically replaced with native JavaScript constructs and TypeScript features. The modern
-                                approach uses the forEach method from arrays or for…of loops, and you can handle data
-                                manipulation using the more standard ES6 syntax.
+                               Does your website feel like it is running too slow? Do you feel it is not delivering the results, like engagement and conversions, you would like for it to do? Are you experiencing slow speed along with performance hindrances while operating the website?
                             </p>
                             <div class="project-wrapper d-flex gap-2 gap-sm-3 align-items-center">
 
@@ -621,10 +625,7 @@ export class MyComponent {
                                 <li><span> Angular</span></li>
                             </ul>
                             <p>
-                                In Angular 2+ (including Angular 4), the use of AngularJS constructs like angular.forEach
-                                are typically replaced with native JavaScript constructs and TypeScript features. The modern
-                                approach uses the forEach method from arrays or for…of loops, and you can handle data
-                                manipulation using the more standard ES6 syntax.
+                              Does your website feel like it is running too slow? Do you feel it is not delivering the results, like engagement and conversions, you would like for it to do? Are you experiencing slow speed along with performance hindrances while operating the website?
                             </p>
                             <div class="project-wrapper d-flex gap-2 gap-sm-3 align-items-center">
 
@@ -704,10 +705,7 @@ export class MyComponent {
                                 <li><span> Angular</span></li>
                             </ul>
                             <p>
-                                In Angular 2+ (including Angular 4), the use of AngularJS constructs like angular.forEach
-                                are typically replaced with native JavaScript constructs and TypeScript features. The modern
-                                approach uses the forEach method from arrays or for…of loops, and you can handle data
-                                manipulation using the more standard ES6 syntax.
+                               Does your website feel like it is running too slow? Do you feel it is not delivering the results, like engagement and conversions, you would like for it to do? Are you experiencing slow speed along with performance hindrances while operating the website?
                             </p>
                             <div class="project-wrapper d-flex gap-2 gap-sm-3 align-items-center">
 
@@ -842,7 +840,7 @@ export class MyComponent {
                     </div>
 
                     <!-- Pagination -->
-                    <div class="our-events-pagination d-flex justify-content-center align-items-center mt-4 mt-lg-5">
+                    <div class="our-events-pagination d-flex justify-content-end align-items-center mt-4 mt-lg-5">
                         <ul id="pagination" class="pagination mb-0"></ul>
                     </div>
                 </div>
@@ -1051,7 +1049,7 @@ export class MyComponent {
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <script>
+   <script>
   document.addEventListener("DOMContentLoaded", function () {
     const toggleBtn = document.querySelector(".toggle-read-btn");
     const collapse = document.getElementById("collapseExample");
