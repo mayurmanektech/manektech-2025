@@ -3888,3 +3888,36 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
         font-weight: 300;
     }
 }
+
+.planning-main-wrapper {
+    .portfolio-list-sidemenu {
+        .item {
+            margin-bottom: 16px;
+            border-bottom: 1px solid #1D1D1D33;
+            &:last-child {
+                margin-bottom: 0;
+                border-bottom: 0;
+                p {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            h5 {
+                font-size: 20px;
+                letter-spacing: 0.01em;
+                margin-bottom: 8px;
+                padding: 0;
+                border: 0;
+            }
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 8px;
+                &:last-child {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}
