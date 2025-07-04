@@ -3857,3 +3857,34 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
         }
     }
 }
+.portfolio-card-row {
+    margin-bottom: 45px;
+}
+.portfolio-card {
+    padding: 26px;
+    height: 100%;
+    .title {
+        font-size: 26px;
+        font-weight: normal;
+        margin-bottom: 6px;
+    }
+}
+.impact-card {
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-119deg, #F5DEFF80 0%, #FFE5E680 100%);
+    .title {
+        font-size: 28px;
+        margin: 0;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+    .desc {
+        margin: 0;
+        line-height: 1.4;
+        font-weight: 300;
+    }
+}
