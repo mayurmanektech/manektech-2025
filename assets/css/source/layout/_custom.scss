@@ -3633,6 +3633,9 @@ form {
         font-weight: 600;
         margin-bottom: 0;
     }
+    p:last-child {
+        margin-bottom: 0;
+    }
 }
 .blog-meet {
     .img-wrapper {
