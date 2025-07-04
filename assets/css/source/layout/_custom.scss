@@ -3356,6 +3356,9 @@ footer .container {
         &.full-blog-img {
             background: linear-gradient(71deg, #FFE5E6 55%, #F5DEFF 100%);
             padding: 50px ;
+            @media screen and (max-width:767px) {
+                padding: 24px;
+            }
         }
     }
 }
@@ -3848,15 +3851,117 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
 // ebook page css end here
 
 // white papers css start----
-
-.whitepapers-highlight{
-    .How-we-do-box-wrappe{
-        .How-we-do-box{
-            background: #fafafa;
-            border: 1px solid rgba(29, 29, 29, 0.2);
+.whitepaper-hero .skill-info{
+    h4{
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 135%;
+        letter-spacing: 0.01em;
+        color: $primary-dark;
+    }
+    p{
+        color: $primary-dark;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 156%;
+        letter-spacing: 0.02em;
+        opacity: 1;
+    }
+    ul li{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 200%;
+        letter-spacing: 0.04em;
+        color: $primary-dark;
+        opacity: 1;
+        padding-bottom: 7px;
+        &::before{
+            top: 16px;
         }
     }
 }
+.whitepapers-highlights{
+    .How-we-do-box-wrapper{
+        margin-top: 56px;
+        .How-we-do-box{
+             background: #fafafa;
+            .How-we-do-card{
+                   h3{
+                    margin-top: 24px;
+                   }
+            }
+        }
+    }
+}
+// -------
+
+
+// ----portfolio-list-filter
+
+.portfolio-list-filter{
+    .our-events-search-filter{
+        padding: 40px 0;
+    }
+    .filter-tab{
+        ul{
+            padding-inline-start: 0;
+            display: flex;
+            overflow-x: auto;
+            // flex-wrap: wrap;
+            gap:16px;
+            align-items: center;
+            justify-content: space-between;
+            li{
+                padding: 16px 60px;
+                list-style: none;
+                min-width: 273px;
+                // width: 100%;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 175%;
+                color: $black-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-bottom: 1px solid #000000;
+                &:hover{
+                  svg path {
+                    fill: $primary-color;
+                    transition: $transition-animate;
+                  }
+                  color: $primary-color;
+                  background: linear-gradient(180deg, #fafafa 0%, #ffeeef 100%);
+                  border-bottom: 1px solid $primary-color;
+                   transition: $transition-animate;
+                }
+                
+            }
+        }
+    }
+    .filter-list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        align-items: center;
+        max-height: 170px;
+        overflow: auto;
+        .filter-item{
+            margin-bottom: 0;
+        }
+    }
+    .select-all-filter-div{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        align-items: center;
+        margin-bottom: 16px;
+        .filter-item{
+            margin-bottom: 0;
+        }
+    }
+}
+
 .portfolio-card-row {
     margin-bottom: 45px;
 }
@@ -3920,4 +4025,46 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
             }
         }
     }
+}
+// ------podcast
+
+.podcast-card-wrappper{
+    .time-date{
+        margin-top: 27px;
+            p{
+                font-size: 16px;
+                color: #1D1D1D80;
+                display: flex;
+                align-items: center;
+                .mini{
+                    display : flex;
+                    align-items: center;
+                }
+                .mini::after {
+                    content: '';
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    background-color:  #4a4647;
+                    border-radius: 50%;
+                    margin: 0 10px;
+                    vertical-align: middle;
+                    
+                }
+            }
+        }
+       .success-story-card{
+        h3{
+            margin: 16px 0;
+        }
+        .category{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 200%;
+            letter-spacing: 0.04em;
+            opacity: 1;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+       } 
 }
