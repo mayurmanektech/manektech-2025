@@ -3993,3 +3993,46 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
         font-weight: 300;
     }
 }
+
+// ------podcast
+
+.podcast-card-wrappper{
+    .time-date{
+        margin-top: 27px;
+            p{
+                font-size: 16px;
+                color: #1D1D1D80;
+                display: flex;
+                align-items: center;
+                .mini{
+                    display : flex;
+                    align-items: center;
+                }
+                .mini::after {
+                    content: '';
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    background-color:  #4a4647;
+                    border-radius: 50%;
+                    margin: 0 10px;
+                    vertical-align: middle;
+                    
+                }
+            }
+        }
+       .success-story-card{
+        h3{
+            margin: 16px 0;
+        }
+        .category{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 200%;
+            letter-spacing: 0.04em;
+            opacity: 1;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+       } 
+}
