@@ -87,6 +87,7 @@ function setupResponsiveMenu() {
 
 // Init on document ready
 jQuery(document).ready(function () {
+  AOS.init();
   setupResponsiveMenu();
 });
 
@@ -144,10 +145,11 @@ jQuery(window).on('resize', function () {
     });
 
     const swiper_process = new Swiper('.process-slider .swiper', {
-      speed: 400,
+      speed: 800,
       spaceBetween: 0,
       autoHeight :true,
       loop: true,
+      effect: "fade",
       navigation: {
         nextEl: ".process-slider-next",
         prevEl: ".process-slider-prev",
