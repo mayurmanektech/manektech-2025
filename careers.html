@@ -625,7 +625,7 @@
              <div class="row d-flex justify-content-between align-items-center gy-2 gy-md-0 serach-select-div">
               <div class="col-md-5 pe-md-0">     
                       <div class="our-events-floating-label form-underline-animate">
-                        <input type="text" placeholder=" " id="searchEvent" required />
+                        <input type="text" placeholder=" " id="searchEvent" required >
                         <label for="searchEvent">Search Keyword</label>
                          <span class="underline"></span>
                       </div>
@@ -633,10 +633,10 @@
               <div class="col-md-3 px-md-0">
                 <div class="our-events-floating-label form-underline-animate">
                           <select required>
-                            <option value="" disabled selected></option>
-                            <option value="business">Business Trip</option>
-                            <option value="festival">Festival Celebration</option>
-                            <option value="annual">Annual Celebration</option>
+                            <option value="" disabled> Select Department</option>
+                            <option value="business">Design</option>
+                            <option value="festival">Sales & Marketing</option>
+                            <option value="annual">Development</option>
                           </select>
                           <label>Department</label>
                            <span class="underline"></span>
@@ -645,10 +645,10 @@
               <div class="col-md-3 px-md-0">
                 <div class="our-events-floating-label form-underline-animate">
                           <select required>
-                            <option value="" disabled selected></option>
-                            <option value="business">Business Trip</option>
-                            <option value="festival">Festival Celebration</option>
-                            <option value="annual">Annual Celebration</option>
+                            <option value="" disabled>Select Experience</option>
+                            <option value="business">0-2 Years</option>
+                            <option value="festival">4 Years</option>
+                            <option value="annual">5+ Years</option>
                           </select>
                           <label>Experience</label>
                            <span class="underline"></span>
@@ -666,7 +666,7 @@
                             </clipPath>
                           </defs>
                         </svg>
-                        </span>
+                    
               </div> 
             </div>
         </div>
@@ -901,13 +901,13 @@
                     <div class="">
                     <img src="./assets/images/work-grow-frame-1.png" alt="video-frame">
                     </div>
-                    <div class="">
-                    <h3>MT provides you the resources to maintain a healthy work-life balance.</h3>
-                    <div class="profile-div">
-                        <h5>Olivia Elrod<h5>
-                        <p class="mb-0">Software Developer, New York, USA</p>
-                    </div>
-                    </div>
+                      <div class="">
+                      <h3>MT provides you the resources to maintain a healthy work-life balance.</h3>
+                        <div class="profile-div">
+                            <h5>Olivia Elrod</h5>
+                            <p class="mb-0">Software Developer, New York, USA</p>
+                        </div>
+                      </div>
                 </div>
              </div>
              <div class="col-lg-4">
@@ -915,7 +915,7 @@
                       <div class="">
                  <h3 class="mt-lg-0">It has  created opportunities for me that have grown my expertise and career</h3>
                     <div class="profile-div mb-4">
-                        <h5>John D<h5>
+                        <h5>John D</h5>
                         <p class="mb-0">Quality Analist, New York, USA</p>
                     </div>
                     </div>
@@ -932,7 +932,7 @@
                    <div class="">
                   <h3> we all have a voice and make a difference every day.</h3>
                     <div class="profile-div">
-                        <h5>Emma Meghan<h5>
+                        <h5>Emma Meghan</h5>
                         <p class="mb-0">Content Writer, New York, USA</p>
                     </div>
                     </div>
@@ -1024,7 +1024,7 @@
 
           <div class="">
             <div class="form-floating">
-            <input type="email" class="form-control" id="email" placeholder=" " required>
+            <input type="email" class="form-control" id="workingemail" placeholder=" " required>
               <label for="email">Business Email Address*</label>
               <span class="underline"></span>
             </div>
@@ -1068,7 +1068,7 @@
             </div>
           </div>
           <div class="checkbox-div d-flex align-items-center">
-           <input class="form-check-input mt-0 " type="checkbox" value="" id="agree" required>
+           <input class="form-check-input mt-0 " type="checkbox" value="" id="Iagree" required>
             <label class="form-check-label mb-0" for="agree">
               I agree to Manektech<a href="#" class="text-decoration-none fw-medium">&nbsp; Privacy and Cookies Policy</a>.
             </label>
@@ -1163,7 +1163,7 @@
       <div class="modal-content">
         <div class="d-flex justify-content-between align-items-start">
               <div class="section-title">
-                <h2>Ready to join our team!</h2>
+                <h2 id="careerModalLabel">Ready to join our team!</h2>
               </div>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 <img src="assets/images/close-icon-gray.svg" alt="modal-colse-icon">
@@ -1175,21 +1175,21 @@
               <div class="form-grid">
                 <div class="">
                   <div class="form-floating">
-                   <input type="text" class="form-control" id="name" placeholder=" " required>
+                   <input type="text" class="form-control" id="Fullname" placeholder=" " required>
                     <label for="name">Full Name *</label>
                     <span class="underline"></span>
                   </div>
                 </div>
                 <div class="">
                   <div class="form-floating">
-                    <input type="email" class="form-control" id="name" placeholder=" " required />
+                    <input type="email" class="form-control" id="email" placeholder=" " required >
                     <label for="email">Your Email *</label>
                     <span class="underline"></span>
                   </div>
                 </div>
                 <div class=" d-flex align-items-end">
                   <div class="form-floating w-100">
-                    <input type="text" class="form-control" id="company" placeholder=" " required />
+                    <input type="text" class="form-control" id="position" placeholder=" " required >
                     <label for="company">Apply For *</label>
                     <span class="underline"></span>
                   </div>
@@ -1204,14 +1204,14 @@
                     <div class="form-floating input-prefix-wrapper">
                       <span class="prefix-text" id="prefixDisplay2">+91</span>
                       <input autocomplete="off" type="text" id="countryCode2" class="form-control" placeholder=""
-                        aria-label="Phone Number" />
+                        aria-label="Phone Number" >
                       <span class="underline"></span>
                     </div>
                   </div>
                 </div>
                 <div class="description">
                   <div class="form-floating">
-                    <textarea class="form-control" id="description" placeholder=" " style="height: 40px;"></textarea>
+                    <textarea class="form-control" id="Experience" placeholder=" " style="height: 40px;"></textarea>
                     <label for="description">Experience *</label>
                     <span class="underline"></span>
                   </div>
@@ -1233,7 +1233,7 @@
                     </label>
                   </div>
                   <div class="mt-3 d-flex  gap-2 gap-md-0 flex-wrap align-items-center">
-                   <input class="form-check-input mt-0 " type="checkbox" value="" id="agree" required>
+                   <input class="form-check-input mt-0 " type="checkbox" value="" id="contactMe" required>
                     <label class="form-check-label mb-0" for="agree">
                       Yes<a href="#" class="text-decoration-none fw-medium"> ManekTech </a>
                       can also contact me about future job opportunities.
