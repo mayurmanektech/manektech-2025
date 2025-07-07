@@ -4107,7 +4107,10 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
     }
 }
 .episode-meta-section {
-    padding: 0 0 40px 0;
+    padding: 0 0 90px 0;
+    @media screen and (max-width:991px) {
+         padding: 0 0 40px 0;
+    }
     h4 {
         font-weight: 600;
         font-size: 26px;

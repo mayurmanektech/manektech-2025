@@ -553,5 +553,74 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+     <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sidebarItems = document.querySelectorAll('.progress-list li');
+  const steps = document.querySelectorAll('.step');
+  const headerOffset = 130;
+  let isScrollingByClick = false;
+
+  // Activate step
+  function activateStep(index) {
+    sidebarItems.forEach(li => li.classList.remove('active'));
+    steps.forEach(s => s.classList.remove('active'));
+    
+    if (sidebarItems[index]) sidebarItems[index].classList.add('active');
+    if (steps[index]) steps[index].classList.add('active');
+  }
+
+  // Click on sidebar items
+  sidebarItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      isScrollingByClick = true;
+      activateStep(index);
+
+      const targetStep = steps[index];
+      const offsetTop = targetStep.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+
+      setTimeout(() => { isScrollingByClick = false; }, 600);
+    });
+  });
+
+  // Scroll tracking
+  window.addEventListener('scroll', () => {
+    if (isScrollingByClick) return;
+
+    let activeIndex = 0;
+    steps.forEach((step, index) => {
+      const rect = step.getBoundingClientRect();
+      if (rect.top - headerOffset <= 0) {
+        activeIndex = index;
+      }
+    });
+
+    activateStep(activeIndex);
+  });
+
+  // On load
+  window.addEventListener('load', () => {
+    activateStep(0);
+  });
+
+  // "How we do it?" heading click
+  const howTrigger = document.querySelector('h6[data-target="#howwedoit"]');
+  if (howTrigger) {
+    howTrigger.addEventListener('click', () => {
+      const id = howTrigger.getAttribute('data-target');
+      const el = document.querySelector(id);
+      if (el) {
+        window.scrollTo({
+          top: el.getBoundingClientRect().top + window.scrollY - headerOffset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  }
+});
+</script>
+
   </body>
   </html>
