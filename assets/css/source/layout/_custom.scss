@@ -4025,7 +4025,8 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
         }
     }
 }
-// ------podcast
+
+// ------podcast details css
 
 .podcast-card-wrappper{
     .time-date{
@@ -4067,3 +4068,113 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
         }
        } 
 }
+// podcast-detail banner----
+
+.orange-layer .bg-img:after {
+    background: linear-gradient(91deg, #fe7541 40%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.podcast-detail-process .sidebar-sticky {
+    @media screen and (min-width:992px) {
+        position: sticky;
+        top: 140px;
+    }
+    ul {
+        padding-inline-start: 14px;
+        li {
+            list-style: decimal;
+            list-style-position: outside;
+            padding-bottom: 16px;
+        }
+    }
+}
+.podcast-detail-process {
+    .content-section .step-div .step {
+        .intro {
+            font-weight: 600;
+            font-size: 28px;
+            letter-spacing: 0.01em;
+        }
+        h4 {
+            font-size: 18px;
+            line-height: 200%;
+            letter-spacing: 0.04em;
+            font-weight: 600;
+        }
+        strong {
+            font-weight: 600;
+        }
+    }
+}
+.episode-meta-section {
+    padding: 0 0 90px 0;
+    @media screen and (max-width:991px) {
+         padding: 0 0 40px 0;
+    }
+    h4 {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 127%;
+        letter-spacing: 0.01em;
+    }
+    .hosts-guests {
+        margin-bottom: 40px;
+        .host-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+            .host-avatar {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                border: 1px solid $primary-color;
+            }
+            .host-info {
+                .host-name {
+                    font-weight: 500;
+                    font-size: 18px;
+                    letter-spacing: 0.03em;
+                    text-align: center;
+                    color: #000;
+                    margin-bottom: 0px;
+                }
+                .host-role {
+                    font-weight: 400;
+                    font-size: 18px;
+                    letter-spacing: 0.03em;
+                    color: #000;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .episode-info {
+        .info-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 36px;
+            margin-top: 40px;
+            .info-item {
+                min-width: 180px;
+                .info-label {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 150%;
+                    letter-spacing: 0.01em;
+                    opacity: 0.6;
+                    margin-bottom: 6px;
+                }
+                .info-value {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 150%;
+                    letter-spacing: 0.01em;
+                    color: #333;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+// ------podcast details css end ---
