@@ -442,7 +442,7 @@
 
           <div class="">
             <div class="form-floating">
-            <input type="email" class="form-control" id="email" placeholder=" " required>
+            <input type="email" class="form-control" id="workingemail" placeholder=" " required>
               <label for="email">Business Email Address*</label>
               <span class="underline"></span>
             </div>
@@ -486,7 +486,7 @@
             </div>
           </div>
           <div class="checkbox-div d-flex align-items-center">
-           <input class="form-check-input mt-0 " type="checkbox" value="" id="agree" required>
+           <input class="form-check-input mt-0 " type="checkbox" value="" id="agreePrivacy" required>
             <label class="form-check-label mb-0" for="agree">
               I agree to Manektech<a href="#" class="text-decoration-none fw-medium">&nbsp; Privacy and Cookies Policy</a>.
             </label>
@@ -583,7 +583,7 @@
       <div class="modal-content">
          <div class="d-flex justify-content-between align-items-start">
               <div class="section-title">
-                <h2>Ready to join our team!</h2>
+                <h2 id="careerModalLabel">Ready to join our team!</h2>
               </div>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 <img src="assets/images/close-icon-gray.svg" alt="modal-colse-icon">
@@ -595,21 +595,21 @@
               <div class="form-grid">
                 <div class="">
                   <div class="form-floating">
-                   <input type="text" class="form-control" id="name" placeholder=" " required>
+                   <input type="text" class="form-control" id="fullname" placeholder=" " required>
                     <label for="name">Full Name *</label>
                     <span class="underline"></span>
                   </div>
                 </div>
                 <div class="">
                   <div class="form-floating">
-                    <input type="email" class="form-control" id="name" placeholder=" " required />
+                    <input type="email" class="form-control" id="email" placeholder=" " required >
                     <label for="email">Your Email *</label>
                     <span class="underline"></span>
                   </div>
                 </div>
                 <div class=" d-flex align-items-end">
                   <div class="form-floating w-100">
-                    <input type="text" class="form-control" id="company" placeholder=" " required />
+                    <input type="text" class="form-control" id="position" placeholder=" " required >
                     <label for="company">Apply For *</label>
                     <span class="underline"></span>
                   </div>
@@ -624,14 +624,14 @@
                     <div class="form-floating input-prefix-wrapper">
                       <span class="prefix-text" id="prefixDisplay2">+91</span>
                       <input autocomplete="off" type="text" id="countryCode2" class="form-control" placeholder=""
-                        aria-label="Phone Number" />
+                        aria-label="Phone Number" >
                       <span class="underline"></span>
                     </div>
                   </div>
                 </div>
                 <div class="description">
                   <div class="form-floating">
-                    <textarea class="form-control" id="description" placeholder=" " style="height: 40px;"></textarea>
+                    <textarea class="form-control" id="experience" placeholder=" " style="height: 40px;"></textarea>
                     <label for="description">Experience *</label>
                     <span class="underline"></span>
                   </div>
@@ -653,7 +653,7 @@
                     </label>
                   </div>
                   <div class="mt-3 d-flex  gap-2 gap-md-0 flex-wrap align-items-center">
-                   <input class="form-check-input mt-0 " type="checkbox" value="" id="agree" required>
+                   <input class="form-check-input mt-0 " type="checkbox" value="" id="contactMe" required>
                     <label class="form-check-label mb-0" for="agree">
                       Yes<a href="#" class="text-decoration-none fw-medium"> ManekTech </a>
                       can also contact me about future job opportunities.
