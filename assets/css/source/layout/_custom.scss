@@ -4178,7 +4178,7 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
     }
 }
 // ------podcast details css end ---
-
+// ------new dot net dev pages------
 .new-net-dev-section {
     .industry-card {
         position: relative;
@@ -4204,7 +4204,10 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
             font-size: 36px;
         }
     }
-
+    .img-w-h{
+          width: 651px;
+          max-height: 550px;
+    }
     .list-section {
         margin-top: 48px;
     }
@@ -4381,3 +4384,69 @@ color: #666;
         }
     }
 }
+
+.Flexible-Engagement-Models-section {
+    padding: 128px 0;
+
+    @media screen and (max-width:1600px) {
+        padding: 90px 0;
+    }
+
+    @media screen and (max-width:991px) {
+        padding: 40px 0;
+    }
+
+    .tab-div {
+        padding: 10px;
+        background: #f8f8f8;
+        width: fit-content;
+        ul {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 26px;
+            padding-inline-start: 0;
+            margin: 0;
+
+            li {
+                list-style: none;
+                padding: 10px 20px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 170%;
+                letter-spacing: 0.04em;
+                color: #666;
+
+                &:hover,
+                &:active {
+                    background-color: $primary-color;
+                    color: $white-color;
+                    // font-weight: 600;
+                    transition: $transition-animate;
+
+                }
+            }
+        }
+    }
+
+    .plug-play {
+        h4 {
+            font-weight: 600;
+            font-size: 30px;
+            color: #333;
+
+            span {
+                color: $primary-color;
+            }
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 150%;
+            letter-spacing: 0.04em;
+            color: #666;
+        }
+    }
+}
+// ------new dot net dev pages --end------
