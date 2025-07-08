@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manektech - .Net Development</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+ 
+    <header id="mainHeader">
+    <div class="container">
+      <a href="#" class="site-logo">
+        <img src="assets/images/logo.svg" alt="brand logo">
+      </a>
+  
+      <nav class="nav-menu">
+  
+        <button class="close-menu d-xl-none" id="close-menu"><svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512">
+            <path
+              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+          </svg></button>
+  
+        <ul class="main-menu">
+          <li>
+            <a href="">Service</a>
+            <span class="menu-arrow"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+              </svg></span>
+            <div class="sub-menu">
+              <strong>Service</strong>
+              <ul>
+                <li>
+                  <a href="#">Custom Software Development</a>
+                </li>
+                <li>
+                  <a href="#">Web Development</a>
+                </li>
+                <li>
+                  <a href="#">Dedicated Development Team</a>
+                </li>
+                <li>
+                  <a href="#">Software Product Development</a>
+                </li>
+                <li>
+                  <a href="#">Ecommerce Development</a>
+                </li>
+                <li>
+                  <a href="#">Mobile App Development</a>
+                </li>
+                <li>
+                  <a href="#">Software Testing & QA</a>
+                </li>
+                <li>
+                  <a href="#">UI/UX Design</a>
+                </li>
+  
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="">Solutions</a>
+            <span class="menu-arrow"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+              </svg></span>
+            <div class="sub-menu">
+              <strong>Solutions</strong>
+              <ul>
+                <li><a href="#">Digital Transformation</a></li>
+                <li><a href="#">Legacy System Modernization</a></li>
+                <li><a href="#">Cloud Migration & Integration</a></li>
+                <li><a href="#">Enterprise Resource Planning (ERP)</a></li>
+                <li><a href="#">CRM Solutions</a></li>
+                <li><a href="#">AI & ML Solutions</a></li>
+                <li><a href="#">DevOps & Automation</a></li>
+                <li><a href="#">Cybersecurity Solutions</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="">Industries</a>
+            <span class="menu-arrow"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+              </svg></span>
+            <div class="sub-menu">
+              <strong>Industries</strong>
+              <ul>
+                <li><a href="#">Healthcare</a></li>
+                <li><a href="#">Fintech</a></li>
+                <li><a href="#">Retail & Ecommerce</a></li>
+                <li><a href="#">Logistics & Supply Chain</a></li>
+                <li><a href="#">Education & E-Learning</a></li>
+                <li><a href="#">Real Estate</a></li>
+                <li><a href="#">Travel & Hospitality</a></li>
+                <li><a href="#">Manufacturing</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="">Technologies</a>
+            <span class="menu-arrow"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+              </svg></span>
+            <div class="sub-menu">
+              <strong>Technologies</strong>
+              <div class="d-xl-flex has-sub-menu">
+                <div class="sub-menu-inner">
+                  <span>Backend</span>
+                  <span class="menu-arrow d-xl-none"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+                    </svg></span>
+                  <ul>
+                    <li><a href="">.Net</a></li>
+                    <li><a href="">Java</a></li>
+                    <li><a href="">Node js</a></li>
+                    <li><a href="">Php</a></li>
+                    <li><a href="">Ror</a></li>
+                  </ul>
+                </div>
+                <div class="sub-menu-inner">
+                  <span>Frontend</span>
+                  <span class="menu-arrow d-xl-none"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+                    </svg></span>
+                  <ul>
+                    <li>
+                      <a href="">Angular</a>
+                    </li>
+                    <li>
+                      <a href="">React</a>
+                    </li>
+  
+                  </ul>
+                </div>
+                <div class="sub-menu-inner">
+                  <span>Mobile</span>
+                  <span class="menu-arrow d-xl-none"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+                    </svg></span>
+                  <ul>
+                    <li>
+                      <a href="">Ios</a>
+                    </li>
+                    <li>
+                      <a href="">Android</a>
+                    </li>
+                    <li>
+                      <a href="">React native</a>
+                    </li>
+                    <li>
+                      <a href="">Flutter</a>
+                    </li>
+                    <li>
+                      <a href="">Xamarin</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sub-menu-inner">
+                  <span>Others</span>
+                  <span class="menu-arrow d-xl-none"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+                    </svg></span>
+                  <ul>
+                    <li>
+                      <a href="">Sharepoint</a>
+                    </li>
+                    <li>
+                      <a href="">Cloud & devops</a>
+                    </li>
+  
+                  </ul>
+                </div>
+              </div>
+  
+  
+            </div>
+          </li>
+          <li>
+            <a href="">About Us</a>
+            <span class="menu-arrow"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+              </svg></span>
+            <div class="sub-menu">
+              <strong>About Us</strong>
+              <ul>
+                <li><a href="#">Company Overview</a></li>
+                <li><a href="#">Leadership Team</a></li>
+                <li><a href="#">Culture & Values</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="">Portfolio</a>
+          </li>
+  
+          <li>
+            <a href="">Career</a>
+          </li>
+          <li>
+            <a href="">Media</a>
+            <span class="menu-arrow"><svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+              </svg></span>
+            <div class="sub-menu">
+              <strong>Media</strong>
+              <ul>
+                <li><a href="#">Press Releases</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#">Success Stories</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+  
+      <a href="#" class="btn ms-auto"> contact Us</a>
+  
+  
+      <button id="menu-toggle" class="menu-toggle d-xl-none">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+    <section class="inner-banner large-banner section-space">
+    <div class="bg-img black">
+        <img src="assets/images/new-net-development-banner.png" alt="new-net-development-banner">
+    </div>
+    <div class="inner-banner-wrapper">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#">Technologies</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">.NET Development</li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-lg-7">
+                    <h1>.NET Development Company</h1>
+                    <p>If you're in search of a reliable ASP.NET development company in the USA for highly advanced ASP NET development services and solutions, let us assist you. As a trusted and pioneering .NET development company in the USA, our certified .NET developers provide custom .NET development services to build secure and power-packed web, desktop, and mobile applications tailored to meet your business demands.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+   <section class="client-section section-space">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title">
+                <h2>Our Clients</h2>
+              </div>
+            </div>
+        </div>
+        <div class="row align-items-center client-img-row">
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="client-img-wrapper">
+              <img src="assets/images/national-geographic.svg" alt="National Geographic Logo">
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="client-img-wrapper">
+              <img src="assets/images/nestle.svg" alt="Nestle Logo">
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="client-img-wrapper">
+              <img src="assets/images/infosys.svg" alt="Infosys Logo">
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="client-img-wrapper">
+              <img src="assets/images/gea.svg" alt="GEA Logo">
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="client-img-wrapper">
+              <img src="assets/images/abb.svg" alt="ABB Logo">
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="client-img-wrapper">
+              <img src="assets/images/salesforce.svg" alt="Salesforce Logo">
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="client-img-wrapper">
+              <img src="assets/images/kotak.svg" alt="Kotak Logo">
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="client-img-wrapper">
+              <img src="assets/images/adanigreenenergy.svg" alt="Adani Green Energy Logo">
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="client-img-wrapper">
+              <img src="assets/images/nyse.png" alt="Kotak Logo">
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="client-img-wrapper">
+              <img src="assets/images/sting.svg" alt="Sting Logo">
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="client-img-wrapper">
+              <img src="assets/images/kotak.svg" alt="Kotak Logo">
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="client-img-wrapper">
+              <img src="assets/images/nestle.svg" alt="Nestle Logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="find-reliable-section section-space">
+        <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                    <div class="section-title mb-4">
+                        <h2>Finding a reliable .NET development <br> partner is a minefield.</h2>
+                    </div>
+                    <p>Finding a reliable .NET development partner can feel like navigating a minefield—one wrong step can lead to missed deadlines, poor code quality, and wasted budgets. With so many options available, making the right choice requires careful evaluation and expertise.</p>
+                    </div>
+                </div>
+                <div class="row list-section">
+                    <div class="col-lg-6">
+                        <img class="w-100" src="./assets/images/Finding-reliable-img.png" alt="Finding-reliable-img">
+                    </div>
+                    <div class=" mt-3 mt-lg-0 ps-2 ps-lg-5 col-lg-6 d-flex align-items-center">
+                        <ul>
+                            <li>Unscalable and <b>difficult to maintain software.</b></li>
+                            <li>Missed deadlines and <b>project delays.</b></li>
+                            <li>Increased costs due to <b>rework.</b></li>
+                            <li>Unscalable and <b>difficult to maintain software.</b></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+                
+    </section>
+     <section class="find-reliable-section section-space">
+        <div class="container">
+                <div class="row list-section mt-0">
+                    <div class=" mt-3 mt-lg-0 pe-2 pe-lg-5 col-lg-6 d-flex align-items-center">
+                        <div class="">
+                            
+                            <div class="section-title mb-4">
+                                <h2>How about some fact <br> number about us</h2>
+                            </div>
+                            <p>Numbers speak louder than words! Here are some key facts and figures that highlight our expertise, achievements, and the impact we've made.</p>
+                             <div class="numbers-grid">
+                            <div class="number-box">
+                            <h3>12k</h3>
+                            <span>Projects</span>
+                            </div>
+                             <div class="number-box">
+                            <h3>91%</h3>
+                            <span>Satisfaction</span>
+                            </div>
+                          
+                            <div class="number-box">
+                                <h3>12+</h3>
+                                <span>Yrs Of Exp.</span>
+                            </div>
+                             <div class="number-box">
+                            <h3>560</h3>
+                            <span>Developments</span>
+                            </div>
+                            <div class="number-box">
+                            <h3>250</h3>
+                            <span>Clients</span>
+                            </div>
+                            <div class="number-box">
+                            <h3>98%</h3>
+                            <span>Accuracy</span>
+                            </div>
+                        </div>                      
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-first order-lg-last">
+                        <img class="w-100" src="./assets/images/fact-number.png" alt="fact-number">
+                    </div>
+                    
+                </div>
+        </div>
+                
+    </section>
+
+     <section class="one-stop-section section-space">
+        <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                    <div class="section-title mb-5">
+                        <h2>One-Stop Top .NET Development Company for <br>Customized Solutions for Driving Digital Transformation</h2>
+                    </div>
+                    </div>
+                </div>
+                <div class="content-data">
+                    <div class="">
+                        <h4>Empowering Businesses with Tailored .NET Solutions</h4>
+                        <p>As a leading .NET development company, we specialize in delivering customized solutions that drive digital transformation. Our expert developers leverage the power of Microsoft’s .NET framework to build scalable, secure, and high-performance applications tailored to your unique business needs. Whether you require web, mobile, or enterprise-grade solutions, we ensure seamless integration, future-ready architecture, and robust functionality to accelerate your growth.</p>
+                    </div>
+                     <div class="">
+                        <h4>Transforming Ideas into Innovative Digital Experiences</h4>
+                        <p>We go beyond conventional development by crafting solutions that enhance efficiency, improve customer experiences, and streamline operations. Our end-to-end .NET development services cover everything from consulting and architecture design to development, testing, and deployment. With a focus on innovation and agility, we help businesses stay ahead of the competition by implementing modern technologies, including cloud-based solutions, AI integration, and IoT-powered applications.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="meet-section">
+        <div class="container">
+            <div class="row align-items-end align-items-xl-center">
+                <div class="col-lg-5">
+                    <div class="meeting-info">
+                    <h3>Have Your Questions Answered!</h3>
+                    <p class="meet-desc">Send your requirements and get an assessment</p>
+                    <a href="#" class="btn white-btn">Schedule Meeting</a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="meet-img-box">
+                        <div class="meeting-person-info">
+                            <p class="title">Jignen Pandya</p>
+                            <p class="desc">Vice President Sales & Marketing</p>
+                        </div>
+                        <div class="img-wrapper">
+                        <img src="assets/images/jignen-pandya.png" alt="jignen-pandya">
+                        </div>
+                        <div class="img-bg-strip">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="new-our-process">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-white mb-4">
+                        <h2>Our process</h2>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row process-grid">
+                <div class="process-step">
+                    <div class="icon"><svg width="34" height="50" viewBox="0 0 34 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_4620_5917)">
+                    <path d="M4.16699 5H22.5029L32.333 14.8301V41.5C32.333 42.3398 32 43.1454 31.4062 43.7393C30.8125 44.333 30.0067 44.6669 29.167 44.667H4.16699C3.32722 44.667 2.52158 44.333 1.92773 43.7393C1.33387 43.1454 1 42.3399 1 41.5V8.16699C1 7.32714 1.33387 6.5216 1.92773 5.92773C2.5216 5.33387 3.32714 5 4.16699 5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.8359 5V13.3333C20.8359 14.4384 21.2749 15.4982 22.0563 16.2796C22.8377 17.061 23.8975 17.5 25.0026 17.5H33.3359" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.33594 26.918H12.5026" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.8359 26.918H25.0026" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.33594 35.25H12.5026" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.8359 35.25H25.0026" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_4620_5917">
+                    <rect width="33.3335" height="49.6667" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    </div>
+                    <h5>Send Your Brief</h5>
+                    <p>Share your project requirements, goals, and expectations with us to get started.</p>
+                </div>
+                <div class="process-step">
+                    <div class="icon"><svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.4557 42.0014C20.4319 44.0411 25.0059 44.5936 29.3534 43.5593C33.7009 42.525 37.536 39.9719 40.1677 36.3601C42.7994 32.7483 44.0545 28.3154 43.7069 23.8601C43.3594 19.4048 41.4319 15.2201 38.272 12.0601C35.112 8.90018 30.9274 6.97276 26.4721 6.62518C22.0168 6.27761 17.5838 7.53275 13.972 10.1644C10.3602 12.7961 7.80717 16.6312 6.77286 20.9787C5.73855 25.3262 6.29103 29.9002 8.33073 33.8764L4.16406 46.1681L16.4557 42.0014Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16.6641 25.334H16.6849" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M25 25.334H25.0208" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M33.3359 25.334H33.3568" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </div>
+                    <h5>Discuss With Us</h5>
+                    <p>Collaborate with our team to refine ideas, align objectives, and finalize the development roadmap.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <div class="icon"><svg width="42" height="52" viewBox="0 0 42 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M28.1641 38.834L40.6641 26.334L28.1641 13.834" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.5 13.834L1 26.334L13.5 38.834" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </div>
+                    <h5>We're Developing</h5>
+                    <p>Our experts bring your vision to life with clean, scalable, and efficient development, ensuring
+                        quality and innovation.</p>
+                </div>
+                <div class="process-step">
+                    <div class="icon"><svg width="42" height="51" viewBox="0 0 42 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M28.0859 33.6647L32.2526 37.8314L40.5859 29.498" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M38.5 21.1643V16.9977C38.4992 16.267 38.3064 15.5494 37.9407 14.9168C37.575 14.2842 37.0495 13.7589 36.4167 13.3935L21.8333 5.06018C21.1999 4.69448 20.4814 4.50195 19.75 4.50195C19.0186 4.50195 18.3001 4.69448 17.6667 5.06018L3.08333 13.3935C2.45055 13.7589 1.92496 14.2842 1.55929 14.9168C1.19363 15.5494 1.00075 16.267 1 16.9977V33.6643C1.00075 34.395 1.19363 35.1127 1.55929 35.7453C1.92496 36.3779 2.45055 36.9032 3.08333 37.2685L17.6667 45.6018C18.3001 45.9675 19.0186 46.1601 19.75 46.1601C20.4814 46.1601 21.1999 45.9675 21.8333 45.6018L26 43.2268" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.375 9.22656L29.125 19.9557" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1.60156 14.9141L19.7474 25.3307L37.8932 14.9141" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.75 46.1654V25.332" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </div>
+                    <h5>Deliver To You</h5>
+                    <p>We ensure a seamless handover with a fully functional, high-quality product ready for deployment.</p>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+  <section class="section-space grey-bg text-white hiring-process new-net-dev-section">
+    <div class="container">
+        <div class="section-title">
+          <h2 class="text-white">Hiring Process</h2>
+        </div>
+        <div class="d-flex justify-content-center">
+        <div class="industry-box-wrapper dark">
+        <div class="industry-box">
+            <div class="industry-card step step1">
+             <p class="number">01</p>
+            <h3>Apply for a job</h3>
+            <p class="mb-0">Find the current opening on the career page and apply for a role that aligns with your skills and interests. One of our recruiters will reach out to you.</p>
+            <div class="candidate-icon">
+                <svg width="105" height="29" viewBox="0 0 105 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.22754 0.601562C6.87171 0.601715 8.2041 1.93493 8.2041 3.5791C8.20393 5.22313 6.8716 6.55551 5.22754 6.55566C3.58335 6.55566 2.25017 5.22322 2.25 3.5791C2.25 1.93484 3.58324 0.601562 5.22754 0.601562Z" stroke="white"/>
+                <path d="M2.75781 11.1738V18.4028L3.48987 28.1024H7.15014L7.9737 18.4028V11.1738" stroke="white"/>
+                <path d="M2.75534 17.9451H0.742188V9.80111L4.40246 8.0625L5.22602 9.7096L6.04958 8.0625L9.61834 9.80111V17.9451H8.06273" stroke="white"/>
+                <path d="M24.1025 0.601562C25.7467 0.601715 27.0791 1.93493 27.0791 3.5791C27.0789 5.22313 25.7466 6.55551 24.1025 6.55566C22.4583 6.55566 21.1252 5.22322 21.125 3.5791C21.125 1.93484 22.4582 0.601562 24.1025 0.601562Z" stroke="white"/>
+                <path d="M21.6328 11.1738V18.4028L22.3649 28.1024H26.0251L26.8487 18.4028V11.1738" stroke="white"/>
+                <path d="M21.6303 17.9451H19.6172V9.80111L23.2775 8.0625L24.101 9.7096L24.9246 8.0625L28.4933 9.80111V17.9451H26.9377" stroke="white"/>
+                <path d="M42.9775 0.601562C44.6217 0.601715 45.9541 1.93493 45.9541 3.5791C45.9539 5.22313 44.6216 6.55551 42.9775 6.55566C41.3333 6.55566 40.0002 5.22322 40 3.5791C40 1.93484 41.3332 0.601562 42.9775 0.601562Z" stroke="white"/>
+                <path d="M40.5078 11.1738V18.4028L41.2399 28.1024H44.9001L45.7237 18.4028V11.1738" stroke="white"/>
+                <path d="M40.5053 17.9451H38.4922V9.80111L42.1525 8.0625L42.976 9.7096L43.7996 8.0625L47.3683 9.80111V17.9451H45.8127" stroke="white"/>
+                <path d="M61.8525 0.601562C63.4967 0.601715 64.8291 1.93493 64.8291 3.5791C64.8289 5.22313 63.4966 6.55551 61.8525 6.55566C60.2083 6.55566 58.8752 5.22322 58.875 3.5791C58.875 1.93484 60.2082 0.601562 61.8525 0.601562Z" stroke="white"/>
+                <path d="M59.3828 11.1738V18.4028L60.1149 28.1024H63.7751L64.5987 18.4028V11.1738" stroke="white"/>
+                <path d="M59.3803 17.9451H57.3672V9.80111L61.0275 8.0625L61.851 9.7096L62.6746 8.0625L66.2433 9.80111V17.9451H64.6877" stroke="white"/>
+                <path d="M80.7354 0.601562C82.3795 0.601715 83.7119 1.93493 83.7119 3.5791C83.7117 5.22313 82.3794 6.55551 80.7354 6.55566C79.0912 6.55566 77.758 5.22322 77.7578 3.5791C77.7578 1.93484 79.0911 0.601562 80.7354 0.601562Z" stroke="white"/>
+                <path d="M78.2656 11.1738V18.4028L78.9977 28.1024H82.6579L83.4815 18.4028V11.1738" stroke="white"/>
+                <path d="M78.2631 17.9451H76.25V9.80111L79.9103 8.0625L80.7338 9.7096L81.5574 8.0625L85.1262 9.80111V17.9451H83.5705" stroke="white"/>
+                <path d="M99.6104 0.601562C101.255 0.601715 102.587 1.93493 102.587 3.5791C102.587 5.22313 101.254 6.55551 99.6104 6.55566C97.9662 6.55566 96.633 5.22322 96.6328 3.5791C96.6328 1.93484 97.9661 0.601562 99.6104 0.601562Z" stroke="white"/>
+                <path d="M97.1406 11.1738V18.4028L97.8727 28.1024H101.533L102.357 18.4028V11.1738" stroke="white"/>
+                <path d="M97.1381 17.9451H95.125V9.80111L98.7853 8.0625L99.6088 9.7096L100.432 8.0625L104.001 9.80111V17.9451H102.446" stroke="white"/>
+                </svg>
+            </div>    
+        </div>
+        </div>
+         <div class="industry-box empty border-end-0"></div>
+          <div class="industry-box empty"></div>
+        <div class="industry-box">
+            <div class="industry-card step step2">
+            <p class="number">02</p>
+            <h3>Candidate Screening</h3>
+            <p class="mb-0">Our recruiters will schedule a call to discuss your background, experience, and career goals to make sure you’re a good fit for the role. This is also an opportunity for you to learn more about us and the role.</p>
+             <div class="candidate-icon">
+                <svg width="86" height="29" viewBox="0 0 86 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.10254 0.601562C6.74671 0.601715 8.0791 1.93493 8.0791 3.5791C8.07893 5.22313 6.7466 6.55551 5.10254 6.55566C3.45835 6.55566 2.12517 5.22322 2.125 3.5791C2.125 1.93484 3.45824 0.601562 5.10254 0.601562Z" stroke="white"/>
+                <path d="M2.63281 11.1738V18.4028L3.36487 28.1024H7.02514L7.8487 18.4028V11.1738" stroke="white"/>
+                <path d="M2.63034 17.9451H0.617188V9.80111L4.27746 8.0625L5.10102 9.7096L5.92458 8.0625L9.49334 9.80111V17.9451H7.93773" stroke="white"/>
+                <path d="M23.9775 0.601562C25.6217 0.601715 26.9541 1.93493 26.9541 3.5791C26.9539 5.22313 25.6216 6.55551 23.9775 6.55566C22.3333 6.55566 21.0002 5.22322 21 3.5791C21 1.93484 22.3332 0.601562 23.9775 0.601562Z" stroke="white"/>
+                <path d="M21.5078 11.1738V18.4028L22.2399 28.1024H25.9001L26.7237 18.4028V11.1738" stroke="white"/>
+                <path d="M21.5053 17.9451H19.4922V9.80111L23.1525 8.0625L23.976 9.7096L24.7996 8.0625L28.3683 9.80111V17.9451H26.8127" stroke="white"/>
+                <path d="M42.8525 0.601562C44.4967 0.601715 45.8291 1.93493 45.8291 3.5791C45.8289 5.22313 44.4966 6.55551 42.8525 6.55566C41.2083 6.55566 39.8752 5.22322 39.875 3.5791C39.875 1.93484 41.2082 0.601562 42.8525 0.601562Z" stroke="white"/>
+                <path d="M40.3828 11.1738V18.4028L41.1149 28.1024H44.7751L45.5987 18.4028V11.1738" stroke="white"/>
+                <path d="M40.3803 17.9451H38.3672V9.80111L42.0275 8.0625L42.851 9.7096L43.6746 8.0625L47.2433 9.80111V17.9451H45.6877" stroke="white"/>
+                <path d="M61.7275 0.601562C63.3717 0.601715 64.7041 1.93493 64.7041 3.5791C64.7039 5.22313 63.3716 6.55551 61.7275 6.55566C60.0833 6.55566 58.7502 5.22322 58.75 3.5791C58.75 1.93484 60.0832 0.601562 61.7275 0.601562Z" stroke="white"/>
+                <path d="M59.2578 11.1738V18.4028L59.9899 28.1024H63.6501L64.4737 18.4028V11.1738" stroke="white"/>
+                <path d="M59.2553 17.9451H57.2422V9.80111L60.9025 8.0625L61.726 9.7096L62.5496 8.0625L66.1183 9.80111V17.9451H64.5627" stroke="white"/>
+                <path d="M80.6104 0.601562C82.2545 0.601715 83.5869 1.93493 83.5869 3.5791C83.5867 5.22313 82.2544 6.55551 80.6104 6.55566C78.9662 6.55566 77.633 5.22322 77.6328 3.5791C77.6328 1.93484 78.9661 0.601562 80.6104 0.601562Z" stroke="white"/>
+                <path d="M78.1406 11.1738V18.4028L78.8727 28.1024H82.5329L83.3565 18.4028V11.1738" stroke="white"/>
+                <path d="M78.1381 17.9451H76.125V9.80111L79.7853 8.0625L80.6088 9.7096L81.4324 8.0625L85.0012 9.80111V17.9451H83.4455" stroke="white"/>
+                </svg>
+            </div>   
+        </div>
+        </div>
+          <div class="industry-box empty"></div>
+           <div class="industry-box empty"></div>
+        <div class="industry-box">
+            <div class="industry-card step step3">
+            <p class="number">03</p>
+            <h3>Technical Round</h3>
+            <p class="mb-0">Depending on the role, you may complete a test task or participate in a technical interview with one of our engineers to demonstrate your expertise.</p>
+            <div class="candidate-icon">
+                <svg width="86" height="29" viewBox="0 0 86 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.10254 0.601562C6.74671 0.601715 8.0791 1.93493 8.0791 3.5791C8.07893 5.22313 6.7466 6.55551 5.10254 6.55566C3.45835 6.55566 2.12517 5.22322 2.125 3.5791C2.125 1.93484 3.45824 0.601562 5.10254 0.601562Z" stroke="white"/>
+                <path d="M2.63281 11.1738V18.4028L3.36487 28.1024H7.02514L7.8487 18.4028V11.1738" stroke="white"/>
+                <path d="M2.63034 17.9451H0.617188V9.80111L4.27746 8.0625L5.10102 9.7096L5.92458 8.0625L9.49334 9.80111V17.9451H7.93773" stroke="white"/>
+                <path d="M23.9775 0.601562C25.6217 0.601715 26.9541 1.93493 26.9541 3.5791C26.9539 5.22313 25.6216 6.55551 23.9775 6.55566C22.3333 6.55566 21.0002 5.22322 21 3.5791C21 1.93484 22.3332 0.601562 23.9775 0.601562Z" stroke="white"/>
+                <path d="M21.5078 11.1738V18.4028L22.2399 28.1024H25.9001L26.7237 18.4028V11.1738" stroke="white"/>
+                <path d="M21.5053 17.9451H19.4922V9.80111L23.1525 8.0625L23.976 9.7096L24.7996 8.0625L28.3683 9.80111V17.9451H26.8127" stroke="white"/>
+                <path d="M42.8525 0.601562C44.4967 0.601715 45.8291 1.93493 45.8291 3.5791C45.8289 5.22313 44.4966 6.55551 42.8525 6.55566C41.2083 6.55566 39.8752 5.22322 39.875 3.5791C39.875 1.93484 41.2082 0.601562 42.8525 0.601562Z" stroke="white"/>
+                <path d="M40.3828 11.1738V18.4028L41.1149 28.1024H44.7751L45.5987 18.4028V11.1738" stroke="white"/>
+                <path d="M40.3803 17.9451H38.3672V9.80111L42.0275 8.0625L42.851 9.7096L43.6746 8.0625L47.2433 9.80111V17.9451H45.6877" stroke="white"/>
+                <path d="M61.7275 0.601562C63.3717 0.601715 64.7041 1.93493 64.7041 3.5791C64.7039 5.22313 63.3716 6.55551 61.7275 6.55566C60.0833 6.55566 58.7502 5.22322 58.75 3.5791C58.75 1.93484 60.0832 0.601562 61.7275 0.601562Z" stroke="white"/>
+                <path d="M59.2578 11.1738V18.4028L59.9899 28.1024H63.6501L64.4737 18.4028V11.1738" stroke="white"/>
+                <path d="M59.2553 17.9451H57.2422V9.80111L60.9025 8.0625L61.726 9.7096L62.5496 8.0625L66.1183 9.80111V17.9451H64.5627" stroke="white"/>
+                <path d="M80.6104 0.601562C82.2545 0.601715 83.5869 1.93493 83.5869 3.5791C83.5867 5.22313 82.2544 6.55551 80.6104 6.55566C78.9662 6.55566 77.633 5.22322 77.6328 3.5791C77.6328 1.93484 78.9661 0.601562 80.6104 0.601562Z" stroke="white"/>
+                <path d="M78.1406 11.1738V18.4028L78.8727 28.1024H82.5329L83.3565 18.4028V11.1738" stroke="white"/>
+                <path d="M78.1381 17.9451H76.125V9.80111L79.7853 8.0625L80.6088 9.7096L81.4324 8.0625L85.0012 9.80111V17.9451H83.4455" stroke="white"/>
+                </svg>
+
+            </div>       
+        </div>
+        </div>
+          <div class="industry-box empty border-end-0"></div>
+           <div class="industry-box empty"></div>
+        <div class="industry-box">
+            <div class="industry-card step step4">
+            <p class="number">04</p>
+            <h3>Leadership Interview</h3>
+            <p class="mb-0">In this round, a hiring manager or senior engineering manager will assess your ability to drive projects, make decisions, solve problems, and navigate team dynamics. It’s also an opportunity to discuss how your skills and experience can contribute to the team’s success.</p>
+             <div class="candidate-icon">
+              <svg width="49" height="29" viewBox="0 0 49 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.86035 0.601562C7.50452 0.601715 8.83691 1.93493 8.83691 3.5791C8.83674 5.22313 7.50441 6.55551 5.86035 6.55566C4.21616 6.55566 2.88299 5.22322 2.88281 3.5791C2.88281 1.93484 4.21605 0.601562 5.86035 0.601562Z" stroke="white"/>
+                <path d="M3.39062 11.1738V18.4028L4.12268 28.1024H7.78295L8.60651 18.4028V11.1738" stroke="white"/>
+                <path d="M3.38815 17.9451H1.375V9.80111L5.03527 8.0625L5.85883 9.7096L6.68239 8.0625L10.2512 9.80111V17.9451H8.69554" stroke="white"/>
+                <path d="M24.7354 0.601562C26.3795 0.601715 27.7119 1.93493 27.7119 3.5791C27.7117 5.22313 26.3794 6.55551 24.7354 6.55566C23.0912 6.55566 21.758 5.22322 21.7578 3.5791C21.7578 1.93484 23.0911 0.601562 24.7354 0.601562Z" stroke="white"/>
+                <path d="M22.2656 11.1738V18.4028L22.9977 28.1024H26.6579L27.4815 18.4028V11.1738" stroke="white"/>
+                <path d="M22.2631 17.9451H20.25V9.80111L23.9103 8.0625L24.7338 9.7096L25.5574 8.0625L29.1262 9.80111V17.9451H27.5705" stroke="white"/>
+                <path d="M43.6104 0.601562C45.2545 0.601715 46.5869 1.93493 46.5869 3.5791C46.5867 5.22313 45.2544 6.55551 43.6104 6.55566C41.9662 6.55566 40.633 5.22322 40.6328 3.5791C40.6328 1.93484 41.9661 0.601562 43.6104 0.601562Z" stroke="white"/>
+                <path d="M41.1406 11.1738V18.4028L41.8727 28.1024H45.5329L46.3565 18.4028V11.1738" stroke="white"/>
+                <path d="M41.1381 17.9451H39.125V9.80111L42.7853 8.0625L43.6088 9.7096L44.4324 8.0625L48.0012 9.80111V17.9451H46.4455" stroke="white"/>
+                </svg>
+            </div>   
+        </div>
+        </div>
+          <div class="industry-box empty"></div>
+           <div class="industry-box empty"></div>
+        <div class="industry-box">
+            <div class="industry-card step step5">
+            <p class="number">05</p>
+            <h3>Culture Fit Round</h3>
+            <p class="mb-0">In this round, our HR team members will assess how well your soft skills, values, and work style align with our company culture. If successful, we’ll extend a formal offer to join us.</p>
+             <div class="candidate-icon">
+                <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.73535 0.601562C7.37952 0.601715 8.71191 1.93493 8.71191 3.5791C8.71174 5.22313 7.37941 6.55551 5.73535 6.55566C4.09116 6.55566 2.75799 5.22322 2.75781 3.5791C2.75781 1.93484 4.09105 0.601562 5.73535 0.601562Z" stroke="white"/>
+                <path d="M3.26562 11.1738V18.4028L3.99768 28.1024H7.65795L8.48151 18.4028V11.1738" stroke="white"/>
+                <path d="M3.26315 17.9451H1.25V9.80111L4.91027 8.0625L5.73383 9.7096L6.55739 8.0625L10.1262 9.80111V17.9451H8.57054" stroke="white"/>
+                <path d="M24.6104 0.601562C26.2545 0.601715 27.5869 1.93493 27.5869 3.5791C27.5867 5.22313 26.2544 6.55551 24.6104 6.55566C22.9662 6.55566 21.633 5.22322 21.6328 3.5791C21.6328 1.93484 22.9661 0.601562 24.6104 0.601562Z" stroke="white"/>
+                <path d="M22.1406 11.1738V18.4028L22.8727 28.1024H26.5329L27.3565 18.4028V11.1738" stroke="white"/>
+                <path d="M22.1381 17.9451H20.125V9.80111L23.7853 8.0625L24.6088 9.7096L25.4324 8.0625L29.0012 9.80111V17.9451H27.4455" stroke="white"/>
+                </svg>
+            </div>   
+        </div>
+        </div>
+          <div class="industry-box empty border-end-0"></div>
+           <div class="industry-box empty"></div>
+        <div class="industry-box">
+            <div class="industry-card step step6">
+            <p class="number">06</p>
+            <h3>Onboarding</h3>
+            <p class="mb-0">Once you accept the offer, our onboarding process will help you seamlessly integrate into your new role. This includes HR onboarding, IT onboarding, and role-specific onboarding, ensuring you are fully equipped and prepared for your new role.</p>
+             <div class="candidate-icon">
+                <svg width="11" height="29" viewBox="0 0 11 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.61035 0.601562C7.25452 0.601715 8.58691 1.93493 8.58691 3.5791C8.58674 5.22313 7.25441 6.55551 5.61035 6.55566C3.96616 6.55566 2.63299 5.22322 2.63281 3.5791C2.63281 1.93484 3.96605 0.601562 5.61035 0.601562Z" stroke="white"/>
+                <path d="M3.14062 11.1738V18.4028L3.87268 28.1024H7.53295L8.35651 18.4028V11.1738" stroke="white"/>
+                <path d="M3.13815 17.9451H1.125V9.80111L4.78527 8.0625L5.60883 9.7096L6.43239 8.0625L10.0012 9.80111V17.9451H8.44554" stroke="white"/>
+                </svg>
+            </div>       
+        </div>
+        </div>
+        </div>
+          </div>
+
+    </div>
+  </section>
+    <section class="review-section section-space">
+      <div class="container">
+        <div class="row gy-5 gy-lg-0">
+          <div class="col-lg-6">
+            <div class="review-info">
+              <div class="section-title">
+                <h2>Customer Reviews</h2>
+              </div>
+              <p class="title">Good Experience With Team</p>
+              <p class="desc">We rely on ManekTech to accelerate our production processes. Their outstanding service has consistently exceeded expectations across multiple projects I've engaged them for, making them a reliable partner. With a stellar team and competitive pricing, they stand out as an excellent company to collaborate with.</p>
+              <div class="reviewer-box">
+                <div class="reviewer-avatar">
+                    <img src="assets/images/reviewer.jpg" alt="Reviewer from Codex Software">
+                </div>
+                <div class="reviewer-info">
+                  <p class="title">Codex Software</p>
+                  <p class="desc">United States of America</p>
+                </div>
+              </div>
+              <div class="review-company mt-4">
+                <img src="assets/images/clutch-review.svg" alt="Clutch Review Logo">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex align-items-center">
+            <div class="review-video-wrapper">
+              <img class="review-thumbnail" src="assets/images/review-thumbnail.webp" alt="review-thumbnail">
+              <button class="video-btn">
+               <img src="assets/images/play-icon.svg" alt="you-tube-icon">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+        <div class=" footer-bottom-main d-flex justify-content-center">
+            <div class="footer-bottom-bar container">
+               <div class="certification-logo-wrapper">
+        <div class="certification-logo swiper-container">
+          <div class="swiper-wrapper" id="certificationLogoWrapper">
+            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/Microsoft-gold-partner.png" alt="Microsoft Gold Partner Logo"></div>
+            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/badge-top-mobile-app-developers-2023.png" alt="Top Mobile App Developers 2023 Badge"></div>
+            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/icaward-appusa-bg.png" alt="AppUSA Award Badge"></div>
+            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/magento-developer.png" alt="Magento Developer Badge"></div>
+            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/12-original.png" alt="12 Original Award Badge"></div>
+            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/top-web-development-companies.png" alt="Top Web Development Companies Badge"></div>
+            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/clutch.png" alt="Clutch Logo"></div>
+            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/deliver-clutch.png" alt="Clutch Deliver Award"></div>
+            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/top-software-developers.png" alt="Top Software Developers Badge"></div>
+          </div>
+        </div>
+      </div>
+
+
+                <div class="copyright-social">
+          <span class="copyright-text">Copyright © 2025 ManekTech. All rights reserved.</span>
+          <ul class="social-link">
+            <li><a href="" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/footer-linkedin-icon.svg" alt="LinkedIn Icon">
+              </a></li>
+            <li><a href="" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/footer-facebook-icon.svg" alt="Facebook Icon">
+              </a></li>
+            <li><a href="" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/footer-instagram-icon.svg" alt="Instagram Icon">
+              </a></li>
+            <li><a href="" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/footer-x-icon.svg" alt="X (formerly Twitter) Icon">
+              </a></li>
+            <li><a href="" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/footer-youtube-icon.svg" alt="YouTube Icon">
+              </a></li>
+            <li><a href="" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/footer-skype-icon.svg" alt="Skype Icon">
+              </a></li>
+            <li><a href="" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/footer-behance-icon.svg" alt="Behance Icon">
+              </a></li>
+            <li><a href="" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/footer-dribble-icon.svg" alt="Dribbble Icon">
+              </a></li>
+            <li><a href="" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/footer-pinterest-icon.svg" alt="Pinterest Icon">
+              </a></li>
+          </ul>
+        </div>
+            </div>
+
+        </div>
+    </footer>
+
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
