@@ -270,16 +270,16 @@
                                     <h2 class="">Let’s Connect !</h2>
                                 </div>
 
-                            <form class="mb-0 mt-5" action="">
+                            <form class="mb-0 mt-5" >
                                 <div class="form-grid dark-form full">
                                     <div class="d-flex flex-column gap-4 ">
                                         <div class="form-floating">
-                                            <input type="name" class="form-control" id="name" placeholder=" " required />
+                                            <input type="name" class="form-control" id="name" placeholder=" " required >
                                             <label for="name">Full Name*</label>
                                             <span class="underline"></span>
                                         </div>
                                         <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" placeholder=" " required />
+                                            <input type="email" class="form-control" id="email" placeholder=" "  required >
                                             <label for="email">Email Address*</label>
                                             <span class="underline"></span>
                                         </div>
@@ -894,16 +894,24 @@
                     </div>
     
                     <div class="tab-div">
-                        <ul>
-                            <li>Staff Augmentation</li>
-                            <li>Software Development Teams</li>
-                            <li>Software Development Outsourcing</li>
+                        <ul id="tabList">
+                            <li class="active" data-index="0">Staff Augmentation</li>
+                            <li data-index="1">Software Development Teams</li>
+                            <li data-index="2">Software Development Outsourcing</li>
                         </ul>
                     </div>
-                    <div class="plug-play mt-5">
+                    <div class="plug-play mt-5" data-content="0">
                         <h4>Plug-and-Play <span>Team Extension</span></h4>
                         <p>Easily scale your team with our vetted developers who integrate seamlessly into your
                             workflows—boosting efficiency, collaboration, and delivery speed.</p>
+                    </div>
+                     <div class="plug-play d-none mt-5" data-content="1">
+                           <h4>Plug-and-Play <span>Dev Teams</span></h4>
+                        <p>Build dedicated teams for your product development with complete flexibility, end-to-end control, seamless collaboration, and the ability to scale resources as your project evolves.</p>
+                    </div>
+                     <div class="plug-play d-none mt-5" data-content="2">
+                         <h4>Plug-and-Play <span>Outsourcing</span></h4>
+                        <p>Outsource entire projects to a trusted and experienced team to reduce operational overhead, ensure quality delivery, streamline processes, and accelerate your development timelines.</p>
                     </div>
                 </div>
             </div>
@@ -1348,6 +1356,36 @@ document.addEventListener('DOMContentLoaded', () => {
   updateSlider();
 });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const tabs = document.querySelectorAll('#tabList li');
+  const contents = document.querySelectorAll('.plug-play');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const index = tab.getAttribute('data-index');
+
+      // Remove active class from all
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      // Hide all plug-play blocks
+      contents.forEach(content => {
+        content.classList.add('d-none');
+      });
+
+      // Show the corresponding one
+      const selected = document.querySelector(`.plug-play[data-content="${index}"]`);
+      if (selected) selected.classList.remove('d-none');
+    });
+  });
+
+  // Trigger first tab on load
+  if (tabs[0]) tabs[0].click();
+});
+</script>
+
 
 
     

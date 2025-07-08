@@ -4423,18 +4423,19 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
                 color: #666;
 
                 &:hover,
-                &:active {
+                &.active {
                     background-color: $primary-color;
                     color: $white-color;
-                    // font-weight: 600;
                     transition: $transition-animate;
 
                 }
+                
             }
         }
     }
 
     .plug-play {
+       
         h4 {
             font-weight: 600;
             font-size: 30px;
