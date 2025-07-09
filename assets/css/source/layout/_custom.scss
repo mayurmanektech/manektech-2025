@@ -4647,79 +4647,74 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
     }
 
 } 
-
-
-
+// location hover tootltip effect---------
 .map-tooltip {
-  position: absolute;
-  pointer-events: none;
-  z-index: 1000;
-  display: none;
-  max-width: 280px;
-//   max-height: 210px;
-  height: 100%;
-  width: 100%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1000;
+    display: none;
+    max-width: 280px;
+    height: 100%;
+    width: 100%;
+     pointer-events: none;
+    .tooltip-card {
+        position: relative;
+        background: white;
+        border-radius: 8px;
+        border: 1px solid rgba(29, 29, 29, 0.2);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        z-index: 99;
+        height: 220px !important;
+        h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: $primary-dark;
+        }
+        p {
+            margin: 6px 0;
+            font-size: 14px;
+            color: $primary-dark;
+        }
+        a {
+            color: $primary-dark;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        .map-link {
+            display: inline-block;
+            margin-top: 6px;
+            font-weight: 500;
+        }
+        .tooltip-arrow {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid $white-color
+        }
+    }
 }
-
 .map-tooltip.visible {
-  display: block;
-  animation: fadeInUp 0.3s ease;
+    display: block;
+    animation: fadeInUp 0.3s ease;
+    pointer-events: auto; 
 }
-
-.tooltip-card {
-  position: relative;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  z-index: 99;
-  height: 210px !important;
-}
-
-.tooltip-card h4 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: #D81F28;
-}
-
-.tooltip-card p {
-  margin: 6px 0;
-  font-size: 13px;
-  color: #333;
-}
-
-.tooltip-card a {
-  color: #D81F28;
-  text-decoration: none;
-  font-size: 13px;
-}
-
-.tooltip-card .map-link {
-  display: inline-block;
-  margin-top: 6px;
-  font-weight: 500;
-}
-
-.tooltip-arrow {
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid white;
-}
-
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+// location hover tootltip effect---------
