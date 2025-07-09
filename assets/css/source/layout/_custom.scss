@@ -2788,13 +2788,14 @@ p{
     margin-top: 60px;   
 }
 .location {
+    cursor: pointer;
     h3 {
         font-size: 24px;
         font-weight: 500;
     }
     p {
         font-size: 18px;
-        margin-bottom: 26px;
+        margin-bottom: 8px;
     }
 }
 // svg hover effect 
@@ -4647,79 +4648,112 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
     }
 
 } 
-
-
-
+// location hover tootltip effect---------
 .map-tooltip {
+    position: absolute;
+    pointer-events: none;
+    z-index: 50;
+    display: none;
+    max-width: 280px;
+    height: 100%;
+    width: 100%;
+     pointer-events: none;
+    .tooltip-card {
+        position: relative;
+        background: white;
+        border-radius: 8px;
+        border: 1px solid rgba(29, 29, 29, 0.2);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        z-index: 20;
+        height: 230px !important;
+        h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: $primary-dark;
+        }
+        p {
+            margin: 6px 0;
+            font-size: 14px;
+            color: $primary-dark;
+        }
+        a {
+            color: $primary-dark;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        .map-link {
+            display: inline-block;
+            margin-top: 6px;
+            font-weight: 600;
+            border: 1px solid $primary-color;
+            padding: 8px 16px;
+            color: $primary-color;
+            border-radius: 4px;
+            width: 100%;
+            text-align: center;
+            &:hover{
+                background-color: $primary-color;
+                color: $white-color;
+                transition: $transition-animate;
+            }
+
+        }
+        .tooltip-arrow {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid $white-color
+        }
+    }
+}
+.map-tooltip.visible {
+    display: block;
+    animation: fadeInUp 0.3s ease;
+    pointer-events: auto; 
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.location-item {
+  position: relative;
+  padding-bottom: 6px; 
+  transition: all 0.3s ease;
+}
+.location-item::after {
+  content: '';
   position: absolute;
-  pointer-events: none;
-  z-index: 1000;
-  display: none;
-  max-width: 280px;
-//   max-height: 210px;
-  height: 100%;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: $primary-color; 
+  transition: width 0.4s ease;
+}
+.location-item.selected::after,
+.location-item:hover::after {
   width: 100%;
 }
-
-.map-tooltip.visible {
-  display: block;
-  animation: fadeInUp 0.3s ease;
+.location-item {
+  transition: all 0.4s ease;
+  margin-bottom: 12px;
+}
+.location-item.blurred {
+  opacity: 0.4;
 }
 
-.tooltip-card {
-  position: relative;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  z-index: 99;
-  height: 210px !important;
-}
-
-.tooltip-card h4 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: #D81F28;
-}
-
-.tooltip-card p {
-  margin: 6px 0;
-  font-size: 13px;
-  color: #333;
-}
-
-.tooltip-card a {
-  color: #D81F28;
-  text-decoration: none;
-  font-size: 13px;
-}
-
-.tooltip-card .map-link {
-  display: inline-block;
-  margin-top: 6px;
-  font-weight: 500;
-}
-
-.tooltip-arrow {
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid white;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+// location hover tootltip effect---------
