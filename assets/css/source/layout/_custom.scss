@@ -34,18 +34,26 @@
         z-index: -1;
        mix-blend-mode: overlay;
     }
-
-      &::after{
-        content: "";
+    .hero-background {
         position: absolute;
         inset: 0;
         width: 100%;
         height: 100%;
-        background-image: url("../images/hero-background.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        object-fit: cover;
         z-index: -2;
+    }
+
+      &::after{
+        // content: "";
+        // position: absolute;
+        // inset: 0;
+        // width: 100%;
+        // height: 100%;
+        // background-image: url("../images/hero-background.webp");
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-position: center;
+        // z-index: -2;
     }
 
     .cta-btns{

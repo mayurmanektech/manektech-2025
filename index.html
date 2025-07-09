@@ -5,10 +5,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Home</title>
       <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+      <link rel="preload" as="style" href="assets/css/style.css" fetchpriority="high">
       <link rel="stylesheet" href="assets/css/style.css">
    </head>
    <body>
-      <header id="mainHeader" data-aos="fade" data-aos-duration="700">
+      <header id="mainHeader">
          <div class="container">
             <a href="#" class="site-logo">
             <img src="assets/images/logo.svg" alt="brand logo">
@@ -247,18 +248,19 @@
          </div>
       </header>
       <section class="hero-section">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-10">
-                  <h1 data-aos="fade-up" data-aos-duration="700">Comprehensive Full-Stack Solutions for Embedded Technology, IoT, and Digital Transformation</h1>
-                  <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" class="banner-discription">We work closely with businesses like yours to craft innovative products and tools that transform the way you operate, empowering your journey through digital transformation, embedded technology, and the Internet of Things.</p>
-                  <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="400" class="d-flex cta-btns">
-                     <a href="#" class="btn secondary-btn meering-btn">Schedule Meeting</a>
-                     <a href="#" class="btn secondary-btn">Build Your Own Team</a>
-                  </div>
-               </div>
-            </div>
-         </div>
+          <img class="hero-background" src="assets/images/hero-background.webp" alt="banner" fetchpriority="high">
+          <div class="container">
+              <div class="row">
+                <div class="col-lg-10">
+                    <h1 data-aos="fade-up" data-aos-duration="700">Comprehensive Full-Stack Solutions for Embedded Technology, IoT, and Digital Transformation</h1>
+                    <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" class="banner-discription">We work closely with businesses like yours to craft innovative products and tools that transform the way you operate, empowering your journey through digital transformation, embedded technology, and the Internet of Things.</p>
+                    <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="400" class="d-flex cta-btns">
+                      <a href="#" class="btn secondary-btn meering-btn">Schedule Meeting</a>
+                      <a href="#" class="btn secondary-btn">Build Your Own Team</a>
+                    </div>
+                </div>
+              </div>
+          </div>
       </section>
       <!-- Inner Section Start -->
       <section class="service-section section-space grey-bg">
@@ -374,42 +376,42 @@
             </div>
             <div class="industry-box-wrapper" data-aos="fade-up" data-aos-duration="700">
                <div class="industry-box">
-                  <img src="assets/images/law-enforement.webp" alt="law-enforement-image">
+                  <img loading="lazy" src="assets/images/law-enforement.webp" alt="law-enforement-image">
                   <div class="industry-card">
                      <h3>Law Enforcement</h3>
                      <p>Supporting law enforcement with cutting-edge solutions to enhance efficiency and ensure public safety. Our expertise drives smarter, data-driven decision-making.</p>
                   </div>
                </div>
                <div class="industry-box">
-                  <img src="assets/images/non-profit-organization.webp" alt="non-profit-organization-image">
+                  <img loading="lazy" src="assets/images/non-profit-organization.webp" alt="non-profit-organization-image">
                   <div class="industry-card">
                      <h3>Non-Profit Organization</h3>
                      <p>We specialize in empowering non-profits with tailored solutions to streamline operations and amplify their impact. Our expertise helps organizations connect with communities and achieve their mission effectively.</p>
                   </div>
                </div>
                <div class="industry-box">
-                  <img src="assets/images/information-technology.webp" alt="information-technology-image">
+                  <img loading="lazy" src="assets/images/information-technology.webp" alt="information-technology-image">
                   <div class="industry-card">
                      <h3>Information Technology</h3>
                      <p>Empowering businesses with innovative IT solutions to drive growth and streamline operations. Our expertise in technology ensures seamless digital transformation.</p>
                   </div>
                </div>
                <div class="industry-box">
-                  <img src="assets/images/government.webp" alt="government-image">
+                  <img loading="lazy" src="assets/images/government.webp" alt="government-image">
                   <div class="industry-card">
                      <h3>Government</h3>
                      <p>Empowering government agencies with technology solutions that streamline operations and improve public service delivery. We help create more efficient and transparent systems for the community.</p>
                   </div>
                </div>
                <div class="industry-box">
-                  <img src="assets/images/travel-hospitality.webp" alt="travel-hospitality-image">
+                  <img loading="lazy" src="assets/images/travel-hospitality.webp" alt="travel-hospitality-image">
                   <div class="industry-card">
                      <h3>Travel & Hospitality</h3>
                      <p>Transforming travel and hospitality experiences with innovative solutions that enhance customer satisfaction and operational efficiency. We help businesses stay ahead in a dynamic industry.</p>
                   </div>
                </div>
                <div class="industry-box">
-                  <img src="assets/images/healthcare.webp" alt="healthcare-image">
+                  <img loading="lazy" src="assets/images/healthcare.webp" alt="healthcare-image">
                   <div class="industry-card">
                      <h3>Healthcare</h3>
                      <p>Transforming healthcare with innovative solutions that improve patient care and operational efficiency. We focus on developing systems that enhance the overall healthcare experience.</p>
@@ -430,62 +432,62 @@
             <div class="row align-items-center client-img-row" data-aos="fade-up" data-aos-duration="700">
                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                   <div class="client-img-wrapper">
-                     <img src="assets/images/national-geographic.svg" alt="National Geographic Logo">
+                     <img loading="lazy" src="assets/images/national-geographic.svg" alt="National Geographic Logo">
                   </div>
                </div>
                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                   <div class="client-img-wrapper">
-                     <img src="assets/images/nestle.svg" alt="Nestle Logo">
+                     <img loading="lazy" src="assets/images/nestle.svg" alt="Nestle Logo">
                   </div>
                </div>
                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                   <div class="client-img-wrapper">
-                     <img src="assets/images/infosys.svg" alt="Infosys Logo">
+                     <img loading="lazy" src="assets/images/infosys.svg" alt="Infosys Logo">
                   </div>
                </div>
                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                   <div class="client-img-wrapper">
-                     <img src="assets/images/gea.svg" alt="GEA Logo">
+                     <img loading="lazy" src="assets/images/gea.svg" alt="GEA Logo">
                   </div>
                </div>
                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                   <div class="client-img-wrapper">
-                     <img src="assets/images/abb.svg" alt="ABB Logo">
+                     <img loading="lazy" src="assets/images/abb.svg" alt="ABB Logo">
                   </div>
                </div>
                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                   <div class="client-img-wrapper">
-                     <img src="assets/images/salesforce.svg" alt="Salesforce Logo">
+                     <img loading="lazy" src="assets/images/salesforce.svg" alt="Salesforce Logo">
                   </div>
                </div>
                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                   <div class="client-img-wrapper">
-                     <img src="assets/images/kotak.svg" alt="Kotak Logo">
+                     <img loading="lazy" src="assets/images/kotak.svg" alt="Kotak Logo">
                   </div>
                </div>
                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                   <div class="client-img-wrapper">
-                     <img src="assets/images/adanigreenenergy.svg" alt="Adani Green Energy Logo">
+                     <img loading="lazy" src="assets/images/adanigreenenergy.svg" alt="Adani Green Energy Logo">
                   </div>
                </div>
                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                   <div class="client-img-wrapper">
-                     <img src="assets/images/nyse.png" alt="Kotak Logo">
+                     <img loading="lazy" src="assets/images/nyse.png" alt="Kotak Logo">
                   </div>
                </div>
                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                   <div class="client-img-wrapper">
-                     <img src="assets/images/sting.svg" alt="Sting Logo">
+                     <img loading="lazy" src="assets/images/sting.svg" alt="Sting Logo">
                   </div>
                </div>
                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                   <div class="client-img-wrapper">
-                     <img src="assets/images/kotak.svg" alt="Kotak Logo">
+                     <img loading="lazy" src="assets/images/kotak.svg" alt="Kotak Logo">
                   </div>
                </div>
                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                   <div class="client-img-wrapper">
-                     <img src="assets/images/nestle.svg" alt="Nestle Logo">
+                     <img loading="lazy" src="assets/images/nestle.svg" alt="Nestle Logo">
                   </div>
                </div>
             </div>
@@ -503,7 +505,7 @@
                      <p class="desc">We rely on ManekTech to accelerate our production processes. Their outstanding service has consistently exceeded expectations across multiple projects I've engaged them for, making them a reliable partner. With a stellar team and competitive pricing, they stand out as an excellent company to collaborate with.</p>
                      <div class="reviewer-box">
                         <div class="reviewer-avatar">
-                           <img src="assets/images/reviewer.jpg" alt="Reviewer from Codex Software">
+                           <img loading="lazy" src="assets/images/reviewer.jpg" alt="Reviewer from Codex Software">
                         </div>
                         <div class="reviewer-info">
                            <p class="title">Codex Software</p>
@@ -511,15 +513,15 @@
                         </div>
                      </div>
                      <div class="review-company mt-4">
-                        <img src="assets/images/clutch-review.svg" alt="Clutch Review Logo">
+                        <img loading="lazy" src="assets/images/clutch-review.svg" alt="Clutch Review Logo">
                      </div>
                   </div>
                </div>
                <div class="col-lg-6 d-flex align-items-center">
                   <div class="review-video-wrapper" data-aos="fade-up" data-aos-duration="700">
-                     <img class="review-thumbnail" src="assets/images/review-thumbnail.webp" alt="Play button icon">
+                     <img loading="lazy" class="review-thumbnail" src="assets/images/review-thumbnail.webp" alt="Play button icon">
                      <button class="video-btn">
-                     <img src="assets/images/play-icon.svg" alt="Play button icon">
+                     <img loading="lazy" src="assets/images/play-icon.svg" alt="Play button icon">
                      </button>
                   </div>
                </div>
@@ -539,7 +541,7 @@
                <div class="col-lg-4 col-md-6">
                   <div class="success-story-card">
                      <div class="img-wrapper">
-                        <img class="w-100" src="assets/images/healthcare-success.webp" alt="Doctor On-demand Healthcare App">
+                        <img loading="lazy" class="w-100" src="assets/images/healthcare-success.webp" alt="Doctor On-demand Healthcare App">
                      </div>
                      <p class="category">Healthcare</p>
                      <h3 class="title">Doctor On-demand App Development - Best Healthcare App</h3>
@@ -548,7 +550,7 @@
                <div class="col-lg-4 col-md-6">
                   <div class="success-story-card">
                      <div class="img-wrapper">
-                        <img class="w-100" src="assets/images/travel-hospitality-success.webp" alt="Travel and Hospitality App UI">
+                        <img loading="lazy" class="w-100" src="assets/images/travel-hospitality-success.webp" alt="Travel and Hospitality App UI">
                      </div>
                      <p class="category">Travel & Hospitality</p>
                      <h3 class="title">Meet The Unrivaled Demands Of Your Customers</h3>
@@ -557,7 +559,7 @@
                <div class="col-lg-4 col-md-6">
                   <div class="success-story-card">
                      <div class="img-wrapper">
-                        <img class="w-100" src="assets/images/media-entertainment.webp" alt="Media and Entertainment Streaming App">
+                        <img loading="lazy" class="w-100" src="assets/images/media-entertainment.webp" alt="Media and Entertainment Streaming App">
                      </div>
                      <p class="category">Media Entertainment</p>
                      <h3 class="title">Music Streaming App Development Platform</h3>
@@ -587,7 +589,7 @@
                            <div class="process-box-wrapper">
                               <div class="process-box">
                                  <div class="img-wrapper">
-                                    <img src="assets/images/process-1.webp" alt="Needs Assessment Illustration">
+                                    <img loading="lazy" src="assets/images/process-1.webp" alt="Needs Assessment Illustration">
                                  </div>
                                  <div class="process-info">
                                     <p class="count">01</p>
@@ -607,7 +609,7 @@
                            <div class="process-box-wrapper">
                               <div class="process-box">
                                  <div class="img-wrapper">
-                                    <img src="assets/images/process-2.webp" alt="Solution Discovery Illustration">
+                                    <img loading="lazy" src="assets/images/process-2.webp" alt="Solution Discovery Illustration">
                                  </div>
                                  <div class="process-info">
                                     <p class="count">02</p>
@@ -627,7 +629,7 @@
                            <div class="process-box-wrapper">
                               <div class="process-box">
                                  <div class="img-wrapper">
-                                    <img src="assets/images/process-3.webp" alt="Prototyping and R&D Illustration">
+                                    <img loading="lazy" src="assets/images/process-3.webp" alt="Prototyping and R&D Illustration">
                                  </div>
                                  <div class="process-info">
                                     <p class="count">03</p>
@@ -647,7 +649,7 @@
                            <div class="process-box-wrapper">
                               <div class="process-box">
                                  <div class="img-wrapper">
-                                    <img src="assets/images/process-4.webp" alt="Design and Specification Illustration">
+                                    <img loading="lazy" src="assets/images/process-4.webp" alt="Design and Specification Illustration">
                                  </div>
                                  <div class="process-info">
                                     <p class="count">04</p>
@@ -667,7 +669,7 @@
                            <div class="process-box-wrapper">
                               <div class="process-box">
                                  <div class="img-wrapper">
-                                    <img src="assets/images/process-5.webp" alt="Development and Testing Illustration">
+                                    <img loading="lazy" src="assets/images/process-5.webp" alt="Development and Testing Illustration">
                                  </div>
                                  <div class="process-info">
                                     <p class="count">05</p>
@@ -687,7 +689,7 @@
                            <div class="process-box-wrapper">
                               <div class="process-box">
                                  <div class="img-wrapper">
-                                    <img src="assets/images/process-6.webp" alt="Production and Support Illustration">
+                                    <img loading="lazy" src="assets/images/process-6.webp" alt="Production and Support Illustration">
                                  </div>
                                  <div class="process-info">
                                     <p class="count">06</p>
@@ -718,7 +720,7 @@
             </div>
             <div class="row gy-4 gy-xl-0" data-aos="zoom-out" data-aos-duration="700">
                <div class="col-xl-7">
-                  <img class="img-fluid w-100" src="./assets/images/why-choose-banner.webp" alt="why-choose-banner">
+                  <img loading="lazy" class="img-fluid w-100" src="./assets/images/why-choose-banner.webp" alt="why-choose-banner">
                </div>
                <div class="col-xl-5 d-flex align-items-center service-left-space">
                   <div class="services">
@@ -1041,7 +1043,7 @@
                      </div>
                      <div class="profile-box">
                         <div class="profile-avatar">
-                           <img src="assets/images/Milan-shah.png" alt="Milan-shah">
+                           <img loading="lazy" src="assets/images/Milan-shah.png" alt="Milan-shah">
                         </div>
                         <div class="profile-info">
                            <p class="title">Milan Shah</p>
@@ -1060,7 +1062,7 @@
                      </div>
                      <div class="profile-box">
                         <div class="profile-avatar">
-                           <img src="assets/images/Ruchir-Pandya.png" alt="Ruchir-Pandya">
+                           <img loading="lazy" src="assets/images/Ruchir-Pandya.png" alt="Ruchir-Pandya">
                         </div>
                         <div class="profile-info">
                            <p class="title">Ruchir Pandya</p>
@@ -1167,15 +1169,15 @@
                <div class="certification-logo-wrapper" data-aos="zoom-out" data-aos-duration="700">
                   <div class="certification-logo swiper-container">
                      <div class="swiper-wrapper" id="certificationLogoWrapper">
-                        <div class="swiper-slide"><img src="./assets/images/certification-png-logo/Microsoft-gold-partner.png" alt="Microsoft Gold Partner Logo"></div>
-                        <div class="swiper-slide"><img src="./assets/images/certification-png-logo/badge-top-mobile-app-developers-2023.png" alt="Top Mobile App Developers 2023 Badge"></div>
-                        <div class="swiper-slide"><img src="./assets/images/certification-png-logo/icaward-appusa-bg.png" alt="AppUSA Award Badge"></div>
-                        <div class="swiper-slide"><img src="./assets/images/certification-png-logo/magento-developer.png" alt="Magento Developer Badge"></div>
-                        <div class="swiper-slide"><img src="./assets/images/certification-png-logo/12-original.png" alt="12 Original Award Badge"></div>
-                        <div class="swiper-slide"><img src="./assets/images/certification-png-logo/top-web-development-companies.png" alt="Top Web Development Companies Badge"></div>
-                        <div class="swiper-slide"><img src="./assets/images/certification-png-logo/clutch.png" alt="Clutch Logo"></div>
-                        <div class="swiper-slide"><img src="./assets/images/certification-png-logo/deliver-clutch.png" alt="Clutch Deliver Award"></div>
-                        <div class="swiper-slide"><img src="./assets/images/certification-png-logo/top-software-developers.png" alt="Top Software Developers Badge"></div>
+                        <div class="swiper-slide"><img loading="lazy" src="./assets/images/certification-png-logo/Microsoft-gold-partner.png" alt="Microsoft Gold Partner Logo"></div>
+                        <div class="swiper-slide"><img loading="lazy" src="./assets/images/certification-png-logo/badge-top-mobile-app-developers-2023.png" alt="Top Mobile App Developers 2023 Badge"></div>
+                        <div class="swiper-slide"><img loading="lazy" src="./assets/images/certification-png-logo/icaward-appusa-bg.png" alt="AppUSA Award Badge"></div>
+                        <div class="swiper-slide"><img loading="lazy" src="./assets/images/certification-png-logo/magento-developer.png" alt="Magento Developer Badge"></div>
+                        <div class="swiper-slide"><img loading="lazy" src="./assets/images/certification-png-logo/12-original.png" alt="12 Original Award Badge"></div>
+                        <div class="swiper-slide"><img loading="lazy" src="./assets/images/certification-png-logo/top-web-development-companies.png" alt="Top Web Development Companies Badge"></div>
+                        <div class="swiper-slide"><img loading="lazy" src="./assets/images/certification-png-logo/clutch.png" alt="Clutch Logo"></div>
+                        <div class="swiper-slide"><img loading="lazy" src="./assets/images/certification-png-logo/deliver-clutch.png" alt="Clutch Deliver Award"></div>
+                        <div class="swiper-slide"><img loading="lazy" src="./assets/images/certification-png-logo/top-software-developers.png" alt="Top Software Developers Badge"></div>
                      </div>
                   </div>
                </div>
@@ -1183,39 +1185,39 @@
                   <span class="copyright-text">Copyright © 2025 ManekTech. All rights reserved.</span>
                   <ul class="social-link">
                      <li><a href="" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/images/footer-linkedin-icon.svg" alt="LinkedIn Icon">
+                        <img loading="lazy" src="./assets/images/footer-linkedin-icon.svg" alt="LinkedIn Icon">
                         </a>
                      </li>
                      <li><a href="" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/images/footer-facebook-icon.svg" alt="Facebook Icon">
+                        <img loading="lazy" src="./assets/images/footer-facebook-icon.svg" alt="Facebook Icon">
                         </a>
                      </li>
                      <li><a href="" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/images/footer-instagram-icon.svg" alt="Instagram Icon">
+                        <img loading="lazy" src="./assets/images/footer-instagram-icon.svg" alt="Instagram Icon">
                         </a>
                      </li>
                      <li><a href="" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/images/footer-x-icon.svg" alt="X (formerly Twitter) Icon">
+                        <img loading="lazy" src="./assets/images/footer-x-icon.svg" alt="X (formerly Twitter) Icon">
                         </a>
                      </li>
                      <li><a href="" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/images/footer-youtube-icon.svg" alt="YouTube Icon">
+                        <img loading="lazy" src="./assets/images/footer-youtube-icon.svg" alt="YouTube Icon">
                         </a>
                      </li>
                      <li><a href="" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/images/footer-skype-icon.svg" alt="Skype Icon">
+                        <img loading="lazy" src="./assets/images/footer-skype-icon.svg" alt="Skype Icon">
                         </a>
                      </li>
                      <li><a href="" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/images/footer-behance-icon.svg" alt="Behance Icon">
+                        <img loading="lazy" src="./assets/images/footer-behance-icon.svg" alt="Behance Icon">
                         </a>
                      </li>
                      <li><a href="" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/images/footer-dribble-icon.svg" alt="Dribbble Icon">
+                        <img loading="lazy" src="./assets/images/footer-dribble-icon.svg" alt="Dribbble Icon">
                         </a>
                      </li>
                      <li><a href="" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/images/footer-pinterest-icon.svg" alt="Pinterest Icon">
+                        <img loading="lazy" src="./assets/images/footer-pinterest-icon.svg" alt="Pinterest Icon">
                         </a>
                      </li>
                   </ul>
@@ -1224,10 +1226,10 @@
          </div>
       </footer>
       <!-- footer end -->
-      <script src="assets/js/jquery-3.7.1.min.js"></script>
-      <script src="assets/js/swiper-bundle.min.js"></script>
-      <script src="assets/js/aos.js"></script>
-      <script src="assets/js/main.js"></script>
+      <script src="assets/js/jquery-3.7.1.min.js" defer></script>
+      <script src="assets/js/swiper-bundle.min.js" defer></script>
+      <script src="assets/js/aos.js" defer></script>
+      <script src="assets/js/main.js" defer></script>
       <script>
          document.querySelectorAll('.location-item').forEach(item => {
            item.addEventListener('mouseenter', () => {
