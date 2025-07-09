@@ -455,7 +455,7 @@
                      </div>
                      <div class="location-item" data-location="southafrica">
                         <h3>South Africa</h3>
-                        <p>The Business Centre No 1. Bridgeway Road, Century City, Cape Town,<br class="d-none d-xl-block">  South Africa, 7446</p>
+                        <p>The Business Centre No 1. Bridgeway Road, <br class="d-none d-xl-block">Century City, Cape Town,  South Africa, 7446</p>
                      </div>
                   </div>
                </div>
@@ -1162,35 +1162,35 @@
       country: "USA",
       address: "4100 NW Loop 410, Suite 200, San Antonio, TX 78229",
       phone: "+1 123-456-7890",
-      email: "usa@example.com",
+      email: "info@manektech.com",
       gmap: "https://www.google.com/maps?q=4100+NW+Loop+410,+San+Antonio,+TX+78229"
     },
     uk: {
       country: "UK",
-      address: "7 Artisan Place Harrow, HA3 5DS",
+      address: "7 Artisan Place Harrow, HA3 5DS, United Kingdom",
       phone: "+44 1234 567890",
-      email: "uk@example.com",
+      email: "info@manektech.com",
       gmap: "https://www.google.com/maps?q=7+Artisan+Place+Harrow,+HA3+5DS"
     },
     india: {
       country: "India",
       address: "4th Floor, Timber Point, Prahaladnagar Road, Ahmedabad, Gujarat - 380015",
       phone: "+91 98765 43210",
-      email: "india@example.com",
+      email: "info@manektech.com",
       gmap: "https://maps.app.goo.gl/9z94WxZ21xFsW5vm8"
     },
     germany: {
       country: "Germany",
-      address: "Franz-Joseph-Strasse, 11, Munich, 80801",
+      address: "Franz-Joseph-Strasse, 11, Munich, 80801, Germany",
       phone: "+49 123 456789",
-      email: "germany@example.com",
+      email: "info@manektech.com",
       gmap: "https://www.google.com/maps?q=Franz-Joseph-Strasse+11+Munich+Germany"
     },
     southafrica: {
       country: "South Africa",
       address: "The Business Centre No 1, Bridgeway Road, Century City, Cape Town, 7446",
       phone: "+27 12 345 6789",
-      email: "sa@example.com",
+      email: "info@manektech.com",
       gmap: "https://www.google.com/maps?q=Bridgeway+Road+Century+City+Cape+Town"
     }
   };
@@ -1209,12 +1209,7 @@
         <p>${data.address}</p>
         <p><strong>Phone:</strong> <a href="tel:${data.phone}">${data.phone}</a></p>
         <p><strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
-        <a href="${data.gmap}" target="_blank" class="map-link"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="21" height="21" viewBox="0 0 256 256" xml:space="preserve">
-        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-          <path d="M 45 90 c -1.062 0 -2.043 -0.561 -2.583 -1.475 l -4.471 -7.563 c -9.222 -15.591 -17.933 -30.317 -20.893 -36.258 c -2.086 -4.277 -3.138 -8.852 -3.138 -13.62 C 13.916 13.944 27.86 0 45 0 c 17.141 0 31.085 13.944 31.085 31.084 c 0 4.764 -1.051 9.339 -3.124 13.596 c -0.021 0.042 -0.042 0.083 -0.063 0.124 c -3.007 6.005 -11.672 20.654 -20.843 36.159 l -4.472 7.563 C 47.044 89.439 46.062 90 45 90 z M 45 6 C 31.168 6 19.916 17.253 19.916 31.084 c 0 3.848 0.847 7.539 2.518 10.969 c 2.852 5.721 11.909 21.033 20.667 35.839 L 45 81.104 l 1.89 -3.196 c 8.763 -14.813 17.823 -30.131 20.687 -35.879 c 0.012 -0.022 0.023 -0.045 0.035 -0.067 c 1.642 -3.406 2.474 -7.065 2.474 -10.877 C 70.085 17.253 58.832 6 45 6 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #333; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
-          <path d="M 45 44.597 c -8.076 0 -14.646 -6.57 -14.646 -14.646 S 36.924 15.306 45 15.306 c 8.075 0 14.646 6.57 14.646 14.646 S 53.075 44.597 45 44.597 z M 45 21.306 c -4.767 0 -8.646 3.878 -8.646 8.646 s 3.878 8.646 8.646 8.646 c 4.768 0 8.646 -3.878 8.646 -8.646 S 49.768 21.306 45 21.306 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill:#333; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
-        </g>
-        </svg> Get Direction</a>
+        <a href="${data.gmap}" target="_blank" class="map-link">Get Direction</a>
         <div class="tooltip-arrow"></div>
       </div>
     `;
@@ -1226,7 +1221,7 @@
     const dotTopY = dotRect.top - svgRect.top;
 
     tooltip.style.left = `${dotCenterX - tooltipWidth / 2.2}px`;
-    tooltip.style.top = `${dotTopY - tooltipHeight - 36}px`;
+    tooltip.style.top = `${dotTopY - tooltipHeight - 60}px`;
     tooltip.classList.add("visible");
   }
 
@@ -1297,6 +1292,23 @@
 });
 tooltip.addEventListener('click', (e) => {
   e.stopPropagation();
+});
+const items = document.querySelectorAll('.location-item');
+
+items.forEach(item => {
+  item.addEventListener('mouseenter', () => {
+    items.forEach(el => {
+      if (el !== item) {
+        el.classList.add('blurred');
+      } else {
+        el.classList.remove('blurred');
+      }
+    });
+  });
+
+  item.addEventListener('mouseleave', () => {
+    items.forEach(el => el.classList.remove('blurred'));
+  });
 });
 
 </script>

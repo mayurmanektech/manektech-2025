@@ -2795,7 +2795,7 @@ p{
     }
     p {
         font-size: 18px;
-        margin-bottom: 26px;
+        margin-bottom: 8px;
     }
 }
 // svg hover effect 
@@ -4652,7 +4652,7 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
 .map-tooltip {
     position: absolute;
     pointer-events: none;
-    z-index: 1000;
+    z-index: 50;
     display: none;
     max-width: 280px;
     height: 100%;
@@ -4665,8 +4665,8 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
         border: 1px solid rgba(29, 29, 29, 0.2);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         padding: 15px;
-        z-index: 99;
-        height: 220px !important;
+        z-index: 20;
+        height: 230px !important;
         h4 {
             font-size: 16px;
             font-weight: 600;
@@ -4687,7 +4687,19 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
         .map-link {
             display: inline-block;
             margin-top: 6px;
-            font-weight: 500;
+            font-weight: 600;
+            border: 1px solid $primary-color;
+            padding: 8px 16px;
+            color: $primary-color;
+            border-radius: 4px;
+            width: 100%;
+            text-align: center;
+            &:hover{
+                background-color: $primary-color;
+                color: $white-color;
+                transition: $transition-animate;
+            }
+
         }
         .tooltip-arrow {
             position: absolute;
@@ -4716,6 +4728,31 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
         opacity: 1;
         transform: translateY(0);
     }
+}
+.location-item {
+  position: relative;
+  padding-bottom: 6px; 
+  transition: all 0.3s ease;
+}
+.location-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: $primary-color; 
+  transition: width 0.4s ease;
+}
+.location-item:hover::after {
+  width: 100%;
+}
+.location-item {
+  transition: all 0.4s ease;
+  margin-bottom: 12px;
+}
+.location-item.blurred {
+  opacity: 0.4;
 }
 
 // location hover tootltip effect---------
