@@ -2755,8 +2755,8 @@ p{
                 }
             }
         }
-        .underline { 
-            background-color: $primary-dark;
+      .underline { 
+            background-color: $primary-color;
         }
     }
     .form-grid .form-floating.select-wrapper  label{
@@ -4636,3 +4636,90 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
     }
 }
 // ------new dot net dev pages --end------
+
+
+.blog-info.blog-subscribe{
+    form .form-grid.dark-form .form-floating .underline{
+        background-color: $primary-color ;
+    }
+    form .form-grid.dark-form .form-control{
+        border-bottom-color: #1d1d1d80;
+    }
+
+} 
+
+
+
+.map-tooltip {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1000;
+  display: none;
+  max-width: 280px;
+//   max-height: 210px;
+  height: 100%;
+  width: 100%;
+}
+
+.map-tooltip.visible {
+  display: block;
+  animation: fadeInUp 0.3s ease;
+}
+
+.tooltip-card {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  z-index: 99;
+  height: 210px !important;
+}
+
+.tooltip-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #D81F28;
+}
+
+.tooltip-card p {
+  margin: 6px 0;
+  font-size: 13px;
+  color: #333;
+}
+
+.tooltip-card a {
+  color: #D81F28;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.tooltip-card .map-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
