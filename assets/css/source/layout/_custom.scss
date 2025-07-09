@@ -4744,6 +4744,7 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
   background-color: $primary-color; 
   transition: width 0.4s ease;
 }
+.location-item.selected::after,
 .location-item:hover::after {
   width: 100%;
 }

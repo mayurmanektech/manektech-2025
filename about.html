@@ -1152,165 +1152,204 @@
       <script src="assets/js/swiper-bundle.min.js"></script>
       <script src="assets/js/aos.js"></script>
       <script src="assets/js/main.js"></script>
-     <script>
-  const tooltip = document.getElementById("mapTooltip");
-  let activeLocation = null;
-  let isLocked = false;
+    <script>
+      const tooltip = document.getElementById("mapTooltip");
+      let activeLocation = null;
+      let isLocked = false;
 
-  const locationData = {
-    usa: {
-      country: "USA",
-      address: "4100 NW Loop 410, Suite 200, San Antonio, TX 78229",
-      phone: "+1 123-456-7890",
-      email: "info@manektech.com",
-      gmap: "https://www.google.com/maps?q=4100+NW+Loop+410,+San+Antonio,+TX+78229"
-    },
-    uk: {
-      country: "UK",
-      address: "7 Artisan Place Harrow, HA3 5DS, United Kingdom",
-      phone: "+44 1234 567890",
-      email: "info@manektech.com",
-      gmap: "https://www.google.com/maps?q=7+Artisan+Place+Harrow,+HA3+5DS"
-    },
-    india: {
-      country: "India",
-      address: "4th Floor, Timber Point, Prahaladnagar Road, Ahmedabad, Gujarat - 380015",
-      phone: "+91 98765 43210",
-      email: "info@manektech.com",
-      gmap: "https://maps.app.goo.gl/9z94WxZ21xFsW5vm8"
-    },
-    germany: {
-      country: "Germany",
-      address: "Franz-Joseph-Strasse, 11, Munich, 80801, Germany",
-      phone: "+49 123 456789",
-      email: "info@manektech.com",
-      gmap: "https://www.google.com/maps?q=Franz-Joseph-Strasse+11+Munich+Germany"
-    },
-    southafrica: {
-      country: "South Africa",
-      address: "The Business Centre No 1, Bridgeway Road, Century City, Cape Town, 7446",
-      phone: "+27 12 345 6789",
-      email: "info@manektech.com",
-      gmap: "https://www.google.com/maps?q=Bridgeway+Road+Century+City+Cape+Town"
-    }
-  };
+      const locationData = {
+        usa: {
+          country: "USA",
+          address: "4100 NW Loop 410, Suite 200, San Antonio, TX 78229",
+          phone: "+1 123-456-7890",
+          email: "info@manektech.com",
+          gmap: "https://www.google.com/maps?q=4100+NW+Loop+410,+San+Antonio,+TX+78229"
+        },
+        uk: {
+          country: "UK",
+          address: "7 Artisan Place Harrow, HA3 5DS, United Kingdom",
+          phone: "+44 1234 567890",
+          email: "info@manektech.com",
+          gmap: "https://www.google.com/maps?q=7+Artisan+Place+Harrow,+HA3+5DS"
+        },
+        india: {
+          country: "India",
+          address: "4th Floor, Timber Point, Prahaladnagar Road, Ahmedabad, Gujarat - 380015",
+          phone: "+91 98765 43210",
+          email: "info@manektech.com",
+          gmap: "https://maps.app.goo.gl/9z94WxZ21xFsW5vm8"
+        },
+        germany: {
+          country: "Germany",
+          address: "Franz-Joseph-Strasse, 11, Munich, 80801, Germany",
+          phone: "+49 123 456789",
+          email: "info@manektech.com",
+          gmap: "https://www.google.com/maps?q=Franz-Joseph-Strasse+11+Munich+Germany"
+        },
+        southafrica: {
+          country: "South Africa",
+          address: "The Business Centre No 1, Bridgeway Road, Century City, Cape Town, 7446",
+          phone: "+27 12 345 6789",
+          email: "info@manektech.com",
+          gmap: "https://www.google.com/maps?q=Bridgeway+Road+Century+City+Cape+Town"
+        }
+      };
 
- function showTooltip(loc) {
-  const dot = document.querySelector(`.map-dot[data-location="${loc}"]`);
-  const svg = dot.closest("svg");
-  const svgRect = svg.getBoundingClientRect();
-  const dotRect = dot.getBoundingClientRect();
-  const data = locationData[loc];
+      function showTooltip(loc) {
+        const dot = document.querySelector(`.map-dot[data-location="${loc}"]`);
+        const svg = dot.closest("svg");
+        const svgRect = svg.getBoundingClientRect();
+        const dotRect = dot.getBoundingClientRect();
+        const data = locationData[loc];
 
-  if (data) {
-    tooltip.innerHTML = `
-      <div class="tooltip-card">
-        <h4>${data.country}</h4>
-        <p>${data.address}</p>
-        <p><strong>Phone:</strong> <a href="tel:${data.phone}">${data.phone}</a></p>
-        <p><strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
-        <a href="${data.gmap}" target="_blank" class="map-link">Get Direction</a>
-        <div class="tooltip-arrow"></div>
-      </div>
-    `;
+        if (data) {
+          tooltip.innerHTML = `
+          <div class="tooltip-card">
+            <h4>${data.country}</h4>
+            <p>${data.address}</p>
+            <p><strong>Phone:</strong> <a href="tel:${data.phone}">${data.phone}</a></p>
+            <p><strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
+            <a href="${data.gmap}" target="_blank" class="map-link">Get Direction</a>
+            <div class="tooltip-arrow"></div>
+          </div>
+        `;
 
-    const tooltipWidth = 280;
-    const tooltipHeight = 140;
+          const tooltipWidth = 280;
+          const tooltipHeight = 140;
 
-    const dotCenterX = dotRect.left + dotRect.width / 2 - svgRect.left;
-    const dotTopY = dotRect.top - svgRect.top;
+          const dotCenterX = dotRect.left + dotRect.width / 2 - svgRect.left;
+          const dotTopY = dotRect.top - svgRect.top;
 
-    tooltip.style.left = `${dotCenterX - tooltipWidth / 2.2}px`;
-    tooltip.style.top = `${dotTopY - tooltipHeight - 60}px`;
-    tooltip.classList.add("visible");
-  }
+          tooltip.style.left = `${dotCenterX - tooltipWidth / 2.2}px`;
+          tooltip.style.top = `${dotTopY - tooltipHeight - 60}px`;
+          tooltip.classList.add("visible");
+        }
 
-  dot?.classList.add("pulse");
-}
-
-
-  function hideTooltip() {
-    tooltip.classList.remove('visible');
-    if (activeLocation) {
-      document.querySelector(`.map-dot[data-location="${activeLocation}"]`)?.classList.remove('pulse');
-    }
-    activeLocation = null;
-    isLocked = false;
-  }
-
-  document.querySelectorAll('.location-item').forEach(item => {
-    const loc = item.dataset.location;
-    const dot = document.querySelector(`.map-dot[data-location="${loc}"]`);
-
-    item.addEventListener('mouseenter', () => {
-      if (!isLocked) {
-        document.querySelectorAll('.map-dot').forEach(dot => dot.classList.remove('pulse'));
-        showTooltip(loc);
-        document.querySelectorAll('.map-dot').forEach(dot => dot.classList.remove('pulse'));
-        
-        dot?.classList.add('pulse');
+        dot?.classList.add("pulse");
       }
-    });
 
-    item.addEventListener('mouseleave', () => {
-      if (!isLocked) {
-        hideTooltip();
-        dot?.classList.remove('pulse');
+
+      function hideTooltip() {
+        tooltip.classList.remove('visible');
+        if (activeLocation) {
+          document.querySelector(`.map-dot[data-location="${activeLocation}"]`)?.classList.remove('pulse');
+        }
+        activeLocation = null;
+        isLocked = false;
       }
-    });
 
-   item.addEventListener('click', (e) => {
-  e.stopPropagation();
+      document.querySelectorAll('.location-item').forEach(item => {
+        const loc = item.dataset.location;
+        const dot = document.querySelector(`.map-dot[data-location="${loc}"]`);
 
-  if (activeLocation === loc && isLocked) {
-    hideTooltip();
-  } else {
-    isLocked = true;
-    activeLocation = loc;
+        item.addEventListener('mouseenter', () => {
+          if (!isLocked) {
+            document.querySelectorAll('.map-dot').forEach(dot => dot.classList.remove('pulse'));
+            showTooltip(loc);
+            document.querySelectorAll('.map-dot').forEach(dot => dot.classList.remove('pulse'));
 
-    // ✅ Remove pulse from all other dots
-    document.querySelectorAll('.map-dot').forEach(dot => dot.classList.remove('pulse'));
+            dot?.classList.add('pulse');
+          }
+        });
 
-    showTooltip(loc);
-  }
-});
-  });
+        item.addEventListener('mouseleave', () => {
+          if (!isLocked) {
+            hideTooltip();
+            dot?.classList.remove('pulse');
+          }
+        });
 
-  // ✅ FIX: Click outside both tooltip & location item to close
-  document.addEventListener('click', (e) => {
-    const isInsideTooltip = tooltip.contains(e.target);
-    const isInsideLocation = e.target.closest('.location-item');
-    if (!isInsideTooltip && !isInsideLocation) {
-      hideTooltip();
-    }
-  });
+        item.addEventListener('click', (e) => {
+          e.stopPropagation();
 
-  window.addEventListener("resize", () => {
-  if (activeLocation && isLocked) {
-    showTooltip(activeLocation);
-  }
-});
-tooltip.addEventListener('click', (e) => {
-  e.stopPropagation();
-});
-const items = document.querySelectorAll('.location-item');
+          if (activeLocation === loc && isLocked) {
+            hideTooltip();
+          } else {
+            isLocked = true;
+            activeLocation = loc;
 
-items.forEach(item => {
-  item.addEventListener('mouseenter', () => {
-    items.forEach(el => {
-      if (el !== item) {
-        el.classList.add('blurred');
-      } else {
-        el.classList.remove('blurred');
-      }
-    });
-  });
+            // ✅ Remove pulse from all other dots
+            document.querySelectorAll('.map-dot').forEach(dot => dot.classList.remove('pulse'));
 
-  item.addEventListener('mouseleave', () => {
-    items.forEach(el => el.classList.remove('blurred'));
-  });
-});
+            showTooltip(loc);
+          }
+        });
+      });
 
-</script>
+      // ✅ FIX: Click outside both tooltip & location item to close
+      document.addEventListener('click', (e) => {
+        const isInsideTooltip = tooltip.contains(e.target);
+        const isInsideLocation = e.target.closest('.location-item');
+        if (!isInsideTooltip && !isInsideLocation) {
+          hideTooltip();
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        if (activeLocation && isLocked) {
+          showTooltip(activeLocation);
+        }
+      });
+      tooltip.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+      const items = document.querySelectorAll('.location-item');
+      let selectedItem = null;
+
+      items.forEach(item => {
+        // Hover effect
+        item.addEventListener('mouseenter', () => {
+          if (!selectedItem) {
+            items.forEach(el => {
+              if (el !== item) {
+                el.classList.add('blurred');
+              } else {
+                el.classList.remove('blurred');
+              }
+            });
+          }
+        });
+
+        item.addEventListener('mouseleave', () => {
+          if (!selectedItem) {
+            items.forEach(el => el.classList.remove('blurred'));
+          }
+        });
+
+        // Click event
+        item.addEventListener('click', (e) => {
+          e.stopPropagation();
+
+          // Remove previous selection
+          items.forEach(el => {
+            el.classList.remove('selected');
+            el.classList.remove('blurred');
+          });
+
+          if (selectedItem === item) {
+            // Deselect if same item clicked again
+            selectedItem = null;
+          } else {
+            selectedItem = item;
+            item.classList.add('selected');
+
+            // Blur others
+            items.forEach(el => {
+              if (el !== item) el.classList.add('blurred');
+            });
+          }
+        });
+      });
+
+      // Optional: click anywhere else to clear selection
+      document.addEventListener('click', () => {
+        selectedItem = null;
+        items.forEach(el => {
+          el.classList.remove('selected');
+          el.classList.remove('blurred');
+        });
+      });
+
+    </script>
    </body>
 </html>
