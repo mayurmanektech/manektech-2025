@@ -1692,7 +1692,7 @@ a {
   .search-wrapper {
       position: relative;
       input {
-          border-bottom: none !important;
+        //   border-bottom: none !important;
       }
   }
 
@@ -1955,6 +1955,11 @@ p{
         box-shadow: none;
         border-color: $primary-color;
         color: $primary-color;
+        &:hover{
+            background-color: $primary-color;
+            color: $white-color;
+            transition: $transition-animate;
+        }
     }
 }
 
