@@ -4729,13 +4729,35 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
         transform: translateY(0);
     }
 }
-.location-item {
+.location {
+      @media screen and (min-width:1200px) {
+        max-width: 350px;
+      }
+      @media screen and (max-width:1199px) {
+          display: grid;
+          gap: 24px;
+          grid-template-columns: 1fr 1fr;
+          margin-top: 24px;
+        }
+        @media screen and (max-width:767px) {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+     @media screen and (min-width:768px) and (max-width:1199px) {
+    .location-item:last-child {
+      grid-column: span 2;
+    }
+}
+    .location-item {
   position: relative;
   padding-bottom: 6px; 
-  transition: all 0.3s ease;
+   transition: all 0.4s ease;
+  margin-bottom: 12px;
+  &.blurred {
+  opacity: 0.4;
 }
-.location-item::after {
-  content: '';
+  &::after{
+content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -4743,17 +4765,16 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
   width: 0;
   background-color: $primary-color; 
   transition: width 0.4s ease;
+  }
 }
+}
+
+
 .location-item.selected::after,
 .location-item:hover::after {
   width: 100%;
 }
-.location-item {
-  transition: all 0.4s ease;
-  margin-bottom: 12px;
-}
-.location-item.blurred {
-  opacity: 0.4;
-}
+
+
 
 // location hover tootltip effect---------
