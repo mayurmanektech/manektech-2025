@@ -532,75 +532,92 @@
     background: linear-gradient(88deg, rgba(245, 207, 208, 0.6) 0%, rgba(255, 217, 233, 0.6) 100%);
     
 }
-.blog-info{
-        .tech-title{
-            font-size: 20px;
+.blog-info {
+    .tech-title {
+        font-size: 20px;
+        color: #1D1D1D80;
+    }
+    .desc{
+        font-size: 26px;
+        line-height: 41px;
+        transition: $transition-animate;
+    }
+    .desc-details{
+        font-size: 18px;
+        line-height: 31px;
+    }
+    .time-date{
+        p{
+            font-size: 16px;
             color: #1D1D1D80;
-        }
-        .desc{
-            font-size: 26px;
-            line-height: 41px;
-        }
-        .desc-details{
-            font-size: 18px;
-            line-height: 31px;
-        }
-        .time-date{
-            p{
-                font-size: 16px;
-                color: #1D1D1D80;
-                display: flex;
-                align-items: center;
-                .mini{
-                    display : flex;
-                    align-items: center;
-                }
-                .mini::after {
-                    content: '';
-                    display: inline-block;
-                    width: 5px;
-                    height: 5px;
-                    background-color:  #4a4647;
-                    border-radius: 50%;
-                    margin: 0 10px;
-                    vertical-align: middle;
-                    
-                }
-            }
-        }
-        .profile-box {
             display: flex;
             align-items: center;
-            gap: 16px;
-            .profile-avatar {
-                width: 48px;
-                height: 48px;
+            .mini{
+                display : flex;
+                align-items: center;
+            }
+            .mini::after {
+                content: '';
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+                background-color:  #4a4647;
                 border-radius: 50%;
-                overflow: hidden;
-                img {
-                    max-width: 48px;
-                    max-height: 48px;
-                    border: 1px solid $primary-color;
-                        border-radius: 50%;
+                margin: 0 10px;
+                vertical-align: middle;
                 
-                }
-            }
-        }
-        .profile-info {
-            font-family: $sora-font-family;
-            .title {
-                font-size: 18px;
-                font-weight: 600;
-                line-height: normal;
-                margin-bottom: 0;
-            }
-            .designation {
-                font-size: 18px;
-                color: #1D1D1D80;
-                margin-bottom: 0;
             }
         }
     }
+    .profile-box {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        .profile-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                max-width: 48px;
+                max-height: 48px;
+                border: 1px solid $primary-color;
+                    border-radius: 50%;
+            
+            }
+        }
+    }
+    .profile-info {
+        font-family: $sora-font-family;
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 0;
+        }
+        .designation {
+            font-size: 18px;
+            color: #1D1D1D80;
+            margin-bottom: 0;
+        }
+    }
+}
+.blog-page-list {
+    a {
+        .blog-info {
+            transition: $transition-animate;
+            color: $primary-dark;
+        }
+        &:hover {
+            .blog-info {
+                background:#E0005F29;
+                .desc {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
 
 // why-choose-section
 .service-left-space{
@@ -3699,6 +3716,8 @@ form {
             font-size: 24px;
             margin-bottom: 8px;
             letter-spacing: 0.04em;
+            line-height: 26px;
+            font-weight: normal;
         }
         .post {
             font-family: $sora-font-family;
