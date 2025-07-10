@@ -4109,7 +4109,12 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
        } 
 }
 // podcast-detail banner----
-
+.sidebar-sticky{
+        @media screen and (min-width:992px) {
+            position: sticky;
+            top: 140px;
+        }
+    }
 .orange-layer .bg-img:after {
     background: linear-gradient(91deg, #fe7541 40%, rgba(0, 0, 0, 0.5) 100%);
 }
