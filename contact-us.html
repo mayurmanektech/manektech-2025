@@ -766,7 +766,7 @@
           <div class="col-lg-6 d-flex align-items-center">
             <div class="review-video-wrapper">
               <img class="review-thumbnail" src="assets/images/review-thumbnail.webp" alt="review-thumbnail">
-              <button class="video-btn">
+              <button class="video-btn" data-bs-toggle="modal" data-bs-target="#testimonialModal">
                 <img src="assets/images/play-icon.svg" alt="you-tube-icon">
               </button>
             </div>
@@ -834,6 +834,27 @@
 
         </div>
     </footer>
+    <div class="modal fade testimonial-modal" id="testimonialModal" tabindex="-1"
+        aria-labelledby="testimonialModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="assets/images/close-icon.svg" alt="">
+                    <span>Close</span>
+                </button>
+                <div class="modal-body">
+                    <div class="img-wrapper">
+                        <img src="assets/images/testimonial-modal.jpg" alt="">
+                    </div>
+                    <div class="overlay-wrapper">
+                        <button type="button" class="video-btn" data-bs-toggle="modal" data-bs-target="#testimonialModal">
+                            <img src="assets/images/play-icon.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- footer end -->
 
 
