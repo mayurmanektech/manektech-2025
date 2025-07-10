@@ -533,6 +533,11 @@
     
 }
 .blog-info {
+    color: $primary-dark;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .tech-title {
         font-size: 20px;
         color: #1D1D1D80;
@@ -611,9 +616,15 @@
         &:hover {
             .blog-info {
                 background: #E0005F29;
-                .desc {
-                    color: $primary-color;
-                }
+            }
+        }
+    }
+}
+a {
+    &:hover {
+        .blog-info {
+            .desc {
+                color: $primary-color;
             }
         }
     }
@@ -3361,10 +3372,6 @@ footer .container {
         padding: 40px;
         border: 1px solid #1D1D1D1A;
         background: #FAFAFA;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         &.blog-subscribe {
             background: linear-gradient(-86deg,#E0005F29 0%, #D81F2829 100%);
             padding: 60px;
