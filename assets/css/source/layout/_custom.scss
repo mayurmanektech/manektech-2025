@@ -4530,6 +4530,10 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
                 margin-bottom: 0;
                 width: max-content;
             }
+            img {
+                filter: brightness(1);
+                transition: $transition-animate;
+            }
             &:hover{
                 background: #df0359;
                 transition: $transition-animate;
@@ -4539,8 +4543,10 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
                 }
                 svg path {
                     fill: $white-color;
-                    transition: $transition-animate;
-                    
+                    transition: $transition-animate; 
+                }
+                img {
+                    filter: brightness(5);
                 }
             }
         }
