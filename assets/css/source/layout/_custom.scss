@@ -533,6 +533,7 @@
     
 }
 .blog-info{
+    height: 100%;
         .tech-title{
             font-size: 20px;
             color: #1D1D1D80;
@@ -542,8 +543,11 @@
             line-height: 41px;
         }
         .desc-details{
+            max-height: 93px;
+            height: 100%;
             font-size: 18px;
             line-height: 31px;
+            overflow-y: auto;
         }
         .time-date{
             p{
