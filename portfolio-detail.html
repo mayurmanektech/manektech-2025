@@ -874,16 +874,11 @@
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-
-    // Show when the very top of the blog section has scrolled
-    // up to just under the header:
     if (scrollY >= sectionTop - HEADER_HEIGHT && scrollY < sectionBottom) {
       progressWrap.classList.add('visible');
     } else {
       progressWrap.classList.remove('visible');
     }
-
-    // Always update width (just hidden when out of range)
     const scrolledInto = scrollY - sectionTop + HEADER_HEIGHT;
     const scrollable   = blogSection.scrollHeight - window.innerHeight;
     const pct          = Math.min(100,
