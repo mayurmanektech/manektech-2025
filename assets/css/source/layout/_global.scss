@@ -1,4 +1,7 @@
 *{box-sizing: border-box;}
+html {
+    overflow-x: hidden;
+}
 body{
     font-size: 16px;
     color:$primary-dark;
@@ -7,7 +10,6 @@ body{
     font-family: $body-font-family;
     font-weight: normal;
     background: $body-bg;
-    overflow-x: hidden;
     position: relative;
 }
 a,.btn-sub,button{
@@ -705,7 +707,7 @@ form {
         .input-prefix-wrapper .prefix-text {
           position: absolute;
           left: 12px;
-          top: 61%;
+          top: 50%;
           transform: translateY(-50%);
           color: #ffffffb3;
            font-family: $sora-font-family;

@@ -87,7 +87,6 @@ function setupResponsiveMenu() {
 
 // Init on document ready
 jQuery(document).ready(function () {
-  AOS.init();
   setupResponsiveMenu();
 });
 

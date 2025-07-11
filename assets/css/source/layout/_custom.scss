@@ -34,18 +34,26 @@
         z-index: -1;
        mix-blend-mode: overlay;
     }
-
-      &::after{
-        content: "";
+    .hero-background {
         position: absolute;
         inset: 0;
         width: 100%;
         height: 100%;
-        background-image: url("../images/hero-background.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        object-fit: cover;
         z-index: -2;
+    }
+
+      &::after{
+        // content: "";
+        // position: absolute;
+        // inset: 0;
+        // width: 100%;
+        // height: 100%;
+        // background-image: url("../images/hero-background.webp");
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-position: center;
+        // z-index: -2;
     }
 
     .cta-btns{
@@ -524,75 +532,103 @@
     background: linear-gradient(88deg, rgba(245, 207, 208, 0.6) 0%, rgba(255, 217, 233, 0.6) 100%);
     
 }
-.blog-info{
-        .tech-title{
-            font-size: 20px;
+.blog-info {
+    color: $primary-dark;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .tech-title {
+        font-size: 20px;
+        color: #1D1D1D80;
+    }
+    .desc{
+        font-size: 26px;
+        line-height: 41px;
+        transition: $transition-animate;
+    }
+    .desc-details{
+        font-size: 18px;
+        line-height: 31px;
+    }
+    .time-date{
+        p{
+            font-size: 16px;
             color: #1D1D1D80;
-        }
-        .desc{
-            font-size: 26px;
-            line-height: 41px;
-        }
-        .desc-details{
-            font-size: 18px;
-            line-height: 31px;
-        }
-        .time-date{
-            p{
-                font-size: 16px;
-                color: #1D1D1D80;
-                display: flex;
-                align-items: center;
-                .mini{
-                    display : flex;
-                    align-items: center;
-                }
-                .mini::after {
-                    content: '';
-                    display: inline-block;
-                    width: 5px;
-                    height: 5px;
-                    background-color:  #4a4647;
-                    border-radius: 50%;
-                    margin: 0 10px;
-                    vertical-align: middle;
-                    
-                }
-            }
-        }
-        .profile-box {
             display: flex;
             align-items: center;
-            gap: 16px;
-            .profile-avatar {
-                width: 48px;
-                height: 48px;
+            .mini{
+                display : flex;
+                align-items: center;
+            }
+            .mini::after {
+                content: '';
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+                background-color:  #4a4647;
                 border-radius: 50%;
-                overflow: hidden;
-                img {
-                    max-width: 48px;
-                    max-height: 48px;
-                    border: 1px solid $primary-color;
-                        border-radius: 50%;
+                margin: 0 10px;
+                vertical-align: middle;
                 
-                }
-            }
-        }
-        .profile-info {
-            font-family: $sora-font-family;
-            .title {
-                font-size: 18px;
-                font-weight: 600;
-                line-height: normal;
-                margin-bottom: 0;
-            }
-            .designation {
-                font-size: 18px;
-                color: #1D1D1D80;
-                margin-bottom: 0;
             }
         }
     }
+    .profile-box {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        .profile-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                max-width: 48px;
+                max-height: 48px;
+                border: 1px solid $primary-color;
+                    border-radius: 50%;
+            
+            }
+        }
+    }
+    .profile-info {
+        font-family: $sora-font-family;
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 0;
+        }
+        .designation {
+            font-size: 18px;
+            color: #1D1D1D80;
+            margin-bottom: 0;
+        }
+    }
+}
+.blog-page-list {
+    a {
+        .blog-info {
+            transition: $transition-animate;
+            color: $primary-dark;
+        }
+        &:hover {
+            .blog-info {
+                background: #E0005F29;
+            }
+        }
+    }
+}
+a {
+    &:hover {
+        .blog-info {
+            .desc {
+                color: $primary-color;
+            }
+        }
+    }
+}
 
 // why-choose-section
 .service-left-space{
@@ -1656,7 +1692,7 @@
   .search-wrapper {
       position: relative;
       input {
-          border-bottom: none !important;
+        //   border-bottom: none !important;
       }
   }
 
@@ -1919,6 +1955,11 @@ p{
         box-shadow: none;
         border-color: $primary-color;
         color: $primary-color;
+        &:hover{
+            background-color: $primary-color;
+            color: $white-color;
+            transition: $transition-animate;
+        }
     }
 }
 
@@ -2747,8 +2788,8 @@ p{
                 }
             }
         }
-        .underline { 
-            background-color: $primary-dark;
+      .underline { 
+            background-color: $primary-color;
         }
     }
     .form-grid .form-floating.select-wrapper  label{
@@ -2780,13 +2821,14 @@ p{
     margin-top: 60px;   
 }
 .location {
+    cursor: pointer;
     h3 {
         font-size: 24px;
         font-weight: 500;
     }
     p {
         font-size: 18px;
-        margin-bottom: 26px;
+        margin-bottom: 8px;
     }
 }
 // svg hover effect 
@@ -3335,10 +3377,6 @@ footer .container {
         padding: 40px;
         border: 1px solid #1D1D1D1A;
         background: #FAFAFA;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         &.blog-subscribe {
             background: linear-gradient(-86deg,#E0005F29 0%, #D81F2829 100%);
             padding: 60px;
@@ -3690,6 +3728,8 @@ form {
             font-size: 24px;
             margin-bottom: 8px;
             letter-spacing: 0.04em;
+            line-height: 26px;
+            font-weight: normal;
         }
         .post {
             font-family: $sora-font-family;
@@ -4069,7 +4109,12 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
        } 
 }
 // podcast-detail banner----
-
+.sidebar-sticky{
+        @media screen and (min-width:992px) {
+            position: sticky;
+            top: 140px;
+        }
+    }
 .orange-layer .bg-img:after {
     background: linear-gradient(91deg, #fe7541 40%, rgba(0, 0, 0, 0.5) 100%);
 }
@@ -4495,6 +4540,10 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
                 margin-bottom: 0;
                 width: max-content;
             }
+            img {
+                filter: brightness(1);
+                transition: $transition-animate;
+            }
             &:hover{
                 background: #df0359;
                 transition: $transition-animate;
@@ -4504,8 +4553,10 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
                 }
                 svg path {
                     fill: $white-color;
-                    transition: $transition-animate;
-                    
+                    transition: $transition-animate; 
+                }
+                img {
+                    filter: brightness(5);
                 }
             }
         }
@@ -4628,3 +4679,144 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
     }
 }
 // ------new dot net dev pages --end------
+
+
+.blog-info.blog-subscribe{
+    form .form-grid.dark-form .form-floating .underline{
+        background-color: $primary-color ;
+    }
+    form .form-grid.dark-form .form-control{
+        border-bottom-color: #1d1d1d80;
+    }
+
+} 
+// location hover tootltip effect---------
+.map-tooltip {
+    position: absolute;
+    pointer-events: none;
+    z-index: 50;
+    display: none;
+    max-width: 280px;
+    height: 100%;
+    width: 100%;
+     pointer-events: none;
+    .tooltip-card {
+        position: relative;
+        background: white;
+        border-radius: 8px;
+        border: 1px solid rgba(29, 29, 29, 0.2);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        z-index: 20;
+        height: 230px !important;
+        h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: $primary-dark;
+        }
+        p {
+            margin: 6px 0;
+            font-size: 14px;
+            color: $primary-dark;
+        }
+        a {
+            color: $primary-dark;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        .map-link {
+            display: inline-block;
+            margin-top: 6px;
+            font-weight: 600;
+            border: 1px solid $primary-color;
+            padding: 8px 16px;
+            color: $primary-color;
+            border-radius: 4px;
+            width: 100%;
+            text-align: center;
+            &:hover{
+                background-color: $primary-color;
+                color: $white-color;
+                transition: $transition-animate;
+            }
+
+        }
+        .tooltip-arrow {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid $white-color
+        }
+    }
+}
+.map-tooltip.visible {
+    display: block;
+    animation: fadeInUp 0.3s ease;
+    pointer-events: auto; 
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.location {
+      @media screen and (min-width:1200px) {
+        max-width: 350px;
+      }
+      @media screen and (max-width:1199px) {
+          display: grid;
+          gap: 24px;
+          grid-template-columns: 1fr 1fr;
+          margin-top: 24px;
+        }
+        @media screen and (max-width:767px) {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+     @media screen and (min-width:768px) and (max-width:1199px) {
+    .location-item:last-child {
+      grid-column: span 2;
+    }
+}
+    .location-item {
+  position: relative;
+  padding-bottom: 6px; 
+   transition: all 0.4s ease;
+  margin-bottom: 12px;
+  &.blurred {
+  opacity: 0.4;
+}
+  &::after{
+content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: $primary-color; 
+  transition: width 0.4s ease;
+  }
+}
+}
+
+
+.location-item.selected::after,
+.location-item:hover::after {
+  width: 100%;
+}
+
+
+
+// location hover tootltip effect---------
