@@ -1276,7 +1276,7 @@ a {
 
 .planning-main-wrapper{
     position: relative;
-    padding: 100px 0 50px;
+    padding: 90px 0 50px;
     @include breakpoint(l-tablet) {
         padding: 50px 0 0;
     }
@@ -4772,51 +4772,77 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
     }
 }
 .location {
-      @media screen and (min-width:1200px) {
+    @media screen and (min-width:1200px) {
         max-width: 350px;
-      }
-      @media screen and (max-width:1199px) {
-          display: grid;
-          gap: 24px;
-          grid-template-columns: 1fr 1fr;
-          margin-top: 24px;
+    }
+
+    @media screen and (max-width:1199px) {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 24px;
+    }
+
+    @media screen and (max-width:767px) {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        .location-item:last-child {
+            grid-column: span 2;
         }
-        @media screen and (max-width:767px) {
-          grid-template-columns: 1fr;
-          gap: 8px;
+    }
+    .location-item {
+        position: relative;
+        padding-bottom: 6px;
+        transition: all 0.4s ease;
+        margin-bottom: 12px;
+
+        &.blurred {
+            opacity: 0.4;
         }
-     @media screen and (min-width:768px) and (max-width:1199px) {
-    .location-item:last-child {
-      grid-column: span 2;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 0;
+            background-color: $primary-color;
+            transition: width 0.4s ease;
+        }
     }
 }
-    .location-item {
-  position: relative;
-  padding-bottom: 6px; 
-   transition: all 0.4s ease;
-  margin-bottom: 12px;
-  &.blurred {
-  opacity: 0.4;
-}
-  &::after{
-content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 0;
-  background-color: $primary-color; 
-  transition: width 0.4s ease;
-  }
-}
-}
-
 
 .location-item.selected::after,
 .location-item:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
 
+// location hover tootltip effect end-----------
 
-// location hover tootltip effect---------
+// common progress bar horizontally in list content
+.reading-progress {
+  position: sticky;
+  top: 90px;              
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #e0e0e0;
+  z-index: 10;
+   opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.reading-progress.visible {
+  opacity: 1;
+}
+.reading-progress__bar {
+  width: 0%;
+  height: 100%;
+  background: $primary-color;
+  transition: width 0.1s ease;
+}
+
