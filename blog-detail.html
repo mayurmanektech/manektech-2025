@@ -292,7 +292,10 @@
     </div>
   </section>
 
-  <section class="blog-detail section-space position-relative">
+  <section class="blog-detail section-space position-relative vertical-progress-bar">
+     <div class="reading-progress position-sticky">
+      <div class="reading-progress__bar"></div>
+    </div>
     <div class="container">
         <div class="row blog-content-row">
             <div class="col-lg-4 col-xl-3 sidebar-sticky">
@@ -857,6 +860,50 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
+
+
+<script>
+(function() {
+  const progressWrap  = document.querySelector('.reading-progress');
+  const progressBar   = progressWrap.querySelector('.reading-progress__bar');
+  const blogSection   = document.querySelector('.vertical-progress-bar');
+  const HEADER_HEIGHT = 0;  // px
+
+  let sectionTop, sectionBottom;
+  function updateBounds() {
+    const rect = blogSection.getBoundingClientRect();
+    sectionTop    = window.scrollY + rect.top;
+    sectionBottom = sectionTop + blogSection.offsetHeight;
+  }
+  updateBounds();
+  window.addEventListener('resize', updateBounds);
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+
+    // Show when the very top of the blog section has scrolled
+    // up to just under the header:
+    if (scrollY >= sectionTop - HEADER_HEIGHT && scrollY < sectionBottom) {
+      progressWrap.classList.add('visible');
+    } else {
+      progressWrap.classList.remove('visible');
+    }
+
+    // Always update width (just hidden when out of range)
+    const scrolledInto = scrollY - sectionTop + HEADER_HEIGHT;
+    const scrollable   = blogSection.scrollHeight - window.innerHeight;
+    const pct          = Math.min(100,
+                           Math.max(0,
+                             (scrolledInto / scrollable) * 100
+                           )
+                         );
+    progressBar.style.width = pct + '%';
+  });
+})();
+
+
+
+</script>
 </body>
 
 </html>

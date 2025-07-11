@@ -4846,3 +4846,13 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
   transition: width 0.1s ease;
 }
 
+.portfolio-slider .process-box-wrapper .process-box {
+    padding: 0;
+    background: none;
+
+    .img-wrapper img {
+        max-height: 630px;
+        height: 100%;
+        object-fit: contain;
+    }
+}
