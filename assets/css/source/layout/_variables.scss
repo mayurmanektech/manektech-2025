@@ -12,7 +12,8 @@ $white-color: #ffffff;
 $black-color:#000000;
 $primary-dark : #1d1d1d;
 $secondary-dark : #242424;
-$gradiant-color: linear-gradient(90.08deg, #D81F28 -0.75%, #E0005F 100.45%);
+$gradiant-color: linear-gradient(90.08deg, transparent -0.75%, #E0005F 100.45%) #D81F28;
+$hover-gradiant-color: #f15596;
 
  
 /* font colors */

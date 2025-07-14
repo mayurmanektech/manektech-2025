@@ -144,7 +144,7 @@ jQuery(window).on('resize', function () {
     });
 
     const swiper_process = new Swiper('.process-slider .swiper', {
-      speed: 800,
+      speed: 1400,
       spaceBetween: 0,
       autoHeight :true,
       loop: true,

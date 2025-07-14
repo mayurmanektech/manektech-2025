@@ -67,6 +67,11 @@
         .meering-btn{
             background-color: $white-color;
             color: $primary-color;
+            &:hover {
+                color: $white-color;
+                border-color: $primary-color;
+                background: $gradiant-color;
+            }
         }
     }
 }
@@ -104,10 +109,12 @@
         background: $gradiant-color;
         height: 1px;
         opacity: 0;
+        width: 0;
     }
     &:hover {
         &:before {
             opacity: 1;
+            width: 100%;
         }
         .learn-more-link {
             opacity: 1;
@@ -393,10 +400,12 @@
         background: $gradiant-color;
         height: 1px;
         opacity: 0;
+        width: 0;
     }
     &:hover {
         &:before {
             opacity: 1;
+            width: 100%;
         }
     }
     .category {
@@ -427,9 +436,19 @@
         margin-bottom: 0;
     }
 }
+.process-slider {
+    .swiper-slide {
+        &:not(.swiper-slide-active) {
+            .process-slide-wrapper {
+                background: transparent !important;
+            }
+        }
+    }
+}
 .process-slide-wrapper {
     padding-bottom: 120px;
     padding-top: 70px;
+    transition: background-image ease 0.9s;
     @media screen and (max-width:1400px) {
         padding:  48px 0 ;
     }
@@ -541,11 +560,19 @@
     .tech-title {
         font-size: 20px;
         color: #1D1D1D80;
+        margin-bottom: 20px;
+        display: inline-block;
     }
     .desc{
         font-size: 26px;
         line-height: 41px;
         transition: $transition-animate;
+        display: block;
+        color: $primary-dark;
+        margin-bottom: 20px;
+        &:hover {
+            color: $primary-color;
+        }
     }
     .desc-details{
         font-size: 18px;
@@ -599,6 +626,7 @@
             font-weight: 600;
             line-height: normal;
             margin-bottom: 0;
+            color: $primary-dark;
         }
         .designation {
             font-size: 18px;
@@ -4732,14 +4760,13 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
             font-weight: 600;
             border: 1px solid $primary-color;
             padding: 8px 16px;
-            color: $primary-color;
+            color: $white-color;
             border-radius: 4px;
             width: 100%;
             text-align: center;
+            background: $gradiant-color;
             &:hover{
-                background-color: $primary-color;
-                color: $white-color;
-                transition: $transition-animate;
+                background-color: $hover-gradiant-color;
             }
 
         }

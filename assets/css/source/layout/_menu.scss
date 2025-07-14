@@ -83,17 +83,16 @@
 
                   @media (min-width:1200px) {
                     pointer-events: none;
-                      position: absolute;
-                          transform: translateY(50px);
-                       width: max-content;
-                           opacity: 0;
-                  visibility: hidden;
-                      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-                  border: 1px solid rgba(223, 223, 223, 0.5);
-                 border-radius: 4px;
-                 padding: 20px;
-                 
-                  transition: 0.3s linear all;
+                    position: absolute;
+                    transform: translateY(25px);
+                    width: max-content;
+                    opacity: 0;
+                    visibility: hidden;
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+                    border: 1px solid rgba(223, 223, 223, 0.5);
+                    border-radius: 4px;
+                    padding: 20px;
+                    transition: $transition-animate;
                   }
 
                   @media (max-width:1199px) {
