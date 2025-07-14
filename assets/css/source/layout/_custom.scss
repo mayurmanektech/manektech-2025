@@ -4827,7 +4827,10 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
 // common progress bar horizontally in list content
 .reading-progress {
   position: sticky;
-  top: 90px;              
+  top: 90px;
+  @media screen and (max-width:1199px) {
+    top: 67px;
+  }             
   left: 0;
   width: 100%;
   height: 3px;
