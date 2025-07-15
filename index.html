@@ -579,7 +579,7 @@
             </div>
          </div>
          <div class="process-slider">
-            <div class="process-background" id="processBackground"></div>
+            <div class="process-background" id="processBackground" data-step="0"></div>
             <div class="swiper">
                <!-- Additional required wrapper -->
                <div class="swiper-wrapper">
@@ -1265,246 +1265,247 @@
       <script src="assets/js/swiper-bundle.min.js" defer></script>
       <script src="assets/js/main.js" defer></script>
       <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-       <script>
-      const tooltip = document.getElementById("mapTooltip");
-      let activeLocation = null;
-      let isLocked = false;
+      <script>
+         const tooltip = document.getElementById("mapTooltip");
+         let activeLocation = null;
+         let isLocked = false;
 
-      const locationData = {
-        usa: {
-          country: "USA",
-          address: "4100 NW Loop 410, Suite 200, San Antonio, TX 78229",
-          phone: "+1 123-456-7890",
-          email: "info@manektech.com",
-          gmap: "https://www.google.com/maps?q=4100+NW+Loop+410,+San+Antonio,+TX+78229"
-        },
-        uk: {
-          country: "UK",
-          address: "7 Artisan Place Harrow, HA3 5DS, United Kingdom",
-          phone: "+44 1234 567890",
-          email: "info@manektech.com",
-          gmap: "https://www.google.com/maps?q=7+Artisan+Place+Harrow,+HA3+5DS"
-        },
-        india: {
-          country: "India",
-          address: "4th Floor, Timber Point, Prahaladnagar Road, Ahmedabad, Gujarat - 380015",
-          phone: "+91 98765 43210",
-          email: "info@manektech.com",
-          gmap: "https://maps.app.goo.gl/9z94WxZ21xFsW5vm8"
-        },
-        germany: {
-          country: "Germany",
-          address: "Franz-Joseph-Strasse, 11, Munich, 80801, Germany",
-          phone: "+49 123 456789",
-          email: "info@manektech.com",
-          gmap: "https://www.google.com/maps?q=Franz-Joseph-Strasse+11+Munich+Germany"
-        },
-        southafrica: {
-          country: "South Africa",
-          address: "The Business Centre No 1, Bridgeway Road, Century City, Cape Town, 7446",
-          phone: "+27 12 345 6789",
-          email: "info@manektech.com",
-          gmap: "https://www.google.com/maps?q=Bridgeway+Road+Century+City+Cape+Town"
-        }
-      };
-
-      function showTooltip(loc) {
-        const dot = document.querySelector(`.map-dot[data-location="${loc}"]`);
-        const svg = dot.closest("svg");
-        const svgRect = svg.getBoundingClientRect();
-        const dotRect = dot.getBoundingClientRect();
-        const data = locationData[loc];
-
-        if (data) {
-          tooltip.innerHTML = `
-          <div class="tooltip-card">
-            <h4>${data.country}</h4>
-            <p>${data.address}</p>
-            <p><strong>Phone:</strong> <a href="tel:${data.phone}">${data.phone}</a></p>
-            <p><strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
-            <a href="${data.gmap}" target="_blank" class="map-link">Get Direction</a>
-            <div class="tooltip-arrow"></div>
-          </div>
-        `;
-
-          const tooltipWidth = 280;
-          const tooltipHeight = 140;
-
-          const dotCenterX = dotRect.left + dotRect.width / 2 - svgRect.left;
-          const dotTopY = dotRect.top - svgRect.top;
-
-          tooltip.style.left = `${dotCenterX - tooltipWidth / 2.2}px`;
-          tooltip.style.top = `${dotTopY - tooltipHeight - 60}px`;
-          tooltip.classList.add("visible");
-        }
-
-        dot?.classList.add("pulse");
-      }
-
-
-      function hideTooltip() {
-        tooltip.classList.remove('visible');
-        if (activeLocation) {
-          document.querySelector(`.map-dot[data-location="${activeLocation}"]`)?.classList.remove('pulse');
-        }
-        activeLocation = null;
-        isLocked = false;
-      }
-
-      document.querySelectorAll('.location-item').forEach(item => {
-        const loc = item.dataset.location;
-        const dot = document.querySelector(`.map-dot[data-location="${loc}"]`);
-
-        item.addEventListener('mouseenter', () => {
-          if (!isLocked) {
-            document.querySelectorAll('.map-dot').forEach(dot => dot.classList.remove('pulse'));
-            showTooltip(loc);
-            document.querySelectorAll('.map-dot').forEach(dot => dot.classList.remove('pulse'));
-
-            dot?.classList.add('pulse');
-          }
-        });
-
-        item.addEventListener('mouseleave', () => {
-          if (!isLocked) {
-            hideTooltip();
-            dot?.classList.remove('pulse');
-          }
-        });
-
-        item.addEventListener('click', (e) => {
-          e.stopPropagation();
-
-          if (activeLocation === loc && isLocked) {
-            hideTooltip();
-          } else {
-            isLocked = true;
-            activeLocation = loc;
-
-            // ✅ Remove pulse from all other dots
-            document.querySelectorAll('.map-dot').forEach(dot => dot.classList.remove('pulse'));
-
-            showTooltip(loc);
-          }
-        });
-      });
-
-      // ✅ FIX: Click outside both tooltip & location item to close
-      document.addEventListener('click', (e) => {
-        const isInsideTooltip = tooltip.contains(e.target);
-        const isInsideLocation = e.target.closest('.location-item');
-        if (!isInsideTooltip && !isInsideLocation) {
-          hideTooltip();
-        }
-      });
-
-      window.addEventListener("resize", () => {
-        if (activeLocation && isLocked) {
-          showTooltip(activeLocation);
-        }
-      });
-      tooltip.addEventListener('click', (e) => {
-        e.stopPropagation();
-      });
-      const items = document.querySelectorAll('.location-item');
-      let selectedItem = null;
-
-      items.forEach(item => {
-        // Hover effect
-        item.addEventListener('mouseenter', () => {
-          if (!selectedItem) {
-            items.forEach(el => {
-              if (el !== item) {
-                el.classList.add('blurred');
-              } else {
-                el.classList.remove('blurred');
-              }
-            });
-          }
-        });
-
-        item.addEventListener('mouseleave', () => {
-          if (!selectedItem) {
-            items.forEach(el => el.classList.remove('blurred'));
-          }
-        });
-
-        // Click event
-        item.addEventListener('click', (e) => {
-          e.stopPropagation();
-
-          // Remove previous selection
-          items.forEach(el => {
-            el.classList.remove('selected');
-            el.classList.remove('blurred');
-          });
-
-          if (selectedItem === item) {
-            // Deselect if same item clicked again
-            selectedItem = null;
-          } else {
-            selectedItem = item;
-            item.classList.add('selected');
-
-            // Blur others
-            items.forEach(el => {
-              if (el !== item) el.classList.add('blurred');
-            });
-          }
-        });
-      });
-
-      // Optional: click anywhere else to clear selection
-      document.addEventListener('click', () => {
-        selectedItem = null;
-        items.forEach(el => {
-          el.classList.remove('selected');
-          el.classList.remove('blurred');
-        });
-      });
-
-    </script>
-   <script>
-      const backgrounds = [
-         "linear-gradient(to bottom, rgba(10,27,53,1) 0%, rgba(214,40,92,1) 100%)",
-         "linear-gradient(to bottom, rgba(214,40,92,1) 0%, rgba(224,153,11,1) 100%)",
-         "linear-gradient(to bottom, rgba(224,153,11,1) 0%, rgba(206,226,234,1) 100%)",
-         "linear-gradient(to bottom, rgba(206,226,234,1) 0%, rgba(118,205,242,1) 100%)",
-         "linear-gradient(to bottom, rgba(118,205,242,1) 0%, rgba(255,181,91,1) 100%)",
-         "linear-gradient(to bottom, rgba(255,181,91,1) 0%, rgba(128,74,137,1) 100%)"
-      ];
-
-      const swiper_process = new Swiper('.process-slider .swiper', {
-         speed: 1000,
-         spaceBetween: 0,
-         autoHeight: true,
-         loop: false, // no loop, since fade with loop breaks layout
-         effect: "fade",
-         fadeEffect: { crossFade: true }, // this fixes the overlapping
-         navigation: {
-            nextEl: ".process-slider-next",
-            prevEl: ".process-slider-prev",
-         },
-         pagination: {
-            el: ".process-pagination",
-            clickable: true,
-         },
-         on: {
-            slideChangeTransitionStart: function () {
-               updateBackground(this.realIndex);
+         const locationData = {
+            usa: {
+               country: "USA",
+               address: "4100 NW Loop 410, Suite 200, San Antonio, TX 78229",
+               phone: "+1 123-456-7890",
+               email: "info@manektech.com",
+               gmap: "https://www.google.com/maps?q=4100+NW+Loop+410,+San+Antonio,+TX+78229"
             },
-         },
-      });
+            uk: {
+               country: "UK",
+               address: "7 Artisan Place Harrow, HA3 5DS, United Kingdom",
+               phone: "+44 1234 567890",
+               email: "info@manektech.com",
+               gmap: "https://www.google.com/maps?q=7+Artisan+Place+Harrow,+HA3+5DS"
+            },
+            india: {
+               country: "India",
+               address: "4th Floor, Timber Point, Prahaladnagar Road, Ahmedabad, Gujarat - 380015",
+               phone: "+91 98765 43210",
+               email: "info@manektech.com",
+               gmap: "https://maps.app.goo.gl/9z94WxZ21xFsW5vm8"
+            },
+            germany: {
+               country: "Germany",
+               address: "Franz-Joseph-Strasse, 11, Munich, 80801, Germany",
+               phone: "+49 123 456789",
+               email: "info@manektech.com",
+               gmap: "https://www.google.com/maps?q=Franz-Joseph-Strasse+11+Munich+Germany"
+            },
+            southafrica: {
+               country: "South Africa",
+               address: "The Business Centre No 1, Bridgeway Road, Century City, Cape Town, 7446",
+               phone: "+27 12 345 6789",
+               email: "info@manektech.com",
+               gmap: "https://www.google.com/maps?q=Bridgeway+Road+Century+City+Cape+Town"
+            }
+         };
 
-      function updateBackground(index) {
-         const bg = document.getElementById("processBackground");
-         bg.style.background = backgrounds[index % backgrounds.length];
-      }
+         function showTooltip(loc) {
+            const dot = document.querySelector(`.map-dot[data-location="${loc}"]`);
+            const svg = dot.closest("svg");
+            const svgRect = svg.getBoundingClientRect();
+            const dotRect = dot.getBoundingClientRect();
+            const data = locationData[loc];
 
-      // Init background
-      updateBackground(0);
+            if (data) {
+               tooltip.innerHTML = `
+                <div class="tooltip-card">
+                  <h4>${data.country}</h4>
+                  <p>${data.address}</p>
+                  <p><strong>Phone:</strong> <a href="tel:${data.phone}">${data.phone}</a></p>
+                  <p><strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
+                  <a href="${data.gmap}" target="_blank" class="map-link">Get Direction</a>
+                  <div class="tooltip-arrow"></div>
+                </div>
+              `;
 
-   </script>
+               const tooltipWidth = 280;
+               const tooltipHeight = 140;
 
+               const dotCenterX = dotRect.left + dotRect.width / 2 - svgRect.left;
+               const dotTopY = dotRect.top - svgRect.top;
+
+               tooltip.style.left = `${dotCenterX - tooltipWidth / 2.2}px`;
+               tooltip.style.top = `${dotTopY - tooltipHeight - 60}px`;
+               tooltip.classList.add("visible");
+            }
+
+            dot?.classList.add("pulse");
+         }
+
+
+         function hideTooltip() {
+            tooltip.classList.remove('visible');
+            if (activeLocation) {
+               document.querySelector(`.map-dot[data-location="${activeLocation}"]`)?.classList.remove('pulse');
+            }
+            activeLocation = null;
+            isLocked = false;
+         }
+
+         document.querySelectorAll('.location-item').forEach(item => {
+            const loc = item.dataset.location;
+            const dot = document.querySelector(`.map-dot[data-location="${loc}"]`);
+
+            item.addEventListener('mouseenter', () => {
+               if (!isLocked) {
+                  document.querySelectorAll('.map-dot').forEach(dot => dot.classList.remove('pulse'));
+                  showTooltip(loc);
+                  document.querySelectorAll('.map-dot').forEach(dot => dot.classList.remove('pulse'));
+
+                  dot?.classList.add('pulse');
+               }
+            });
+
+            item.addEventListener('mouseleave', () => {
+               if (!isLocked) {
+                  hideTooltip();
+                  dot?.classList.remove('pulse');
+               }
+            });
+
+            item.addEventListener('click', (e) => {
+               e.stopPropagation();
+
+               if (activeLocation === loc && isLocked) {
+                  hideTooltip();
+               } else {
+                  isLocked = true;
+                  activeLocation = loc;
+
+                  // ✅ Remove pulse from all other dots
+                  document.querySelectorAll('.map-dot').forEach(dot => dot.classList.remove('pulse'));
+
+                  showTooltip(loc);
+               }
+            });
+         });
+
+         // ✅ FIX: Click outside both tooltip & location item to close
+         document.addEventListener('click', (e) => {
+            const isInsideTooltip = tooltip.contains(e.target);
+            const isInsideLocation = e.target.closest('.location-item');
+            if (!isInsideTooltip && !isInsideLocation) {
+               hideTooltip();
+            }
+         });
+
+         window.addEventListener("resize", () => {
+            if (activeLocation && isLocked) {
+               showTooltip(activeLocation);
+            }
+         });
+         tooltip.addEventListener('click', (e) => {
+            e.stopPropagation();
+         });
+         const items = document.querySelectorAll('.location-item');
+         let selectedItem = null;
+
+         items.forEach(item => {
+            // Hover effect
+            item.addEventListener('mouseenter', () => {
+               if (!selectedItem) {
+                  items.forEach(el => {
+                     if (el !== item) {
+                        el.classList.add('blurred');
+                     } else {
+                        el.classList.remove('blurred');
+                     }
+                  });
+               }
+            });
+
+            item.addEventListener('mouseleave', () => {
+               if (!selectedItem) {
+                  items.forEach(el => el.classList.remove('blurred'));
+               }
+            });
+
+            // Click event
+            item.addEventListener('click', (e) => {
+               e.stopPropagation();
+
+               // Remove previous selection
+               items.forEach(el => {
+                  el.classList.remove('selected');
+                  el.classList.remove('blurred');
+               });
+
+               if (selectedItem === item) {
+                  // Deselect if same item clicked again
+                  selectedItem = null;
+               } else {
+                  selectedItem = item;
+                  item.classList.add('selected');
+
+                  // Blur others
+                  items.forEach(el => {
+                     if (el !== item) el.classList.add('blurred');
+                  });
+               }
+            });
+         });
+
+         // Optional: click anywhere else to clear selection
+         document.addEventListener('click', () => {
+            selectedItem = null;
+            items.forEach(el => {
+               el.classList.remove('selected');
+               el.classList.remove('blurred');
+            });
+         });
+
+      </script>
+      <script>
+         const animatedGradients = [
+            "linear-gradient(to bottom, #ffffff 0%, #ffe5cb 50%, #ff9955 100%)",
+            "linear-gradient(to bottom, #ffffff 0%, #cdeeff 50%, #4bb7f5 100%)",
+            "linear-gradient(to bottom, #ffffff 0%, #d8bdf2 50%, #9c5de5 100%)",
+            "linear-gradient(to bottom, #ffffff 0%, #bcefd8 50%, #4ac788 100%)",
+            "linear-gradient(to bottom, #ffffff 0%, #ffe7a3 50%, #ffb940 100%)",
+            "linear-gradient(to bottom, #ffffff 0%, #e5d8ce 50%, #b48d78 100%)"
+         ];
+
+         const swiper_process = new Swiper('.process-slider .swiper', {
+            speed: 800,
+            spaceBetween: 0,
+            autoHeight: true,
+            loop: true,
+            effect: 'fade',
+            autoplay: {
+               delay: 4000,
+               disableOnInteraction: true,
+            },
+            navigation: {
+               nextEl: '.process-slider-next',
+               prevEl: '.process-slider-prev',
+            },
+            pagination: {
+               el: '.process-pagination',
+               clickable: true,
+            },
+            on: {
+               slideChangeTransitionStart: function () {
+                  updateProcessBg(this.realIndex);
+               }
+            }
+         });
+         function updateProcessBg(index) {
+            const bg = document.getElementById("processBackground");
+            bg.style.background = animatedGradients[index % animatedGradients.length];
+            bg.style.animation = "none";
+            void bg.offsetHeight;
+            bg.style.animation = "gradientScroll 2s ease ";
+         }
+         updateProcessBg(0);
+      </script>
    </body>
 </html>
