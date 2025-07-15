@@ -4889,3 +4889,45 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
         object-fit: contain;
     }
 }
+
+
+
+
+
+.process-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  transition: background 1.2s ease;
+  opacity: 0.9;
+}
+
+.process-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.process-slide-wrapper {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+/* ✅ FIXED: Remove broken absolute positioning */
+.process-slider .swiper-slide {
+  opacity: 1; /* Let Swiper fade control this */
+  transition: opacity 0.5s ease;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+/* Let Swiper fade effect handle the visibility internally */
+.swiper-wrapper {
+  position: relative;
+}

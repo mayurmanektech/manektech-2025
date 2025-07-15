@@ -143,21 +143,21 @@ jQuery(window).on('resize', function () {
       },
     });
 
-    const swiper_process = new Swiper('.process-slider .swiper', {
-      speed: 1400,
-      spaceBetween: 0,
-      autoHeight :true,
-      loop: true,
-      effect: "fade",
-      navigation: {
-        nextEl: ".process-slider-next",
-        prevEl: ".process-slider-prev",
-      },
-      pagination: {
-        el: ".process-pagination",
-        clickable: true,
-      },
-    });
+    // const swiper_process = new Swiper('.process-slider .swiper', {
+    //   speed: 1400,
+    //   spaceBetween: 0,
+    //   autoHeight :true,
+    //   loop: true,
+    //   effect: "fade",
+    //   navigation: {
+    //     nextEl: ".process-slider-next",
+    //     prevEl: ".process-slider-prev",
+    //   },
+    //   pagination: {
+    //     el: ".process-pagination",
+    //     clickable: true,
+    //   },
+    // });
 
     var pElements = $('.journey-content > .title');
     var journey_pagination = [];

@@ -579,12 +579,13 @@
             </div>
          </div>
          <div class="process-slider">
+            <div class="process-background" id="processBackground"></div>
             <div class="swiper">
                <!-- Additional required wrapper -->
                <div class="swiper-wrapper">
                   <!-- Slides -->
                   <div class="swiper-slide">
-                     <div class="process-slide-wrapper" style="background: linear-gradient(0deg, #D7E5ED 0%, #FFFFFF 100%);">
+                     <div class="process-slide-wrapper" >
                         <div class="container position-relative">
                            <div class="process-box-wrapper">
                               <div class="process-box">
@@ -604,7 +605,7 @@
                      </div>
                   </div>
                   <div class="swiper-slide">
-                     <div class="process-slide-wrapper" style="background: linear-gradient(0deg, #EDE0F3 0%, #FFFFFF 100%);">
+                     <div class="process-slide-wrapper" >
                         <div class="container position-relative">
                            <div class="process-box-wrapper">
                               <div class="process-box">
@@ -624,7 +625,7 @@
                      </div>
                   </div>
                   <div class="swiper-slide">
-                     <div class="process-slide-wrapper" style="background: linear-gradient(0deg, #EEF3E0 0%, #FFFFFF 100%);">
+                     <div class="process-slide-wrapper" >
                         <div class="container position-relative">
                            <div class="process-box-wrapper">
                               <div class="process-box">
@@ -644,7 +645,7 @@
                      </div>
                   </div>
                   <div class="swiper-slide">
-                     <div class="process-slide-wrapper" style="background: linear-gradient(0deg, #F3E0E0 0%, #FFFFFF 100%);">
+                     <div class="process-slide-wrapper" >
                         <div class="container position-relative">
                            <div class="process-box-wrapper">
                               <div class="process-box">
@@ -664,7 +665,7 @@
                      </div>
                   </div>
                   <div class="swiper-slide">
-                     <div class="process-slide-wrapper" style="background: linear-gradient(0deg, #E0F3E7 0%, #FFFFFF 100%);">
+                     <div class="process-slide-wrapper" >
                         <div class="container position-relative">
                            <div class="process-box-wrapper">
                               <div class="process-box">
@@ -684,7 +685,7 @@
                      </div>
                   </div>
                   <div class="swiper-slide">
-                     <div class="process-slide-wrapper" style="background: linear-gradient(0deg, #E4E0F3 0%, #FFFFFF 100%);">
+                     <div class="process-slide-wrapper" >
                         <div class="container position-relative">
                            <div class="process-box-wrapper">
                               <div class="process-box">
@@ -1263,6 +1264,7 @@
       <script src="assets/js/bootstrap.min.js"></script>
       <script src="assets/js/swiper-bundle.min.js" defer></script>
       <script src="assets/js/main.js" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
        <script>
       const tooltip = document.getElementById("mapTooltip");
       let activeLocation = null;
@@ -1462,5 +1464,47 @@
       });
 
     </script>
+   <script>
+      const backgrounds = [
+         "linear-gradient(to bottom, rgba(10,27,53,1) 0%, rgba(214,40,92,1) 100%)",
+         "linear-gradient(to bottom, rgba(214,40,92,1) 0%, rgba(224,153,11,1) 100%)",
+         "linear-gradient(to bottom, rgba(224,153,11,1) 0%, rgba(206,226,234,1) 100%)",
+         "linear-gradient(to bottom, rgba(206,226,234,1) 0%, rgba(118,205,242,1) 100%)",
+         "linear-gradient(to bottom, rgba(118,205,242,1) 0%, rgba(255,181,91,1) 100%)",
+         "linear-gradient(to bottom, rgba(255,181,91,1) 0%, rgba(128,74,137,1) 100%)"
+      ];
+
+      const swiper_process = new Swiper('.process-slider .swiper', {
+         speed: 1000,
+         spaceBetween: 0,
+         autoHeight: true,
+         loop: false, // no loop, since fade with loop breaks layout
+         effect: "fade",
+         fadeEffect: { crossFade: true }, // this fixes the overlapping
+         navigation: {
+            nextEl: ".process-slider-next",
+            prevEl: ".process-slider-prev",
+         },
+         pagination: {
+            el: ".process-pagination",
+            clickable: true,
+         },
+         on: {
+            slideChangeTransitionStart: function () {
+               updateBackground(this.realIndex);
+            },
+         },
+      });
+
+      function updateBackground(index) {
+         const bg = document.getElementById("processBackground");
+         bg.style.background = backgrounds[index % backgrounds.length];
+      }
+
+      // Init background
+      updateBackground(0);
+
+   </script>
+
    </body>
 </html>
