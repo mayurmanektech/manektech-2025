@@ -415,6 +415,7 @@
         margin-top: 27px;
         font-size: 20px;
         letter-spacing: 0.01em;
+        display: inline-block;
         @include breakpoint(s-tablet) {
             margin-top: 16px;
         }
@@ -425,8 +426,15 @@
         margin-bottom: 30px;
         font-weight: normal;
         letter-spacing: 0.01em;
+        display: block;
+        color: $primary-dark;
         @include breakpoint(s-tablet) {
             margin-bottom: 10px;
+        }
+    }
+    a.title {
+        &:hover {
+            color: $primary-color;
         }
     }
 }
@@ -548,8 +556,7 @@
 
 // blog section 
 .blog-section{
-    background: linear-gradient(88deg, rgba(245, 207, 208, 0.6) 0%, rgba(255, 217, 233, 0.6) 100%);
-    
+    background: linear-gradient(88deg, rgba(245, 207, 208, 0.6) 0%, rgba(255, 217, 233, 0.6) 100%);  
 }
 .blog-info {
     color: $primary-dark;
@@ -636,21 +643,11 @@
     }
 }
 .blog-page-list {
-    a {
-        .blog-info {
-            transition: $transition-animate;
-            color: $primary-dark;
-        }
+    .blog-info {
+        transition: $transition-animate;
+        color: $primary-dark;
         &:hover {
-            .blog-info {
-                background: #E0005F29;
-            }
-        }
-    }
-}
-a {
-    &:hover {
-        .blog-info {
+            background: #E0005F29;
             .desc {
                 color: $primary-color;
             }
@@ -4107,6 +4104,9 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
                 .mini{
                     display : flex;
                     align-items: center;
+                    a {
+                        color: #1D1D1D80;
+                    }
                 }
                 .mini::after {
                     content: '';
@@ -4123,6 +4123,9 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
         }
        .success-story-card{
         h3{
+            margin: 16px 0;
+        }
+        .title {
             margin: 16px 0;
         }
         .category{
