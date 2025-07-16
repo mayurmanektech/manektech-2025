@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     "use strict";
-    
+
     // Fixed Header Script
     // const header = document.getElementById('mainHeader');
     const header = document.body;
@@ -88,6 +88,7 @@ function setupResponsiveMenu() {
 // Init on document ready
 jQuery(document).ready(function () {
   setupResponsiveMenu();
+
 });
 
 // Re-run on resize
@@ -96,6 +97,43 @@ jQuery(window).on('resize', function () {
 });
 
 
+window.addEventListener('load', initMobileSwiper);
+  
+// Run on resize
+window.addEventListener('resize', () => {
+  initMobileSwiper();
+});
+
+let swiper_client = null;
+
+function initMobileSwiper() {
+  const isMobile = document.body.clientWidth < 767;
+  
+  // alert(document.body.clientWidth);
+  if (isMobile) {
+    swiper_client = new Swiper('#client-slider', {
+      speed: 4000,
+      spaceBetween: 0,
+      autoHeight :true,
+      loop: true,
+      slidesPerView: 4,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 3,
+          spaceBetween: 36,
+        },
+      },
+    });
+  } else if (!isMobile && swiper_client) {
+    swiper_client.destroy(true, true);
+    swiper_client = null;
+  }
+}
 
   document.addEventListener('DOMContentLoaded', function () {
     // const container_margin = $(".get-margin").css('margin-left');
@@ -107,7 +145,7 @@ jQuery(window).on('resize', function () {
 
   
 
-    const swiper = new Swiper('.swiper-container', {
+    const swiper = new Swiper('.certification-logo', {
       loop: true,
       speed: 4000,
       autoplay: {
@@ -142,6 +180,11 @@ jQuery(window).on('resize', function () {
         },
       },
     });
+
+  
+    // Run on page load
+
+
 
     // const swiper_process = new Swiper('.process-slider .swiper', {
     //   speed: 1400,
@@ -215,6 +258,9 @@ jQuery(window).on('resize', function () {
         clickable: true,
       },
     });
+
+
+
   });
 
 

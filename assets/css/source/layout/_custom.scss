@@ -5062,3 +5062,23 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
         border-bottom: 0;
     }
 }
+.client-slider-wrapper .swiper-wrapper {
+    align-items: center;
+    @media screen and (min-width: 767px) {
+        row-gap: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        .swiper-slide {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+            width: 16.66666667%;
+        }
+    }
+}
