@@ -2968,7 +2968,9 @@ footer .container {
     }
 }
 .hiring-process{
+    position: relative;
     .industry-box-wrapper{
+        position: relative;
          max-width: 1060px;
         width: 100%;
         display: grid;
@@ -4934,7 +4936,68 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
     }
 }
 
+// our process fill line animation process ---------
 
+.scroll-line {
+    @media screen and (max-width:991px) {
+         display: none;
+    }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.scroll-fill {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(to bottom, #d81f28, #e0005f);
+  border-radius: 12px;
+  transition: height 0.8s ease;
+}
+.scroll-fill.reverse {
+  transition: height 0.8s ease 1.6s; 
+}
 
+.industry-box:has(.industry-card) {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(to right, #d81f28, #e0005f);
+    transition: width 0.8s ease;
+    border-radius: 12px;
+    transition-delay: 0.8s;
+  }
+  &.active::after {
+    width: 100%;
+  }
+  &::after {
+    right: -2px;
+    left: auto;
+  }
+  &.active:has(.step2, .step4, .step6)::after {
+    left: -1px;
+    right: auto;
+  }
+  &.reverse:has(.step2, .step4, .step6)::after {
+    left: 0%;
+    right: 0;
+  }
+  &.active {
+  border-color: transparent;
+  transition-delay: 1.6s;
+}
+}
 
-
+// our process fill line animation process end ---------

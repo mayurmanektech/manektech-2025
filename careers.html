@@ -836,6 +836,7 @@
         </div>
         <div class="d-flex justify-content-center">
         <div class="industry-box-wrapper dark">
+           <div class="scroll-line"><div class="scroll-fill"></div></div>
         <div class="industry-box">
             <div class="industry-card step step1">
              <p class="number">01</p>
@@ -1326,6 +1327,58 @@ $(function(){
 });
 </script>
 
+<script>
+  
+  document.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+    const isScrollingUp = currentScrollY < previousScrollY;
+
+    const section = document.querySelector(".hiring-process");
+    const wrapper = section.querySelector(".industry-box-wrapper");
+    const scrollFill = wrapper.querySelector(".scroll-fill");
+    const cards = wrapper.querySelectorAll(".industry-card");
+    const boxes = wrapper.querySelectorAll(".industry-box");
+
+    const wrapperTop = wrapper.getBoundingClientRect().top + window.scrollY;
+    let maxVisibleBottom = 0;
+
+    cards.forEach((card, index) => {
+      const stepNumber = index + 1;
+
+      const cardTop = card.getBoundingClientRect().top;
+      const parentBox = card.closest(".industry-box");
+
+      if (cardTop <= 300) {
+        const cardBottom = card.getBoundingClientRect().bottom + window.scrollY;
+        maxVisibleBottom = Math.max(maxVisibleBottom, cardBottom - wrapperTop);
+        parentBox.classList.add("active");
+
+        parentBox.classList.remove("reverse");
+      } else {
+        parentBox.classList.remove("active");
+
+        if (isScrollingUp) {
+          parentBox.classList.add("reverse");
+        } else {
+          parentBox.classList.remove("reverse");
+        }
+      }
+    });
+
+    scrollFill.style.height = `${maxVisibleBottom}px`;
+
+    if (isScrollingUp) {
+      scrollFill.classList.add("reverse");
+    } else {
+      scrollFill.classList.remove("reverse");
+    }
+
+    previousScrollY = currentScrollY;
+  });
+
+  let previousScrollY = window.scrollY;
+
+</script>
 
 
 
