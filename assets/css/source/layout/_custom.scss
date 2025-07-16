@@ -4961,10 +4961,10 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
   height: 0%;
   background: linear-gradient(to bottom, #d81f28, #e0005f);
   border-radius: 12px;
-  transition: height 0.8s ease;
+  transition: height 0.4s ease;
 }
 .scroll-fill.reverse {
-  transition: height 0.8s ease 1.6s; 
+  transition: height 0.4s ease 0.8s; 
 }
 
 .industry-box:has(.industry-card) {
@@ -4976,9 +4976,9 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
     height: 2px;
     width: 0%;
     background: linear-gradient(to right, #d81f28, #e0005f);
-    transition: width 0.8s ease;
+    transition: width 0.4s ease;
     border-radius: 12px;
-    transition-delay: 0.8s;
+    transition-delay: 0.4s;
   }
   &.active::after {
     width: 100%;
@@ -4997,7 +4997,7 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
   }
   &.active {
   border-color: transparent;
-  transition-delay: 1.6s;
+  transition-delay: 0.8s;
 }
 }
 

@@ -1251,7 +1251,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const cardTop = card.getBoundingClientRect().top;
       const parentBox = card.closest(".industry-box");
 
-      if (cardTop <= 300) {
+      if (cardTop <= 350) {
         const cardBottom = card.getBoundingClientRect().bottom + window.scrollY;
         maxVisibleBottom = Math.max(maxVisibleBottom, cardBottom - wrapperTop);
         parentBox.classList.add("active");
