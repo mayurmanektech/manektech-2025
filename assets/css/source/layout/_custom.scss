@@ -1309,6 +1309,7 @@
             stroke: $white-color;
             transition: $transition-animate;
         }
+        
     }
 }
 .How-we-do-card {
@@ -5001,3 +5002,63 @@ background: linear-gradient(91deg, #e69543 40%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 // our process fill line animation process end ---------
+@media screen and (max-width: 1399px) {
+    .user-profile-section.meet-section .meeting-info {
+        padding: 40px 0;
+    }
+}
+.user-profile-section {
+    .container{
+        @media screen and (min-width:1200px)  and (max-width: 1599px) {
+        padding: 24px 0 0;
+        }
+    }
+    .meeting-info .meet-desc {
+        font-size: 18px;
+        line-height: 172%;
+    }
+    .meeting-person-info{
+        z-index: 20;
+    }
+    .meeting-info{
+        .schedule-meeting-div{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 14px;
+            .link{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 54px;
+                width: 54px;
+                @media (max-width: 1199px) {
+                    height: 40px;
+                    width: 40px;
+                }
+                border-radius: 3px;
+                background-color: $primary-dark;
+                &:hover{
+                    background-color: $primary-color;
+                    transition: $transition-animate;
+                }
+                img{
+                    height: 24px;
+                    width: 24px;
+                }
+            }
+        }
+    }
+    .breadcrumb .breadcrumb-item a {
+        color: $primary-dark;
+
+    }
+    .breadcrumb .breadcrumb-item.active {
+        color: rgba(17, 17, 17, 0.5);
+    }
+    .breadcrumb .breadcrumb-item:before {
+        border: 2px solid rgba(17, 17, 17, 0.5);
+        border-left: 0;
+        border-bottom: 0;
+    }
+}

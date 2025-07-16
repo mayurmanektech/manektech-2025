@@ -375,8 +375,11 @@
                </div>
             </div>
             <div class="industry-box-wrapper">
-               <div class="industry-box">
+               <div class="industry-box" onmouseenter="playVideo(this)" onmouseleave="pauseVideo(this)">
                   <img loading="lazy" src="assets/images/law-enforement.webp" alt="law-enforement-image">
+                   <!-- <video class="bg-video" muted loop preload="none" >
+                     <source src="./assets/video/Law-Enforcement.mp4" type="video/mp4" />
+                  </video> -->
                   <div class="industry-card">
                      <h3>Law Enforcement</h3>
                      <p>Supporting law enforcement with cutting-edge solutions to enhance efficiency and ensure public safety. Our expertise drives smarter, data-driven decision-making.</p>
@@ -1509,5 +1512,18 @@
          }
          updateProcessBg(0);
       </script>
+      <script>
+  function playVideo(card) {
+    const video = card.querySelector("video");
+    video.play();
+  }
+
+  function pauseVideo(card) {
+    const video = card.querySelector("video");
+    video.pause();
+    video.currentTime = 0; // rewind to start
+  }
+</script>
+
    </body>
 </html>
