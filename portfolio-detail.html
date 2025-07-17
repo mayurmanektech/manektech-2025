@@ -500,6 +500,7 @@
     <section class="process-section portfolio-slider">
          
          <div class="process-slider">
+              <div class="process-background" id="processBackground" data-step="0"></div>
             <div class="swiper">
                <!-- Additional required wrapper -->
                <div class="swiper-wrapper">
@@ -893,6 +894,49 @@
 
 
 </script>
+  <script>
+            const animatedGradients = [
+            "linear-gradient(to bottom, #ffffff 0%, #eaf1f6 50%, #d7e5ed 100%)", // Slide 1
+            "linear-gradient(to bottom, #ffffff 0%, #f3e9f9 50%, #ede0f3 100%)", // Slide 2
+            "linear-gradient(to bottom, #ffffff 0%, #f1f6e9 50%, #eef3e0 100%)", // Slide 3
+            "linear-gradient(to bottom, #ffffff 0%, #fbe5e5 50%, #f3e0e0 100%)", // Slide 4
+            "linear-gradient(to bottom, #ffffff 0%, #e5f7f0 50%, #e0f3e7 100%)", // Slide 5
+            "linear-gradient(to bottom, #ffffff 0%, #ebe5f7 50%, #e4e0f3 100%)"  // Slide 6
+            ];
+
+         const swiper_process = new Swiper('.process-slider .swiper', {
+            speed: 800,
+            spaceBetween: 0,
+            autoHeight: true,
+            loop: true,
+            effect: 'fade',
+            autoplay: {
+               delay: 6000,
+               disableOnInteraction: true,
+            },
+            navigation: {
+               nextEl: '.process-slider-next',
+               prevEl: '.process-slider-prev',
+            },
+            pagination: {
+               el: '.process-pagination',
+               clickable: true,
+            },
+            on: {
+               slideChangeTransitionStart: function () {
+                  updateProcessBg(this.realIndex);
+               }
+            }
+         });
+         function updateProcessBg(index) {
+            const bg = document.getElementById("processBackground");
+            bg.style.background = animatedGradients[index % animatedGradients.length];
+            bg.style.animation = "none";
+            void bg.offsetHeight;
+            bg.style.animation = "gradientScroll 2s ease ";
+         }
+         updateProcessBg(0);
+      </script>
 </body>
 
 </html>

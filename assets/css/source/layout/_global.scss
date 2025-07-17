@@ -182,6 +182,7 @@ h4,.h4{
     &:hover{
         color: $white-color;
         background-color: $hover-gradiant-color;
+        border-color: transparent;
     }
     &:focus{
         outline: none;
@@ -841,7 +842,7 @@ form {
                 line-height: normal;
                 &:hover {
                     background: linear-gradient(90.08deg, #D81F28 -0.75%, #f15596 100.45%);
-                    transform: $transition-animate;
+                    transition: $transition-animate;
                 }
             }
         }
