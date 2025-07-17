@@ -11,6 +11,9 @@ body{
     font-weight: normal;
     background: $body-bg;
     position: relative;
+    @media screen and (max-width: 767px) {
+        overflow-x: hidden;
+    }
 }
 a,.btn-sub,button{
     transition: $transition-animate;

@@ -2,651 +2,662 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manektech - .Net Development</title>
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manektech - .Net Development</title>
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
- 
+
   <header id="mainHeader">
     <div class="container">
-       <a href="index.html" class="site-logo">
-       <img src="assets/images/logo.svg" alt="brand logo">
-       </a>
-       <nav class="nav-menu">
-          <button class="close-menu d-xl-none" id="close-menu">
-             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-               <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-             </svg>
-          </button>
-          <ul class="main-menu">
-             <li>
-                <a href="">Service</a>
-                <span class="menu-arrow">
-                   <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
-                   </svg>
-                </span>
-                <div class="sub-menu">
-                   <strong>Service</strong>
-                   <ul>
-                      <li>
-                         <a href="#">Custom Software Development</a>
-                      </li>
-                      <li>
-                         <a href="#">Web Development</a>
-                      </li>
-                      <li>
-                         <a href="#">Dedicated Development Team</a>
-                      </li>
-                      <li>
-                         <a href="#">Software Product Development</a>
-                      </li>
-                      <li>
-                         <a href="#">Ecommerce Development</a>
-                      </li>
-                      <li>
-                         <a href="#">Mobile App Development</a>
-                      </li>
-                      <li>
-                         <a href="#">Software Testing & QA</a>
-                      </li>
-                      <li>
-                         <a href="#">UI/UX Design</a>
-                      </li>
-                   </ul>
-                </div>
-             </li>
-             <li>
-                <a href="">Solutions</a>
-                <span class="menu-arrow">
-                   <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
-                   </svg>
-                </span>
-                <div class="sub-menu">
-                   <strong>Solutions</strong>
-                   <ul>
-                      <li><a href="#">Digital Transformation</a></li>
-                      <li><a href="#">Legacy System Modernization</a></li>
-                      <li><a href="#">Cloud Migration & Integration</a></li>
-                      <li><a href="#">Enterprise Resource Planning (ERP)</a></li>
-                      <li><a href="#">CRM Solutions</a></li>
-                      <li><a href="#">AI & ML Solutions</a></li>
-                      <li><a href="#">DevOps & Automation</a></li>
-                      <li><a href="#">Cybersecurity Solutions</a></li>
-                   </ul>
-                </div>
-             </li>
-             <li>
-                <a href="">Industries</a>
-                <span class="menu-arrow">
-                   <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
-                   </svg>
-                </span>
-                <div class="sub-menu">
-                   <strong>Industries</strong>
-                   <ul>
-                      <li><a href="healthcare.html">Healthcare</a></li>
-                      <li><a href="#">Fintech</a></li>
-                      <li><a href="#">Retail & Ecommerce</a></li>
-                      <li><a href="#">Logistics & Supply Chain</a></li>
-                      <li><a href="#">Education & E-Learning</a></li>
-                      <li><a href="#">Real Estate</a></li>
-                      <li><a href="#">Travel & Hospitality</a></li>
-                      <li><a href="#">Manufacturing</a></li>
-                   </ul>
-                </div>
-             </li>
-             <li>
-                <a href="technology.html">Technologies</a>
-                <span class="menu-arrow">
-                   <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
-                   </svg>
-                </span>
-                <div class="sub-menu">
-                   <strong>Technologies</strong>
-                   <div class="d-xl-flex has-sub-menu">
-                      <div class="sub-menu-inner">
-                         <span>Backend</span>
-                         <span class="menu-arrow d-xl-none">
-                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
-                               xmlns="http://www.w3.org/2000/svg">
-                               <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
-                            </svg>
-                         </span>
-                         <ul>
-                            <li><a href="new-net-development.html">.Net</a></li>
-                            <li><a href="">Java</a></li>
-                            <li><a href="">Node js</a></li>
-                            <li><a href="">Php</a></li>
-                            <li><a href="">Ror</a></li>
-                         </ul>
-                      </div>
-                      <div class="sub-menu-inner">
-                         <span>Frontend</span>
-                         <span class="menu-arrow d-xl-none">
-                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
-                               xmlns="http://www.w3.org/2000/svg">
-                               <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
-                            </svg>
-                         </span>
-                         <ul>
-                            <li>
-                               <a href="">Angular</a>
-                            </li>
-                            <li>
-                               <a href="">React</a>
-                            </li>
-                         </ul>
-                      </div>
-                      <div class="sub-menu-inner">
-                         <span>Mobile</span>
-                         <span class="menu-arrow d-xl-none">
-                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
-                               xmlns="http://www.w3.org/2000/svg">
-                               <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
-                            </svg>
-                         </span>
-                         <ul>
-                            <li>
-                               <a href="">Ios</a>
-                            </li>
-                            <li>
-                               <a href="">Android</a>
-                            </li>
-                            <li>
-                               <a href="">React native</a>
-                            </li>
-                            <li>
-                               <a href="">Flutter</a>
-                            </li>
-                            <li>
-                               <a href="">Xamarin</a>
-                            </li>
-                         </ul>
-                      </div>
-                      <div class="sub-menu-inner">
-                         <span>Others</span>
-                         <span class="menu-arrow d-xl-none">
-                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
-                               xmlns="http://www.w3.org/2000/svg">
-                               <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
-                            </svg>
-                         </span>
-                         <ul>
-                            <li>
-                               <a href="">Sharepoint</a>
-                            </li>
-                            <li>
-                               <a href="">Cloud & devops</a>
-                            </li>
-                         </ul>
-                      </div>
-                   </div>
-                </div>
-             </li>
-             <li>
-                <a href="about.html">About Us</a>
-                <span class="menu-arrow">
-                   <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
-                   </svg>
-                </span>
-                <div class="sub-menu">
-                   <strong>About Us</strong>
-                   <ul>
-                      <li><a href="#">Company Overview</a></li>
-                      <li><a href="#">Leadership Team</a></li>
-                      <li><a href="#">Culture & Values</a></li>
-                      <li><a href="careers.html">Careers</a></li>
-                      <li><a href="contact-us.html">Contact Us</a></li>
-                   </ul>
-                </div>
-             </li>
-             <li>
-                <a href="portfolio-list.html">Portfolio</a>
-             </li>
-             <li>
-                <a href="careers.html">Career</a>
-             </li>
-             <li>
-                <a href="">Media</a>
-                <span class="menu-arrow">
-                   <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
-                   </svg>
-                </span>
-                <div class="sub-menu">
-                   <strong>Media</strong>
-                   <ul>
-                      <li><a href="#">Press Releases</a></li>
-                      <li><a href="blog-list.html">Blog</a></li>
-                      <li><a href="#">Case Studies</a></li>
-                      <li><a href="#">Success Stories</a></li>
-                   </ul>
-                </div>
-             </li>
-          </ul>
-       </nav>
-       <a href="contact-us.html" class="btn ms-auto">contact Us</a>
-       <button id="menu-toggle" class="menu-toggle d-xl-none">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-             <path
-                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+      <a href="index.html" class="site-logo">
+        <img src="assets/images/logo.svg" alt="brand logo">
+      </a>
+      <nav class="nav-menu">
+        <button class="close-menu d-xl-none" id="close-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path
+              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
           </svg>
-       </button>
-    </div>
- </header>
-
-      <section class="inner-banner large-banner section-space dot-net-banner">
-        <div class="bg-img development">
-            <img src="assets/images/dot-net-development-banner.png" alt="dot-net-development-banner">
-        </div>
-        <div class="inner-banner-wrapper">
-            <div class="container">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="index.html">Technologies</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">.NET Development</li>
-                    </ol>
-                </nav>
-                <div class="row">
-                    <div class="col-lg-7">
-                        <h1 class="banner-head-title">Powerful, Scalable, and Secure .NET Development Solutions </h1>
-                        <p>Leverage the power of Microsoft .NET to build high-performance web, mobile, and enterprise applications. Our expert .NET developers create robust, scalable, and secure solutions tailored to your business needs.</p>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#downloadBrochureModal"  class="btn secondary-btn">Get in Touch for Details</a>
-                    </div>
-                </div>
+        </button>
+        <ul class="main-menu">
+          <li>
+            <a href="">Service</a>
+            <span class="menu-arrow">
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+              </svg>
+            </span>
+            <div class="sub-menu">
+              <strong>Service</strong>
+              <ul>
+                <li>
+                  <a href="#">Custom Software Development</a>
+                </li>
+                <li>
+                  <a href="#">Web Development</a>
+                </li>
+                <li>
+                  <a href="#">Dedicated Development Team</a>
+                </li>
+                <li>
+                  <a href="#">Software Product Development</a>
+                </li>
+                <li>
+                  <a href="#">Ecommerce Development</a>
+                </li>
+                <li>
+                  <a href="#">Mobile App Development</a>
+                </li>
+                <li>
+                  <a href="#">Software Testing & QA</a>
+                </li>
+                <li>
+                  <a href="#">UI/UX Design</a>
+                </li>
+              </ul>
             </div>
-        </div>
-    </section>
-
-     <section class="How-we-do-section section-space service-we-offers-section dot-net-dev-services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                  <div class="section-title mb-3">
-                    <h2>Our .NET Development Services</h2>
-                  </div>
-                </div>
+          </li>
+          <li>
+            <a href="">Solutions</a>
+            <span class="menu-arrow">
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+              </svg>
+            </span>
+            <div class="sub-menu">
+              <strong>Solutions</strong>
+              <ul>
+                <li><a href="#">Digital Transformation</a></li>
+                <li><a href="#">Legacy System Modernization</a></li>
+                <li><a href="#">Cloud Migration & Integration</a></li>
+                <li><a href="#">Enterprise Resource Planning (ERP)</a></li>
+                <li><a href="#">CRM Solutions</a></li>
+                <li><a href="#">AI & ML Solutions</a></li>
+                <li><a href="#">DevOps & Automation</a></li>
+                <li><a href="#">Cybersecurity Solutions</a></li>
+              </ul>
             </div>
-            <div class="How-we-do-box-wrapper">
-              <div class="How-we-do-box">
-                <div class="How-we-do-card">
-                  <h3 class="mb-2">Custom .NET Application Development </h3>
-                  <p class="mb-0">We specialize in building tailor-made .NET applications that cater to your unique business requirements. Our solutions are optimized for speed, security, and scalability, ensuring a seamless user experience across web and mobile platforms.
-                  </p>
-                </div>
-              </div>
-              <div class="How-we-do-box">
-                <div class="How-we-do-card">
-                  <h3 class="mb-2">.NET Migration & Upgradation</h3>
-                  <p class="mb-0">Upgrading from an older framework? We help businesses modernize their legacy applications by migrating them to the latest .NET versions with improved performance, security, and cloud readiness.
-                  </p>
-              </div>
-              </div>
-              <div class="How-we-do-box">
-                <div class="How-we-do-card">
-                  <h3 class="mb-2">.NET Web Development</h3>
-                  <p class="mb-0">We develop feature-rich web applications using ASP.NET MVC, Blazor, and .NET Core. Whether you need a customer portal, SaaS platform, or an e-commerce website, we build high-performance solutions that drive engagement.
-                  </p>             
-                </div>
-              </div>
-              <div class="How-we-do-box">
-                <div class="How-we-do-card">
-                  <h3 class="mb-2">Cross-Platform Mobile Development</h3>
-                  <p class="mb-0">Using Xamarin and .NET MAUI, we create cross-platform mobile applications that work seamlessly on iOS and Android. A single codebase ensures cost-effective development and faster deployment.
-                  </p>
-                </div>
-              </div>
-              <div class="How-we-do-box">
-                <div class="How-we-do-card">
-                  <h3 class="mb-2">Enterprise-Grade .NET Solutions</h3>
-                  <p class="mb-0">For businesses in finance, healthcare, retail, and more, we build enterprise-level applications with multi-layered security, cloud integration, and data-driven architecture to support large-scale operations.
-                  </p>           
-                    </div>
-              </div>
-              <div class="How-we-do-box">
-                <div class="How-we-do-card">
-                  <h3 class="mb-2">API Development & Third-Party Integrations</h3>
-                  <p class="mb-0">We develop secure, high-performance APIs using RESTful, GraphQL, and gRPC. Our solutions integrate seamlessly with third-party services, ensuring smooth data exchange and enhanced functionality.
-                  </p>
-                </div>
-              </div>
+          </li>
+          <li>
+            <a href="">Industries</a>
+            <span class="menu-arrow">
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+              </svg>
+            </span>
+            <div class="sub-menu">
+              <strong>Industries</strong>
+              <ul>
+                <li><a href="healthcare.html">Healthcare</a></li>
+                <li><a href="#">Fintech</a></li>
+                <li><a href="#">Retail & Ecommerce</a></li>
+                <li><a href="#">Logistics & Supply Chain</a></li>
+                <li><a href="#">Education & E-Learning</a></li>
+                <li><a href="#">Real Estate</a></li>
+                <li><a href="#">Travel & Hospitality</a></li>
+                <li><a href="#">Manufacturing</a></li>
+              </ul>
             </div>
-        </div>
-   </section>
-
-    <section class="process-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-title">
-              <h2>Our Process</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="process-slider">
-          <div class="process-background" id="processBackground" data-step="0"></div>
-        <div class="swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="process-slide-wrapper pt-5" >
-                <div class="container position-relative">
-                  <div class="process-box-wrapper">
-                    <div class="process-box">
-                      <div class="img-wrapper">
-                        <img src="assets/images/process-1.webp" alt="">
-                      </div>
-                      <div class="process-info">
-                        <p class="count">01</p>
-                        <p class="title">Needs Assessment</p>
-                        <p class="desc">Our Business Solutions and Engineering teams work together to identify your needs and chart a clear path to success.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-button-prev process-slider-prev"></div>
-                  <div class="swiper-button-next process-slider-next"></div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="process-slide-wrapper" >
-                <div class="container position-relative">
-                  <div class="process-box-wrapper">
-                    <div class="process-box">
-                      <div class="img-wrapper">
-                        <img src="assets/images/process-2.webp" alt="">
-                      </div>
-                      <div class="process-info">
-                        <p class="count">02</p>
-                        <p class="title">Solution Discovery</p>
-                        <p class="desc">Our talented architects and engineers are eager to tackle even the toughest challenges, bringing innovative and thoughtful solutions to the table.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-button-prev process-slider-prev"></div>
-                  <div class="swiper-button-next process-slider-next"></div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="process-slide-wrapper">
-                <div class="container position-relative">
-                  <div class="process-box-wrapper">
-                    <div class="process-box">
-                      <div class="img-wrapper">
-                        <img src="assets/images/process-3.webp" alt="">
-                      </div>
-                      <div class="process-info">
-                        <p class="count">03</p>
-                        <p class="title">Prototyping & R&D</p>
-                        <p class="desc">We create cutting-edge technology, often building prototypes and proof-of-concept models to explore and refine the best possible solutions.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-button-prev process-slider-prev"></div>
-                  <div class="swiper-button-next process-slider-next"></div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="process-slide-wrapper">
-                <div class="container position-relative">
-                  <div class="process-box-wrapper">
-                    <div class="process-box">
-                      <div class="img-wrapper">
-                        <img src="assets/images/process-4.webp" alt="">
-                      </div>
-                      <div class="process-info">
-                        <p class="count">04</p>
-                        <p class="title">Design & Specification</p>
-                        <p class="desc">We know that the smallest details make the biggest difference, so we go the extra mile to create human-centered designs and meticulously capture every specification.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-button-prev process-slider-prev"></div>
-                  <div class="swiper-button-next process-slider-next"></div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="process-slide-wrapper" >
-                <div class="container position-relative">
-                  <div class="process-box-wrapper">
-                    <div class="process-box">
-                      <div class="img-wrapper">
-                        <img src="assets/images/process-5.webp" alt="">
-                      </div>
-                      <div class="process-info">
-                        <p class="count">05</p>
-                        <p class="title">Development & Testing</p>
-                        <p class="desc">Our global development teams are designed to bring complete, full-stack solutions to life—seamlessly integrating hardware, firmware, and software.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-button-prev process-slider-prev"></div>
-                  <div class="swiper-button-next process-slider-next"></div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="process-slide-wrapper" >
-                <div class="container position-relative">
-                  <div class="process-box-wrapper">
-                    <div class="process-box">
-                      <div class="img-wrapper">
-                        <img src="assets/images/process-6.webp" alt="">
-                      </div>
-                      <div class="process-info">
-                        <p class="count">06</p>
-                        <p class="title">Production & Support</p>
-                        <p class="desc">We’re with you beyond development, offering end-to-end support—including global sourcing, maintenance, DevOps, and ongoing assistance—to keep your technology running smoothly.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-button-prev process-slider-prev"></div>
-                  <div class="swiper-button-next process-slider-next"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-         <div class="swiper-pagination process-pagination"></div>
-          <!-- If we need navigation buttons -->
-        </div>
-      </div>
-    </section>
-    
-     <section class="meet-section">
-        <div class="container">
-            <div class="row align-items-end align-items-xl-center">
-                <div class="col-lg-5">
-                    <div class="meeting-info">
-                    <h3>Have Your Questions Answered!</h3>
-                    <p class="meet-desc">Send your requirements and get an assessment</p>
-                    <a href="#" class="btn white-btn">Schedule Meeting</a>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="meet-img-box">
-                        <div class="meeting-person-info">
-                            <p class="title">Jignen Pandya</p>
-                            <p class="desc">Vice President Sales & Marketing</p>
-                        </div>
-                        <div class="img-wrapper">
-                        <img src="assets/images/jignen-pandya.png" alt="jignen-pandya">
-                        </div>
-                        <div class="img-bg-strip">
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-      <section class="How-we-do-section section-space service-we-offers-section why-choose-dot-net">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                  <div class="section-title mb-3">
-                    <h2>Why Choose .NET for Development?</h2>
-                  </div>
-                </div>
-            </div>
-            <div class="How-we-do-box-wrapper">
-              <div class="How-we-do-box">
-                <div class="How-we-do-card">
-                  <h3 class="mb-2">1. Scalability & Performance </h3>
-                      <ul>
-                        <li>.NET applications can handle high traffic and large-scale operations efficiently.</li>
-                        <li>Supports asynchronous programming for faster performance.</li>
-                        <li>Ideal for enterprise-level applications and cloud-based solutions.</li>
-                      </ul>
-                </div>
-              </div>
-              <div class="How-we-do-box">
-                <div class="How-we-do-card">
-                  <h3 class="mb-2">2. Security & Reliability</h3>
-                    <ul>
-                        <li>Built-in security features like authentication, authorization, and data encryption.</li>
-                        <li>Supports OAuth, OpenID, and JWT authentication for secure access.</li>
-                        <li>Regular updates and strong support from Microsoft ensure reliability.</li>
-                      </ul>
-                    </div>
-              </div>
-              <div class="How-we-do-box">
-                <div class="How-we-do-card">
-                  <h3 class="mb-2">3. Cross-Platform Compatibility</h3>
-                     <ul>
-                        <li>.NET applications can handle high traffic and large-scale operations efficiently.</li>
-                        <li>Supports asynchronous programming for faster performance.</li>
-                        <li>Ideal for enterprise-level applications and cloud-based solutions.</li>
-                      </ul>              
-                    </div>
-              </div>
-              <div class="How-we-do-box">
-                <div class="How-we-do-card">
-                  <h3 class="mb-2">4. Seamless Integration with Microsoft Technologies</h3>
-                      <ul>
-                        <li>.NET Core runs on Windows, Linux, and macOS, enabling cross-platform development.</li>
-                        <li>Build applications that work seamlessly across desktop, mobile, and cloud environments.</li>
-                        <li>Enhances flexibility and reach with a unified codebase across platforms.</li>
-                      </ul>
-                </div>
-              </div>
-              <div class="How-we-do-box">
-                <div class="How-we-do-card">
-                  <h3 class="mb-2">5. Cost-Effective & Open-Source</h3>
-                    <ul>
-                        <li>.NET Core is open-source and free to use.</li>
-                        <li>Reduces development and maintenance costs compared to proprietary frameworks.</li>
-                        <li>Strong community support and frequent updates from Microsoft.</li>
-                      </ul>            
-                    </div>
-              </div>
-              <div class="How-we-do-box">
-                <div class="How-we-do-card">
-                  <h3 class="mb-2">6. Versatile & Future-Ready</h3>
+          </li>
+          <li>
+            <a href="technology.html">Technologies</a>
+            <span class="menu-arrow">
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+              </svg>
+            </span>
+            <div class="sub-menu">
+              <strong>Technologies</strong>
+              <div class="d-xl-flex has-sub-menu">
+                <div class="sub-menu-inner">
+                  <span>Backend</span>
+                  <span class="menu-arrow d-xl-none">
+                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+                    </svg>
+                  </span>
                   <ul>
-                        <li>Suitable for Web Apps, Mobile Apps, Desktop Apps, APIs, Cloud Solutions, and AI/ML applications.</li>
-                        <li>Constant improvements with latest versions (.NET 8, .NET 9 upcoming) ensure long-term viability.</li>
-                      </ul>
+                    <li><a href="new-net-development.html">.Net</a></li>
+                    <li><a href="">Java</a></li>
+                    <li><a href="">Node js</a></li>
+                    <li><a href="">Php</a></li>
+                    <li><a href="">Ror</a></li>
+                  </ul>
+                </div>
+                <div class="sub-menu-inner">
+                  <span>Frontend</span>
+                  <span class="menu-arrow d-xl-none">
+                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+                    </svg>
+                  </span>
+                  <ul>
+                    <li>
+                      <a href="">Angular</a>
+                    </li>
+                    <li>
+                      <a href="">React</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sub-menu-inner">
+                  <span>Mobile</span>
+                  <span class="menu-arrow d-xl-none">
+                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+                    </svg>
+                  </span>
+                  <ul>
+                    <li>
+                      <a href="">Ios</a>
+                    </li>
+                    <li>
+                      <a href="">Android</a>
+                    </li>
+                    <li>
+                      <a href="">React native</a>
+                    </li>
+                    <li>
+                      <a href="">Flutter</a>
+                    </li>
+                    <li>
+                      <a href="">Xamarin</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sub-menu-inner">
+                  <span>Others</span>
+                  <span class="menu-arrow d-xl-none">
+                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+                    </svg>
+                  </span>
+                  <ul>
+                    <li>
+                      <a href="">Sharepoint</a>
+                    </li>
+                    <li>
+                      <a href="">Cloud & devops</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-        </div>
-     </section>
-
-        <section class=" section-space tech-we-use-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title mb-0">
-                            <h2>Technologies we use</h2>
-                        </div>
-                    </div>
-                    <div class="">
-                        <div class="tech-table">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <th>.NET Frameworks</th>
-                                        <td>.NET Core, .NET 6/7/8, ASP.NET MVC, Blazor, Xamarin/.NET MAUI</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Backend</th>
-                                        <td>Python, Node.js, Java</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Platform</th>
-                                        <td>AWS, Microsoft Azure</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Database</th>
-                                        <td>MySQL, PostgreSQL</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Tools</th>
-                                        <td>Git, Jira, Jest/Mocha/Selenium</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Programming Languages</th>
-                                        <td>C#, .NET 6/7/8, ASP.NET MVC, Blazor, Xamarin/.NET MAUI</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Database Management</th>
-                                        <td>Microsoft SQL, MySQL & PostgreSQL, MongoDB & NoSQL, Azure Cosmos DB</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Cloud & DevOps</th>
-                                        <td>Microsoft Azure, AWS, Docker & Kubernetes, CI/CD Pipelines</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Frontend</th>
-                                        <td>Angular, React, Vue.js, HTML5, CSS3, JavaScript, TypeScript</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Platform</th>
-                                        <td>AWS, Microsoft, Azure</td>
-                                    </tr>
-                                    <tr>
-                                        <th>API Development</th>
-                                        <td>RESTful APIs, GraphQL APIs, gRPC, OAuth, JWT, OpenID</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+          </li>
+          <li>
+            <a href="about.html">About Us</a>
+            <span class="menu-arrow">
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+              </svg>
+            </span>
+            <div class="sub-menu">
+              <strong>About Us</strong>
+              <ul>
+                <li><a href="#">Company Overview</a></li>
+                <li><a href="#">Leadership Team</a></li>
+                <li><a href="#">Culture & Values</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+              </ul>
             </div>
-        </section>
+          </li>
+          <li>
+            <a href="portfolio-list.html">Portfolio</a>
+          </li>
+          <li>
+            <a href="careers.html">Career</a>
+          </li>
+          <li>
+            <a href="">Media</a>
+            <span class="menu-arrow">
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0.5L6 5.5L11 0.5" stroke-width="1.2" />
+              </svg>
+            </span>
+            <div class="sub-menu">
+              <strong>Media</strong>
+              <ul>
+                <li><a href="#">Press Releases</a></li>
+                <li><a href="blog-list.html">Blog</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#">Success Stories</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <a href="contact-us.html" class="btn ms-auto">contact Us</a>
+      <button id="menu-toggle" class="menu-toggle d-xl-none">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+        </svg>
+      </button>
+    </div>
+  </header>
 
-    <section class="client-section section-space">
+  <section class="inner-banner large-banner section-space dot-net-banner">
+    <div class="bg-img development">
+      <img src="assets/images/dot-net-development-banner.png" alt="dot-net-development-banner">
+    </div>
+    <div class="inner-banner-wrapper">
       <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Technologies</a></li>
+            <li class="breadcrumb-item active" aria-current="page">.NET Development</li>
+          </ol>
+        </nav>
         <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title">
-                <h2>Our Clients</h2>
+          <div class="col-lg-7">
+            <h1 class="banner-head-title">Powerful, Scalable, and Secure .NET Development Solutions </h1>
+            <p>Leverage the power of Microsoft .NET to build high-performance web, mobile, and enterprise applications.
+              Our expert .NET developers create robust, scalable, and secure solutions tailored to your business needs.
+            </p>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#downloadBrochureModal" class="btn secondary-btn">Get in
+              Touch for Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="How-we-do-section section-space service-we-offers-section dot-net-dev-services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title mb-3">
+            <h2>Our .NET Development Services</h2>
+          </div>
+        </div>
+      </div>
+      <div class="How-we-do-box-wrapper">
+        <div class="How-we-do-box">
+          <div class="How-we-do-card">
+            <h3 class="mb-2">Custom .NET Application Development </h3>
+            <p class="mb-0">We specialize in building tailor-made .NET applications that cater to your unique business
+              requirements. Our solutions are optimized for speed, security, and scalability, ensuring a seamless user
+              experience across web and mobile platforms.
+            </p>
+          </div>
+        </div>
+        <div class="How-we-do-box">
+          <div class="How-we-do-card">
+            <h3 class="mb-2">.NET Migration & Upgradation</h3>
+            <p class="mb-0">Upgrading from an older framework? We help businesses modernize their legacy applications by
+              migrating them to the latest .NET versions with improved performance, security, and cloud readiness.
+            </p>
+          </div>
+        </div>
+        <div class="How-we-do-box">
+          <div class="How-we-do-card">
+            <h3 class="mb-2">.NET Web Development</h3>
+            <p class="mb-0">We develop feature-rich web applications using ASP.NET MVC, Blazor, and .NET Core. Whether
+              you need a customer portal, SaaS platform, or an e-commerce website, we build high-performance solutions
+              that drive engagement.
+            </p>
+          </div>
+        </div>
+        <div class="How-we-do-box">
+          <div class="How-we-do-card">
+            <h3 class="mb-2">Cross-Platform Mobile Development</h3>
+            <p class="mb-0">Using Xamarin and .NET MAUI, we create cross-platform mobile applications that work
+              seamlessly on iOS and Android. A single codebase ensures cost-effective development and faster deployment.
+            </p>
+          </div>
+        </div>
+        <div class="How-we-do-box">
+          <div class="How-we-do-card">
+            <h3 class="mb-2">Enterprise-Grade .NET Solutions</h3>
+            <p class="mb-0">For businesses in finance, healthcare, retail, and more, we build enterprise-level
+              applications with multi-layered security, cloud integration, and data-driven architecture to support
+              large-scale operations.
+            </p>
+          </div>
+        </div>
+        <div class="How-we-do-box">
+          <div class="How-we-do-card">
+            <h3 class="mb-2">API Development & Third-Party Integrations</h3>
+            <p class="mb-0">We develop secure, high-performance APIs using RESTful, GraphQL, and gRPC. Our solutions
+              integrate seamlessly with third-party services, ensuring smooth data exchange and enhanced functionality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title">
+            <h2>Our Process</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="process-slider">
+      <div class="process-background" id="processBackground" data-step="0"></div>
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="process-slide-wrapper pt-5">
+              <div class="container position-relative">
+                <div class="process-box-wrapper">
+                  <div class="process-box">
+                    <div class="img-wrapper">
+                      <img src="assets/images/process-1.webp" alt="">
+                    </div>
+                    <div class="process-info">
+                      <p class="count">01</p>
+                      <p class="title">Needs Assessment</p>
+                      <p class="desc">Our Business Solutions and Engineering teams work together to identify your needs
+                        and chart a clear path to success.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-prev process-slider-prev"></div>
+                <div class="swiper-button-next process-slider-next"></div>
               </div>
             </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="process-slide-wrapper">
+              <div class="container position-relative">
+                <div class="process-box-wrapper">
+                  <div class="process-box">
+                    <div class="img-wrapper">
+                      <img src="assets/images/process-2.webp" alt="">
+                    </div>
+                    <div class="process-info">
+                      <p class="count">02</p>
+                      <p class="title">Solution Discovery</p>
+                      <p class="desc">Our talented architects and engineers are eager to tackle even the toughest
+                        challenges, bringing innovative and thoughtful solutions to the table.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-prev process-slider-prev"></div>
+                <div class="swiper-button-next process-slider-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="process-slide-wrapper">
+              <div class="container position-relative">
+                <div class="process-box-wrapper">
+                  <div class="process-box">
+                    <div class="img-wrapper">
+                      <img src="assets/images/process-3.webp" alt="">
+                    </div>
+                    <div class="process-info">
+                      <p class="count">03</p>
+                      <p class="title">Prototyping & R&D</p>
+                      <p class="desc">We create cutting-edge technology, often building prototypes and proof-of-concept
+                        models to explore and refine the best possible solutions.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-prev process-slider-prev"></div>
+                <div class="swiper-button-next process-slider-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="process-slide-wrapper">
+              <div class="container position-relative">
+                <div class="process-box-wrapper">
+                  <div class="process-box">
+                    <div class="img-wrapper">
+                      <img src="assets/images/process-4.webp" alt="">
+                    </div>
+                    <div class="process-info">
+                      <p class="count">04</p>
+                      <p class="title">Design & Specification</p>
+                      <p class="desc">We know that the smallest details make the biggest difference, so we go the extra
+                        mile to create human-centered designs and meticulously capture every specification.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-prev process-slider-prev"></div>
+                <div class="swiper-button-next process-slider-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="process-slide-wrapper">
+              <div class="container position-relative">
+                <div class="process-box-wrapper">
+                  <div class="process-box">
+                    <div class="img-wrapper">
+                      <img src="assets/images/process-5.webp" alt="">
+                    </div>
+                    <div class="process-info">
+                      <p class="count">05</p>
+                      <p class="title">Development & Testing</p>
+                      <p class="desc">Our global development teams are designed to bring complete, full-stack solutions
+                        to life—seamlessly integrating hardware, firmware, and software.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-prev process-slider-prev"></div>
+                <div class="swiper-button-next process-slider-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="process-slide-wrapper">
+              <div class="container position-relative">
+                <div class="process-box-wrapper">
+                  <div class="process-box">
+                    <div class="img-wrapper">
+                      <img src="assets/images/process-6.webp" alt="">
+                    </div>
+                    <div class="process-info">
+                      <p class="count">06</p>
+                      <p class="title">Production & Support</p>
+                      <p class="desc">We’re with you beyond development, offering end-to-end support—including global
+                        sourcing, maintenance, DevOps, and ongoing assistance—to keep your technology running smoothly.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-prev process-slider-prev"></div>
+                <div class="swiper-button-next process-slider-next"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="row align-items-center client-img-row">
+        <div class="swiper-pagination process-pagination"></div>
+        <!-- If we need navigation buttons -->
+      </div>
+    </div>
+  </section>
+
+  <section class="meet-section">
+    <div class="container">
+      <div class="row align-items-end align-items-xl-center">
+        <div class="col-lg-5">
+          <div class="meeting-info">
+            <h3>Have Your Questions Answered!</h3>
+            <p class="meet-desc">Send your requirements and get an assessment</p>
+            <a href="#" class="btn white-btn">Schedule Meeting</a>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="meet-img-box">
+            <div class="meeting-person-info">
+              <p class="title">Jignen Pandya</p>
+              <p class="desc">Vice President Sales & Marketing</p>
+            </div>
+            <div class="img-wrapper">
+              <img src="assets/images/jignen-pandya.png" alt="jignen-pandya">
+            </div>
+            <div class="img-bg-strip">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="How-we-do-section section-space service-we-offers-section why-choose-dot-net">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title mb-3">
+            <h2>Why Choose .NET for Development?</h2>
+          </div>
+        </div>
+      </div>
+      <div class="How-we-do-box-wrapper">
+        <div class="How-we-do-box">
+          <div class="How-we-do-card">
+            <h3 class="mb-2">1. Scalability & Performance </h3>
+            <ul>
+              <li>.NET applications can handle high traffic and large-scale operations efficiently.</li>
+              <li>Supports asynchronous programming for faster performance.</li>
+              <li>Ideal for enterprise-level applications and cloud-based solutions.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="How-we-do-box">
+          <div class="How-we-do-card">
+            <h3 class="mb-2">2. Security & Reliability</h3>
+            <ul>
+              <li>Built-in security features like authentication, authorization, and data encryption.</li>
+              <li>Supports OAuth, OpenID, and JWT authentication for secure access.</li>
+              <li>Regular updates and strong support from Microsoft ensure reliability.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="How-we-do-box">
+          <div class="How-we-do-card">
+            <h3 class="mb-2">3. Cross-Platform Compatibility</h3>
+            <ul>
+              <li>.NET applications can handle high traffic and large-scale operations efficiently.</li>
+              <li>Supports asynchronous programming for faster performance.</li>
+              <li>Ideal for enterprise-level applications and cloud-based solutions.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="How-we-do-box">
+          <div class="How-we-do-card">
+            <h3 class="mb-2">4. Seamless Integration with Microsoft Technologies</h3>
+            <ul>
+              <li>.NET Core runs on Windows, Linux, and macOS, enabling cross-platform development.</li>
+              <li>Build applications that work seamlessly across desktop, mobile, and cloud environments.</li>
+              <li>Enhances flexibility and reach with a unified codebase across platforms.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="How-we-do-box">
+          <div class="How-we-do-card">
+            <h3 class="mb-2">5. Cost-Effective & Open-Source</h3>
+            <ul>
+              <li>.NET Core is open-source and free to use.</li>
+              <li>Reduces development and maintenance costs compared to proprietary frameworks.</li>
+              <li>Strong community support and frequent updates from Microsoft.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="How-we-do-box">
+          <div class="How-we-do-card">
+            <h3 class="mb-2">6. Versatile & Future-Ready</h3>
+            <ul>
+              <li>Suitable for Web Apps, Mobile Apps, Desktop Apps, APIs, Cloud Solutions, and AI/ML applications.</li>
+              <li>Constant improvements with latest versions (.NET 8, .NET 9 upcoming) ensure long-term viability.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class=" section-space tech-we-use-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title mb-0">
+            <h2>Technologies we use</h2>
+          </div>
+        </div>
+        <div class="">
+          <div class="tech-table">
+            <table>
+              <tbody>
+                <tr>
+                  <th>.NET Frameworks</th>
+                  <td>.NET Core, .NET 6/7/8, ASP.NET MVC, Blazor, Xamarin/.NET MAUI</td>
+                </tr>
+                <tr>
+                  <th>Backend</th>
+                  <td>Python, Node.js, Java</td>
+                </tr>
+                <tr>
+                  <th>Platform</th>
+                  <td>AWS, Microsoft Azure</td>
+                </tr>
+                <tr>
+                  <th>Database</th>
+                  <td>MySQL, PostgreSQL</td>
+                </tr>
+                <tr>
+                  <th>Tools</th>
+                  <td>Git, Jira, Jest/Mocha/Selenium</td>
+                </tr>
+                <tr>
+                  <th>Programming Languages</th>
+                  <td>C#, .NET 6/7/8, ASP.NET MVC, Blazor, Xamarin/.NET MAUI</td>
+                </tr>
+                <tr>
+                  <th>Database Management</th>
+                  <td>Microsoft SQL, MySQL & PostgreSQL, MongoDB & NoSQL, Azure Cosmos DB</td>
+                </tr>
+                <tr>
+                  <th>Cloud & DevOps</th>
+                  <td>Microsoft Azure, AWS, Docker & Kubernetes, CI/CD Pipelines</td>
+                </tr>
+                <tr>
+                  <th>Frontend</th>
+                  <td>Angular, React, Vue.js, HTML5, CSS3, JavaScript, TypeScript</td>
+                </tr>
+                <tr>
+                  <th>Platform</th>
+                  <td>AWS, Microsoft, Azure</td>
+                </tr>
+                <tr>
+                  <th>API Development</th>
+                  <td>RESTful APIs, GraphQL APIs, gRPC, OAuth, JWT, OpenID</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="client-section section-space">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title">
+            <h2>Our Clients</h2>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row align-items-center client-img-row">
           <div class="col-6 col-md-4 col-lg-3 col-xl-2">
             <div class="client-img-wrapper">
               <img src="assets/images/national-geographic.svg" alt="">
@@ -707,166 +718,199 @@
               <img src="assets/images/nestle.svg" alt="">
             </div>
           </div>
+        </div> -->
+      <div class="swiper-container client-slider-wrapper" id="client-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/images/national-geographic.svg" alt="Microsoft Gold Partner Logo">
+          </div>
+          <div class="swiper-slide"><img src="assets/images/nestle.svg" alt="Top Mobile App Developers 2023 Badge">
+          </div>
+          <div class="swiper-slide"><img src="assets/images/infosys.svg" alt="AppUSA Award Badge"></div>
+          <div class="swiper-slide"><img src="assets/images/gea.svg" alt="Magento Developer Badge"></div>
+          <div class="swiper-slide"><img src="assets/images/abb.svg" alt="12 Original Award Badge"></div>
+          <div class="swiper-slide"><img src="assets/images/salesforce.svg" alt="Top Web Development Companies Badge">
+          </div>
+          <div class="swiper-slide"><img src="assets/images/kotak.svg" alt="Clutch Logo"></div>
+          <div class="swiper-slide"><img src="assets/images/adanigreenenergy.svg" alt="Clutch Deliver Award"></div>
+          <div class="swiper-slide"><img src="assets/images/nyse.png" alt="Top Software Developers Badge"></div>
+          <div class="swiper-slide"><img src="assets/images/sting.svg" alt="Top Software Developers Badge"></div>
+          <div class="swiper-slide"><img src="assets/images/kotak.svg" alt="Top Software Developers Badge"></div>
+          <div class="swiper-slide"><img src="assets/images/nestle.svg" alt="Top Software Developers Badge"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-     <section class="review-section section-space">
-      <div class="container">
-        <div class="row gy-5 gy-lg-0">
-          <div class="col-lg-6">
-            <div class="review-info">
-              <div class="section-title">
-                <h2>Customer Reviews</h2>
-              </div>
-              <p class="title">Good Experience With Team</p>
-              <p class="desc">We rely on ManekTech to accelerate our production processes. Their outstanding service has consistently exceeded expectations across multiple projects I've engaged them for, making them a reliable partner. With a stellar team and competitive pricing, they stand out as an excellent company to collaborate with.</p>
-              <div class="reviewer-box">
-                <div class="reviewer-avatar">
-                  <img src="assets/images/reviewer.jpg" alt="">
-                </div>
-                <div class="reviewer-info">
-                  <p class="title">Codex Software</p>
-                  <p class="desc">United States of America</p>
-                </div>
-              </div>
-              <div class="review-company mt-4">
-                <img src="assets/images/clutch-review.svg" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 d-flex align-items-center">
-            <div class="review-video-wrapper">
-              <img class="review-thumbnail" src="assets/images/review-thumbnail.webp" alt="">
-              <button class="video-btn" data-bs-toggle="modal" data-bs-target="#testimonialModal">
-                <img src="assets/images/play-icon.svg" alt="">
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-
-     <!-- footer start -->
-
-    <footer>
-        <div class="container ">
+  <section class="review-section section-space">
+    <div class="container">
+      <div class="row gy-5 gy-lg-0">
+        <div class="col-lg-6">
+          <div class="review-info">
             <div class="section-title">
-                <h2 class="text-white">Let’s Discuss Your Next Project!</h2>
+              <h2>Customer Reviews</h2>
             </div>
-
-           <form>
-                <div class="form-grid">
-
-                    <div class="">
-                        <div class="form-floating">
-                           <input type="text" class="form-control" id="name" placeholder=" " required>
-                            <label for="name">Name*</label>
-                            <span class="underline"></span>
-                        </div>
-                    </div>
-
-                    <div class="">
-                        <div class="form-floating">
-                          <input type="email" class="form-control" id="email" placeholder=" " required>
-                            <label for="email">Business Email Address*</label>
-                            <span class="underline"></span>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="form-label">Time Zone</label>
-                        <div class=" input-group gap-3 d-flex flex-nowrap">
-                            <div class=" form-floating select-wrapper">
-                                <select class="form-select" id="timezone"></select>
-                                <span class="underline"></span>
-                            </div>
-                            <div class="form-floating input-prefix-wrapper">
-                                <span class="prefix-text" id="prefixDisplay">+91</span>
-                               <input autocomplete="off" type="text" id="countryCode" class="form-control" placeholder="" aria-label="Phone Number">
-                                <span class="underline"></span>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class=" d-flex align-items-end">
-                        <div class="form-floating w-100">
-                            <input type="text" class="form-control" id="company" placeholder=" " required />
-                            <label for="company">Company Name*</label>
-                            <span class="underline"></span>
-                        </div>
-                    </div>
-                    <div class="description">
-                        <div class="form-floating">
-                            <textarea class="form-control" id="description" placeholder=" "
-                                style="height: 40px;"></textarea>
-                            <label for="description">Description</label>
-                            <span class="underline"></span>
-                        </div>
-                    </div>
-                    <div class="attachment-wrapper">
-                        <div class="custom-upload">
-                            <button class="upload-btn">Attachment</button>
-                            <span class="upload-text">or drag & drop file here (max 100 mb)</span>
-                            <input type="file" class="file-input" >
-                        </div>
-                    </div>
-                    <div class="checkbox-div d-flex align-items-center">
-                       <input class="form-check-input mt-0 " type="checkbox" value="" id="agree" required>
-                        <label class="form-check-label mb-0" for="agree">
-                            I agree to Manektech<a href="#" class="text-decoration-none fw-medium">&nbsp; Privacy and
-                                Cookies Policy</a>.
-                        </label>
-                    </div>
-                    <div class="submit-btn-div ">
-                        <button type="submit" class="btn btn-submit ">Submit</button>
-                    </div>
-                </div>
-            </form>
-            <div class="contact-info">
-                <div>
-                    <h6 class="fw-normal mb-1">
-                        <a href="mailto:info@manektech.com">info@manektech.com</a>
-                    </h6>
-                    <small class="">Share a detailed specification</small>
-                </div>
-                <div>
-                    <h6 class="fw-normal mb-1">
-                        <a href="tel:+918511428441">+91 85114 28441</a>
-                    </h6>
-                    <small class="">
-                        Connect on WhatsApp
-                    </small>
-                </div>
-                <div>
-                    <h6 class="fw-normal mb-1">Live chat with us</h6>
-                    <small class="">Begin a quick discussion</small>
-                </div>
+            <p class="title">Good Experience With Team</p>
+            <p class="desc">We rely on ManekTech to accelerate our production processes. Their outstanding service has
+              consistently exceeded expectations across multiple projects I've engaged them for, making them a reliable
+              partner. With a stellar team and competitive pricing, they stand out as an excellent company to
+              collaborate with.</p>
+            <div class="reviewer-box">
+              <div class="reviewer-avatar">
+                <img src="assets/images/reviewer.jpg" alt="">
+              </div>
+              <div class="reviewer-info">
+                <p class="title">Codex Software</p>
+                <p class="desc">United States of America</p>
+              </div>
             </div>
-
+            <div class="review-company mt-4">
+              <img src="assets/images/clutch-review.svg" alt="">
+            </div>
+          </div>
         </div>
-        <div class=" footer-bottom-main d-flex justify-content-center">
-            <div class="footer-bottom-bar container">
-               <div class="certification-logo-wrapper">
-        <div class="certification-logo swiper-container">
-          <div class="swiper-wrapper" id="certificationLogoWrapper">
-            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/Microsoft-gold-partner.png" alt="Microsoft Gold Partner Logo"></div>
-            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/badge-top-mobile-app-developers-2023.png" alt="Top Mobile App Developers 2023 Badge"></div>
-            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/icaward-appusa-bg.png" alt="AppUSA Award Badge"></div>
-            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/magento-developer.png" alt="Magento Developer Badge"></div>
-            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/12-original.png" alt="12 Original Award Badge"></div>
-            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/top-web-development-companies.png" alt="Top Web Development Companies Badge"></div>
-            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/clutch.png" alt="Clutch Logo"></div>
-            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/deliver-clutch.png" alt="Clutch Deliver Award"></div>
-            <div class="swiper-slide"><img src="./assets/images/certification-png-logo/top-software-developers.png" alt="Top Software Developers Badge"></div>
+        <div class="col-lg-6 d-flex align-items-center">
+          <div class="review-video-wrapper">
+            <img class="review-thumbnail" src="assets/images/review-thumbnail.webp" alt="">
+            <button class="video-btn" data-bs-toggle="modal" data-bs-target="#testimonialModal">
+              <img src="assets/images/play-icon.svg" alt="">
+            </button>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
 
-                <div class="copyright-social">
+  <!-- footer start -->
+
+  <footer>
+    <div class="container ">
+      <div class="section-title">
+        <h2 class="text-white">Let’s Discuss Your Next Project!</h2>
+      </div>
+
+      <form>
+        <div class="form-grid">
+
+          <div class="">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="name" placeholder=" " required>
+              <label for="name">Name*</label>
+              <span class="underline"></span>
+            </div>
+          </div>
+
+          <div class="">
+            <div class="form-floating">
+              <input type="email" class="form-control" id="email" placeholder=" " required>
+              <label for="email">Business Email Address*</label>
+              <span class="underline"></span>
+            </div>
+          </div>
+
+          <div>
+            <label class="form-label">Time Zone</label>
+            <div class=" input-group gap-3 d-flex flex-nowrap">
+              <div class=" form-floating select-wrapper">
+                <select class="form-select" id="timezone"></select>
+                <span class="underline"></span>
+              </div>
+              <div class="form-floating input-prefix-wrapper">
+                <span class="prefix-text" id="prefixDisplay">+91</span>
+                <input autocomplete="off" type="text" id="countryCode" class="form-control" placeholder=""
+                  aria-label="Phone Number">
+                <span class="underline"></span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class=" d-flex align-items-end">
+            <div class="form-floating w-100">
+              <input type="text" class="form-control" id="company" placeholder=" " required />
+              <label for="company">Company Name*</label>
+              <span class="underline"></span>
+            </div>
+          </div>
+          <div class="description">
+            <div class="form-floating">
+              <textarea class="form-control" id="description" placeholder=" " style="height: 40px;"></textarea>
+              <label for="description">Description</label>
+              <span class="underline"></span>
+            </div>
+          </div>
+          <div class="attachment-wrapper">
+            <div class="custom-upload">
+              <button class="upload-btn">Attachment</button>
+              <span class="upload-text">or drag & drop file here (max 100 mb)</span>
+              <input type="file" class="file-input">
+            </div>
+          </div>
+          <div class="checkbox-div d-flex align-items-center">
+            <input class="form-check-input mt-0 " type="checkbox" value="" id="agree" required>
+            <label class="form-check-label mb-0" for="agree">
+              I agree to Manektech<a href="#" class="text-decoration-none fw-medium">&nbsp; Privacy and
+                Cookies Policy</a>.
+            </label>
+          </div>
+          <div class="submit-btn-div ">
+            <button type="submit" class="btn btn-submit ">Submit</button>
+          </div>
+        </div>
+      </form>
+      <div class="contact-info">
+        <div>
+          <h6 class="fw-normal mb-1">
+            <a href="mailto:info@manektech.com">info@manektech.com</a>
+          </h6>
+          <small class="">Share a detailed specification</small>
+        </div>
+        <div>
+          <h6 class="fw-normal mb-1">
+            <a href="tel:+918511428441">+91 85114 28441</a>
+          </h6>
+          <small class="">
+            Connect on WhatsApp
+          </small>
+        </div>
+        <div>
+          <h6 class="fw-normal mb-1">Live chat with us</h6>
+          <small class="">Begin a quick discussion</small>
+        </div>
+      </div>
+
+    </div>
+    <div class=" footer-bottom-main d-flex justify-content-center">
+      <div class="footer-bottom-bar container">
+        <div class="certification-logo-wrapper">
+          <div class="certification-logo swiper-container">
+            <div class="swiper-wrapper" id="certificationLogoWrapper">
+              <div class="swiper-slide"><img src="./assets/images/certification-png-logo/Microsoft-gold-partner.png"
+                  alt="Microsoft Gold Partner Logo"></div>
+              <div class="swiper-slide"><img
+                  src="./assets/images/certification-png-logo/badge-top-mobile-app-developers-2023.png"
+                  alt="Top Mobile App Developers 2023 Badge"></div>
+              <div class="swiper-slide"><img src="./assets/images/certification-png-logo/icaward-appusa-bg.png"
+                  alt="AppUSA Award Badge"></div>
+              <div class="swiper-slide"><img src="./assets/images/certification-png-logo/magento-developer.png"
+                  alt="Magento Developer Badge"></div>
+              <div class="swiper-slide"><img src="./assets/images/certification-png-logo/12-original.png"
+                  alt="12 Original Award Badge"></div>
+              <div class="swiper-slide"><img
+                  src="./assets/images/certification-png-logo/top-web-development-companies.png"
+                  alt="Top Web Development Companies Badge"></div>
+              <div class="swiper-slide"><img src="./assets/images/certification-png-logo/clutch.png" alt="Clutch Logo">
+              </div>
+              <div class="swiper-slide"><img src="./assets/images/certification-png-logo/deliver-clutch.png"
+                  alt="Clutch Deliver Award"></div>
+              <div class="swiper-slide"><img src="./assets/images/certification-png-logo/top-software-developers.png"
+                  alt="Top Software Developers Badge"></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="copyright-social">
           <span class="copyright-text">Copyright © 2025 ManekTech. All rights reserved.</span>
           <ul class="social-link">
             <li><a href="" target="_blank" rel="noopener noreferrer">
@@ -898,167 +942,167 @@
               </a></li>
           </ul>
         </div>
-            </div>
+      </div>
 
+    </div>
+  </footer>
+
+  <!-- Button trigger modal -->
+
+
+  <!--download brochure Modal -->
+  <div class="modal fade testimonial-modal" id="downloadBrochureModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="d-flex justify-content-between align-items-start">
+          <div class="section-title">
+            <h2>Download Brochure</h2>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <img src="assets/images/close-icon-gray.svg" alt="modal-colse-icon">
+          </button>
         </div>
-    </footer>
+        <div class="modal-body">
+          <div class="container px-4 px-sm-0">
 
-    <!-- Button trigger modal -->
 
+            <form class="my-0">
+              <div class="form-grid">
 
-    <!--download brochure Modal -->
-    <div class="modal fade testimonial-modal" id="downloadBrochureModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-    <div class="d-flex justify-content-between align-items-start">
-                <div class="section-title">
-                  <h2>Download Brochure</h2>
+                <div class="">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="fname" placeholder=" " required>
+                    <label for="fname">Full Name</label>
+                    <span class="underline"></span>
+                  </div>
                 </div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                  <img src="assets/images/close-icon-gray.svg" alt="modal-colse-icon">
-                </button>
-              </div>
-          <div class="modal-body">
-            <div class="container px-4 px-sm-0">
-              
-    
-              <form  class="my-0">
-                <div class="form-grid">
-    
-                  <div class="">
-                    <div class="form-floating">
-                     <input type="text" class="form-control" id="fname" placeholder=" " required>
-                      <label for="fname">Full Name</label>
-                      <span class="underline"></span>
-                    </div>
+
+                <div class="">
+                  <div class="form-floating">
+                    <input type="email" class="form-control" id="lname" placeholder=" " required />
+                    <label for="lname">Last Name</label>
+                    <span class="underline"></span>
                   </div>
-    
-                  <div class="">
-                    <div class="form-floating">
-                      <input type="email" class="form-control" id="lname" placeholder=" " required />
-                      <label for="lname">Last Name</label>
-                      <span class="underline"></span>
-                    </div>
+                </div>
+
+                <div class=" d-flex align-items-end">
+                  <div class="form-floating w-100">
+                    <input type="text" class="form-control" id="country" placeholder=" " required />
+                    <label for="country">Country</label>
+                    <span class="underline"></span>
                   </div>
-    
-                  <div class=" d-flex align-items-end">
-                    <div class="form-floating w-100">
-                      <input type="text" class="form-control" id="country" placeholder=" " required />
-                      <label for="country">Country</label>
-                      <span class="underline"></span>
-                    </div>
-                  </div>
-    
-                  <div>
-                  
-                    <div class=" input-group gap-3 d-flex flex-nowrap">
-                      <div class=" form-floating select-wrapper">
-                    <select class="form-select" id="timezone2"></select>
+                </div>
+
+                <div>
+
+                  <div class=" input-group gap-3 d-flex flex-nowrap">
+                    <div class=" form-floating select-wrapper">
+                      <select class="form-select" id="timezone2"></select>
                       <label class="form-label">Phone Number</label>
-                        <span class="underline"></span>
-                      </div>
-                      <div class="form-floating input-prefix-wrapper">
-                        <span class="prefix-text" id="prefixDisplay2">+91</span>
-                        <input autocomplete="off" type="text" id="countryCode2" class="form-control" placeholder=""
-                          aria-label="Phone Number" />
-                        <span class="underline"></span>
-                      </div>
+                      <span class="underline"></span>
+                    </div>
+                    <div class="form-floating input-prefix-wrapper">
+                      <span class="prefix-text" id="prefixDisplay2">+91</span>
+                      <input autocomplete="off" type="text" id="countryCode2" class="form-control" placeholder=""
+                        aria-label="Phone Number" />
+                      <span class="underline"></span>
                     </div>
                   </div>
-
-                  
-    
-                  <div class="submit-btn-div ">
-                    <button type="submit" class="btn btn-submit ">Download Now</button>
-                  </div>
-    
-    
-    
                 </div>
-              </form>
-    
-    
-            </div>
+
+
+
+                <div class="submit-btn-div ">
+                  <button type="submit" class="btn btn-submit ">Download Now</button>
+                </div>
+
+
+
+              </div>
+            </form>
+
+
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Modal -->
-    <div class="modal fade testimonial-modal" id="testimonialModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <img src="assets/images/close-icon.svg" alt="">
-                    <span>Close</span>
-                </button>
-                <div class="modal-body">
-                    <div class="img-wrapper">
-                        <img src="assets/images/testimonial-modal.jpg" alt="">
-                    </div>
-                    <div class="overlay-wrapper">
-                        <button type="button" class="video-btn" data-bs-toggle="modal"
-                            data-bs-target="#testimonialModal">
-                            <img src="assets/images/play-icon.svg" alt="">
-                        </button>
-                    </div>
-                </div>
-            </div>
+  <!-- Modal -->
+  <div class="modal fade testimonial-modal" id="testimonialModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <img src="assets/images/close-icon.svg" alt="">
+          <span>Close</span>
+        </button>
+        <div class="modal-body">
+          <div class="img-wrapper">
+            <img src="assets/images/testimonial-modal.jpg" alt="">
+          </div>
+          <div class="overlay-wrapper">
+            <button type="button" class="video-btn" data-bs-toggle="modal" data-bs-target="#testimonialModal">
+              <img src="assets/images/play-icon.svg" alt="">
+            </button>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
-    <!-- footer end -->
-
-
-
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-       
-            const animatedGradients = [
-            "linear-gradient(to bottom, #ffffff 0%, #eaf1f6 50%, #d7e5ed 100%)", // Slide 1
-            "linear-gradient(to bottom, #ffffff 0%, #f3e9f9 50%, #ede0f3 100%)", // Slide 2
-            "linear-gradient(to bottom, #ffffff 0%, #f1f6e9 50%, #eef3e0 100%)", // Slide 3
-            "linear-gradient(to bottom, #ffffff 0%, #fbe5e5 50%, #f3e0e0 100%)", // Slide 4
-            "linear-gradient(to bottom, #ffffff 0%, #e5f7f0 50%, #e0f3e7 100%)", // Slide 5
-            "linear-gradient(to bottom, #ffffff 0%, #ebe5f7 50%, #e4e0f3 100%)"  // Slide 6
-            ];
+  <!-- footer end -->
 
 
-         const swiper_process = new Swiper('.process-slider .swiper', {
-            speed: 800,
-            spaceBetween: 0,
-            autoHeight: true,
-            loop: true,
-            effect: 'fade',
-            autoplay: {
-               delay: 6000,
-               disableOnInteraction: true,
-            },
-            navigation: {
-               nextEl: '.process-slider-next',
-               prevEl: '.process-slider-prev',
-            },
-            pagination: {
-               el: '.process-pagination',
-               clickable: true,
-            },
-            on: {
-               slideChangeTransitionStart: function () {
-                  updateProcessBg(this.realIndex);
-               }
-            }
-         });
-         function updateProcessBg(index) {
-            const bg = document.getElementById("processBackground");
-            bg.style.background = animatedGradients[index % animatedGradients.length];
-            bg.style.animation = "none";
-            void bg.offsetHeight;
-            bg.style.animation = "gradientScroll 2s ease ";
-         }
-         updateProcessBg(0);
-      </script>
+
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+
+    const animatedGradients = [
+      "linear-gradient(to bottom, #ffffff 0%, #eaf1f6 50%, #d7e5ed 100%)", // Slide 1
+      "linear-gradient(to bottom, #ffffff 0%, #f3e9f9 50%, #ede0f3 100%)", // Slide 2
+      "linear-gradient(to bottom, #ffffff 0%, #f1f6e9 50%, #eef3e0 100%)", // Slide 3
+      "linear-gradient(to bottom, #ffffff 0%, #fbe5e5 50%, #f3e0e0 100%)", // Slide 4
+      "linear-gradient(to bottom, #ffffff 0%, #e5f7f0 50%, #e0f3e7 100%)", // Slide 5
+      "linear-gradient(to bottom, #ffffff 0%, #ebe5f7 50%, #e4e0f3 100%)"  // Slide 6
+    ];
+
+
+    const swiper_process = new Swiper('.process-slider .swiper', {
+      speed: 800,
+      spaceBetween: 0,
+      autoHeight: true,
+      loop: true,
+      effect: 'fade',
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: true,
+      },
+      navigation: {
+        nextEl: '.process-slider-next',
+        prevEl: '.process-slider-prev',
+      },
+      pagination: {
+        el: '.process-pagination',
+        clickable: true,
+      },
+      on: {
+        slideChangeTransitionStart: function () {
+          updateProcessBg(this.realIndex);
+        }
+      }
+    });
+    function updateProcessBg(index) {
+      const bg = document.getElementById("processBackground");
+      bg.style.background = animatedGradients[index % animatedGradients.length];
+      bg.style.animation = "none";
+      void bg.offsetHeight;
+      bg.style.animation = "gradientScroll 2s ease ";
+    }
+    updateProcessBg(0);
+  </script>
 </body>
+
 </html>
