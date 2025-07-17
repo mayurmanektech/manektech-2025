@@ -2853,7 +2853,7 @@ p{
                 font-weight: 500;
                 line-height: normal;
                 &:hover {
-                    opacity: 0.9;
+                    background: linear-gradient(90.08deg, #D81F28 -0.75%, #f15596 100.45%);
                     transform: $transition-animate;
                 }
             }
