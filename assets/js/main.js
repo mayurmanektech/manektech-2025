@@ -343,36 +343,7 @@ initCountrySelector("timezone2", "countryCode2", "prefixDisplay2", "+91");
 
 
   //  our process progress step
-
-// const sidebarItems = document.querySelectorAll('.progress-list li');
-// const progressLine = document.querySelector('.progress-line');
-// const steps = document.querySelectorAll('.step');
-
-// sidebarItems.forEach((item, index) => {
-//   item.addEventListener('click', () => {130
-//     sidebarItems.forEach(li => li.classList.remove('active'));
-//     item.classList.add('active');
-
-//     const targetStep = steps[index];
-//     const firstStepTop = steps[0].offsetTop;
-//     const targetBottom = targetStep.offsetTop + targetStep.offsetHeight;
-//     const newHeight = targetBottom - firstStepTop;
-
-//     progressLine.style.height = newHeight + 'px';
-
-//     const headerOffset = 130;
-//     const elementPosition = targetStep.getBoundingClientRect().top + window.scrollY;
-//     const offsetPosition = elementPosition - headerOffset;
-
-//     window.scrollTo({
-//       top: offsetPosition,
-//       behavior: 'smooth'
-//     });
-//   });
-// });
-
-
-
+  
 // Handle click on "How we do it?" heading
 const howWeDoItTrigger = document.querySelector('h6[data-target="#howwedoit"]');
 

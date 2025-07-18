@@ -1282,6 +1282,23 @@
     width: 100%;
     border-right: 1px solid #E8E8E8;
     border-bottom: 1px solid #E8E8E8;
+    .how-we-do-icon{
+        img{
+            position: static;
+            width: auto;
+            height: auto;
+            opacity: 1;
+            object-fit: contain;
+        }
+    }
+    &:hover{
+        .how-we-do-icon{
+        img{
+            filter: invert(1);
+            transition: $transition-animate;
+        }
+    }
+    }
     &:before {
         content: '';
         position: absolute;
