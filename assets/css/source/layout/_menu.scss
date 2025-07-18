@@ -190,6 +190,19 @@
                     stroke:#1D1D1D;
                 }
               }
+              // .menu-arrow::after {
+              //   content: '';
+              //   display: inline-block;
+              //   width: 8px;
+              //   height: 8px;
+              //   border-right: 1px solid #1d1d1d;
+              //   border-bottom: 1px solid #1d1d1d;
+              //   transform: rotate(45deg);
+              //   margin-left: 5px;
+              //   margin: 3px 0px 3px 0px;
+              // }
+
+
           }
 
           &.main-menu {
@@ -257,7 +270,10 @@
   }
 
 
-
+// .nav-menu ul.main-menu>li:focus>.menu-arrow::after, .nav-menu ul.main-menu>li:hover>.menu-arrow::after{
+//    border-color: $primary-color;
+//    transition: $transition-animate;
+// }
 
 
 

@@ -448,11 +448,13 @@
             margin-bottom: 10px;
         }
     }
+     h3.title,
     a.title {
         &:hover {
             color: $primary-color;
         }
     }
+   
 }
 
 .process-section {
